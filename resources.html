@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZinClin Resources | Clinical Programming Industry Insights | Zinger Software Solutions</title>
+    <meta name="description" content="Expert insights on clinical programming, AI automation, offshore vs onshore strategies, and CDISC best practices from 24+ years of industry experience.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: #b8d4f0;
+            font-weight: normal;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Page Header */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .expertise-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+
+        /* Featured Resources */
+        .featured-resources {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .featured-resources h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .featured-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
+            color: white;
+            padding: 2rem;
+        }
+
+        .resource-type {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .key-insights {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .key-insights li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .key-insights li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+        }
+
+        .download-btn {
+            background: #4ecdc4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .download-btn:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Resource Categories */
+        .resource-categories {
+            padding: 4rem 0;
+        }
+
+        .resource-categories h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4ecdc4;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .category-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .resource-list li {
+            margin-bottom: 0.8rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .resource-list li:hover {
+            background: #e8f9f5;
+        }
+
+        .resource-title {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.3rem;
+        }
+
+        .resource-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Industry Insights */
+        .industry-insights {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+        }
+
+        .industry-insights h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .insight-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .insight-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .insight-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Newsletter Signup */
+        .newsletter-signup {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-content h2 {
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .signup-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-top: 3rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row input {
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-row input:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        .subscribe-btn {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-btn:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        .newsletter-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .benefit-title {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Coming Soon */
+        .coming-soon {
+            padding: 4rem 0;
+        }
+
+        .coming-soon h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .coming-soon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .coming-soon-card {
+            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .coming-soon-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .expertise-badges {
+                gap: 1rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Industry Resources & Expertise</h1>
+                <p>Leverage 24+ years of clinical programming expertise through comprehensive guides, best practices, and strategic insights for the evolving pharmaceutical industry.</p>
+                
+                <div class="expertise-badges">
+                    <div class="badge">Clinical Programming</div>
+                    <div class="badge">CDISC Standards</div>
+                    <div class="badge">AI Automation</div>
+                    <div class="badge">Regulatory Compliance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources -->
+    <section class="featured-resources">
+        <div class="container">
+            <h2>Featured Resources</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-header">
+                        <div class="resource-type">Strategic Guide</div>
+                        <h3>Onshore vs. Offshore: The True Cost of Clinical Programming</h3>
+                        <p>Comprehensive ROI analysis and strategic decision framework for clinical programming resource allocation.</p>
+                    </div>
+                    <div class="card-content">
+                        <ul class="key-insights">
+                            <li>Hidden costs of offshore programming (oversight, rework, delays)</li>
+                            <li>Quality control metrics and compliance considerations</li>
+                            <li>ROI calculator with real-world study examples</li>
+                            <li>Risk assessment framework for data security</li>
+                        </ul>
+                        <a href="contact.html" class="download-btn">Download Free Guide</a>
+                    </div>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="card-header">
+                        <div class="resource-type">Industry Report</div>
+                        <h3>The Case for Onshoring Clinical Programming in 2025</h3>
+                        <p>Market trend analysis and future outlook for clinical programming resource strategies.</p>
+                    </div>
+                    <div class="card-content">
+                        <ul class="key-insights">
+                            <li>Post-pandemic shifts in pharma resource allocation</li>
+                            <li>Data security and regulatory compliance trends</li>
+                            <li>AI automation impact on programming economics</li>
+                            <li>Competitive advantages of local programming teams</li>
+                        </ul>
+                        <a href="contact.html" class="download-btn">Request Report</a>
+                    </div>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="card-header">
+                        <div class="resource-type">Interactive Tool</div>
+                        <h3>Statistical Programming Efficiency Assessment</h3>
+                        <p>Interactive calculator to measure your current programming efficiency and identify optimization opportunities.</p>
+                    </div>
+                    <div class="card-content">
+                        <ul class="key-insights">
+                            <li>Current vs. optimal timeline analysis</li>
+                            <li>Resource utilization metrics</li>
+                            <li>Cost per study calculations</li>
+                            <li>Efficiency improvement recommendations</li>
+                        </ul>
+                        <a href="contact.html" class="download-btn">Access Calculator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="resource-categories">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">📊</div>
+                    <h3>CDISC & Regulatory</h3>
+                    <p>Best practices for CDISC implementation, regulatory compliance, and submission-ready deliverables.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">SDTM Implementation Guide</div>
+                            <div class="resource-desc">Step-by-step approach to robust SDTM domain mapping</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">ADaM Best Practices</div>
+                            <div class="resource-desc">Analysis dataset creation for regulatory submissions</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">CDISC Compliance Checklist</div>
+                            <div class="resource-desc">Comprehensive validation framework</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🤖</div>
+                    <h3>AI & Automation</h3>
+                    <p>Insights on AI-powered programming automation, implementation strategies, and industry transformation.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">AI in Clinical Programming</div>
+                            <div class="resource-desc">Current state and future outlook for automation</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Implementation Roadmap</div>
+                            <div class="resource-desc">Step-by-step AI integration strategy</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">ROI Case Studies</div>
+                            <div class="resource-desc">Real-world automation success stories</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">📈</div>
+                    <h3>Strategic Planning</h3>
+                    <p>Resource allocation strategies, team optimization, and competitive positioning frameworks.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">Programming Team Scaling</div>
+                            <div class="resource-desc">Capacity planning and resource optimization</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Vendor vs. In-House Analysis</div>
+                            <div class="resource-desc">Decision framework for programming resources</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Quality Metrics Framework</div>
+                            <div class="resource-desc">KPIs for programming excellence</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🔧</div>
+                    <h3>Technical Guides</h3>
+                    <p>Hands-on programming techniques, optimization strategies, and advanced SAS methodologies.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">Advanced SAS Techniques</div>
+                            <div class="resource-desc">Performance optimization and complex programming</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Code Review Standards</div>
+                            <div class="resource-desc">Quality assurance and validation protocols</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Validation Strategies</div>
+                            <div class="resource-desc">Comprehensive QC and testing approaches</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Insights -->
+    <section class="industry-insights">
+        <div class="container">
+            <h2>Industry Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-number">$5B+</div>
+                    <div class="insight-title">Clinical Data Services Market</div>
+                    <p>Total addressable market for clinical programming and data management services globally</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">40-60%</div>
+                    <div class="insight-title">Cost Reduction Potential</div>
+                    <p>Typical savings achieved through AI-enhanced programming automation versus traditional methods</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">70%</div>
+                    <div class="insight-title">Timeline Acceleration</div>
+                    <p>Reduction in initial programming timelines when using automated code generation platforms</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">85%</div>
+                    <div class="insight-title">Quality Improvement</div>
+                    <p>Reduction in programming-related queries and rework cycles with standardized automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on Industry Trends</h2>
+                <p>Get exclusive insights on clinical programming automation, industry best practices, and ZinClin development updates delivered to your inbox.</p>
+                
+                <div class="signup-form">
+                    <form id="newsletter-form">
+                        <div class="form-row">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                            Join 1,200+ clinical programming professionals. Unsubscribe anytime.
+                        </p>
+                    </form>
+                    
+                    <div class="newsletter-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📧</div>
+                            <div class="benefit-title">Monthly Insights</div>
+                            <p>Industry trends and best practices</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚀</div>
+                            <div class="benefit-title">Product Updates</div>
+                            <p>Early access to ZinClin features</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📊</div>
+                            <div class="benefit-title">Exclusive Content</div>
+                            <p>Subscriber-only resources and guides</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-title">Career Resources</div>
+                            <p>Professional development insights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="coming-soon">
+        <div class="container">
+            <h2>Coming Soon</h2>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <h4>ZinClin Development Blog</h4>
+                    <p>Behind-the-scenes insights into ZinClin platform development, AI model training, and feature releases.</p>
+                    <div class="timeline">Q2 2025</div>
+                </div>
+                
+                <div class="coming-soon-card">
+                    <h4>Interactive Webinar Series</h4>
+                    <p>Monthly webinars on clinical programming automation, industry trends, and best practices with live Q&A sessions.</p>
+                    <div class="timeline">Q3 2025</div>
+                </div>
+                
+                <div class="coming-soon-card">
+                    <h4>Customer Advisory Program</h4>
+                    <p>Exclusive access to product roadmap input, beta features, and strategic partnership opportunities.</p>
+                    <div class="timeline">Q2 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="#featured">Featured Guides</a>
+                    <a href="#categories">Browse by Category</a>
+                    <a href="#newsletter">Newsletter Signup</a>
+                    <a href="contact.html">Request Custom Content</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">Features & Benefits</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="contact.html">Request Demo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 admin@zingersoftwaresolutions.com</p>
+                    <p>📍 Apex, NC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Sharing 24+ years of clinical programming expertise.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            alert('Thank you for subscribing! You\'ll receive our next newsletter with exclusive clinical programming insights and ZinClin updates.');
+            this.reset();
+        });
+
+        // Resource list click handlers
+        document.querySelectorAll('.resource-list li').forEach(item => {
+            item.addEventListener('click', function() {
+                const title = this.querySelector('.resource-title').textContent;
+                alert(`"${title}" will be available soon. Join our early access program to be notified when new resources are published.`);
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to all cards
+        document.querySelectorAll('.featured-card, .category-card, .insight-card, .coming-soon-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

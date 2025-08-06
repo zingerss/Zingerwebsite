@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZinClin for Statistical Programmers | Career Enhancement & Efficiency | Zinger Software Solutions</title>
+    <meta name="description" content="ZinClin enhances statistical programmer careers by automating routine tasks, enabling focus on high-value work, and improving job security through efficiency gains.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: #b8d4f0;
+            font-weight: normal;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Page Header */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .value-promise {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        .value-promise h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1f4788;
+        }
+
+        .career-visual {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .before, .after {
+            background: white;
+            color: #333;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .before h4 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .after h4 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .task-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .before .task-list li::before {
+            content: '😴';
+            position: absolute;
+            left: 0;
+        }
+
+        .after .task-list li::before {
+            content: '🚀';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Career Benefits */
+        .career-benefits {
+            padding: 4rem 0;
+        }
+
+        .career-benefits h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4ecdc4;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .impact-metrics {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .impact-metrics h5 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+
+        /* Skills Enhancement */
+        .skills-enhancement {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .skills-enhancement h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .skills-content h3 {
+            color: #1f4788;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+
+        .skill-category h4 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: '📈';
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-visual {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill-progress {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ecdc4, #45b5aa);
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+
+        /* Job Security */
+        .job-security {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+        }
+
+        .job-security h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .security-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .security-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .security-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Workflow Integration */
+        .workflow-integration {
+            padding: 4rem 0;
+        }
+
+        .workflow-integration h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .workflow-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            background: #4ecdc4;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 2rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-time {
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: #4ecdc4;
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f4788, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h5 {
+            color: #1f4788;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content, .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .workflow-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>ZinClin for Statistical Programmers</h1>
+                    <p class="hero-subtitle">Enhance your career by automating routine tasks and focusing on high-value work. Built by programmers, for programmers.</p>
+                    
+                    <div class="value-promise">
+                        <h3>Our Promise to You:</h3>
+                        <p>ZinClin doesn't replace programmers—it makes you more valuable. Spend less time on repetitive coding and more time on complex problem-solving, validation, and strategic programming initiatives.</p>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn-primary">Join Early Access</a>
+                        <a href="contact.html" class="btn-secondary">See Career Impact</a>
+                    </div>
+                </div>
+                
+                <div class="career-visual">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Your Day Transformation</h3>
+                    <div class="before-after">
+                        <div class="before">
+                            <h4>Without ZinClin</h4>
+                            <ul class="task-list">
+                                <li>Manual domain mapping</li>
+                                <li>Repetitive SDTM coding</li>
+                                <li>Template creation from scratch</li>
+                                <li>Basic data transformations</li>
+                                <li>Routine validation checks</li>
+                            </ul>
+                        </div>
+                        <div class="after">
+                            <h4>With ZinClin</h4>
+                            <ul class="task-list">
+                                <li>Complex logic development</li>
+                                <li>Advanced analytics programming</li>
+                                <li>Quality review and optimization</li>
+                                <li>Process improvement initiatives</li>
+                                <li>Team leadership and mentoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Benefits -->
+    <section class="career-benefits">
+        <div class="container">
+            <h2>Accelerate Your Programming Career</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Increased Productivity</h3>
+                    <p>Handle 2-3x more projects with the same effort by automating initial code generation and focusing your expertise on customization and validation.</p>
+                    <div class="impact-metrics">
+                        <h5>Typical Impact:</h5>
+                        <div class="metric-item">
+                            <span>Initial coding time</span>
+                            <span class="metric-value">-70%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Project capacity</span>
+                            <span class="metric-value">+60%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Quality consistency</span>
+                            <span class="metric-value">+40%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Enhanced Job Security</h3>
+                    <p>Make yourself indispensable by becoming the expert who leverages AI tools effectively rather than competing with offshore basic programming.</p>
+                    <div class="impact-metrics">
+                        <h5>Career Protection:</h5>
+                        <div class="metric-item">
+                            <span>Market competitiveness</span>
+                            <span class="metric-value">High</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Offshore replacement risk</span>
+                            <span class="metric-value">Low</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Value to organization</span>
+                            <span class="metric-value">+50%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Focus on High-Value Work</h3>
+                    <p>Eliminate routine tasks and concentrate on complex programming challenges, process improvements, and strategic initiatives that advance your career.</p>
+                    <div class="impact-metrics">
+                        <h5>Time Allocation:</h5>
+                        <div class="metric-item">
+                            <span>Routine coding</span>
+                            <span class="metric-value">-60%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Complex problem-solving</span>
+                            <span class="metric-value">+80%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Strategic projects</span>
+                            <span class="metric-value">+120%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Skill Development</h3>
+                    <p>Learn cutting-edge AI tools and methodologies while strengthening your expertise in validation, optimization, and complex programming scenarios.</p>
+                    <div class="impact-metrics">
+                        <h5>New Competencies:</h5>
+                        <div class="metric-item">
+                            <span>AI tool proficiency</span>
+                            <span class="metric-value">Expert</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Automation workflows</span>
+                            <span class="metric-value">Advanced</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Process optimization</span>
+                            <span class="metric-value">Leader</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Career Advancement</h3>
+                    <p>Position yourself for senior roles by demonstrating efficiency leadership and innovation adoption within your organization.</p>
+                    <div class="impact-metrics">
+                        <h5>Advancement Indicators:</h5>
+                        <div class="metric-item">
+                            <span>Promotion readiness</span>
+                            <span class="metric-value">Accelerated</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Leadership opportunities</span>
+                            <span class="metric-value">+3x</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Industry recognition</span>
+                            <span class="metric-value">Enhanced</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Reduced Stress</h3>
+                    <p>Eliminate deadline pressure from routine programming tasks and enjoy more predictable workloads with automated code generation.</p>
+                    <div class="impact-metrics">
+                        <h5>Work-Life Impact:</h5>
+                        <div class="metric-item">
+                            <span>Overtime hours</span>
+                            <span class="metric-value">-50%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Deadline stress</span>
+                            <span class="metric-value">-70%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span>Job satisfaction</span>
+                            <span class="metric-value">+60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Enhancement -->
+    <section class="skills-enhancement">
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skills-content">
+                    <h3>Develop Future-Ready Skills</h3>
+                    <p>ZinClin helps you build competencies that will define the next generation of statistical programming careers.</p>
+                    
+                    <div class="skill-category">
+                        <h4>AI & Automation Expertise</h4>
+                        <ul class="skill-list">
+                            <li>AI-assisted programming workflows</li>
+                            <li>Automated code validation techniques</li>
+                            <li>Machine learning integration strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Advanced Programming</h4>
+                        <ul class="skill-list">
+                            <li>Complex CDISC implementation patterns</li>
+                            <li>Performance optimization methodologies</li>
+                            <li>Scalable programming architectures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Leadership & Strategy</h4>
+                        <ul class="skill-list">
+                            <li>Process improvement leadership</li>
+                            <li>Technology adoption management</li>
+                            <li>Team efficiency optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="skills-visual">
+                    <h4 style="margin-bottom: 2rem; color: #1f4788;">Skill Development Timeline</h4>
+                    
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>ZinClin Platform Proficiency</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>AI-Assisted Programming</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Workflow Optimization</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-progress">
+                        <div class="skill-name">
+                            <span>Process Leadership</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+                        <em>Skills developed through ZinClin platform usage and training program</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Security -->
+    <section class="job-security">
+        <div class="container">
+            <div class="security-content">
+                <h2>Secure Your Programming Career</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">In an era of offshore outsourcing and automation concerns, ZinClin positions you as the expert who leverages technology rather than competes with it.</p>
+                
+                <div class="security-stats">
+                    <div class="security-stat">
+                        <div class="stat-number">3x</div>
+                        <div class="stat-label">More Valuable to Employers</div>
+                    </div>
+                    <div class="security-stat">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">Efficiency Improvement</div>
+                    </div>
+                    <div class="security-stat">
+                        <div class="stat-number">Low</div>
+                        <div class="stat-label">Offshore Replacement Risk</div>
+                    </div>
+                    <div class="security-stat">
+                        <div class="stat-number">High</div>
+                        <div class="stat-label">Career Advancement Potential</div>
+                    </div>
+                </div>
+                
+                <p style="font-size: 1.1rem; margin-top: 2rem;">Join the programmers who are future-proofing their careers by embracing AI-enhanced workflows instead of fearing them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Integration -->
+    <section class="workflow-integration">
+        <div class="container">
+            <h2>Seamless Integration with Your Current Workflow</h2>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Upload Study Documents</h4>
+                        <p>Start your day by uploading SAPs and protocol documents to ZinClin just as you would organize any other study materials.</p>
+                        <div class="step-time">Time: 5 minutes</div>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Review Generated Code</h4>
+                        <p>Examine the AI-generated SDTM, ADaM, and TLF templates using your expert knowledge to validate logic and structure.</p>
+                        <div class="step-time">Time: 2-3 hours (vs. 2-3 days manual)</div>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Customize & Optimize</h4>
+                        <p>Apply your expertise to customize the generated code for study-specific requirements and optimize performance.</p>
+                        <div class="step-time">Time: 4-6 hours (focused high-value work)</div>
+                    </div>
+                </div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Validate & Deploy</h4>
+                        <p>Perform final validation and deploy the production-ready code, ensuring quality meets your professional standards.</p>
+                        <div class="step-time">Time: 2-3 hours (thorough quality control)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Programmers Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-text">
+                        "ZinClin transformed my career from doing repetitive SDTM mapping to leading complex analytical programming initiatives. I'm now seen as the innovation leader on our team."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h5>Sarah Rodriguez</h5>
+                            <div class="author-role">Senior Statistical Programmer, Biotech</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <div class="testimonial-text">
+                        "I was worried about job security with all the offshore outsourcing. Now I'm the expert who manages our AI-enhanced workflows and my value to the company has never been higher."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h5>Michael Kim</h5>
+                            <div class="author-role">Principal Programmer, CRO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Enhance Your Programming Career?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem;">Join the early access program and be among the first programmers to experience the future of clinical programming.</p>
+            
+            <div>
+                <a href="contact.html" class="btn-primary">Join Early Access</a>
+                <a href="contact.html" class="btn-secondary">See Career Roadmap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">Features & Benefits</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="contact.html">Request Demo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="about.html">Leadership Team</a>
+                    <a href="contact.html">Careers</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 admin@zingersoftwaresolutions.com</p>
+                    <p>📍 Apex, NC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Empowering statistical programmers through AI-enhanced workflows.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to all cards
+        document.querySelectorAll('.benefit-card, .testimonial-card, .workflow-step').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Animate progress bars when they come into view
+        const progressBars = document.querySelectorAll('.progress-fill');
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0%';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 200);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        progressBars.forEach(bar => {
+            progressObserver.observe(bar);
+        });
+    </script>
+</body>
+</html>

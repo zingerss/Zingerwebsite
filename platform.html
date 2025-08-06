@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZinClin Platform | AI-Powered Clinical Programming Features | Zinger Software Solutions</title>
+    <meta name="description" content="Explore ZinClin's AI-driven features: SAP processing, SDTM/ADaM code generation, CDISC compliance, and workflow automation for clinical programming teams.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: #b8d4f0;
+            font-weight: normal;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Page Header */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+
+        /* Platform Overview */
+        .platform-overview {
+            padding: 4rem 0;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .overview-content h2 {
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .overview-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .overview-features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .overview-features li::before {
+            content: '🚀';
+            position: absolute;
+            left: 0;
+        }
+
+        .platform-diagram {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .workflow-step {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-number {
+            background: #4ecdc4;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .workflow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: #4ecdc4;
+            margin: 0.5rem 0;
+        }
+
+        /* Core Features */
+        .core-features {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .core-features h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .feature-card h3 {
+            color: #1f4788;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-benefits {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .feature-benefits li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+
+        .feature-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        /* Technology Stack */
+        .tech-stack {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+        }
+
+        .tech-stack h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-card h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 4rem 0;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .comparison-column {
+            text-align: center;
+        }
+
+        .comparison-header {
+            padding: 1.5rem;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .current-state {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .offshore-state {
+            background: #f39c12;
+            color: white;
+        }
+
+        .zinclin-state {
+            background: #4ecdc4;
+            color: #1f4788;
+        }
+
+        .comparison-content {
+            padding: 2rem;
+            background: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .metric {
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-label {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 1.1rem;
+        }
+
+        /* Demo Section */
+        .demo-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .demo-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-mockup {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .mockup-browser {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .browser-header {
+            background: #f1f3f4;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .browser-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27ca3f; }
+
+        .browser-content {
+            padding: 2rem;
+            text-align: left;
+            color: #333;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            color: #1f4788;
+            margin: 1rem 0;
+        }
+
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #164070;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(31, 71, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #4ecdc4;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-comparison {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-badges {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="platform.html" class="active">Platform</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The ZinClin Platform</h1>
+                <p>AI-powered automation that transforms clinical programming workflows. Built by programmers for programmers, with 24+ years of industry expertise embedded in every feature.</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">🤖 AI-Powered</div>
+                    <div class="badge">☁️ Cloud SaaS</div>
+                    <div class="badge">🔒 CDISC Compliant</div>
+                    <div class="badge">⚡ 60-70% Faster</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Overview -->
+    <section class="platform-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>Intelligent Automation for Clinical Programming</h2>
+                    <p>ZinClin processes your Statistical Analysis Plans (SAPs) and protocol documents using advanced natural language processing to automatically generate production-ready SDTM, ADaM, and TLF code templates.</p>
+                    
+                    <ul class="overview-features">
+                        <li>Upload SAPs and protocol documents directly to the platform</li>
+                        <li>AI extracts variables, mappings, and analysis requirements</li>
+                        <li>Generate CDISC-compliant SDTM and ADaM code automatically</li>
+                        <li>Produce TLF templates with proper formatting and structure</li>
+                        <li>Review, customize, and deploy with programmer oversight</li>
+                        <li>Integrate seamlessly with existing development workflows</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-diagram">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Document Upload</h4>
+                            <p>Upload SAPs, protocols, and shell specifications</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">⬇️</div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>AI Processing</h4>
+                            <p>NLP extracts variables, mappings, and requirements</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">⬇️</div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Code Generation</h4>
+                            <p>Automated SDTM, ADaM, and TLF code creation</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">⬇️</div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Review & Deploy</h4>
+                            <p>Programmer review, customization, and deployment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="core-features">
+        <div class="container">
+            <h2>Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>SAP & Protocol Processing</h3>
+                    <p>Advanced NLP algorithms parse Statistical Analysis Plans and protocol documents to extract study design, variables, and analysis requirements.</p>
+                    <ul class="feature-benefits">
+                        <li>Automatic variable identification and classification</li>
+                        <li>Analysis population and endpoint extraction</li>
+                        <li>Statistical methodology recognition</li>
+                        <li>CDISC domain mapping suggestions</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>SDTM Code Generation</h3>
+                    <p>Generate production-ready SDTM mapping and dataset creation code that follows industry best practices and CDISC implementation guidelines.</p>
+                    <ul class="feature-benefits">
+                        <li>Compliant SDTM domain structures</li>
+                        <li>Controlled terminology implementation</li>
+                        <li>Data validation and quality checks</li>
+                        <li>Comprehensive metadata generation</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>ADaM Dataset Creation</h3>
+                    <p>Automatically generate ADaM analysis datasets with proper CDISC ADaM structure, derived variables, and analysis-ready formats.</p>
+                    <ul class="feature-benefits">
+                        <li>ADSL, ADAE, ADCM, and custom domain support</li>
+                        <li>Derived variable calculations</li>
+                        <li>Analysis flag creation</li>
+                        <li>Population subset definitions</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>TLF Template Generation</h3>
+                    <p>Create Tables, Listings, and Figures (TLF) templates with proper formatting, statistical procedures, and output specifications.</p>
+                    <ul class="feature-benefits">
+                        <li>Demographics and baseline tables</li>
+                        <li>Efficacy and safety summaries</li>
+                        <li>Listing templates with sorting</li>
+                        <li>Figure specifications and formatting</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Quality & Compliance</h3>
+                    <p>Built-in quality checks, validation rules, and compliance features ensure generated code meets regulatory and industry standards.</p>
+                    <ul class="feature-benefits">
+                        <li>CDISC compliance validation</li>
+                        <li>Code review and annotation features</li>
+                        <li>Audit trail and version control</li>
+                        <li>Regulatory submission readiness</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Workflow Integration</h3>
+                    <p>Seamlessly integrate with existing development environments, version control systems, and clinical programming workflows.</p>
+                    <ul class="feature-benefits">
+                        <li>SAS environment compatibility</li>
+                        <li>Git integration and version control</li>
+                        <li>Team collaboration features</li>
+                        <li>Project management integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2>Built on Modern Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h3>Advanced AI/ML</h3>
+                    <p>Natural Language Processing, Machine Learning models trained on clinical documentation patterns and CDISC standards.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <h3>Cloud-Native SaaS</h3>
+                    <p>Scalable, multi-tenant architecture designed for enterprise deployment with global accessibility and reliability.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Industry-standard security protocols, data encryption, compliance with pharmaceutical data protection requirements.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">📚</div>
+                    <h3>CDISC Knowledge Base</h3>
+                    <p>Comprehensive implementation of CDISC standards, controlled terminology, and regulatory guidance embedded in the platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Comparison -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Measurable Impact on Your Operations</h2>
+            <div class="benefits-comparison">
+                <div class="comparison-column">
+                    <div class="comparison-header current-state">Current Manual Process</div>
+                    <div class="comparison-content">
+                        <div class="metric">
+                            <div class="metric-label">Programming Time</div>
+                            <div class="metric-value">2-3 weeks</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Quality Issues</div>
+                            <div class="metric-value">High error rate</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Resource Requirements</div>
+                            <div class="metric-value">3-4 senior programmers</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Cost Impact</div>
+                            <div class="metric-value">$150K-200K/study</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-column">
+                    <div class="comparison-header offshore-state">Offshore Solution</div>
+                    <div class="comparison-content">
+                        <div class="metric">
+                            <div class="metric-label">Programming Time</div>
+                            <div class="metric-value">3-4 weeks + rework</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Quality Issues</div>
+                            <div class="metric-value">Communication barriers</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Resource Requirements</div>
+                            <div class="metric-value">2 local + 4 offshore</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Cost Impact</div>
+                            <div class="metric-value">$80K-120K + hidden costs</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-column">
+                    <div class="comparison-header zinclin-state">ZinClin Platform</div>
+                    <div class="comparison-content">
+                        <div class="metric">
+                            <div class="metric-label">Programming Time</div>
+                            <div class="metric-value">3-5 days initial code</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Quality Issues</div>
+                            <div class="metric-value">Consistent, high quality</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Resource Requirements</div>
+                            <div class="metric-value">1-2 local programmers</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Cost Impact</div>
+                            <div class="metric-value">$50K-80K/study</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-content">
+                <h2>See ZinClin in Action</h2>
+                <p>While ZinClin is in active development, you can experience the vision through our conceptual demonstrations and early access program.</p>
+                
+                <div class="demo-mockup">
+                    <div class="mockup-browser">
+                        <div class="browser-header">
+                            <div class="browser-dot red"></div>
+                            <div class="browser-dot yellow"></div>
+                            <div class="browser-dot green"></div>
+                        </div>
+                        <div class="browser-content">
+                            <h4>Upload Document: Statistical Analysis Plan v2.1</h4>
+                            <p><strong>Processing Status:</strong> Analyzing study design and variables...</p>
+                            
+                            <div class="code-block">
+/* Generated SDTM DM Domain Code */
+data sdtm.dm;
+    set rawdata.demographics;
+    
+    domain = "DM";
+    usubjid = catx("-", studyid, subjid);
+    rfstdtc = put(randdt, yymmdd10.);
+    
+    /* Age calculation */
+    if not missing(brthdt) and not missing(randdt) then
+        age = floor(yrdif(brthdt, randdt, 'AGE'));
+run;</div>
+                            
+                            <p><strong>Generated:</strong> 15 SDTM domains, 8 ADaM datasets, 23 TLF templates</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="contact.html" class="btn-primary">Request Early Access</a>
+                    <a href="contact.html" class="btn-secondary">Schedule Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZinClin Platform</h3>
+                    <a href="platform.html">Features & Benefits</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="contact.html">Request Demo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="about.html">Leadership Team</a>
+                    <a href="contact.html">Careers</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 admin@zingersoftwaresolutions.com</p>
+                    <p>📍 Apex, NC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transitioning from clinical programming services to AI-powered automation since 2013.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to all cards
+        document.querySelectorAll('.feature-card, .tech-card, .workflow-step').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

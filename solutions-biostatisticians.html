@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZinClin for Biostatisticians | Enhanced Collaboration & Faster Deliverables | Zinger Software Solutions</title>
+    <meta name="description" content="ZinClin helps biostatisticians accelerate study timelines through faster programming collaboration, improved quality control, and streamlined statistical deliverables.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: #b8d4f0;
+            font-weight: normal;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Page Header */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .biostat-benefits {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .biostat-benefits li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .biostat-benefits li::before {
+            content: '📊';
+            position: absolute;
+            left: 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1f4788;
+        }
+
+        .workflow-visual {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .workflow-item {
+            background: white;
+            color: #333;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .workflow-icon {
+            background: #4ecdc4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .workflow-text {
+            flex: 1;
+        }
+
+        .workflow-text h4 {
+            color: #1f4788;
+            margin-bottom: 0.3rem;
+        }
+
+        .workflow-text p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Collaboration Benefits */
+        .collaboration-benefits {
+            padding: 4rem 0;
+        }
+
+        .collaboration-benefits h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4ecdc4;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-stats {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+
+        /* Timeline Improvement */
+        .timeline-improvement {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+        }
+
+        .timeline-improvement h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-comparison {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .timeline-side {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+        }
+
+        .timeline-side h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .phase-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .phase-list li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phase-name {
+            font-weight: 500;
+        }
+
+        .phase-duration {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .traditional-duration {
+            color: #ffcccb;
+        }
+
+        .zinclin-duration {
+            color: #90EE90;
+        }
+
+        .total-row {
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Quality Control */
+        .quality-control {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .quality-control h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .quality-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .quality-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .quality-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .quality-card h4 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .quality-metrics {
+            background: #e8f9f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .quality-metrics h5 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Use Cases */
+        .use-cases {
+            padding: 4rem 0;
+        }
+
+        .use-cases h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, #1f4788, #2558a0);
+            color: white;
+            padding: 2rem;
+        }
+
+        .case-type {
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-content {
+            padding: 2rem;
+        }
+
+        .case-impact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-metric {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .impact-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f4788;
+        }
+
+        /* Integration */
+        .integration {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .integration h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .integration-flow {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            background: #4ecdc4;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 2rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-benefit {
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content, .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .flow-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>ZinClin for Biostatisticians</h1>
+                    <p class="hero-subtitle">Accelerate study timelines through enhanced collaboration with programming teams, improved quality control, and streamlined statistical deliverables.</p>
+                    
+                    <ul class="biostat-benefits">
+                        <li>Faster iteration cycles between SAP updates and programming</li>
+                        <li>Consistent implementation of statistical methodologies</li>
+                        <li>Reduced time spent on programming quality reviews</li>
+                        <li>Earlier identification of data and analysis issues</li>
+                    </ul>
+                    
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn-primary">Join Early Access</a>
+                        <a href="contact.html" class="btn-secondary">See Workflow Impact</a>
+                    </div>
+                </div>
+                
+                <div class="workflow-visual">
+                    <h3 style="margin-bottom: 2rem; text-align: center;">Enhanced Biostatistician Workflow</h3>
+                    
+                    <div class="workflow-item">
+                        <div class="workflow-icon">1</div>
+                        <div class="workflow-text">
+                            <h4>SAP Upload</h4>
+                            <p>Upload SAP to ZinClin for automated analysis plan interpretation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item">
+                        <div class="workflow-icon">2</div>
+                        <div class="workflow-text">
+                            <h4>Rapid Programming</h4>
+                            <p>Programming team generates initial code in hours, not weeks</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item">
+                        <div class="workflow-icon">3</div>
+                        <div class="workflow-text">
+                            <h4>Real-time Review</h4>
+                            <p>Review and validate statistical implementation same day</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item">
+                        <div class="workflow-icon">4</div>
+                        <div class="workflow-text">
+                            <h4>Quick Iterations</h4>
+                            <p>Rapid SAP revisions with immediate programming updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Benefits -->
+    <section class="collaboration-benefits">
+        <div class="container">
+            <h2>Enhanced Team Collaboration</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Accelerated Timelines</h3>
+                    <p>Reduce the time between SAP finalization and programming completion by 60-70%, enabling faster database lock and earlier interim analyses.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">SAP to Code</span>
+                            <span class="stat-value">3-5 days vs 2-3 weeks</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Revision Cycles</span>
+                            <span class="stat-value">Same day vs 1-2 weeks</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Quality Review</span>
+                            <span class="stat-value">50% faster</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Improved Implementation Accuracy</h3>
+                    <p>Ensure statistical methods are implemented correctly with automated CDISC-compliant code generation that follows your SAP specifications precisely.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Implementation Errors</span>
+                            <span class="stat-value">-80%</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">CDISC Compliance</span>
+                            <span class="stat-value">100% consistent</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">QC Findings</span>
+                            <span class="stat-value">-60%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Better Resource Utilization</h3>
+                    <p>Focus your time on high-value statistical analysis and interpretation rather than programming oversight and quality control activities.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Programming Oversight</span>
+                            <span class="stat-value">-70% time</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Statistical Analysis</span>
+                            <span class="stat-value">+50% focus</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Study Capacity</span>
+                            <span class="stat-value">+40%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Seamless SAP Iterations</h3>
+                    <p>Make SAP revisions with confidence knowing that programming updates can be generated and validated within hours rather than waiting weeks.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">SAP Update Cycle</span>
+                            <span class="stat-value">Same day</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Programming Rework</span>
+                            <span class="stat-value">Automated</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Version Control</span>
+                            <span class="stat-value">Integrated</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Enhanced Quality Control</h3>
+                    <p>Benefit from consistent, standardized programming approaches that make quality review more efficient and comprehensive.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Review Time</span>
+                            <span class="stat-value">-50%</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Code Consistency</span>
+                            <span class="stat-value">Standardized</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Documentation</span>
+                            <span class="stat-value">Auto-generated</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Competitive Advantage</h3>
+                    <p>Deliver study results faster than competitors while maintaining superior quality, giving your organization a significant market advantage.</p>
+                    <div class="benefit-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Time to Market</span>
+                            <span class="stat-value">2-4 weeks faster</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Client Satisfaction</span>
+                            <span class="stat-value">Higher</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Cost Efficiency</span>
+                            <span class="stat-value">40% improvement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Improvement -->
+    <section class="timeline-improvement">
+        <div class="container">
+            <h2>Dramatic Timeline Improvements</h2>
+            <div class="timeline-comparison">
+                <div class="timeline-grid">
+                    <div class="timeline-side">
+                        <h3>Traditional Process</h3>
+                        <ul class="phase-list">
+                            <li>
+                                <span class="phase-name">SAP Finalization</span>
+                                <span class="phase-duration traditional-duration">2 weeks</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Programming Assignment</span>
+                                <span class="phase-duration traditional-duration">1 week</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Initial Programming</span>
+                                <span class="phase-duration traditional-duration">3-4 weeks</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Biostat QC Review</span>
+                                <span class="phase-duration traditional-duration">1-2 weeks</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Programming Revisions</span>
+                                <span class="phase-duration traditional-duration">1-2 weeks</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Final QC & Sign-off</span>
+                                <span class="phase-duration traditional-duration">1 week</span>
+                            </li>
+                            <li class="total-row">
+                                <span class="phase-name">Total Timeline</span>
+                                <span class="phase-duration traditional-duration">9-12 weeks</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-side">
+                        <h3>ZinClin Enhanced Process</h3>
+                        <ul class="phase-list">
+                            <li>
+                                <span class="phase-name">SAP Upload to ZinClin</span>
+                                <span class="phase-duration zinclin-duration">1 day</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">AI Code Generation</span>
+                                <span class="phase-duration zinclin-duration">2-4 hours</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Programmer Review & Customization</span>
+                                <span class="phase-duration zinclin-duration">3-5 days</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Biostat Review & Validation</span>
+                                <span class="phase-duration zinclin-duration">2-3 days</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Revisions (if needed)</span>
+                                <span class="phase-duration zinclin-duration">1-2 days</span>
+                            </li>
+                            <li>
+                                <span class="phase-name">Final Validation</span>
+                                <span class="phase-duration zinclin-duration">1 day</span>
+                            </li>
+                            <li class="total-row">
+                                <span class="phase-name">Total Timeline</span>
+                                <span class="phase-duration zinclin-duration">2-3 weeks</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Result: 70% Timeline Reduction</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">From 9-12 weeks to 2-3 weeks for programming deliverables</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Control Features -->
+    <section class="quality-control">
+        <div class="container">
+            <h2>Enhanced Quality Control Capabilities</h2>
+            <div class="quality-features">
+                <div class="quality-card">
+                    <div class="quality-icon">🔍</div>
+                    <h4>Automated Compliance Checks</h4>
+                    <p>Built-in CDISC validation ensures every generated dataset meets regulatory standards before your review.</p>
+                    <div class="quality-metrics">
+                        <h5>Quality Improvements:</h5>
+                        <p>• 100% CDISC compliance<br>• Automated domain validation<br>• Controlled terminology checks</p>
+                    </div>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">📝</div>
+                    <h4>Comprehensive Documentation</h4>
+                    <p>Automatically generated code documentation and derivation logic make review and validation more efficient.</p>
+                    <div class="quality-metrics">
+                        <h5>Documentation Features:</h5>
+                        <p>• Auto-generated metadata<br>• Derivation specifications<br>• Audit trail maintenance</p>
+                    </div>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">⚡</div>
+                    <h4>Rapid Issue Resolution</h4>
+                    <p>Identify and resolve statistical implementation issues in real-time rather than waiting for traditional QC cycles.</p>
+                    <div class="quality-metrics">
+                        <h5>Resolution Speed:</h5>
+                        <p>• Same-day issue identification<br>• Immediate code updates<br>• Rapid re-validation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <h2>Real-World Success Scenarios</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-type">Phase III Oncology Study</div>
+                        <h4>Accelerated Interim Analysis</h4>
+                    </div>
+                    <div class="case-content">
+                        <p>A biostatistician needed to implement urgent SAP revisions for an interim efficacy analysis. Using ZinClin, programming updates were completed in 2 days instead of the usual 2-3 weeks.</p>
+                        <div class="case-impact">
+                            <div class="impact-metric">
+                                <div class="impact-value">85%</div>
+                                <div>Timeline Reduction</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="impact-value">3 weeks</div>
+                                <div>Earlier Analysis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-type">Multiple Studies Portfolio</div>
+                        <h4>Resource Optimization</h4>
+                    </div>
+                    <div class="case-content">
+                        <p>A senior biostatistician managing 5 concurrent studies reduced programming oversight time by 60%, allowing focus on complex statistical methodology and regulatory interactions.</p>
+                        <div class="case-impact">
+                            <div class="impact-metric">
+                                <div class="impact-value">60%</div>
+                                <div>Less Oversight Time</div>
+                            </div>
+                            <div class="impact-metric">
+                                <div class="impact-value">2x</div>
+                                <div>Study Capacity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Flow -->
+    <section class="integration">
+        <div class="container">
+            <h2>Simple Integration with Your Current Process</h2>
+            <div class="integration-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Upload Your SAP</h4>
+                        <p>Simply upload your Statistical Analysis Plan to ZinClin as you would to any document management system.</p>
+                        <div class="step-benefit">Benefit: Zero change to your SAP development process</div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Review Generated Structure</h4>
+                        <p>Review the automatically extracted analysis plan structure and variable mappings within hours of upload.</p>
+                        <div class="step-benefit">Benefit: Immediate validation of programming interpretation</div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Collaborate on Code Review</h4>
+                        <p>Work with your programming team to review and validate the generated SDTM, ADaM, and TLF code.</p>
+                        <div class="step-benefit">Benefit: Enhanced collaboration with consistent code quality</div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Approve and Deploy</h4>
+                        <p>Final validation and approval of production-ready code with comprehensive documentation and audit trails.</p>
+                        <div class="step-benefit">Benefit: Faster sign-off with complete quality assurance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Accelerate Your Study Timelines?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem;">Join biostatisticians who are reducing programming cycles from weeks to days while improving quality and collaboration.</p>
+            
+            <div>
+                <a href="contact.html" class="btn-primary">Join Early Access</a>
+                <a href="contact.html" class="btn-secondary">Request Workflow Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">Features & Benefits</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="contact.html">Request Demo</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="about.html">Leadership Team</a>
+                    <a href="contact.html">Careers</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 admin@zingersoftwaresolutions.com</p>
+                    <p>📍 Apex, NC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Accelerating biostatistician workflows through AI-enhanced collaboration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to all cards
+        document.querySelectorAll('.benefit-card, .quality-card, .case-card, .flow-step').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

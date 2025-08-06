@@ -48,6 +48,13 @@
             font-weight: bold;
             color: #4ecdc4;
         }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: #b8d4f0;
+            font-weight: normal;
+            margin-top: -5px;
+        }
 
         .nav-links {
             display: flex;
@@ -193,7 +200,102 @@
             margin-bottom: 1rem;
         }
 
-        /* Problem/Solution */
+        /* SaaS Model */
+        .saas-model {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+        }
+
+        .saas-model h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .saas-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .saas-feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .saas-feature h4 {
+            color: #4ecdc4;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Evolution Story */
+        .evolution {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .evolution h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .evolution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .evolution-text h3 {
+            color: #1f4788;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .evolution-timeline {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .timeline-icon {
+            background: #4ecdc4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .timeline-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
         .problem-solution {
             padding: 4rem 0;
         }
@@ -379,7 +481,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">ZinClin</div>
+                <div class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </div>
                 <nav class="nav-links">
                     <a href="#platform">Platform</a>
                     <a href="#solutions">Solutions</a>
@@ -394,11 +499,11 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI-Driven Platform Empowering Clinical Programming Teams</h1>
-            <p class="subtitle">Make local clinical programming teams cost-competitive with offshore providers while enhancing efficiency by 60-70%. Built by programmers, for programmers.</p>
+            <h1>AI-Driven SaaS Platform Empowering Clinical Programming Teams</h1>
+            <p class="subtitle">Cloud-based subscription service delivering AI-powered clinical programming automation to biotechs and CROs worldwide. Built by the team that has provided these services for 12+ years, we're transitioning from manual service delivery to scalable SaaS automation that makes local teams cost-competitive with offshore providers while enhancing efficiency by 60-70%.</p>
             <div class="hero-ctas">
                 <a href="#early-access" class="btn-primary">Join Early Access Program</a>
-                <a href="#learn-more" class="btn-secondary">Schedule Strategy Call</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
@@ -422,6 +527,77 @@
                     <div class="prop-icon">📈</div>
                     <h3>Multiply Efficiency</h3>
                     <p>Achieve 60-70% efficiency gains with the same team size. Enhance your programmers' value, don't replace them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Model -->
+    <section class="saas-model">
+        <div class="container">
+            <h2>Scalable SaaS Business Model</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">ZinClin is a cloud-based Software-as-a-Service platform designed for recurring subscription revenue and global scalability.</p>
+            <div class="saas-features">
+                <div class="saas-feature">
+                    <h4>🌐 Cloud-Based Platform</h4>
+                    <p>Multi-tenant SaaS architecture serving clients globally with secure, scalable infrastructure</p>
+                </div>
+                <div class="saas-feature">
+                    <h4>💰 Subscription Revenue</h4>
+                    <p>Recurring monthly/annual subscriptions providing predictable, scalable revenue growth</p>
+                </div>
+                <div class="saas-feature">
+                    <h4>🏢 Enterprise Ready</h4>
+                    <p>Multi-user organizations, role-based access, and enterprise-grade security and compliance</p>
+                </div>
+                <div class="saas-feature">
+                    <h4>📈 Scalable Business</h4>
+                    <p>Serving multiple biotech and CRO clients simultaneously with high-margin software delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Story -->
+    <section class="evolution">
+        <div class="container">
+            <h2>From Services to Innovation</h2>
+            <div class="evolution-content">
+                <div class="evolution-text">
+                    <h3>Why ZinClin Works: Born from Real-World Experience</h3>
+                    <p>For over 12 years, Zinger Software Solutions has been providing clinical programming services and technical staffing to biotechs and CROs. We've delivered exactly what ZinClin now automates.</p>
+                    <p><strong>We're not guessing at market needs</strong> – we've been fulfilling them manually for over a decade. ZinClin represents our evolution from providing services to automating the expertise our clients have relied on.</p>
+                    <p>This transition allows us to scale solutions instead of just delivering services, while empowering local teams with the efficiency they need to compete.</p>
+                </div>
+                <div class="evolution-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">1</div>
+                        <div class="timeline-content">
+                            <h4>2013-2025: Service Excellence</h4>
+                            <p>12+ years providing clinical programming and technical staffing services</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">2</div>
+                        <div class="timeline-content">
+                            <h4>Market Pain Points Identified</h4>
+                            <p>Saw clients struggling with offshore costs, quality, and communication</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">3</div>
+                        <div class="timeline-content">
+                            <h4>AI Innovation</h4>
+                            <p>Developed ZinClin to automate the expertise we've provided manually</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">4</div>
+                        <div class="timeline-content">
+                            <h4>Product Transition</h4>
+                            <p>Scaling from service delivery to product innovation</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -468,7 +644,7 @@
                 <button type="submit">Join Early Access</button>
             </form>
             <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                Or <a href="tel:919-561-7379" style="color: #4ecdc4;">call us at 919-561-7379</a> to schedule a strategy call
+                Or <a href="mailto:admin@zingersoftwaresolutions.com" style="color: #4ecdc4;">email us</a> for more information
             </p>
         </div>
     </section>
@@ -498,12 +674,11 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <p>📧 admin@zingersoftwaresolutions.com</p>
-                    <p>📞 919-561-7379</p>
-                    <p>📍 Morrisville, NC</p>
+                    <p>📍 Apex, NC</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Empowering clinical programming teams since 2013.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transitioning from clinical programming services to AI-powered automation since 2013.</p>
             </div>
         </div>
     </footer>
