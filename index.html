@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin - AI-Driven Clinical Programming Platform | Zinger Software Solutions</title>
-    <meta name="description" content="Make local clinical programming teams cost-competitive with AI-powered automation. Reduce offshore dependency while enhancing programmer efficiency by 60-70%.">
+    <title>ZinClin | AI-Powered Clinical Programming Automation | Zinger Software Solutions</title>
+    <meta name="description" content="ZinClin empowers clinical programming teams with AI-driven automation. Reduce offshore dependency, enhance efficiency by 60-70%, and accelerate SDTM/ADaM deliverables.">
     
     <style>
         /* Reset and Base Styles */
@@ -47,6 +47,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #4ecdc4;
+            text-decoration: none;
         }
         
         .logo-sub {
@@ -69,7 +70,7 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover, .nav-links a.active {
             color: #4ecdc4;
         }
 
@@ -96,30 +97,72 @@
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 4rem 0;
-            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero h1 {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
         }
 
-        .hero .subtitle {
+        .hero-subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .hero-ctas {
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .hero-cta {
             display: flex;
             gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
 
         .btn-primary {
@@ -157,6 +200,49 @@
             color: #1f4788;
         }
 
+        .hero-visual {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .mockup-screen {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .mockup-title {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .mockup-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .mockup-item {
+            background: #f8f9fa;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .mockup-arrow {
+            font-size: 2rem;
+            color: #4ecdc4;
+            margin: 1rem 0;
+        }
+
         /* Value Propositions */
         .value-props {
             padding: 4rem 0;
@@ -173,13 +259,13 @@
         .props-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .prop-card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
+            padding: 2.5rem;
+            border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             text-align: center;
             transition: transform 0.3s ease;
@@ -190,8 +276,12 @@
         }
 
         .prop-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .prop-card h3 {
@@ -200,201 +290,198 @@
             margin-bottom: 1rem;
         }
 
-        /* SaaS Model */
-        .saas-model {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-        }
-
-        .saas-model h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .saas-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .saas-feature {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .saas-feature h4 {
+        .prop-card .benefit {
             color: #4ecdc4;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Evolution Story */
-        .evolution {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .evolution h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .evolution-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .evolution-text h3 {
-            color: #1f4788;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .evolution-timeline {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .timeline-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .timeline-icon {
-            background: #4ecdc4;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-weight: bold;
-            margin-right: 1rem;
-            flex-shrink: 0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
-        .timeline-content h4 {
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
+        /* Problem Solution */
         .problem-solution {
             padding: 4rem 0;
-        }
-
-        .problem-solution h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
         }
 
         .ps-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
-        .ps-content h3 {
-            color: #1f4788;
+        .problem-side {
+            background: #ffe6e6;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .solution-side {
+            background: #e8f9f5;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #4ecdc4;
+        }
+
+        .ps-title {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            color: #1f4788;
         }
 
-        .ps-content ul {
+        .ps-list {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
         }
 
-        .ps-content li {
-            padding: 0.5rem 0;
+        .ps-list li {
+            margin-bottom: 1rem;
             padding-left: 1.5rem;
             position: relative;
         }
 
-        .ps-content li:before {
-            content: "✗";
-            color: #e74c3c;
+        .problem-side .ps-list li::before {
+            content: '❌';
             position: absolute;
             left: 0;
-            font-weight: bold;
         }
 
-        .solution li:before {
-            content: "✓";
-            color: #4ecdc4;
+        .solution-side .ps-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
         }
 
-        /* Early Access */
-        .early-access {
+        /* Target Audiences */
+        .target-audiences {
+            padding: 4rem 0;
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
-            text-align: center;
         }
 
-        .early-access h2 {
+        .target-audiences h2 {
+            text-align: center;
             font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .audiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-card h3 {
+            color: #4ecdc4;
             margin-bottom: 1rem;
         }
 
-        .early-access p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+        /* Social Proof */
+        .social-proof {
+            padding: 4rem 0;
+            background: #f8f9fa;
         }
 
-        .access-form {
-            max-width: 500px;
+        .social-proof h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .proof-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .proof-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .proof-label {
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-form {
+            max-width: 600px;
             margin: 0 auto;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
         }
 
-        .access-form input {
-            flex: 1;
-            min-width: 250px;
+        .cta-form h3 {
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
             padding: 1rem;
             border: none;
             border-radius: 5px;
             font-size: 1rem;
         }
 
-        .access-form button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .access-form button:hover {
-            background: #45b5aa;
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: 3px solid rgba(31, 71, 136, 0.3);
         }
 
         /* Footer */
@@ -434,33 +521,6 @@
             color: #bdc3c7;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .ps-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .access-form {
-                flex-direction: column;
-            }
-            
-            .access-form input {
-                min-width: 100%;
-            }
-        }
-
         /* Development Stage Banner */
         .dev-banner {
             background: #f39c12;
@@ -469,9 +529,43 @@
             padding: 0.5rem;
             font-weight: bold;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .ps-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- ⚠️ IMPORTANT NOTE: This homepage was recreated unnecessarily. 
+         USE THE EXISTING index.html from the project files instead.
+         This version is provided for reference only. -->
+    
     <!-- Development Banner -->
     <div class="dev-banner">
         🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
@@ -481,17 +575,17 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     ZinClin
                     <div class="logo-sub">by Zinger Software Solutions</div>
-                </div>
+                </a>
                 <nav class="nav-links">
-                    <a href="#platform">Platform</a>
-                    <a href="#solutions">Solutions</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="platform.html">Platform</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
-                <a href="#early-access" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
             </div>
         </div>
     </header>
@@ -499,11 +593,54 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>AI-Driven SaaS Platform Empowering Clinical Programming Teams</h1>
-            <p class="subtitle">Cloud-based subscription service delivering AI-powered clinical programming automation to biotechs and CROs worldwide. Built by the team that has provided these services for 12+ years, we're transitioning from manual service delivery to scalable SaaS automation that makes local teams cost-competitive with offshore providers while enhancing efficiency by 60-70%.</p>
-            <div class="hero-ctas">
-                <a href="#early-access" class="btn-primary">Join Early Access Program</a>
-                <a href="#contact" class="btn-secondary">Contact Us</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>AI-Driven Platform Empowering Clinical Programming Teams</h1>
+                    <p class="hero-subtitle">Reduce offshore dependency while enhancing local team efficiency by 60-70%. Make your programming teams cost-competitive through intelligent automation.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">60-70%</span>
+                            <span class="stat-label">Efficiency Gains</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$5B+</span>
+                            <span class="stat-label">Market Opportunity</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn-primary">Join Early Access</a>
+                        <a href="platform.html" class="btn-secondary">See Platform</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="mockup-screen">
+                        <div class="mockup-title">Upload SAP Document</div>
+                        <div class="mockup-content">
+                            <div class="mockup-item">📄 Protocol Analysis</div>
+                            <div class="mockup-item">📊 Variables Identified</div>
+                            <div class="mockup-item">🔍 CDISC Mapping</div>
+                            <div class="mockup-item">⚙️ Code Generation</div>
+                        </div>
+                    </div>
+                    <div class="mockup-arrow">⬇️</div>
+                    <div class="mockup-screen">
+                        <div class="mockup-title">Generated SDTM/ADaM Code</div>
+                        <div style="text-align: left; font-family: monospace; font-size: 0.8rem; color: #1f4788;">
+                            proc sql;<br>
+                            &nbsp;&nbsp;create table work.dm as<br>
+                            &nbsp;&nbsp;select * from rawdata.demographics<br>
+                            &nbsp;&nbsp;where usubjid is not null;<br>
+                            quit;
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -511,141 +648,165 @@
     <!-- Value Propositions -->
     <section class="value-props">
         <div class="container">
-            <h2>Transform Your Programming Economics</h2>
+            <h2>Transform Your Clinical Programming Operations</h2>
             <div class="props-grid">
                 <div class="prop-card">
-                    <div class="prop-icon">🏆</div>
+                    <div class="prop-icon">🎯</div>
                     <h3>Onshore Excellence</h3>
-                    <p>Make local teams cost-competitive with offshore providers while maintaining superior quality, control, and communication.</p>
+                    <div class="benefit">Make local teams cost-competitive</div>
+                    <p>Eliminate offshore communication barriers, quality issues, and hidden costs while empowering your local programming talent with AI-powered efficiency.</p>
                 </div>
+                
                 <div class="prop-card">
                     <div class="prop-icon">⚡</div>
                     <h3>Accelerate Timelines</h3>
-                    <p>Generate production-ready SDTM, ADaM, and TLF starter code in hours, not weeks. Focus on customization, not repetitive setup.</p>
+                    <div class="benefit">Generate starter code in hours, not weeks</div>
+                    <p>Transform SAPs and protocols into production-ready SDTM, ADaM, and TLF code templates automatically, dramatically reducing initial programming time.</p>
                 </div>
+                
                 <div class="prop-card">
                     <div class="prop-icon">📈</div>
                     <h3>Multiply Efficiency</h3>
-                    <p>Achieve 60-70% efficiency gains with the same team size. Enhance your programmers' value, don't replace them.</p>
+                    <div class="benefit">60-70% efficiency gains, same team size</div>
+                    <p>Enable your existing programmers to handle significantly more projects while focusing on high-value customization and validation tasks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SaaS Model -->
-    <section class="saas-model">
-        <div class="container">
-            <h2>Scalable SaaS Business Model</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">ZinClin is a cloud-based Software-as-a-Service platform designed for recurring subscription revenue and global scalability.</p>
-            <div class="saas-features">
-                <div class="saas-feature">
-                    <h4>🌐 Cloud-Based Platform</h4>
-                    <p>Multi-tenant SaaS architecture serving clients globally with secure, scalable infrastructure</p>
-                </div>
-                <div class="saas-feature">
-                    <h4>💰 Subscription Revenue</h4>
-                    <p>Recurring monthly/annual subscriptions providing predictable, scalable revenue growth</p>
-                </div>
-                <div class="saas-feature">
-                    <h4>🏢 Enterprise Ready</h4>
-                    <p>Multi-user organizations, role-based access, and enterprise-grade security and compliance</p>
-                </div>
-                <div class="saas-feature">
-                    <h4>📈 Scalable Business</h4>
-                    <p>Serving multiple biotech and CRO clients simultaneously with high-margin software delivery</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Evolution Story -->
-    <section class="evolution">
-        <div class="container">
-            <h2>From Services to Innovation</h2>
-            <div class="evolution-content">
-                <div class="evolution-text">
-                    <h3>Why ZinClin Works: Born from Real-World Experience</h3>
-                    <p>For over 12 years, Zinger Software Solutions has been providing clinical programming services and technical staffing to biotechs and CROs. We've delivered exactly what ZinClin now automates.</p>
-                    <p><strong>We're not guessing at market needs</strong> – we've been fulfilling them manually for over a decade. ZinClin represents our evolution from providing services to automating the expertise our clients have relied on.</p>
-                    <p>This transition allows us to scale solutions instead of just delivering services, while empowering local teams with the efficiency they need to compete.</p>
-                </div>
-                <div class="evolution-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-icon">1</div>
-                        <div class="timeline-content">
-                            <h4>2013-2025: Service Excellence</h4>
-                            <p>12+ years providing clinical programming and technical staffing services</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">2</div>
-                        <div class="timeline-content">
-                            <h4>Market Pain Points Identified</h4>
-                            <p>Saw clients struggling with offshore costs, quality, and communication</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">3</div>
-                        <div class="timeline-content">
-                            <h4>AI Innovation</h4>
-                            <p>Developed ZinClin to automate the expertise we've provided manually</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-icon">4</div>
-                        <div class="timeline-content">
-                            <h4>Product Transition</h4>
-                            <p>Scaling from service delivery to product innovation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem/Solution -->
+    <!-- Problem vs Solution -->
     <section class="problem-solution">
         <div class="container">
-            <h2>The Clinical Programming Challenge</h2>
             <div class="ps-grid">
-                <div class="ps-content problem">
-                    <h3>Current Pain Points</h3>
-                    <ul>
-                        <li>High offshore hidden costs (communication, rework, oversight)</li>
-                        <li>Quality control and compliance issues</li>
-                        <li>Time zone communication barriers</li>
-                        <li>Local teams can't compete on cost</li>
-                        <li>Repetitive manual coding tasks</li>
-                        <li>Long turnaround times for deliverables</li>
+                <div class="problem-side">
+                    <h3 class="ps-title">The Offshore Challenge</h3>
+                    <ul class="ps-list">
+                        <li>Communication barriers and time zone issues</li>
+                        <li>Quality control and rework cycles</li>
+                        <li>Data security and compliance concerns</li>
+                        <li>Hidden costs of oversight and management</li>
+                        <li>Loss of tribal knowledge and control</li>
+                        <li>Long feedback loops and delays</li>
                     </ul>
                 </div>
-                <div class="ps-content solution">
-                    <h3>ZinClin Solution</h3>
-                    <ul>
-                        <li>AI-powered automation of Mock Shell & SAP processing</li>
-                        <li>Production-ready SDTM, ADaM, and TLF code generation</li>
-                        <li>Built-in CDISC compliance and best practices</li>
-                        <li>Local control with faster communication</li>
-                        <li>Enhanced programmer productivity and value</li>
-                        <li>Dramatically reduced time-to-deliverable</li>
+                
+                <div class="solution-side">
+                    <h3 class="ps-title">The ZinClin Solution</h3>
+                    <ul class="ps-list">
+                        <li>Local teams with AI-powered efficiency</li>
+                        <li>Consistent, high-quality code generation</li>
+                        <li>Complete data control and security</li>
+                        <li>Transparent costs with predictable ROI</li>
+                        <li>Enhanced team capabilities and knowledge</li>
+                        <li>Real-time collaboration and feedback</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Early Access -->
-    <section class="early-access" id="early-access">
+    <!-- Target Audiences -->
+    <section class="target-audiences">
         <div class="container">
-            <h2>Get Early Access to ZinClin</h2>
-            <p>Be among the first to experience AI-enhanced clinical programming. Join our beta program for exclusive access and input on product development.</p>
-            <form class="access-form" action="#" method="POST">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Join Early Access</button>
-            </form>
-            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                Or <a href="mailto:admin@zingersoftwaresolutions.com" style="color: #4ecdc4;">email us</a> for more information
-            </p>
+            <h2>Built for Clinical Programming Professionals</h2>
+            <div class="audiences-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👨‍💻</div>
+                    <h3>Statistical Programmers</h3>
+                    <p>Enhance your productivity and focus on high-value work. Generate initial code structures automatically and spend more time on validation and optimization.</p>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">📊</div>
+                    <h3>Biostatisticians</h3>
+                    <p>Accelerate study deliverables with faster programming turnarounds. Maintain quality control while improving collaboration with programming teams.</p>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">🏢</div>
+                    <h3>Biotech Companies</h3>
+                    <p>Reduce programming costs without sacrificing quality. Keep sensitive data in-house while competing effectively with offshore pricing models.</p>
+                </div>
+                
+                <div class="audience-card">
+                    <div class="audience-icon">🔬</div>
+                    <h3>CROs</h3>
+                    <p>Differentiate your services with faster turnarounds and superior quality. Eliminate offshore management overhead while improving client satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Built on Proven Industry Expertise</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-number">12+</div>
+                    <div class="proof-label">Years in Clinical Programming</div>
+                    <p>Zinger Software Solutions has delivered clinical programming services since 2013</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-number">100+</div>
+                    <div class="proof-label">Successful Project Deliveries</div>
+                    <p>Proven track record of quality deliverables for biotechs and CROs</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-number">24+</div>
+                    <div class="proof-label">Years Founder Experience</div>
+                    <p>Deep expertise in SAS programming, CDISC standards, and regulatory submissions</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-number">$5B+</div>
+                    <div class="proof-label">Market Opportunity</div>
+                    <p>Addressing the massive clinical data services market with AI innovation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Programming Operations?</h2>
+            <div class="cta-form">
+                <h3>Join Our Early Access Program</h3>
+                <form id="hero-signup" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="role" required>
+                            <option value="">Select Your Role</option>
+                            <option value="statistical-programmer">Statistical Programmer</option>
+                            <option value="biostatistician">Biostatistician</option>
+                            <option value="data-manager">Clinical Data Manager</option>
+                            <option value="director-manager">Director/Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Get Early Access</button>
+                </form>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                    Be first to experience ZinClin when beta testing begins in Q2 2025
+                </p>
+            </div>
         </div>
     </section>
 
@@ -655,21 +816,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>ZinClin Platform</h3>
-                    <a href="#features">Features & Benefits</a>
-                    <a href="#early-access">Early Access Program</a>
-                    <a href="#demo">Request Demo</a>
+                    <a href="platform.html">Features & Benefits</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="contact.html">Request Demo</a>
                 </div>
                 <div class="footer-section">
                     <h3>Solutions</h3>
-                    <a href="#biotechs">For Biotechs</a>
-                    <a href="#cros">For CROs</a>
-                    <a href="#programmers">For Programmers</a>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
-                    <a href="#about">About Zinger Software Solutions</a>
-                    <a href="#leadership">Leadership Team</a>
-                    <a href="#careers">Careers</a>
+                    <a href="about.html">About Us</a>
+                    <a href="about.html">Leadership Team</a>
+                    <a href="contact.html">Careers</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -683,13 +844,23 @@
         </div>
     </footer>
 
-    <!-- Simple JavaScript for form handling -->
+    <!-- JavaScript -->
     <script>
-        document.querySelector('.access-form').addEventListener('submit', function(e) {
+        // Hero form submission
+        document.getElementById('hero-signup').addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            alert('Thank you for your interest! We\'ll be in touch soon about early access to ZinClin.');
-            // In production, this would integrate with your email marketing system
+            
+            const formData = new FormData(this);
+            const firstName = formData.get('firstName');
+            const email = formData.get('email');
+            
+            if (!firstName || !email) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            alert(`Thank you ${firstName}! You've been added to our early access program. We'll notify you when beta testing begins in Q2 2025.`);
+            this.reset();
         });
 
         // Smooth scrolling for anchor links
@@ -704,6 +875,29 @@
                     });
                 }
             });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to all cards
+        document.querySelectorAll('.prop-card, .audience-card, .proof-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
