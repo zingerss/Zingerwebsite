@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About ZinClin & Zinger Software Solutions | Company Story & Leadership</title>
-    <meta name="description" content="Learn about Zinger Software Solutions' evolution from clinical programming services to ZinClin AI platform. Meet our leadership team with 24+ years experience.">
+    <title>About ZinClin - Zinger Software Solutions Evolution to Module 1 SDTM Automation Beta Q4 2025</title>
+    <meta name="description" content="Zinger Software Solutions evolution to ZinClin SaaS platform. 12+ years clinical programming expertise. Module 1 SDTM automation Q4 2025.">
     
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -23,73 +22,77 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
+        }
+
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 1rem 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #4ecdc4;
+            color: #1f4788;
             text-decoration: none;
         }
-        
+
         .logo-sub {
-            font-size: 0.9rem;
-            color: #b8d4f0;
+            font-size: 0.7rem;
+            color: #4ecdc4;
             font-weight: normal;
-            margin-top: -5px;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
+            color: #333;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #4ecdc4;
         }
 
         .cta-button {
             background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.7rem 1.5rem;
-            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .cta-button:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
         }
 
         /* Page Header */
@@ -154,6 +157,144 @@
             font-size: 1rem;
         }
 
+        /* Evolution Timeline */
+        .evolution-timeline {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .evolution-timeline h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4ecdc4;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 1rem 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #4ecdc4;
+            border: 4px solid #4ecdc4;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: white;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-year {
+            background: #1f4788;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        /* Module Development */
+        .module-development {
+            padding: 4rem 0;
+        }
+
+        .module-development h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .development-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .development-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .module-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .development-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .development-status {
+            background: #f39c12;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .status-development {
+            background: #95a5a6;
+        }
+
+        .status-consideration {
+            background: #34495e;
+        }
+
         /* SaaS Business Model */
         .saas-business {
             padding: 4rem 0;
@@ -187,202 +328,166 @@
             border-radius: 10px;
         }
 
-        .saas-metric h4 {
-            font-size: 1.5rem;
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
             margin-bottom: 0.5rem;
         }
 
-        /* Leadership */
-        .leadership {
-            padding: 4rem 0;
-            background: #f8f9fa;
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
-        .leadership h2 {
+        /* Leadership Team */
+        .leadership-team {
+            padding: 4rem 0;
+        }
+
+        .leadership-team h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .leaders-grid {
+        .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .leader-card {
+        .team-member {
             background: white;
-            padding: 2.5rem;
-            border-radius: 10px;
+            padding: 2rem;
+            border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             text-align: center;
         }
 
-        .leader-avatar {
-            width: 120px;
-            height: 120px;
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: #4ecdc4;
             border-radius: 50%;
-            background: linear-gradient(135deg, #1f4788, #4ecdc4);
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: white;
-            font-weight: bold;
         }
 
-        .leader-card h3 {
+        .team-member h3 {
             color: #1f4788;
-            font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
-        .leader-title {
+        .member-title {
             color: #4ecdc4;
             font-weight: bold;
             margin-bottom: 1rem;
         }
 
-        /* Evolution Timeline */
-        .evolution-timeline {
-            padding: 4rem 0;
+        .member-experience {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: left;
         }
 
-        .evolution-timeline h2 {
+        /* Vision Mission */
+        .vision-mission {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .vision-mission h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #4ecdc4;
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 2rem;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 2rem;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            position: relative;
-        }
-
-        .timeline-year {
-            background: #1f4788;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-content h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        /* Mission Vision */
-        .mission-vision {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-        }
-
-        .mv-grid {
+        .vision-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
 
-        .mv-card {
-            text-align: center;
+        .vision-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .mv-card h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+        .vision-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
             color: #4ecdc4;
         }
 
-        /* CTA Section */
-        .about-cta {
+        .vision-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
             padding: 4rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
             text-align: center;
         }
 
-        .about-cta h2 {
-            color: #1f4788;
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-cta h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
         }
 
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
         .btn-primary {
             background: #4ecdc4;
-            color: #1f4788;
+            color: white;
             padding: 1rem 2rem;
-            border: none;
             border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
-            margin: 0 1rem;
         }
 
         .btn-primary:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #1f4788;
+            color: white;
             padding: 1rem 2rem;
-            border: 2px solid #1f4788;
+            border: 2px solid white;
             border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
-            margin: 0 1rem;
         }
 
         .btn-secondary:hover {
-            background: #1f4788;
-            color: white;
+            background: white;
+            color: #1f4788;
         }
 
         /* Footer */
@@ -422,9 +527,26 @@
             color: #bdc3c7;
         }
 
-        /* Responsive Design */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .story-grid, .mv-grid {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .saas-business-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .vision-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -439,29 +561,21 @@
                 padding-right: 0 !important;
             }
             
-            .nav-links {
-                display: none;
+            .timeline-item::after {
+                left: 15px !important;
             }
             
-            .leaders-grid {
-                grid-template-columns: 1fr;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
-        }
-
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
     </div>
 
     <!-- Header -->
@@ -477,8 +591,9 @@
                     <a href="platform.html">Platform</a>
                     <a href="about.html" class="active">About</a>
                     <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Join Module 1 Early Access</a>
             </div>
         </div>
     </header>
@@ -487,7 +602,7 @@
     <section class="page-hero">
         <div class="container">
             <h1>About ZinClin & Zinger Software Solutions</h1>
-            <p>Our journey from clinical programming services to AI-powered automation represents 12+ years of industry expertise transformed into scalable innovation.</p>
+            <p>From 12+ years of clinical programming services to Module 1 SDTM automation innovation. Our evolution represents a strategic transition from traditional services to modular AI-powered SaaS solutions.</p>
         </div>
     </section>
 
@@ -496,79 +611,31 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-content">
-                    <h2>From Services to Innovation</h2>
-                    <p>Founded in 2013, Zinger Software Solutions began as a boutique technical staffing and clinical programming services company. For over a decade, we've provided high-quality programming talent and direct programming services to biotechs and CROs.</p>
-                    <p><strong>We lived the challenges our clients face every day:</strong> offshore communication barriers, quality control issues, long turnaround times, and the struggle to maintain competitive costs with local talent.</p>
-                    <p>ZinClin represents our evolution from providing these services manually to automating the expertise our clients have relied on for years through a scalable SaaS platform. <strong>We're building a cloud-based software business that serves multiple biotech and CRO clients globally</strong> with recurring subscription revenue, rather than custom one-off solutions.</p>
+                    <h2>Our Evolution Story</h2>
+                    <p>Zinger Software Solutions was founded in 2013 with a focus on delivering high-quality clinical programming services to the pharmaceutical and biotech industries. Over 12+ years, we've completed hundreds of successful projects, building deep expertise in SDTM, ADaM, and TLF programming.</p>
+                    
+                    <p>This extensive experience revealed consistent patterns in clinical programming challenges: repetitive SDTM tasks, offshore quality concerns, and the need for faster, more reliable automation. These insights led to the development of ZinClin, our modular AI platform that transforms this expertise into scalable software solutions.</p>
+                    
+                    <p>Starting with Module 1 SDTM automation in Q4 2025, we're transitioning from custom service delivery to modular SaaS subscriptions that provide the same expertise at scale.</p>
                 </div>
+                
                 <div class="story-stats">
                     <div class="stat-item">
+                        <span class="stat-number">2013</span>
+                        <span class="stat-label">Company Founded</span>
+                    </div>
+                    <div class="stat-item">
                         <span class="stat-number">12+</span>
-                        <span class="stat-label">Years in Clinical Programming</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Successful Projects</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">24+</span>
                         <span class="stat-label">Years Founder Experience</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Successful Project Deliveries</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">60-70%</span>
-                        <span class="stat-label">Target Efficiency Improvement</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SaaS Business Model -->
-    <section class="saas-business">
-        <div class="container">
-            <h2>ZinClin: Scalable SaaS Business Model</h2>
-            <div class="saas-business-content">
-                <div>
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Software-as-a-Service Platform</h3>
-                    <p style="margin-bottom: 1rem;">ZinClin is architected as a multi-tenant, cloud-based SaaS platform designed for recurring subscription revenue and global scalability.</p>
-                    <p style="margin-bottom: 1rem;"><strong>Target Market:</strong> Pharmaceutical companies, biotechs, and CROs seeking AI-powered clinical programming automation</p>
-                    <p style="margin-bottom: 1rem;"><strong>Revenue Model:</strong> Monthly and annual subscription tiers with enterprise licensing for multi-user organizations</p>
-                    <p><strong>Scalability:</strong> Cloud infrastructure capable of serving hundreds of client organizations simultaneously</p>
-                </div>
-                <div class="saas-metrics">
-                    <div class="saas-metric">
-                        <h4>$5B+</h4>
-                        <p>Total Addressable Market<br>(Clinical Data Services)</p>
-                    </div>
-                    <div class="saas-metric">
-                        <h4>Multi-Tenant</h4>
-                        <p>Cloud Architecture<br>Global Scalability</p>
-                    </div>
-                    <div class="saas-metric">
-                        <h4>Recurring</h4>
-                        <p>Subscription Revenue<br>High Margins</p>
-                    </div>
-                    <div class="saas-metric">
-                        <h4>Enterprise</h4>
-                        <p>Multi-User Organizations<br>Role-Based Access</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership -->
-    <section class="leadership">
-        <div class="container">
-            <h2>Leadership Team</h2>
-            <div class="leaders-grid">
-                <div class="leader-card">
-                    <div class="leader-avatar">AA</div>
-                    <h3>Amit Ahuja</h3>
-                    <div class="leader-title">Founder & CEO</div>
-                    <p>With 24+ years of experience in clinical programming and biostatistics, Amit founded Zinger Software Solutions in 2013. His deep expertise in SAS programming, CDISC standards, and clinical trial operations drives ZinClin's development.</p>
-                    <p><strong>Background:</strong> Statistical programming, clinical data management, regulatory submissions, and team leadership across pharmaceutical and biotech companies.</p>
-                    <p><strong>Vision:</strong> Leading the transition from manual clinical programming services to AI-powered SaaS automation that empowers local teams and creates scalable business value.</p>
                 </div>
             </div>
         </div>
@@ -577,75 +644,195 @@
     <!-- Evolution Timeline -->
     <section class="evolution-timeline">
         <div class="container">
-            <h2>Our Evolution Journey</h2>
+            <h2>Company Evolution Timeline</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2013</div>
-                        <h3>Company Founded</h3>
-                        <p>Established Zinger Software Solutions as a boutique technical staffing and clinical programming services company focused on the pharmaceutical and biotech industries.</p>
+                        <h3>Zinger Software Solutions Founded</h3>
+                        <p>Established as a boutique clinical programming services company specializing in SAS programming, CDISC implementation, and regulatory submission support.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2014-2018</div>
-                        <h3>Service Excellence</h3>
-                        <p>Built reputation for high-quality clinical programming services, CDISC implementation, and technical staffing. Developed deep relationships with biotech and CRO clients.</p>
+                        <h3>Service Portfolio Expansion</h3>
+                        <p>Expanded services to include comprehensive SDTM, ADaM, and TLF programming for biotechs and CROs. Built reputation for quality and regulatory compliance expertise.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2019-2022</div>
-                        <h3>Market Insights</h3>
-                        <p>Identified recurring client pain points: offshore communication challenges, quality control issues, and the need for faster, more cost-effective programming solutions.</p>
+                        <h3>Industry Expertise Deepening</h3>
+                        <p>Accumulated deep insights into clinical programming challenges, offshore limitations, and automation opportunities through hundreds of project deliveries.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2023-2024</div>
-                        <h3>AI Innovation</h3>
-                        <p>Began developing ZinClin to automate the clinical programming expertise we've been providing manually. Leveraged advances in AI and NLP for clinical document processing.</p>
+                        <h3>ZinClin Platform Development</h3>
+                        <p>Began development of AI-powered clinical programming platform, leveraging 10+ years of accumulated expertise and industry insights.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-year">2025</div>
-                        <h3>Product Launch</h3>
-                        <p>Transitioning from service-focused to product-based company with ZinClin platform. Scaling solutions instead of just delivering services.</p>
+                        <div class="timeline-year">2025 Q4</div>
+                        <h3>Module 1 Beta Launch</h3>
+                        <p>Module 1 SDTM automation enters beta testing with early access customers, marking transition to modular SaaS business model.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026 Q1</div>
+                        <h3>Module 1 General Availability</h3>
+                        <p>Module 1 becomes available to all customers, establishing foundation for progressive module expansion based on market feedback.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision">
+    <!-- Module Development Strategy -->
+    <section class="module-development">
         <div class="container">
-            <div class="mv-grid">
-                <div class="mv-card">
-                    <h3>Our Mission</h3>
-                    <p>To empower clinical programming teams with AI-driven automation that enhances efficiency, reduces costs, and enables local teams to compete effectively with offshore alternatives while maintaining superior quality and control.</p>
+            <h2>Modular Development Strategy</h2>
+            <div class="development-grid">
+                <div class="development-card">
+                    <div class="module-icon">1️⃣</div>
+                    <h3>Module 1: SDTM Foundation</h3>
+                    <p>CRF annotation, SDTM mapping specifications, and code generation automation. Universal need across all clinical studies makes this the logical starting point.</p>
+                    <div class="development-status">Beta Q4 2025</div>
                 </div>
-                <div class="mv-card">
-                    <h3>Our Vision</h3>
-                    <p>To become the leading platform for clinical programming automation, enabling pharmaceutical and biotech companies to accelerate drug development through intelligent, scalable programming solutions.</p>
+                
+                <div class="development-card">
+                    <div class="module-icon">2️⃣</div>
+                    <h3>Module 2: ADaM Enhancement</h3>
+                    <p>Analysis dataset specification and code generation automation. Development timeline based on Module 1 adoption and customer feedback.</p>
+                    <div class="development-status status-development">Development Planned</div>
+                </div>
+                
+                <div class="development-card">
+                    <div class="module-icon">3️⃣</div>
+                    <h3>Module 3: TLF Completion</h3>
+                    <p>Tables, Listings, and Figures automation for end-to-end programming workflow coverage. Timeline based on market demand and validation.</p>
+                    <div class="development-status status-consideration">Under Consideration</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="about-cta">
+    <!-- SaaS Business Model -->
+    <section class="saas-business">
         <div class="container">
-            <h2>Ready to Experience the Future of Clinical Programming?</h2>
-            <p>Join our early access program and be among the first to experience ZinClin's AI-powered automation.</p>
-            <div style="margin-top: 2rem;">
-                <a href="contact.html" class="btn-primary">Join Early Access</a>
-                <a href="mailto:admin@zingersoftwaresolutions.com" class="btn-secondary">Contact Us</a>
+            <h2>Transition to Modular SaaS</h2>
+            <div class="saas-business-content">
+                <div>
+                    <h3>Strategic Business Evolution</h3>
+                    <p>Our transition from custom services to modular SaaS represents a strategic evolution that leverages 12+ years of domain expertise while providing scalable solutions to the clinical programming industry.</p>
+                    
+                    <p>The modular approach allows customers to start with Module 1 SDTM automation, prove ROI, and expand to additional modules based on their specific needs and proven value delivery.</p>
+                    
+                    <p>This evolution enables us to serve a broader market while maintaining the quality and expertise that established our reputation in clinical programming services.</p>
+                </div>
+                
+                <div class="saas-metrics">
+                    <div class="saas-metric">
+                        <div class="metric-value">SaaS</div>
+                        <div class="metric-label">Subscription Model</div>
+                    </div>
+                    <div class="saas-metric">
+                        <div class="metric-value">Modular</div>
+                        <div class="metric-label">Progressive Adoption</div>
+                    </div>
+                    <div class="saas-metric">
+                        <div class="metric-value">Scalable</div>
+                        <div class="metric-label">Market Reach</div>
+                    </div>
+                    <div class="saas-metric">
+                        <div class="metric-value">AI-Powered</div>
+                        <div class="metric-label">Technology Foundation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="leadership-team">
+        <div class="container">
+            <h2>Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">AA</div>
+                    <h3>Amit Ahuja</h3>
+                    <div class="member-title">Founder & CEO</div>
+                    <p>Bringing 24+ years of clinical programming expertise to ZinClin development. Former biostatistician with deep understanding of CDISC standards, regulatory requirements, and industry challenges.</p>
+                    <div class="member-experience">
+                        <strong>Experience Highlights:</strong><br>
+                        • 24+ years clinical programming experience<br>
+                        • CDISC standards expertise<br>
+                        • Regulatory submission experience<br>
+                        • SAS programming specialization
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">ZS</div>
+                    <h3>Zinger Software Solutions Team</h3>
+                    <div class="member-title">Development & Operations</div>
+                    <p>Experienced team of clinical programmers, data scientists, and software engineers translating 12+ years of service delivery expertise into modular AI solutions.</p>
+                    <div class="member-experience">
+                        <strong>Team Expertise:</strong><br>
+                        • Clinical programming services<br>
+                        • AI/ML development<br>
+                        • SaaS platform architecture<br>
+                        • Quality assurance and validation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission">
+        <div class="container">
+            <h2>Vision & Mission</h2>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <div class="vision-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>To transform clinical programming through modular AI automation that enhances human expertise rather than replacing it. Starting with Module 1 SDTM automation, we aim to eliminate repetitive tasks while enabling programmers to focus on complex challenges and innovation.</p>
+                    
+                    <p>We're committed to providing onshore quality and control at offshore-competitive pricing, helping our customers achieve their development timelines without compromising regulatory compliance or data integrity.</p>
+                </div>
+                
+                <div class="vision-card">
+                    <div class="vision-icon">🚀</div>
+                    <h3>Our Vision</h3>
+                    <p>To become the leading platform for modular clinical programming automation, enabling pharmaceutical and biotech companies to accelerate drug development through AI-powered efficiency gains.</p>
+                    
+                    <p>We envision a future where clinical programmers are empowered with AI tools that amplify their expertise, where companies can scale programming capacity without offshore dependencies, and where quality and compliance are enhanced through automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Module 1 Journey</h2>
+                <p>Be part of the clinical programming automation evolution. Join our Module 1 early access program to experience SDTM automation when beta testing begins Q4 2025, or schedule a strategy call to discuss how ZinClin can transform your programming operations.</p>
+                
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
+                    <a href="contact.html" class="btn-secondary">Schedule Strategy Call</a>
+                </div>
             </div>
         </div>
     </section>
@@ -656,32 +843,49 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>ZinClin Platform</h3>
-                    <a href="platform.html">Features & Benefits</a>
-                    <a href="contact.html">Early Access Program</a>
-                    <a href="contact.html">Request Demo</a>
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform Overview</a>
+                    <a href="contact.html">Module 1 Early Access</a>
+                    <a href="about.html">About Zinger</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="about.html">Leadership Team</a>
-                    <a href="contact.html">Careers</a>
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">Biotech Companies</a>
+                    <a href="solutions-cros.html">CROs</a>
+                    <a href="solutions-programmers.html">Programmers</a>
+                    <a href="solutions-biostatisticians.html">Biostatisticians</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Services Legacy</h3>
-                    <a href="about.html">12+ Years Experience</a>
-                    <a href="about.html">Clinical Programming</a>
-                    <a href="about.html">Technical Staffing</a>
+                    <h3>Resources</h3>
+                    <a href="resources.html">Industry Resources</a>
+                    <a href="contact.html">Module 1 Resources</a>
+                    <a href="contact.html">Strategy Consultation</a>
+                    <a href="contact.html">Technical Documentation</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>📧 admin@zingersoftwaresolutions.com</p>
-                    <p>📍 Apex, NC</p>
+                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
+                    <a href="contact.html">Contact Form</a>
+                    <a href="contact.html">Schedule Strategy Call</a>
+                    <p style="margin-top: 1rem;">Apex, NC</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transitioning from clinical programming services to AI-powered automation since 2013.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. ZinClin is a trademark of Zinger Software Solutions.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

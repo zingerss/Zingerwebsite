@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for CROs | Competitive Advantage & Service Differentiation | Zinger Software Solutions</title>
-    <meta name="description" content="ZinClin helps CROs differentiate services with faster turnarounds, superior quality, and competitive pricing while eliminating offshore management overhead.">
+    <title>ZinClin for CROs - Competitive Advantage Module 1 SDTM Automation Beta Q4 2025 - Zinger Software Solutions</title>
+    <meta name="description" content="Competitive advantage through modular AI automation. Win more bids with Module 1 SDTM capabilities. Beta Q4 2025.">
     
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -23,76 +22,80 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
+        }
+
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 1rem 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #4ecdc4;
+            color: #1f4788;
             text-decoration: none;
         }
-        
+
         .logo-sub {
-            font-size: 0.9rem;
-            color: #b8d4f0;
+            font-size: 0.7rem;
+            color: #4ecdc4;
             font-weight: normal;
-            margin-top: -5px;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
+            color: #333;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #4ecdc4;
         }
 
         .cta-button {
             background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.7rem 1.5rem;
-            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .cta-button:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
         }
 
-        /* Page Header */
+        /* Page Hero */
         .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
@@ -113,12 +116,12 @@
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-text h1 {
@@ -160,20 +163,17 @@
 
         .btn-primary {
             background: #4ecdc4;
-            color: #1f4788;
+            color: white;
             padding: 1rem 2rem;
-            border: none;
             border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
         .btn-secondary {
@@ -182,9 +182,8 @@
             padding: 1rem 2rem;
             border: 2px solid white;
             border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
@@ -193,374 +192,346 @@
             color: #1f4788;
         }
 
-        .competitive-metrics {
+        .service-tiers {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
             padding: 2rem;
+            border-radius: 15px;
         }
 
-        .metrics-grid {
+        .tiers-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
 
-        .metric-item {
-            text-align: center;
+        .tier-card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 10px;
+            text-align: center;
         }
 
-        .metric-number {
-            font-size: 2.5rem;
+        .tier-title {
             font-weight: bold;
+            margin-bottom: 0.5rem;
             color: #4ecdc4;
-            display: block;
         }
 
-        .metric-label {
+        .tier-modules {
             font-size: 0.9rem;
-            opacity: 0.8;
+            margin-bottom: 0.5rem;
         }
 
-        /* Service Differentiation */
-        .service-differentiation {
+        .tier-advantage {
+            font-size: 0.8rem;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        /* Business Benefits */
+        .business-benefits {
             padding: 4rem 0;
             background: #f8f9fa;
         }
 
-        .service-differentiation h2 {
+        .business-benefits h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .differentiation-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
-        .differentiation-card {
+        .benefit-card {
             background: white;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
-            border-top: 4px solid #4ecdc4;
         }
 
-        .differentiation-card:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
         }
 
-        .diff-icon {
+        .benefit-icon {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: #4ecdc4;
         }
 
-        .differentiation-card h3 {
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-metrics {
+            background: #e8f9f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #1f4788;
+        }
+
+        .metric-value {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        /* Client Benefits */
+        .client-benefits {
+            padding: 4rem 0;
+        }
+
+        .client-benefits h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .client-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .client-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .client-card h3 {
             color: #1f4788;
             margin-bottom: 1rem;
         }
 
         .client-benefit {
-            background: #e8f9f5;
+            background: #f8f9fa;
             padding: 1rem;
             border-radius: 8px;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             border-left: 4px solid #4ecdc4;
         }
 
-        .client-benefit strong {
-            color: #1f4788;
-        }
-
-        /* Offshore Problems */
-        .offshore-problems {
-            padding: 4rem 0;
-        }
-
-        .offshore-problems h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .problems-solution-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .problems-side {
-            background: #ffe6e6;
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 5px solid #e74c3c;
-        }
-
-        .solution-side {
-            background: #e8f9f5;
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 5px solid #4ecdc4;
-        }
-
-        .problems-side h3,
-        .solution-side h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #1f4788;
-        }
-
-        .problem-list,
-        .solution-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .problem-list li,
-        .solution-list li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .problem-list li::before {
-            content: '❌';
-            position: absolute;
-            left: 0;
-        }
-
-        .solution-list li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-        }
-
-        /* Client Success */
-        .client-success {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
-            color: white;
-        }
-
-        .client-success h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .success-stories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-
-        .success-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 15px;
-        }
-
-        .success-header {
-            margin-bottom: 1.5rem;
-        }
-
-        .client-type {
-            color: #1f4788;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        .success-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .result-metric {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .result-value {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.3rem;
-        }
-
-        .result-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Pricing Strategy */
-        .pricing-strategy {
+        /* Service Positioning */
+        .service-positioning {
             padding: 4rem 0;
             background: #f8f9fa;
         }
 
-        .pricing-strategy h2 {
+        .service-positioning h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .pricing-comparison {
+        .positioning-content {
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .pricing-table {
+        .positioning-matrix {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .pricing-column {
-            background: white;
-            text-align: center;
-        }
-
-        .pricing-header {
-            padding: 2rem;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .traditional-header {
-            background: #e74c3c;
-            color: white;
-        }
-
-        .offshore-header {
-            background: #f39c12;
-            color: white;
-        }
-
-        .zinclin-header {
-            background: #4ecdc4;
-            color: #1f4788;
-        }
-
-        .pricing-content {
-            padding: 2rem;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .price-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .price-label {
-            font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-value {
-            font-size: 1.1rem;
-        }
-
-        .pricing-highlight {
-            background: #4ecdc4;
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: auto;
-        }
-
-        /* Implementation */
-        .implementation {
-            padding: 4rem 0;
-        }
-
-        .implementation h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .implementation-phases {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .phase-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
+        .positioning-tier {
             background: white;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .phase-number {
-            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
+        .tier-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .tier-number {
+            background: #4ecdc4;
             color: white;
-            width: 70px;
-            height: 70px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
             font-weight: bold;
-            margin-right: 2rem;
-            flex-shrink: 0;
+            margin: 0 auto 1rem;
         }
 
-        .phase-content h4 {
+        .tier-header h4 {
             color: #1f4788;
             margin-bottom: 0.5rem;
         }
 
-        .phase-duration {
-            color: #4ecdc4;
-            font-weight: bold;
-            font-size: 0.9rem;
+        .tier-features {
+            list-style: none;
+            padding: 0;
         }
 
-        /* CTA Section */
-        .cta-section {
+        .tier-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        /* Market Opportunities */
+        .market-opportunities {
+            padding: 4rem 0;
+        }
+
+        .market-opportunities h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .opportunity-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .opportunity-header {
+            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .opportunity-type {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-header h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .opportunity-content {
+            padding: 1.5rem;
+        }
+
+        .opportunity-metrics {
+            background: #e8f9f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        /* Early Access */
+        .early-access {
             padding: 4rem 0;
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             text-align: center;
         }
 
-        .cta-section h2 {
+        .early-access-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .early-access h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
+        }
+
+        .partnership-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .partnership-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .early-access-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-row input {
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-row button {
+            background: #4ecdc4;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-row button:hover {
+            background: #45b5aa;
         }
 
         /* Footer */
@@ -600,49 +571,32 @@
             color: #bdc3c7;
         }
 
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .problems-solution-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-table {
-                grid-template-columns: 1fr;
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .phase-item {
-                flex-direction: column;
+            .hero-content {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
             
-            .phase-number {
-                margin-right: 0;
-                margin-bottom: 1rem;
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -650,7 +604,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
     </div>
 
     <!-- Header -->
@@ -666,8 +620,9 @@
                     <a href="platform.html">Platform</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Join Module 1 Early Access</a>
             </div>
         </div>
     </header>
@@ -678,39 +633,41 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>ZinClin for CROs</h1>
-                    <p class="hero-subtitle">Differentiate your services with superior speed, quality, and cost competitiveness. Eliminate offshore management overhead while exceeding client expectations.</p>
+                    <p class="hero-subtitle">Differentiate your services with modular automation capabilities. Win more bids with faster turnarounds, competitive pricing, and superior quality assurance. Start with Module 1 for immediate competitive advantage, scale based on client needs and market positioning.</p>
                     
                     <ul class="competitive-advantages">
-                        <li>Win more bids with faster, cost-competitive proposals</li>
-                        <li>Deliver superior quality without offshore communication risks</li>
-                        <li>Scale capacity without proportional headcount increases</li>
-                        <li>Improve margins through efficiency automation</li>
+                        <li>Win more bids with Module 1 (SDTM) competitive pricing and speed</li>
+                        <li>Differentiate services through progressive automation capabilities</li>
+                        <li>Scale module adoption based on client requirements and budgets</li>
+                        <li>Eliminate offshore management overhead while improving margins</li>
                     </ul>
                     
                     <div class="hero-cta">
                         <a href="contact.html" class="btn-primary">Request Partnership Demo</a>
-                        <a href="contact.html" class="btn-secondary">Calculate ROI</a>
+                        <a href="contact.html" class="btn-secondary">Join Module 1 Early Access</a>
                     </div>
                 </div>
                 
-                <div class="competitive-metrics">
-                    <h3 style="margin-bottom: 2rem; text-align: center;">CRO Competitive Advantages</h3>
-                    <div class="metrics-grid">
-                        <div class="metric-item">
-                            <span class="metric-number">50-70%</span>
-                            <span class="metric-label">Faster Turnarounds</span>
+                <div class="service-tiers">
+                    <h3 style="margin-bottom: 2rem; text-align: center;">Modular Service Differentiation</h3>
+                    <div class="tiers-grid">
+                        <div class="tier-card">
+                            <div class="tier-title">Essential</div>
+                            <div class="tier-modules">Module 1: SDTM</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Competitive SDTM automation for cost-conscious clients</p>
+                            <div class="tier-advantage">Win Price-Sensitive Bids</div>
                         </div>
-                        <div class="metric-item">
-                            <span class="metric-number">30-40%</span>
-                            <span class="metric-label">Cost Reduction</span>
+                        <div class="tier-card">
+                            <div class="tier-title">Advanced</div>
+                            <div class="tier-modules">Modules 1+2: SDTM+ADaM</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Enhanced analytics capability for biostat-heavy clients</p>
+                            <div class="tier-advantage">Premium Service Tier</div>
                         </div>
-                        <div class="metric-item">
-                            <span class="metric-number">Zero</span>
-                            <span class="metric-label">Offshore Dependencies</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-number">3x</span>
-                            <span class="metric-label">Team Capacity</span>
+                        <div class="tier-card">
+                            <div class="tier-title">Complete</div>
+                            <div class="tier-modules">All Modules: SDTM+ADaM+TLF</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">End-to-end automation for full-service contracts</p>
+                            <div class="tier-advantage">Market Leadership</div>
                         </div>
                     </div>
                 </div>
@@ -718,157 +675,67 @@
         </div>
     </section>
 
-    <!-- Service Differentiation -->
-    <section class="service-differentiation">
+    <!-- Business Benefits -->
+    <section class="business-benefits">
         <div class="container">
-            <h2>Differentiate Your Programming Services</h2>
-            <div class="differentiation-grid">
-                <div class="differentiation-card">
-                    <div class="diff-icon">⚡</div>
-                    <h3>Unmatched Speed</h3>
-                    <p>Generate initial SDTM, ADaM, and TLF code in hours instead of weeks, dramatically reducing study startup times and accelerating client timelines.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> 2-3 week reduction in study programming timelines, faster database lock to CSR completion.
-                    </div>
-                </div>
-                
-                <div class="differentiation-card">
-                    <div class="diff-icon">🎯</div>
-                    <h3>Consistent Quality</h3>
-                    <p>Eliminate the variability and quality issues common with offshore programming through standardized, CDISC-compliant code generation.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> Reduced QC cycles, fewer client queries, and faster regulatory review acceptance.
-                    </div>
-                </div>
-                
-                <div class="differentiation-card">
-                    <div class="diff-icon">💰</div>
-                    <h3>Competitive Pricing</h3>
-                    <p>Offer offshore-competitive pricing while maintaining local quality and control, giving you the best of both worlds in client proposals.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> 30-40% cost savings compared to traditional programming with superior service quality.
-                    </div>
-                </div>
-                
-                <div class="differentiation-card">
-                    <div class="diff-icon">🔒</div>
-                    <h3>Data Security Excellence</h3>
-                    <p>Keep all client data within your controlled infrastructure while achieving the efficiency benefits typically associated with offshore outsourcing.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> Complete data security compliance without compromising on cost or timeline objectives.
-                    </div>
-                </div>
-                
-                <div class="differentiation-card">
-                    <div class="diff-icon">📈</div>
-                    <h3>Scalable Capacity</h3>
-                    <p>Handle 2-3x more concurrent studies with your existing programming team, improving resource utilization and profit margins.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> Accept more projects without quality degradation, shorter client wait times for programming resources.
-                    </div>
-                </div>
-                
-                <div class="differentiation-card">
-                    <div class="diff-icon">🤝</div>
-                    <h3>Enhanced Client Relationships</h3>
-                    <p>Provide real-time collaboration and immediate responsiveness that offshore models cannot match, strengthening client partnerships.</p>
-                    <div class="client-benefit">
-                        <strong>Client Impact:</strong> Same time zone collaboration, immediate query resolution, and stronger working relationships.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offshore Problems vs ZinClin Solution -->
-    <section class="offshore-problems">
-        <div class="container">
-            <h2>Solve Common Offshore Programming Challenges</h2>
-            <div class="problems-solution-grid">
-                <div class="problems-side">
-                    <h3>Offshore Programming Issues</h3>
-                    <ul class="problem-list">
-                        <li>Communication barriers and time zone misalignment</li>
-                        <li>Quality inconsistency requiring extensive QC cycles</li>
-                        <li>Data security and compliance concerns</li>
-                        <li>Hidden management and oversight costs</li>
-                        <li>Long feedback loops delaying project timelines</li>
-                        <li>Cultural and process misunderstandings</li>
-                        <li>Client concerns about data handling practices</li>
-                        <li>Difficulty scaling teams up and down quickly</li>
-                    </ul>
-                </div>
-                
-                <div class="solution-side">
-                    <h3>ZinClin Advantages</h3>
-                    <ul class="solution-list">
-                        <li>Local teams with AI-enhanced productivity</li>
-                        <li>Consistent, high-quality automated code generation</li>
-                        <li>Complete data control within your infrastructure</li>
-                        <li>Transparent costs with predictable ROI</li>
-                        <li>Real-time collaboration and immediate feedback</li>
-                        <li>Seamless integration with existing processes</li>
-                        <li>Client confidence in data security practices</li>
-                        <li>Instant capacity scaling through efficiency gains</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Success Stories -->
-    <section class="client-success">
-        <div class="container">
-            <h2>CRO Success Stories</h2>
-            <div class="success-stories">
-                <div class="success-card">
-                    <div class="success-header">
-                        <div class="client-type">Mid-Size CRO</div>
-                        <h4>Oncology Studies Acceleration</h4>
-                    </div>
-                    <p>A 200-person CRO reduced programming turnaround times from 6 weeks to 2 weeks across their oncology portfolio, winning 3 additional contracts due to competitive timelines and pricing.</p>
-                    <div class="results-grid">
-                        <div class="result-metric">
-                            <div class="result-value">67%</div>
-                            <div class="result-label">Faster Delivery</div>
+            <h2>Business Benefits for CROs</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Competitive Bid Advantage</h3>
+                    <p>Module 1 will enable aggressive pricing on SDTM components while maintaining profit margins through automation efficiency gains.</p>
+                    <div class="benefit-metrics">
+                        <div class="metric-row">
+                            <span class="metric-label">Bid Win Rate:</span>
+                            <span class="metric-value">Target +25%</span>
                         </div>
-                        <div class="result-metric">
-                            <div class="result-value">$1.2M</div>
-                            <div class="result-label">New Contracts Won</div>
+                        <div class="metric-row">
+                            <span class="metric-label">Pricing Advantage:</span>
+                            <span class="metric-value">20-30% lower</span>
                         </div>
-                        <div class="result-metric">
-                            <div class="result-value">40%</div>
-                            <div class="result-label">Cost Reduction</div>
-                        </div>
-                        <div class="result-metric">
-                            <div class="result-value">95%</div>
-                            <div class="result-label">Client Satisfaction</div>
+                        <div class="metric-row">
+                            <span class="metric-label">Margin Improvement:</span>
+                            <span class="metric-value">15-20%</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="success-card">
-                    <div class="success-header">
-                        <div class="client-type">Specialty CRO</div>
-                        <h4>Operational Excellence</h4>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Accelerated Delivery</h3>
+                    <p>Module 1 automation will compress SDTM timelines by 60-70%, enabling faster project completion and increased client satisfaction.</p>
+                    <div class="benefit-metrics">
+                        <div class="metric-row">
+                            <span class="metric-label">SDTM Timeline:</span>
+                            <span class="metric-value">60-70% faster</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Client Satisfaction:</span>
+                            <span class="metric-value">Higher</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Capacity Utilization:</span>
+                            <span class="metric-value">Optimized</span>
+                        </div>
                     </div>
-                    <p>A niche CNS-focused CRO eliminated their offshore programming dependencies, improved quality metrics, and increased profit margins by 25% while maintaining competitive pricing.</p>
-                    <div class="results-grid">
-                        <div class="result-metric">
-                            <div class="result-value">Zero</div>
-                            <div class="result-label">Offshore Dependencies</div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Service Differentiation</h3>
+                    <p>Offer modular automation capabilities that competitors cannot match, positioning your CRO as an innovation leader in clinical programming.</p>
+                    <div class="benefit-metrics">
+                        <div class="metric-row">
+                            <span class="metric-label">Market Position:</span>
+                            <span class="metric-value">Innovation Leader</span>
                         </div>
-                        <div class="result-metric">
-                            <div class="result-value">25%</div>
-                            <div class="result-label">Margin Improvement</div>
+                        <div class="metric-row">
+                            <span class="metric-label">Service Premium:</span>
+                            <span class="metric-value">Justified</span>
                         </div>
-                        <div class="result-metric">
-                            <div class="result-value">80%</div>
-                            <div class="result-label">Fewer QC Cycles</div>
-                        </div>
-                        <div class="result-metric">
-                            <div class="result-value">3x</div>
-                            <div class="result-label">Team Productivity</div>
+                        <div class="metric-row">
+                            <span class="metric-label">Client Retention:</span>
+                            <span class="metric-value">Enhanced</span>
                         </div>
                     </div>
                 </div>
@@ -876,74 +743,169 @@
         </div>
     </section>
 
-    <!-- Pricing Strategy -->
-    <section class="pricing-strategy">
+    <!-- Client Benefits -->
+    <section class="client-benefits">
         <div class="container">
-            <h2>Competitive Pricing Model</h2>
-            <div class="pricing-comparison">
-                <div class="pricing-table">
-                    <div class="pricing-column">
-                        <div class="pricing-header traditional-header">Traditional In-House</div>
-                        <div class="pricing-content">
-                            <div class="price-item">
-                                <div class="price-label">Programming Cost</div>
-                                <div class="price-value">$180K per study</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Timeline</div>
-                                <div class="price-value">6-8 weeks</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Quality Risk</div>
-                                <div class="price-value">Variable</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Client Preference</div>
-                                <div class="price-value">High quality, high cost</div>
-                            </div>
+            <h2>Enhanced Client Value Delivery</h2>
+            <div class="client-grid">
+                <div class="client-card">
+                    <div class="client-icon">💰</div>
+                    <h3>Cost-Effective Solutions</h3>
+                    <p>Module 1 will enable you to offer clients offshore-competitive pricing with onshore quality, communication, and regulatory advantages.</p>
+                    <div class="client-benefit">
+                        <strong>Client Value:</strong> Superior cost-effectiveness without sacrificing quality or communication. Onshore advantages with offshore pricing.
+                    </div>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-icon">🚀</div>
+                    <h3>Faster Time-to-Market</h3>
+                    <p>Accelerated SDTM programming will enable clients to reach critical milestones faster, supporting their business objectives and investor timelines.</p>
+                    <div class="client-benefit">
+                        <strong>Client Value:</strong> Competitive advantage through faster study completion, earlier regulatory submissions, and accelerated market entry.
+                    </div>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-icon">🤝</div>
+                    <h3>Improved Collaboration</h3>
+                    <p>Module 1 automation will enable more responsive service delivery, real-time collaboration, and enhanced project transparency.</p>
+                    <div class="client-benefit">
+                        <strong>Client Value:</strong> Stronger working relationships, faster problem resolution, improved project communication.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Positioning -->
+    <section class="service-positioning">
+        <div class="container">
+            <div class="positioning-content">
+                <h2>Progressive Service Positioning Strategy</h2>
+                
+                <div class="positioning-matrix">
+                    <div class="positioning-tier">
+                        <div class="tier-header">
+                            <div class="tier-number">1</div>
+                            <h4>Foundation Tier</h4>
+                            <p>Module 1: SDTM Automation</p>
                         </div>
+                        <ul class="tier-features">
+                            <li>Competitive pricing for budget-conscious clients</li>
+                            <li>50% faster SDTM programming turnaround</li>
+                            <li>Consistent CDISC compliance and quality</li>
+                            <li>Immediate competitive advantage over offshore</li>
+                            <li>Foundation for upselling additional modules</li>
+                        </ul>
                     </div>
                     
-                    <div class="pricing-column">
-                        <div class="pricing-header offshore-header">Offshore Programming</div>
-                        <div class="pricing-content">
-                            <div class="price-item">
-                                <div class="price-label">Programming Cost</div>
-                                <div class="price-value">$95K + $35K overhead</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Timeline</div>
-                                <div class="price-value">8-10 weeks (with rework)</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Quality Risk</div>
-                                <div class="price-value">High communication risk</div>
-                            </div>
-                            <div class="price-item">
-                                <div class="price-label">Client Preference</div>
-                                <div class="price-value">Cost-focused, concerns</div>
-                            </div>
+                    <div class="positioning-tier">
+                        <div class="tier-header">
+                            <div class="tier-number">2</div>
+                            <h4>Premium Tier</h4>
+                            <p>Modules 1+2: SDTM+ADaM</p>
                         </div>
+                        <ul class="tier-features">
+                            <li>Enhanced biostatistician collaboration</li>
+                            <li>Advanced analytics capability positioning</li>
+                            <li>70% faster end-to-end programming cycle</li>
+                            <li>Premium pricing justification through value</li>
+                            <li>Differentiation from basic automation CROs</li>
+                        </ul>
                     </div>
                     
-                    <div class="pricing-column">
-                        <div class="pricing-header zinclin-header">ZinClin Enhanced</div>
-                        <div class="pricing-content">
-                            <div class="price-item">
-                                <div class="price-label">Programming Cost</div>
-                                <div class="price-value">$110K total</div>
+                    <div class="positioning-tier">
+                        <div class="tier-header">
+                            <div class="tier-number">3</div>
+                            <h4>Market Leader</h4>
+                            <p>All Modules: Complete Automation</p>
+                        </div>
+                        <ul class="tier-features">
+                            <li>End-to-end automation from protocol to submission</li>
+                            <li>Market leadership positioning</li>
+                            <li>Maximum service differentiation</li>
+                            <li>Highest margin premium services</li>
+                            <li>Industry innovation thought leadership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Opportunities -->
+    <section class="market-opportunities">
+        <div class="container">
+            <h2>Market Opportunity Scenarios</h2>
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <div class="opportunity-type">Emerging CRO Strategy</div>
+                        <h4>Competitive Disruption Opportunity</h4>
+                    </div>
+                    <div class="opportunity-content">
+                        <p>A mid-size CRO could leverage Module 1 to disrupt established competitors by offering superior SDTM pricing and timeline advantages while maintaining quality.</p>
+                        <div class="opportunity-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">Market Disruption:</span>
+                                <span class="metric-value">High potential</span>
                             </div>
-                            <div class="price-item">
-                                <div class="price-label">Timeline</div>
-                                <div class="price-value">2-3 weeks</div>
+                            <div class="metric-row">
+                                <span class="metric-label">Competitive Advantage:</span>
+                                <span class="metric-value">12-18 months lead</span>
                             </div>
-                            <div class="price-item">
-                                <div class="price-label">Quality Risk</div>
-                                <div class="price-value">Consistent high quality</div>
+                            <div class="metric-row">
+                                <span class="metric-label">Win Rate Improvement:</span>
+                                <span class="metric-value">Target +30%</span>
                             </div>
-                            <div class="pricing-highlight">
-                                <strong>Best of Both Worlds:</strong><br>
-                                Competitive cost + superior quality + faster delivery
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <div class="opportunity-type">Established CRO Enhancement</div>
+                        <h4>Service Portfolio Expansion</h4>
+                    </div>
+                    <div class="opportunity-content">
+                        <p>Large CROs could add Module 1 capabilities to existing service portfolios, enhancing margins while offering clients next-generation automation benefits.</p>
+                        <div class="opportunity-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">Margin Enhancement:</span>
+                                <span class="metric-value">15-25%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Service Differentiation:</span>
+                                <span class="metric-value">Significant</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Client Retention:</span>
+                                <span class="metric-value">Improved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <div class="opportunity-type">Specialized CRO Focus</div>
+                        <h4>SDTM Center of Excellence</h4>
+                    </div>
+                    <div class="opportunity-content">
+                        <p>Specialized CROs could position Module 1 capabilities as a center of excellence for SDTM automation, attracting clients seeking innovation leadership.</p>
+                        <div class="opportunity-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">Specialization Premium:</span>
+                                <span class="metric-value">20-30%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Market Recognition:</span>
+                                <span class="metric-value">Industry leader</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Client Attraction:</span>
+                                <span class="metric-value">Innovation-focused</span>
                             </div>
                         </div>
                     </div>
@@ -952,59 +914,41 @@
         </div>
     </section>
 
-    <!-- Implementation -->
-    <section class="implementation">
+    <!-- Early Access -->
+    <section class="early-access">
         <div class="container">
-            <h2>Partnership Implementation</h2>
-            <div class="implementation-phases">
-                <div class="phase-item">
-                    <div class="phase-number">1</div>
-                    <div class="phase-content">
-                        <h4>Strategic Assessment & ROI Analysis</h4>
-                        <p>Evaluate your current programming portfolio, client requirements, and competitive positioning to identify the highest-value implementation opportunities.</p>
-                        <div class="phase-duration">Duration: 1 week</div>
+            <div class="early-access-content">
+                <h2>Partner with ZinClin for Module 1</h2>
+                <p>Join the Module 1 early access program to gain competitive advantage when beta testing begins Q4 2025. Shape development priorities for CRO-specific requirements and establish market leadership position.</p>
+                
+                <div class="partnership-benefits">
+                    <div class="partnership-item">
+                        <strong>Competitive Advantage</strong><br>
+                        First-mover advantage in AI automation
+                    </div>
+                    <div class="partnership-item">
+                        <strong>Partnership Terms</strong><br>
+                        Preferred pricing and implementation support
+                    </div>
+                    <div class="partnership-item">
+                        <strong>Feature Influence</strong><br>
+                        CRO-specific development priorities
+                    </div>
+                    <div class="partnership-item">
+                        <strong>Market Positioning</strong><br>
+                        Industry innovation leadership
                     </div>
                 </div>
                 
-                <div class="phase-item">
-                    <div class="phase-number">2</div>
-                    <div class="phase-content">
-                        <h4>Team Training & Platform Integration</h4>
-                        <p>Train your programming teams on ZinClin platform capabilities and integrate with your existing project management and quality systems.</p>
-                        <div class="phase-duration">Duration: 2-3 weeks</div>
-                    </div>
+                <div class="early-access-form">
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit">Request Partnership Discussion</button>
+                        </div>
+                    </form>
+                    <p style="margin-top: 1rem; opacity: 0.9;">Early access partners will receive competitive positioning analysis, implementation roadmaps, and direct collaboration with our development team for CRO-specific requirements.</p>
                 </div>
-                
-                <div class="phase-item">
-                    <div class="phase-number">3</div>
-                    <div class="phase-content">
-                        <h4>Pilot Project Implementation</h4>
-                        <p>Deploy ZinClin on 1-2 pilot studies to validate workflows, measure efficiency gains, and optimize processes for your specific client needs.</p>
-                        <div class="phase-duration">Duration: 4-6 weeks</div>
-                    </div>
-                </div>
-                
-                <div class="phase-item">
-                    <div class="phase-number">4</div>
-                    <div class="phase-content">
-                        <h4>Full Service Integration & Sales Enablement</h4>
-                        <p>Roll out across your study portfolio and equip your business development team with competitive positioning materials and ROI demonstrations.</p>
-                        <div class="phase-duration">Duration: Ongoing support</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Differentiate Your CRO Services?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem;">Join CROs who are winning more business with faster, higher-quality, and more cost-competitive programming services.</p>
-            
-            <div>
-                <a href="contact.html" class="btn-primary">Request Partnership Demo</a>
-                <a href="contact.html" class="btn-secondary">Download ROI Calculator</a>
             </div>
         </div>
     </section>
@@ -1014,59 +958,55 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <h3>ZinClin Platform</h3>
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform Overview</a>
+                    <a href="contact.html">Module 1 Early Access</a>
+                    <a href="about.html">About Zinger</a>
+                </div>
+                <div class="footer-section">
                     <h3>Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
-                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                    <a href="solutions-biotechs.html">Biotech Companies</a>
+                    <a href="solutions-cros.html">CROs</a>
+                    <a href="solutions-programmers.html">Programmers</a>
+                    <a href="solutions-biostatisticians.html">Biostatisticians</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Platform</h3>
-                    <a href="platform.html">Features & Benefits</a>
-                    <a href="contact.html">Early Access Program</a>
-                    <a href="contact.html">Request Demo</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="about.html">Leadership Team</a>
-                    <a href="contact.html">Careers</a>
+                    <h3>Resources</h3>
+                    <a href="resources.html">Industry Resources</a>
+                    <a href="contact.html">Module 1 Resources</a>
+                    <a href="contact.html">Strategy Consultation</a>
+                    <a href="contact.html">Technical Documentation</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>📧 admin@zingersoftwaresolutions.com</p>
-                    <p>📍 Apex, NC</p>
+                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
+                    <a href="contact.html">Contact Form</a>
+                    <a href="contact.html">Schedule Strategy Call</a>
+                    <p style="margin-top: 1rem;">Apex, NC</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Helping CROs win through AI-enhanced programming services.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. ZinClin is a trademark of Zinger Software Solutions.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Early access form handling
+        document.querySelector('.early-access-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest in partnering with ZinClin! We\'ll contact you to discuss Module 1 early access partnership opportunities and competitive positioning strategies.');
+        });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-        }, observerOptions);
-
-        // Apply observer to all cards
-        document.querySelectorAll('.differentiation-card, .success-card, .phase-item').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
         });
     </script>
 </body>

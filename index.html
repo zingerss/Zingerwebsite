@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZinClin | AI-Powered Clinical Programming Automation | Zinger Software Solutions</title>
-    <meta name="description" content="ZinClin empowers clinical programming teams with AI-driven automation. Reduce offshore dependency, enhance efficiency by 60-70%, and accelerate SDTM/ADaM deliverables.">
+    <meta name="description" content="ZinClin modular platform empowers clinical programming teams with AI-driven automation. Start with SDTM, scale to complete automation. Reduce offshore dependency by 60-70%.">
     
     <style>
         /* Reset and Base Styles */
@@ -205,10 +205,9 @@
             border-radius: 15px;
             padding: 2rem;
             text-align: center;
-            position: relative;
         }
 
-        .mockup-screen {
+        .module-preview {
             background: white;
             border-radius: 10px;
             padding: 1.5rem;
@@ -217,52 +216,54 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .mockup-title {
+        .preview-title {
             font-weight: bold;
             color: #1f4788;
             margin-bottom: 1rem;
         }
 
-        .mockup-content {
+        .module-flow {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            text-align: left;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.5rem;
+            text-align: center;
         }
 
-        .mockup-item {
+        .flow-item {
             background: #f8f9fa;
-            padding: 0.8rem;
+            padding: 0.8rem 0.5rem;
             border-radius: 5px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1f4788;
         }
 
-        .mockup-arrow {
-            font-size: 2rem;
+        .flow-arrow {
+            font-size: 1.5rem;
             color: #4ecdc4;
             margin: 1rem 0;
         }
 
-        /* Value Propositions */
-        .value-props {
+        /* Modular Value Props */
+        .modular-value {
             padding: 4rem 0;
             background: #f8f9fa;
         }
 
-        .value-props h2 {
+        .modular-value h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .props-grid {
+        .value-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
         }
 
-        .prop-card {
+        .value-card {
             background: white;
             padding: 2.5rem;
             border-radius: 15px;
@@ -271,11 +272,11 @@
             transition: transform 0.3s ease;
         }
 
-        .prop-card:hover {
+        .value-card:hover {
             transform: translateY(-5px);
         }
 
-        .prop-icon {
+        .value-icon {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #4ecdc4, #45b5aa);
@@ -284,22 +285,95 @@
             background-clip: text;
         }
 
-        .prop-card h3 {
+        .value-card h3 {
             color: #1f4788;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .prop-card .benefit {
+        .value-card .benefit {
             color: #4ecdc4;
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
 
+        /* Module Progression */
+        .module-progression {
+            padding: 4rem 0;
+        }
+
+        .progression-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .progression-content h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .progression-flow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .progression-module {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+        }
+
+        .module-number {
+            background: #4ecdc4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .progression-module h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-status {
+            background: #f39c12;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .status-dev {
+            background: #95a5a6;
+        }
+
+        .progression-arrow {
+            font-size: 2rem;
+            color: #4ecdc4;
+            text-align: center;
+        }
+
         /* Problem Solution */
         .problem-solution {
             padding: 4rem 0;
+            background: #f8f9fa;
         }
 
         .ps-grid {
@@ -558,17 +632,21 @@
             .nav-links {
                 display: none;
             }
+            
+            .progression-flow {
+                grid-template-columns: 1fr;
+            }
+            
+            .progression-arrow {
+                transform: rotate(90deg);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- ⚠️ IMPORTANT NOTE: This homepage was recreated unnecessarily. 
-         USE THE EXISTING index.html from the project files instead.
-         This version is provided for reference only. -->
-    
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin is in active development - Join our early access program to be first to know when it launches
+        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
     </div>
 
     <!-- Header -->
@@ -595,49 +673,47 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>AI-Driven Platform Empowering Clinical Programming Teams</h1>
-                    <p class="hero-subtitle">Reduce offshore dependency while enhancing local team efficiency by 60-70%. Make your programming teams cost-competitive through intelligent automation.</p>
+                    <h1>Start with SDTM, Scale to Complete Automation</h1>
+                    <p class="hero-subtitle">ZinClin's modular platform empowers clinical programming teams with focused AI automation. Begin with SDTM foundations, add ADaM analytics, complete with TLF outputs. Reduce offshore dependency while enhancing local team efficiency by 60-70%.</p>
                     
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">60-70%</span>
-                            <span class="stat-label">Efficiency Gains</span>
+                            <span class="stat-number">Module 1</span>
+                            <span class="stat-label">SDTM Beta Q4 2025</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">24+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">$5B+</span>
-                            <span class="stat-label">Market Opportunity</span>
+                            <span class="stat-number">60-70%</span>
+                            <span class="stat-label">Efficiency Target</span>
                         </div>
                     </div>
                     
                     <div class="hero-cta">
-                        <a href="contact.html" class="btn-primary">Join Early Access</a>
-                        <a href="platform.html" class="btn-secondary">See Platform</a>
+                        <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
+                        <a href="platform.html" class="btn-secondary">Explore Modules</a>
                     </div>
                 </div>
                 
                 <div class="hero-visual">
-                    <div class="mockup-screen">
-                        <div class="mockup-title">Upload SAP Document</div>
-                        <div class="mockup-content">
-                            <div class="mockup-item">📄 Protocol Analysis</div>
-                            <div class="mockup-item">📊 Variables Identified</div>
-                            <div class="mockup-item">🔍 CDISC Mapping</div>
-                            <div class="mockup-item">⚙️ Code Generation</div>
+                    <div class="module-preview">
+                        <div class="preview-title">ZinClin Modular Approach</div>
+                        <div class="module-flow">
+                            <div class="flow-item">SDTM<br>Foundation</div>
+                            <div class="flow-item">ADaM<br>Analytics</div>
+                            <div class="flow-item">TLF<br>Outputs</div>
                         </div>
                     </div>
-                    <div class="mockup-arrow">⬇️</div>
-                    <div class="mockup-screen">
-                        <div class="mockup-title">Generated SDTM/ADaM Code</div>
-                        <div style="text-align: left; font-family: monospace; font-size: 0.8rem; color: #1f4788;">
-                            proc sql;<br>
-                            &nbsp;&nbsp;create table work.dm as<br>
-                            &nbsp;&nbsp;select * from rawdata.demographics<br>
-                            &nbsp;&nbsp;where usubjid is not null;<br>
-                            quit;
+                    <div class="flow-arrow">⬇️</div>
+                    <div class="module-preview">
+                        <div class="preview-title">Module 1: SDTM Features</div>
+                        <div style="text-align: left; font-size: 0.9rem; color: #1f4788;">
+                            • CRF Annotation Automation<br>
+                            • SDTM Mapping Specifications<br>
+                            • Production-Ready Code Generation<br>
+                            • CDISC Compliance Validation
                         </div>
                     </div>
                 </div>
@@ -645,30 +721,72 @@
         </div>
     </section>
 
-    <!-- Value Propositions -->
-    <section class="value-props">
+    <!-- Modular Value Propositions -->
+    <section class="modular-value">
         <div class="container">
-            <h2>Transform Your Clinical Programming Operations</h2>
-            <div class="props-grid">
-                <div class="prop-card">
-                    <div class="prop-icon">🎯</div>
-                    <h3>Onshore Excellence</h3>
-                    <div class="benefit">Make local teams cost-competitive</div>
-                    <p>Eliminate offshore communication barriers, quality issues, and hidden costs while empowering your local programming talent with AI-powered efficiency.</p>
+            <h2>Three Modules, Infinite Possibilities</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">🏗️</div>
+                    <h3>Start with SDTM</h3>
+                    <div class="benefit">Universal foundation for all studies</div>
+                    <p>Every clinical study needs SDTM datasets. Module 1 automates CRF annotation, mapping specifications, and code generation - providing immediate ROI on your most essential programming needs.</p>
                 </div>
                 
-                <div class="prop-card">
-                    <div class="prop-icon">⚡</div>
-                    <h3>Accelerate Timelines</h3>
-                    <div class="benefit">Generate starter code in hours, not weeks</div>
-                    <p>Transform SAPs and protocols into production-ready SDTM, ADaM, and TLF code templates automatically, dramatically reducing initial programming time.</p>
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>Scale with ADaM</h3>
+                    <div class="benefit">Advanced analytics acceleration</div>
+                    <p>Module 2 builds on SDTM foundations to automate analysis dataset creation, enabling faster biostatistician collaboration and statistical programming workflows.</p>
                 </div>
                 
-                <div class="prop-card">
-                    <div class="prop-icon">📈</div>
-                    <h3>Multiply Efficiency</h3>
-                    <div class="benefit">60-70% efficiency gains, same team size</div>
-                    <p>Enable your existing programmers to handle significantly more projects while focusing on high-value customization and validation tasks.</p>
+                <div class="value-card">
+                    <div class="value-icon">📑</div>
+                    <h3>Complete with TLF</h3>
+                    <div class="benefit">End-to-end automation</div>
+                    <p>Module 3 delivers comprehensive automation from protocol to publication-ready outputs, completing your transformation to AI-enhanced clinical programming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module Progression -->
+    <section class="module-progression">
+        <div class="container">
+            <div class="progression-content">
+                <h2>Your Automation Journey</h2>
+                
+                <div class="progression-flow">
+                    <div class="progression-module">
+                        <div class="module-number">1</div>
+                        <h4>SDTM Module</h4>
+                        <p>CRF annotation, mapping specs, and SDTM code generation</p>
+                        <div class="module-status">Beta Q4 2025</div>
+                    </div>
+                    
+                    <div class="progression-arrow">→</div>
+                    
+                    <div class="progression-module">
+                        <div class="module-number">2</div>
+                        <h4>ADaM Module</h4>
+                        <p>Analysis dataset specifications and automated code creation</p>
+                        <div class="module-status status-dev">In Development</div>
+                    </div>
+                    
+                    <div class="progression-arrow">→</div>
+                    
+                    <div class="progression-module">
+                        <div class="module-number">3</div>
+                        <h4>TLF Module</h4>
+                        <p>Tables, listings, and figures automation for complete outputs</p>
+                        <div class="module-status status-dev">Planned</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="font-size: 1.1rem; color: #666;">
+                        <strong>Flexible Adoption:</strong> Choose the modules that fit your immediate needs. Start with SDTM for universal value, add ADaM for analytics power, complete with TLF for end-to-end automation.
+                    </p>
                 </div>
             </div>
         </div>
@@ -681,24 +799,24 @@
                 <div class="problem-side">
                     <h3 class="ps-title">The Offshore Challenge</h3>
                     <ul class="ps-list">
-                        <li>Communication barriers and time zone issues</li>
-                        <li>Quality control and rework cycles</li>
+                        <li>Communication barriers and time zone delays</li>
+                        <li>Quality control and extensive rework cycles</li>
                         <li>Data security and compliance concerns</li>
                         <li>Hidden costs of oversight and management</li>
-                        <li>Loss of tribal knowledge and control</li>
-                        <li>Long feedback loops and delays</li>
+                        <li>Loss of institutional knowledge and control</li>
+                        <li>Long feedback loops affecting study timelines</li>
                     </ul>
                 </div>
                 
                 <div class="solution-side">
-                    <h3 class="ps-title">The ZinClin Solution</h3>
+                    <h3 class="ps-title">The ZinClin Advantage</h3>
                     <ul class="ps-list">
-                        <li>Local teams with AI-powered efficiency</li>
-                        <li>Consistent, high-quality code generation</li>
-                        <li>Complete data control and security</li>
-                        <li>Transparent costs with predictable ROI</li>
-                        <li>Enhanced team capabilities and knowledge</li>
-                        <li>Real-time collaboration and feedback</li>
+                        <li>Local teams enhanced with AI efficiency</li>
+                        <li>Consistent, high-quality automated code generation</li>
+                        <li>Complete data control and security compliance</li>
+                        <li>Transparent modular pricing with predictable ROI</li>
+                        <li>Enhanced team capabilities and retained knowledge</li>
+                        <li>Real-time collaboration and immediate feedback</li>
                     </ul>
                 </div>
             </div>
@@ -713,25 +831,25 @@
                 <div class="audience-card">
                     <div class="audience-icon">👨‍💻</div>
                     <h3>Statistical Programmers</h3>
-                    <p>Enhance your productivity and focus on high-value work. Generate initial code structures automatically and spend more time on validation and optimization.</p>
+                    <p>Start with Module 1 to automate SDTM foundations, then scale through ADaM and TLF modules to become the AI-enhanced programming expert your organization needs.</p>
                 </div>
                 
                 <div class="audience-card">
                     <div class="audience-icon">📊</div>
                     <h3>Biostatisticians</h3>
-                    <p>Accelerate study deliverables with faster programming turnarounds. Maintain quality control while improving collaboration with programming teams.</p>
+                    <p>Module 1 accelerates SDTM delivery, Module 2 transforms ADaM collaboration. Reduce programming cycle times while maintaining statistical rigor and quality control.</p>
                 </div>
                 
                 <div class="audience-card">
                     <div class="audience-icon">🏢</div>
                     <h3>Biotech Companies</h3>
-                    <p>Reduce programming costs without sacrificing quality. Keep sensitive data in-house while competing effectively with offshore pricing models.</p>
+                    <p>Achieve offshore-competitive costs with superior quality and control. Start with Module 1 for immediate ROI, scale modules based on your pipeline needs and budget.</p>
                 </div>
                 
                 <div class="audience-card">
                     <div class="audience-icon">🔬</div>
                     <h3>CROs</h3>
-                    <p>Differentiate your services with faster turnarounds and superior quality. Eliminate offshore management overhead while improving client satisfaction.</p>
+                    <p>Differentiate your services with modular automation capabilities. Win more bids with faster turnarounds, competitive pricing, and superior quality assurance.</p>
                 </div>
             </div>
         </div>
@@ -744,26 +862,26 @@
             <div class="proof-grid">
                 <div class="proof-card">
                     <div class="proof-number">12+</div>
-                    <div class="proof-label">Years in Clinical Programming</div>
-                    <p>Zinger Software Solutions has delivered clinical programming services since 2013</p>
+                    <div class="proof-label">Years Clinical Programming Services</div>
+                    <p>Zinger Software Solutions has delivered high-quality clinical programming since 2013, building the expertise now embedded in ZinClin modules</p>
                 </div>
                 
                 <div class="proof-card">
                     <div class="proof-number">100+</div>
                     <div class="proof-label">Successful Project Deliveries</div>
-                    <p>Proven track record of quality deliverables for biotechs and CROs</p>
+                    <p>Proven track record of SDTM, ADaM, and TLF deliverables for biotechs and CROs, informing our modular automation approach</p>
                 </div>
                 
                 <div class="proof-card">
                     <div class="proof-number">24+</div>
                     <div class="proof-label">Years Founder Experience</div>
-                    <p>Deep expertise in SAS programming, CDISC standards, and regulatory submissions</p>
+                    <p>Amit Ahuja's deep expertise in SAS programming, CDISC standards, and regulatory submissions drives ZinClin's development roadmap</p>
                 </div>
                 
                 <div class="proof-card">
                     <div class="proof-number">$5B+</div>
                     <div class="proof-label">Market Opportunity</div>
-                    <p>Addressing the massive clinical data services market with AI innovation</p>
+                    <p>Addressing the massive clinical data services market with modular AI innovation that scales with customer needs</p>
                 </div>
             </div>
         </div>
@@ -772,9 +890,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your Programming Operations?</h2>
+            <h2>Ready to Start Your Modular Automation Journey?</h2>
             <div class="cta-form">
-                <h3>Join Our Early Access Program</h3>
+                <h3>Join Module 1 (SDTM) Early Access Program</h3>
                 <form id="hero-signup" action="#" method="POST">
                     <div class="form-row">
                         <div class="form-group">
@@ -796,15 +914,17 @@
                             <option value="biostatistician">Biostatistician</option>
                             <option value="data-manager">Clinical Data Manager</option>
                             <option value="director-manager">Director/Manager</option>
+                            <option value="cro-executive">CRO Executive</option>
+                            <option value="biotech-executive">Biotech Executive</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Get Early Access</button>
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Join Module 1 Early Access</button>
                 </form>
                 
                 <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                    Be first to experience ZinClin when beta testing begins in Q2 2025
+                    Be first to experience SDTM automation when Module 1 beta testing begins Q4 2025
                 </p>
             </div>
         </div>
@@ -815,8 +935,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Platform</h3>
-                    <a href="platform.html">Features & Benefits</a>
+                    <h3>ZinClin Modules</h3>
+                    <a href="platform.html">Module Overview</a>
                     <a href="contact.html">Early Access Program</a>
                     <a href="contact.html">Request Demo</a>
                 </div>
@@ -839,7 +959,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transitioning from clinical programming services to AI-powered automation since 2013.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transforming clinical programming through modular AI automation since 2013.</p>
             </div>
         </div>
     </footer>
@@ -859,7 +979,7 @@
                 return;
             }
             
-            alert(`Thank you ${firstName}! You've been added to our early access program. We'll notify you when beta testing begins in Q2 2025.`);
+            alert(`Thank you ${firstName}! You've been added to Module 1 (SDTM) early access program. We'll notify you when beta testing begins Q4 2025.`);
             this.reset();
         });
 
@@ -893,7 +1013,7 @@
         }, observerOptions);
 
         // Apply observer to all cards
-        document.querySelectorAll('.prop-card, .audience-card, .proof-card').forEach(card => {
+        document.querySelectorAll('.value-card, .audience-card, .proof-card, .progression-module').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
