@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Programming Services | Technical Staffing & SAS Programming | Zinger Software Solutions</title>
+    <meta name="description" content="12+ years of clinical programming excellence. Technical staffing, SAS programming, and consulting services with proven CDISC expertise.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #4ecdc4;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #1f4788;
+        }
+
+        .service-card h3 {
+            color: #1f4788;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-description {
+            margin-bottom: 2rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .specialties-list {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .specialties-list h4 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .specialties-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specialties-list li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .specialties-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .service-cta {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .service-cta:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-company {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Innovation Bridge */
+        .innovation-bridge {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .innovation-bridge h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .innovation-bridge p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .bridge-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .bridge-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .bridge-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .bridge-feature h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Dual CTAs */
+        .dual-ctas {
+            padding: 4rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .dual-ctas h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .ctas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-card {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .cta-card h3 {
+            color: #1f4788;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card p {
+            margin-bottom: 2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-secondary {
+            background: #1f4788;
+            color: white;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(31, 71, 136, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ctas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ZinClin
+                    <div class="logo-sub">by Zinger Software Solutions</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="platform.html">Platform</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>12+ Years of Clinical Programming Excellence</h1>
+            <p>Established in 2013, Zinger Software Solutions has built a reputation for delivering high-quality clinical programming services, technical staffing, and strategic consulting to pharmaceutical and biotechnology companies.</p>
+            
+            <div class="hero-badges">
+                <div class="badge">Founded 2013</div>
+                <div class="badge">CDISC Expertise</div>
+                <div class="badge">Regulatory Compliance</div>
+                <div class="badge">Quality Guaranteed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Our Comprehensive Services</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+                We provide end-to-end clinical programming solutions with a boutique approach, working with a select number of clients to ensure personal and dedicated relationships.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Technical Staffing</h3>
+                    <div class="service-description">
+                        Our dedicated Technical Recruiters specialize in today's evolving IT and technical positions. We recruit and place highly skilled technology professionals for your project, contract-to-hire and full-time hiring needs. All candidates are fully interviewed, technically tested, reference checked and come with placement guarantees.
+                    </div>
+                    
+                    <div class="specialties-list">
+                        <h4>Specialties Include:</h4>
+                        <ul>
+                            <li>Statistical Programmers/Clinical Programmers with CDISC Expertise</li>
+                            <li>Clinical Staff - CRA, CTA, etc.</li>
+                            <li>Data Managers</li>
+                            <li>Application Development</li>
+                            <li>Software Engineering</li>
+                            <li>Quality Assurance</li>
+                            <li>Network and Systems Engineering</li>
+                            <li>Database Management and Administration</li>
+                            <li>Web Development and Optimization</li>
+                            <li>Network Security</li>
+                            <li>Desktop and Systems Support</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html" class="service-cta">Contact for Staffing</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>SAS Programming</h3>
+                    <div class="service-description">
+                        In addition to placing SAS Programmers within our client's positions, Zinger also employs in-house SAS programmers who provide programming support for internal client projects with uncompromising levels of quality that match or exceed our client's internal departments.
+                    </div>
+                    
+                    <div class="specialties-list">
+                        <h4>Programming Services Include:</h4>
+                        <ul>
+                            <li>SAS Programming Support based on client's needs</li>
+                            <li>Generating Statistical reports</li>
+                            <li>Data cleaning and manipulation using SAS</li>
+                            <li>General Dataset Remapping/Restructuring</li>
+                            <li>CRF Tabulations and Patient Profiles</li>
+                            <li>Data Management Listings (e.g., QC Listings)</li>
+                            <li>CDISC implementation for clinical projects</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html" class="service-cta">Request Programming Quote</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Consulting Services</h3>
+                    <div class="service-description">
+                        At Zinger, we provide strategic insight and expertise within the technical staffing and programming sectors. Our consulting services help you create, implement or revise technical initiatives and optimize internal teams responsible for product delivery.
+                    </div>
+                    
+                    <div class="specialties-list">
+                        <h4>Consulting Areas:</h4>
+                        <ul>
+                            <li>Strategic planning and technical roadmaps</li>
+                            <li>Team structure optimization</li>
+                            <li>Technical initiative implementation guidance</li>
+                            <li>Staffing strategy development</li>
+                            <li>External insights on industry trends</li>
+                            <li>Efficiency improvement recommendations</li>
+                            <li>Technology assessment and planning</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html" class="service-cta">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Zinger's technical team delivered exceptional CDISC programming quality that exceeded our internal standards. Their expertise in regulatory compliance saved us significant time and ensured our submissions were audit-ready."
+                    </div>
+                    <div class="testimonial-author">Dr. Sarah Mitchell</div>
+                    <div class="testimonial-company">Clinical Operations Director, Mid-size Biotech</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "The statistical programmers Zinger placed with us were not only technically excellent but understood our specific CDISC requirements immediately. Their boutique approach made all the difference in our project success."
+                    </div>
+                    <div class="testimonial-author">Mark Thompson</div>
+                    <div class="testimonial-company">VP of Biostatistics, Pharmaceutical Company</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Zinger's consulting helped us restructure our programming team for 40% better efficiency. Their industry insights were invaluable for our strategic planning and resource allocation decisions."
+                    </div>
+                    <div class="testimonial-author">Jennifer Rodriguez</div>
+                    <div class="testimonial-company">Head of Data Management, CRO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Bridge -->
+    <section class="innovation-bridge">
+        <div class="container">
+            <h2>From Manual Services to AI Automation</h2>
+            <p>
+                Our decade of hands-on clinical programming experience now powers the development of ZinClin, bringing AI automation to the industry we know inside and out. Every manual process we've optimized, every client challenge we've solved, and every regulatory requirement we've mastered is being transformed into intelligent automation.
+            </p>
+            
+            <div class="bridge-features">
+                <div class="bridge-feature">
+                    <div class="bridge-icon">🔬</div>
+                    <h3>Real-World Experience</h3>
+                    <p>12+ years of actual project delivery informs every ZinClin feature</p>
+                </div>
+                
+                <div class="bridge-feature">
+                    <div class="bridge-icon">⚡</div>
+                    <h3>Proven Expertise</h3>
+                    <p>CDISC mastery and regulatory knowledge built into AI automation</p>
+                </div>
+                
+                <div class="bridge-feature">
+                    <div class="bridge-icon">🚀</div>
+                    <h3>Innovation Foundation</h3>
+                    <p>Service excellence standards driving platform development quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual CTAs -->
+    <section class="dual-ctas">
+        <div class="container">
+            <h2>Choose Your Path Forward</h2>
+            
+            <div class="ctas-grid">
+                <div class="cta-card">
+                    <h3>Need Services Today?</h3>
+                    <p>Get immediate access to our proven clinical programming services, technical staffing, and strategic consulting. Available now with our established quality guarantees.</p>
+                    <a href="contact.html" class="btn-primary">Contact for Current Services</a>
+                </div>
+                
+                <div class="cta-card">
+                    <h3>Ready for Tomorrow?</h3>
+                    <p>Join our ZinClin early access program to be among the first to experience AI-powered clinical programming automation built on our decade of expertise.</p>
+                    <a href="contact.html" class="btn-secondary">Join ZinClin Early Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

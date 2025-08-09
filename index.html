@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin | AI-Powered Clinical Programming Automation | Zinger Software Solutions</title>
-    <meta name="description" content="ZinClin modular platform empowers clinical programming teams with AI-driven automation. Start with SDTM, scale to complete automation. Reduce offshore dependency by 60-70%.">
+    <title>ZinClin - AI-Powered Clinical Programming Automation | Start with Module 1 SDTM | Zinger Software Solutions</title>
+    <meta name="description" content="ZinClin AI-powered clinical programming automation platform. Start with Module 1 SDTM foundation, scale to complete automation. Early access program now open.">
     
     <style>
         /* Reset and Base Styles */
@@ -18,6 +18,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
 
         .container {
@@ -31,10 +32,7 @@
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .header-content {
@@ -46,109 +44,85 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #4ecdc4;
+            color: white;
             text-decoration: none;
         }
-        
+
         .logo-sub {
-            font-size: 0.9rem;
-            color: #b8d4f0;
-            font-weight: normal;
-            margin-top: -5px;
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #4ecdc4;
         }
 
         .cta-button {
             background: #4ecdc4;
             color: #1f4788;
-            padding: 0.7rem 1.5rem;
-            border: none;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            text-decoration: none;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .cta-button:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
         }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
+            padding: 5rem 0;
+            text-align: center;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
+        .hero h1 {
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-weight: 700;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
         .stat-item {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             color: #4ecdc4;
             display: block;
@@ -160,179 +134,127 @@
         }
 
         .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn-primary {
             background: #4ecdc4;
             color: #1f4788;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
+            border-radius: 8px;
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
         }
 
         .btn-primary:hover {
             background: #45b5aa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
             border: 2px solid white;
-            border-radius: 5px;
-            font-size: 1.1rem;
+            border-radius: 8px;
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
         }
 
         .btn-secondary:hover {
             background: white;
             color: #1f4788;
+            transform: translateY(-3px);
         }
 
-        .hero-visual {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
+        /* Value Propositions */
+        .value-props {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .value-props h2 {
             text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .prop-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #4ecdc4;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .prop-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1f4788;
+        }
+
+        .prop-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .prop-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Modular Approach */
+        .modular-approach {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .modular-approach h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .modules-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .module-preview {
             background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .preview-title {
-            font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .module-flow {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 0.5rem;
-            text-align: center;
-        }
-
-        .flow-item {
-            background: #f8f9fa;
-            padding: 0.8rem 0.5rem;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #1f4788;
-        }
-
-        .flow-arrow {
-            font-size: 1.5rem;
-            color: #4ecdc4;
-            margin: 1rem 0;
-        }
-
-        /* Modular Value Props */
-        .modular-value {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .modular-value h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .value-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .value-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .value-card h3 {
-            color: #1f4788;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-card .benefit {
-            color: #4ecdc4;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Module Progression */
-        .module-progression {
-            padding: 4rem 0;
-        }
-
-        .progression-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .progression-content h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .progression-flow {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .progression-module {
-            background: white;
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             text-align: center;
-            position: relative;
         }
 
         .module-number {
-            background: #4ecdc4;
+            background: #1f4788;
             color: white;
             width: 40px;
             height: 40px;
@@ -344,218 +266,135 @@
             margin: 0 auto 1rem;
         }
 
-        .progression-module h4 {
+        .module-preview h3 {
             color: #1f4788;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .module-status {
-            background: #f39c12;
-            color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.8rem;
             font-weight: bold;
-            display: inline-block;
             margin-top: 1rem;
+            display: inline-block;
         }
 
-        .status-dev {
-            background: #95a5a6;
-        }
-
-        .progression-arrow {
-            font-size: 2rem;
-            color: #4ecdc4;
-            text-align: center;
-        }
-
-        /* Problem Solution */
-        .problem-solution {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .ps-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .problem-side {
-            background: #ffe6e6;
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 5px solid #e74c3c;
-        }
-
-        .solution-side {
-            background: #e8f9f5;
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 5px solid #4ecdc4;
-        }
-
-        .ps-title {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #1f4788;
-        }
-
-        .ps-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .ps-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .problem-side .ps-list li::before {
-            content: '❌';
-            position: absolute;
-            left: 0;
-        }
-
-        .solution-side .ps-list li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-        }
-
-        /* Target Audiences */
-        .target-audiences {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+        .status-active {
+            background: #28a745;
             color: white;
         }
 
-        .target-audiences h2 {
+        .status-planned {
+            background: #ffc107;
+            color: #212529;
+        }
+
+        /* Audience Targeting */
+        .audience-targeting {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .audience-targeting h2 {
             text-align: center;
             font-size: 2.5rem;
+            color: #1f4788;
             margin-bottom: 3rem;
         }
 
-        .audiences-grid {
+        .audience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .audience-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease;
         }
 
         .audience-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
         }
 
         .audience-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
         }
 
         .audience-card h3 {
-            color: #4ecdc4;
+            color: #1f4788;
             margin-bottom: 1rem;
         }
 
-        /* Social Proof */
-        .social-proof {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .social-proof h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .proof-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .proof-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .proof-number {
-            font-size: 2.5rem;
+        .audience-benefit {
             font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
+            color: #28a745;
+            margin-top: 1rem;
         }
 
-        .proof-label {
-            color: #4ecdc4;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 4rem 0;
+        /* Early Access CTA */
+        .early-access-cta {
+            padding: 5rem 0;
             background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
             color: white;
             text-align: center;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 15px;
-        }
-
-        .cta-form h3 {
+        .early-access-cta h2 {
+            font-size: 2.8rem;
             margin-bottom: 2rem;
         }
 
-        .form-row {
+        .early-access-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-features {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .cta-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
         }
 
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
+        .cta-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-cta-large {
+            background: white;
+            color: #1f4788;
+            padding: 1.5rem 3rem;
+            font-size: 1.3rem;
             border: none;
-            border-radius: 5px;
-            font-size: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: 3px solid rgba(31, 71, 136, 0.3);
+        .btn-cta-large:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
         }
 
         /* Footer */
@@ -577,6 +416,7 @@
             margin-bottom: 1rem;
         }
 
+        .footer-section p,
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
@@ -606,39 +446,23 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
             .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .ps-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .progression-flow {
-                grid-template-columns: 1fr;
-            }
-            
-            .progression-arrow {
-                transform: rotate(90deg);
+            .btn-primary,
+            .btn-secondary {
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
             }
         }
     </style>
@@ -646,7 +470,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
     </div>
 
     <!-- Header -->
@@ -660,8 +484,10 @@
                 <nav class="nav-links">
                     <a href="index.html" class="active">Home</a>
                     <a href="platform.html">Platform</a>
+                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
                 </nav>
                 <a href="contact.html" class="cta-button">Join Early Access</a>
             </div>
@@ -671,262 +497,173 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Start with SDTM, Scale to Complete Automation</h1>
-                    <p class="hero-subtitle">ZinClin's modular platform empowers clinical programming teams with focused AI automation. Begin with SDTM foundations, add ADaM analytics, complete with TLF outputs. Reduce offshore dependency while enhancing local team efficiency by 60-70%.</p>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">Module 1</span>
-                            <span class="stat-label">SDTM Beta Q4 2025</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">60-70%</span>
-                            <span class="stat-label">Efficiency Target</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-cta">
-                        <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
-                        <a href="platform.html" class="btn-secondary">Explore Modules</a>
-                    </div>
+            <h1>AI-Driven Clinical Programming</h1>
+            <p class="hero-subtitle">Start with SDTM foundations, scale to complete automation. Our modular approach lets you begin with Module 1 and expand based on your team's needs and timeline.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">60-70%</span>
+                    <span class="stat-label">Target Efficiency Gains</span>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="module-preview">
-                        <div class="preview-title">ZinClin Modular Approach</div>
-                        <div class="module-flow">
-                            <div class="flow-item">SDTM<br>Foundation</div>
-                            <div class="flow-item">ADaM<br>Analytics</div>
-                            <div class="flow-item">TLF<br>Outputs</div>
-                        </div>
-                    </div>
-                    <div class="flow-arrow">⬇️</div>
-                    <div class="module-preview">
-                        <div class="preview-title">Module 1: SDTM Features</div>
-                        <div style="text-align: left; font-size: 0.9rem; color: #1f4788;">
-                            • CRF Annotation Automation<br>
-                            • SDTM Mapping Specifications<br>
-                            • Production-Ready Code Generation<br>
-                            • CDISC Compliance Validation
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-number">Module 1</span>
+                    <span class="stat-label">SDTM Foundation Ready</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Years Expertise</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="contact.html" class="btn-primary">Join Early Access Program</a>
+                <a href="platform.html" class="btn-secondary">Explore Platform</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <h2>Why ZinClin Changes Everything</h2>
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon">🎯</div>
+                    <h3>Modular Start, Complete Scale</h3>
+                    <p>Begin with Module 1 SDTM automation where every study needs it most, then expand to ADaM and TLF modules as your team grows and processes mature.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon">🏆</div>
+                    <h3>Onshore Excellence</h3>
+                    <p>Achieve offshore-competitive pricing while maintaining onshore quality, data security, and real-time collaboration that offshore models cannot match.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon">⚡</div>
+                    <h3>AI-Powered Automation</h3>
+                    <p>Leverage 12+ years of clinical programming expertise now built into intelligent automation that understands CDISC standards and regulatory requirements.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon">📈</div>
+                    <h3>Immediate ROI</h3>
+                    <p>Module 1 targets the universal SDTM need across all studies, providing immediate value and the fastest path to efficiency gains and cost reduction.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modular Value Propositions -->
-    <section class="modular-value">
+    <!-- Modular Approach -->
+    <section class="modular-approach">
         <div class="container">
-            <h2>Three Modules, Infinite Possibilities</h2>
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon">🏗️</div>
-                    <h3>Start with SDTM</h3>
-                    <div class="benefit">Universal foundation for all studies</div>
-                    <p>Every clinical study needs SDTM datasets. Module 1 automates CRF annotation, mapping specifications, and code generation - providing immediate ROI on your most essential programming needs.</p>
+            <h2>Progressive Module Strategy</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
+                Start where you need it most, expand when you're ready. Our modular approach ensures you get value immediately while building toward comprehensive automation.
+            </p>
+            
+            <div class="modules-preview">
+                <div class="module-preview">
+                    <div class="module-number">1</div>
+                    <h3>SDTM Foundation</h3>
+                    <p>CRF annotation, SDTM mapping specifications, and code generation. Every study needs SDTM - your logical starting point.</p>
+                    <div class="module-status status-active">In Development</div>
                 </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">📊</div>
-                    <h3>Scale with ADaM</h3>
-                    <div class="benefit">Advanced analytics acceleration</div>
-                    <p>Module 2 builds on SDTM foundations to automate analysis dataset creation, enabling faster biostatistician collaboration and statistical programming workflows.</p>
+
+                <div class="module-preview">
+                    <div class="module-number">2</div>
+                    <h3>ADaM Enhancement</h3>
+                    <p>Analysis dataset automation building on your SDTM foundation to accelerate biostatistical programming workflows.</p>
+                    <div class="module-status status-planned">Development Priority Based on Module 1</div>
                 </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">📑</div>
-                    <h3>Complete with TLF</h3>
-                    <div class="benefit">End-to-end automation</div>
-                    <p>Module 3 delivers comprehensive automation from protocol to publication-ready outputs, completing your transformation to AI-enhanced clinical programming.</p>
+
+                <div class="module-preview">
+                    <div class="module-number">3</div>
+                    <h3>TLF Completion</h3>
+                    <p>Complete the automation circle with Tables, Listings, and Figures generation from protocol to publication-ready outputs.</p>
+                    <div class="module-status status-planned">Future Consideration</div>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="platform.html" class="btn-primary">Explore Full Platform</a>
             </div>
         </div>
     </section>
 
-    <!-- Module Progression -->
-    <section class="module-progression">
+    <!-- Audience Targeting -->
+    <section class="audience-targeting">
         <div class="container">
-            <div class="progression-content">
-                <h2>Your Automation Journey</h2>
-                
-                <div class="progression-flow">
-                    <div class="progression-module">
-                        <div class="module-number">1</div>
-                        <h4>SDTM Module</h4>
-                        <p>CRF annotation, mapping specs, and SDTM code generation</p>
-                        <div class="module-status">Beta Q4 2025</div>
-                    </div>
-                    
-                    <div class="progression-arrow">→</div>
-                    
-                    <div class="progression-module">
-                        <div class="module-number">2</div>
-                        <h4>ADaM Module</h4>
-                        <p>Analysis dataset specifications and automated code creation</p>
-                        <div class="module-status status-dev">In Development</div>
-                    </div>
-                    
-                    <div class="progression-arrow">→</div>
-                    
-                    <div class="progression-module">
-                        <div class="module-number">3</div>
-                        <h4>TLF Module</h4>
-                        <p>Tables, listings, and figures automation for complete outputs</p>
-                        <div class="module-status status-dev">Planned</div>
-                    </div>
+            <h2>Built for Your Role</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">💊</div>
+                    <h3>Biotechs</h3>
+                    <p>Reduce clinical programming costs by 40-60% while maintaining quality and accelerating study timelines through intelligent automation.</p>
+                    <div class="audience-benefit">Immediate Cost Reduction</div>
+                    <p style="margin-top: 1rem;"><a href="solutions-biotechs.html" style="color: #4ecdc4; text-decoration: none;">Learn More →</a></p>
                 </div>
-                
-                <div style="text-align: center; margin-top: 3rem;">
-                    <p style="font-size: 1.1rem; color: #666;">
-                        <strong>Flexible Adoption:</strong> Choose the modules that fit your immediate needs. Start with SDTM for universal value, add ADaM for analytics power, complete with TLF for end-to-end automation.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Problem vs Solution -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="ps-grid">
-                <div class="problem-side">
-                    <h3 class="ps-title">The Offshore Challenge</h3>
-                    <ul class="ps-list">
-                        <li>Communication barriers and time zone delays</li>
-                        <li>Quality control and extensive rework cycles</li>
-                        <li>Data security and compliance concerns</li>
-                        <li>Hidden costs of oversight and management</li>
-                        <li>Loss of institutional knowledge and control</li>
-                        <li>Long feedback loops affecting study timelines</li>
-                    </ul>
+                <div class="audience-card">
+                    <div class="audience-icon">🏢</div>
+                    <h3>CROs</h3>
+                    <p>Win more bids with competitive pricing and faster delivery through Module 1 SDTM automation, differentiating your services in a crowded market.</p>
+                    <div class="audience-benefit">Competitive Advantage</div>
+                    <p style="margin-top: 1rem;"><a href="solutions-cros.html" style="color: #4ecdc4; text-decoration: none;">Learn More →</a></p>
                 </div>
-                
-                <div class="solution-side">
-                    <h3 class="ps-title">The ZinClin Advantage</h3>
-                    <ul class="ps-list">
-                        <li>Local teams enhanced with AI efficiency</li>
-                        <li>Consistent, high-quality automated code generation</li>
-                        <li>Complete data control and security compliance</li>
-                        <li>Transparent modular pricing with predictable ROI</li>
-                        <li>Enhanced team capabilities and retained knowledge</li>
-                        <li>Real-time collaboration and immediate feedback</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Target Audiences -->
-    <section class="target-audiences">
-        <div class="container">
-            <h2>Built for Clinical Programming Professionals</h2>
-            <div class="audiences-grid">
                 <div class="audience-card">
                     <div class="audience-icon">👨‍💻</div>
-                    <h3>Statistical Programmers</h3>
-                    <p>Start with Module 1 to automate SDTM foundations, then scale through ADaM and TLF modules to become the AI-enhanced programming expert your organization needs.</p>
+                    <h3>Programmers</h3>
+                    <p>Enhance your career with AI programming skills, focusing on high-value tasks while automating repetitive SDTM work through Module 1.</p>
+                    <div class="audience-benefit">Career Enhancement</div>
+                    <p style="margin-top: 1rem;"><a href="solutions-programmers.html" style="color: #4ecdc4; text-decoration: none;">Learn More →</a></p>
                 </div>
-                
+
                 <div class="audience-card">
                     <div class="audience-icon">📊</div>
                     <h3>Biostatisticians</h3>
-                    <p>Module 1 accelerates SDTM delivery, Module 2 transforms ADaM collaboration. Reduce programming cycle times while maintaining statistical rigor and quality control.</p>
-                </div>
-                
-                <div class="audience-card">
-                    <div class="audience-icon">🏢</div>
-                    <h3>Biotech Companies</h3>
-                    <p>Achieve offshore-competitive costs with superior quality and control. Start with Module 1 for immediate ROI, scale modules based on your pipeline needs and budget.</p>
-                </div>
-                
-                <div class="audience-card">
-                    <div class="audience-icon">🔬</div>
-                    <h3>CROs</h3>
-                    <p>Differentiate your services with modular automation capabilities. Win more bids with faster turnarounds, competitive pricing, and superior quality assurance.</p>
+                    <p>Accelerate your workflows with automated SDTM foundation, reducing programming cycle times by 70% and improving collaboration efficiency.</p>
+                    <div class="audience-benefit">Workflow Acceleration</div>
+                    <p style="margin-top: 1rem;"><a href="solutions-biostatisticians.html" style="color: #4ecdc4; text-decoration: none;">Learn More →</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
+    <!-- Early Access CTA -->
+    <section class="early-access-cta">
         <div class="container">
-            <h2>Built on Proven Industry Expertise</h2>
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <div class="proof-number">12+</div>
-                    <div class="proof-label">Years Clinical Programming Services</div>
-                    <p>Zinger Software Solutions has delivered high-quality clinical programming since 2013, building the expertise now embedded in ZinClin modules</p>
+            <h2>Join the Future of Clinical Programming</h2>
+            <p>Be among the first to experience Module 1 SDTM automation. Early access participants influence development priorities, receive preferential pricing, and get hands-on experience with the future of clinical programming.</p>
+            
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">🎯</div>
+                    <h3>Influence Development</h3>
+                    <p>Your feedback shapes feature priorities</p>
                 </div>
                 
-                <div class="proof-card">
-                    <div class="proof-number">100+</div>
-                    <div class="proof-label">Successful Project Deliveries</div>
-                    <p>Proven track record of SDTM, ADaM, and TLF deliverables for biotechs and CROs, informing our modular automation approach</p>
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">💰</div>
+                    <h3>Preferential Pricing</h3>
+                    <p>Lock in early adopter rates</p>
                 </div>
                 
-                <div class="proof-card">
-                    <div class="proof-number">24+</div>
-                    <div class="proof-label">Years Founder Experience</div>
-                    <p>Amit Ahuja's deep expertise in SAS programming, CDISC standards, and regulatory submissions drives ZinClin's development roadmap</p>
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">🚀</div>
+                    <h3>Priority Access</h3>
+                    <p>First access to new features</p>
                 </div>
                 
-                <div class="proof-card">
-                    <div class="proof-number">$5B+</div>
-                    <div class="proof-label">Market Opportunity</div>
-                    <p>Addressing the massive clinical data services market with modular AI innovation that scales with customer needs</p>
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">🤝</div>
+                    <h3>Direct Support</h3>
+                    <p>Work directly with our team</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Start Your Modular Automation Journey?</h2>
-            <div class="cta-form">
-                <h3>Join Module 1 (SDTM) Early Access Program</h3>
-                <form id="hero-signup" action="#" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" name="firstName" placeholder="First Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="lastName" placeholder="Last Name" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <select name="role" required>
-                            <option value="">Select Your Role</option>
-                            <option value="statistical-programmer">Statistical Programmer</option>
-                            <option value="biostatistician">Biostatistician</option>
-                            <option value="data-manager">Clinical Data Manager</option>
-                            <option value="director-manager">Director/Manager</option>
-                            <option value="cro-executive">CRO Executive</option>
-                            <option value="biotech-executive">Biotech Executive</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Join Module 1 Early Access</button>
-                </form>
-                
-                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                    Be first to experience SDTM automation when Module 1 beta testing begins Q4 2025
-                </p>
-            </div>
+            
+            <a href="contact.html" class="btn-cta-large">Join Early Access Program</a>
         </div>
     </section>
 
@@ -935,90 +672,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Modules</h3>
-                    <a href="platform.html">Module Overview</a>
-                    <a href="contact.html">Early Access Program</a>
-                    <a href="contact.html">Request Demo</a>
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
+                </div>
+                
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="about.html">Leadership Team</a>
-                    <a href="contact.html">Careers</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>📧 admin@zingersoftwaresolutions.com</p>
-                    <p>📍 Apex, NC</p>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Transforming clinical programming through modular AI automation since 2013.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Hero form submission
-        document.getElementById('hero-signup').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const firstName = formData.get('firstName');
-            const email = formData.get('email');
-            
-            if (!firstName || !email) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            alert(`Thank you ${firstName}! You've been added to Module 1 (SDTM) early access program. We'll notify you when beta testing begins Q4 2025.`);
-            this.reset();
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Apply observer to all cards
-        document.querySelectorAll('.value-card, .audience-card, .proof-card, .progression-module').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>

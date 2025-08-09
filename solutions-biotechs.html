@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for Biotech Companies - 40-60% Cost Reduction Module 1 SDTM Automation Beta Q4 2025 - Zinger Software Solutions</title>
-    <meta name="description" content="40-60% cost reduction with Module 1 SDTM automation. Onshore AI programming for biotech companies. Beta Q4 2025.">
+    <title>ZinClin for Biotechs - Module 1 SDTM Cost Reduction & ROI | Zinger Software Solutions</title>
+    <meta name="description" content="40-60% cost reduction with Module 1 SDTM automation for biotech companies. Onshore AI programming excellence. Early access program now open.">
     
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -17,50 +18,40 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Development Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            padding: 0 20px;
         }
 
         /* Header */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: relative;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #1f4788;
+            color: white;
             text-decoration: none;
         }
 
         .logo-sub {
             font-size: 0.7rem;
-            color: #4ecdc4;
-            font-weight: normal;
+            opacity: 0.8;
+            margin-top: -0.2rem;
         }
 
         .nav-links {
@@ -69,10 +60,10 @@
         }
 
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .nav-links a:hover,
@@ -82,10 +73,10 @@
 
         .cta-button {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 0.8rem 1.5rem;
-            border-radius: 5px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -95,237 +86,183 @@
             transform: translateY(-2px);
         }
 
-        /* Page Hero */
-        .page-hero {
+        /* Hero Section */
+        .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text h1 {
+        .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cost-savings {
-            list-style: none;
-            padding: 0;
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .cost-savings li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
+        .stat-item {
+            text-align: center;
         }
 
-        .cost-savings li::before {
-            content: '💰';
-            position: absolute;
-            left: 0;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn-primary {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 1rem 2rem;
+            border: none;
             border-radius: 5px;
-            text-decoration: none;
+            font-size: 1.1rem;
             font-weight: bold;
+            text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
         }
 
         .btn-primary:hover {
             background: #45b5aa;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
+        /* Cost Reduction Section */
+        .cost-reduction {
+            padding: 5rem 0;
             background: white;
+        }
+
+        .cost-reduction h2 {
+            text-align: center;
+            font-size: 2.5rem;
             color: #1f4788;
+            margin-bottom: 3rem;
         }
 
-        .cost-preview {
-            background: rgba(255, 255, 255, 0.1);
+        .reduction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .reduction-card {
+            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #4ecdc4;
         }
 
-        .preview-title {
-            font-size: 1.2rem;
-            font-weight: bold;
+        .reduction-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            color: #4ecdc4;
+            color: #28a745;
+        }
+
+        .reduction-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
         }
 
         .cost-comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .cost-side h4 {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .cost-amount {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .cost-description {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Cost Benefits */
-        .cost-benefits {
             padding: 4rem 0;
             background: #f8f9fa;
         }
 
-        .cost-benefits h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-card {
+        .comparison-table {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
+            border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
         }
 
-        .benefit-card:hover {
-            transform: translateY(-5px);
+        .table-header {
+            background: #1f4788;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
         }
 
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
+        .table-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid #eee;
         }
 
-        .benefit-card h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-stats {
-            background: #e8f9f5;
+        .table-cell {
             padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
+            text-align: center;
         }
 
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-weight: 500;
-            color: #1f4788;
-        }
-
-        .stat-value {
-            color: #4ecdc4;
+        .table-cell:first-child {
+            text-align: left;
             font-weight: bold;
         }
 
-        /* Module Implementation */
-        .module-implementation {
-            padding: 4rem 0;
-        }
-
-        .module-implementation h2 {
-            text-align: center;
+        .highlight {
+            background: #e8f9f5;
             color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-weight: bold;
         }
 
-        .implementation-strategy {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .strategy-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .step-card {
+        /* Implementation Strategy */
+        .implementation {
+            padding: 5rem 0;
             background: white;
+        }
+
+        .implementation h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .implementation-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .timeline-phase {
+            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 10px;
             text-align: center;
             position: relative;
         }
 
-        .step-number {
+        .phase-number {
             background: #4ecdc4;
             color: white;
             width: 40px;
@@ -338,238 +275,39 @@
             margin: 0 auto 1rem;
         }
 
-        .step-card h4 {
+        .timeline-phase h3 {
             color: #1f4788;
             margin-bottom: 1rem;
         }
 
-        .step-timeline {
-            background: #f39c12;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .roi-projection {
+        /* ROI Calculator */
+        .roi-section {
+            padding: 5rem 0;
             background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 15px;
             text-align: center;
         }
 
-        .roi-projection h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .roi-numbers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .roi-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        .roi-value {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .roi-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Competitive Advantage */
-        .competitive-advantage {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .competitive-advantage h2 {
-            text-align: center;
-            color: #1f4788;
+        .roi-section h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .advantage-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .advantage-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .advantage-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
-        }
-
-        .advantage-card h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .advantage-features {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
-        }
-
-        .advantage-features li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .advantage-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-        }
-
-        /* Case Studies */
-        .case-studies {
-            padding: 4rem 0;
-        }
-
-        .case-studies h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .studies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-
-        .study-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .study-header {
-            background: linear-gradient(135deg, #1f4788, #2558a0);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .study-type {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .study-header h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .study-content {
-            padding: 1.5rem;
-        }
-
-        .study-metrics {
-            background: #e8f9f5;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        /* Early Access */
-        .early-access {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .early-access-content {
-            max-width: 800px;
+        .roi-calculator {
+            max-width: 600px;
             margin: 0 auto;
-        }
-
-        .early-access h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .early-access-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .benefit-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        .early-access-form {
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 15px;
-            margin-top: 2rem;
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 1rem;
+        .roi-metric {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 1rem;
-        }
-
-        .form-row input {
             padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .form-row button {
-            background: #4ecdc4;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .form-row button:hover {
-            background: #45b5aa;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
         }
 
         /* Footer */
@@ -591,6 +329,7 @@
             margin-bottom: 1rem;
         }
 
+        .footer-section p,
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
@@ -609,32 +348,36 @@
             color: #bdc3c7;
         }
 
-        /* Mobile Responsive */
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            
-            .cost-comparison {
+            .table-row {
                 grid-template-columns: 1fr;
             }
             
-            .form-row {
-                grid-template-columns: 1fr;
+            .table-cell {
+                text-align: left;
+                border-bottom: 1px solid #eee;
             }
         }
     </style>
@@ -642,7 +385,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
     </div>
 
     <!-- Header -->
@@ -656,338 +399,209 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
+                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Module 1 Early Access</a>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
             </div>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>ZinClin for Biotech Companies</h1>
-                    <p class="hero-subtitle">Achieve offshore-competitive costs with superior quality and control. Start with Module 1 SDTM automation for immediate ROI, then scale additional modules based on your pipeline needs and budget.</p>
-                    
-                    <ul class="cost-savings">
-                        <li>Target 40-60% reduction in clinical programming costs</li>
-                        <li>Maintain onshore quality and regulatory control</li>
-                        <li>Scale modular subscriptions with your pipeline growth</li>
-                        <li>Achieve competitive timelines without offshore risks</li>
-                        <li>Start with Module 1, expand based on proven ROI</li>
-                    </ul>
-                    
-                    <div class="hero-cta">
-                        <a href="contact.html" class="btn-primary">Join Module 1 Beta</a>
-                        <a href="contact.html" class="btn-secondary">Request ROI Analysis</a>
-                    </div>
+            <h1>ZinClin for Biotechs</h1>
+            <p class="hero-subtitle">Reduce clinical programming costs by 40-60% while maintaining quality and accelerating study timelines. Start with Module 1 SDTM automation - the foundation every study needs.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">40-60%</span>
+                    <span class="stat-label">Target Cost Reduction</span>
                 </div>
-                
-                <div class="cost-preview">
-                    <div class="preview-title">Target Cost Comparison</div>
-                    <div class="cost-comparison">
-                        <div class="cost-side">
-                            <h4>Current Offshore</h4>
-                            <div class="cost-amount">$150K</div>
-                            <div class="cost-description">per study programming package</div>
-                        </div>
-                        <div class="cost-side">
-                            <h4>Module 1 + Onshore</h4>
-                            <div class="cost-amount">$90K</div>
-                            <div class="cost-description">target with superior quality control</div>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-number">Module 1</span>
+                    <span class="stat-label">SDTM Foundation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Onshore</span>
+                    <span class="stat-label">Quality & Security</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
+                <a href="contact.html" class="btn-primary">Request ROI Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Reduction -->
+    <section class="cost-reduction">
+        <div class="container">
+            <h2>Immediate Cost Reduction Through Module 1</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
+                Module 1 SDTM automation targets the universal need across all studies, providing immediate value and the fastest path to cost reduction.
+            </p>
+            
+            <div class="reduction-grid">
+                <div class="reduction-card">
+                    <div class="reduction-icon">💰</div>
+                    <h3>Programming Cost Reduction</h3>
+                    <p>Reduce SDTM programming costs by 40-60% through intelligent automation while maintaining the same quality standards as your internal teams.</p>
+                </div>
+
+                <div class="reduction-card">
+                    <div class="reduction-icon">⚡</div>
+                    <h3>Faster Study Timelines</h3>
+                    <p>Accelerate SDTM delivery by 50-70% with automated CRF annotation and mapping specification generation, reducing critical path dependencies.</p>
+                </div>
+
+                <div class="reduction-card">
+                    <div class="reduction-icon">🔒</div>
+                    <h3>Onshore Data Security</h3>
+                    <p>Maintain complete data control and security with onshore processing, eliminating offshore data transfer risks and compliance complexities.</p>
+                </div>
+
+                <div class="reduction-card">
+                    <div class="reduction-icon">📈</div>
+                    <h3>Scalable Resource Management</h3>
+                    <p>Handle 2-3x more concurrent studies with existing programming teams through Module 1 automation, improving resource utilization significantly.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cost Benefits -->
-    <section class="cost-benefits">
+    <!-- Cost Comparison -->
+    <section class="cost-comparison">
         <div class="container">
-            <h2>Module 1 Cost Benefits for Biotechs</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Competitive SDTM Pricing</h3>
-                    <p>Module 1 will enable offshore-competitive pricing for SDTM programming while maintaining onshore quality, control, and regulatory compliance advantages.</p>
-                    <div class="benefit-stats">
-                        <div class="stat-row">
-                            <span class="stat-label">Target Cost Reduction:</span>
-                            <span class="stat-value">40-60%</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Quality Control:</span>
-                            <span class="stat-value">Superior</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Timeline Advantage:</span>
-                            <span class="stat-value">Same or faster</span>
-                        </div>
-                    </div>
+            <h2 style="text-align: center; font-size: 2.5rem; color: #1f4788; margin-bottom: 3rem;">Module 1 SDTM Cost Comparison</h2>
+            
+            <div class="comparison-table">
+                <div class="table-header">
+                    <h3>Annual Programming Costs (5 Studies/Year)</h3>
                 </div>
                 
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Predictable Budget Control</h3>
-                    <p>Module 1 SaaS subscriptions will provide predictable monthly costs, eliminating variable offshore project pricing and unexpected revision charges.</p>
-                    <div class="benefit-stats">
-                        <div class="stat-row">
-                            <span class="stat-label">Pricing Model:</span>
-                            <span class="stat-value">Predictable SaaS</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Revision Costs:</span>
-                            <span class="stat-value">Included</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Budget Variance:</span>
-                            <span class="stat-value">Minimal</span>
-                        </div>
-                    </div>
+                <div class="table-row" style="background: #f8f9fa; font-weight: bold;">
+                    <div class="table-cell">Approach</div>
+                    <div class="table-cell">Cost/Study</div>
+                    <div class="table-cell">Annual Cost</div>
+                    <div class="table-cell">Time/Study</div>
                 </div>
                 
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Scalable Growth Model</h3>
-                    <p>Start with Module 1 for immediate SDTM cost savings, then add Module 2 (ADaM) and Module 3 (TLF) as your pipeline and budget expand.</p>
-                    <div class="benefit-stats">
-                        <div class="stat-row">
-                            <span class="stat-label">Initial Investment:</span>
-                            <span class="stat-value">Module 1 Only</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Expansion:</span>
-                            <span class="stat-value">Based on ROI</span>
-                        </div>
-                        <div class="stat-row">
-                            <span class="stat-label">Risk:</span>
-                            <span class="stat-value">Minimized</span>
-                        </div>
-                    </div>
+                <div class="table-row">
+                    <div class="table-cell">Internal Team (US)</div>
+                    <div class="table-cell">$45,000</div>
+                    <div class="table-cell">$225,000</div>
+                    <div class="table-cell">8-10 weeks</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="table-cell">Offshore Programming</div>
+                    <div class="table-cell">$25,000</div>
+                    <div class="table-cell">$125,000</div>
+                    <div class="table-cell">10-12 weeks</div>
+                </div>
+                
+                <div class="table-row highlight">
+                    <div class="table-cell">ZinClin Module 1</div>
+                    <div class="table-cell">$18,000</div>
+                    <div class="table-cell">$90,000</div>
+                    <div class="table-cell">3-4 weeks</div>
+                </div>
+                
+                <div class="table-row" style="background: #e8f9f5;">
+                    <div class="table-cell"><strong>Annual Savings vs Internal</strong></div>
+                    <div class="table-cell"><strong>$27,000</strong></div>
+                    <div class="table-cell"><strong>$135,000</strong></div>
+                    <div class="table-cell"><strong>5-6 weeks</strong></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Module Implementation Strategy -->
-    <section class="module-implementation">
+    <!-- Implementation Strategy -->
+    <section class="implementation">
         <div class="container">
-            <h2>Biotech Implementation Strategy</h2>
-            <div class="implementation-strategy">
-                <div class="strategy-steps">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h4>Start with Module 1</h4>
-                        <p>Begin with SDTM automation to establish foundation and prove ROI. Every clinical study needs SDTM, making this the logical starting point.</p>
-                        <div class="step-timeline">Q4 2025 Beta</div>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h4>Measure ROI Impact</h4>
-                        <p>Track cost savings, timeline improvements, and quality enhancements from Module 1 implementation across your first few studies.</p>
-                        <div class="step-timeline">Q1-Q2 2026</div>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h4>Scale Based on Success</h4>
-                        <p>Add Module 2 (ADaM) and Module 3 (TLF) based on proven Module 1 results, pipeline growth, and budget availability.</p>
-                        <div class="step-timeline">Q3 2026+</div>
-                    </div>
+            <h2>Module 1 Implementation Strategy</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
+                Start with Module 1 SDTM automation for immediate impact, then scale based on your team's needs and success metrics.
+            </p>
+            
+            <div class="implementation-timeline">
+                <div class="timeline-phase">
+                    <div class="phase-number">1</div>
+                    <h3>Early Access Enrollment</h3>
+                    <p>Join our early access program to begin testing Module 1 SDTM automation with your current studies and provide feedback on features.</p>
                 </div>
-                
-                <div class="roi-projection">
-                    <h3>Projected Module 1 ROI for Mid-Size Biotech</h3>
-                    <p>Based on 4-6 studies per year with typical SDTM programming requirements</p>
-                    <div class="roi-numbers">
-                        <div class="roi-item">
-                            <div class="roi-value">$240K</div>
-                            <div class="roi-label">Annual Savings Target</div>
-                        </div>
-                        <div class="roi-item">
-                            <div class="roi-value">60%</div>
-                            <div class="roi-label">Cost Reduction Goal</div>
-                        </div>
-                        <div class="roi-item">
-                            <div class="roi-value">4-6 weeks</div>
-                            <div class="roi-label">Timeline Improvement</div>
-                        </div>
-                        <div class="roi-item">
-                            <div class="roi-value">6 months</div>
-                            <div class="roi-label">Target Payback Period</div>
-                        </div>
-                    </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">2</div>
+                    <h3>Pilot Study Implementation</h3>
+                    <p>Run 1-2 pilot studies through Module 1 to validate efficiency gains and quality standards while your team learns the platform.</p>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">3</div>
+                    <h3>Production Rollout</h3>
+                    <p>Scale Module 1 across all new studies once validation is complete, capturing immediate cost savings and timeline improvements.</p>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-number">4</div>
+                    <h3>Module Expansion</h3>
+                    <p>Evaluate Module 2 (ADaM) and Module 3 (TLF) based on your experience with Module 1 and evolving automation needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Competitive Advantage -->
-    <section class="competitive-advantage">
+    <!-- ROI Calculator -->
+    <section class="roi-section">
         <div class="container">
-            <h2>Competitive Advantages for Biotechs</h2>
-            <div class="advantage-grid">
-                <div class="advantage-card">
-                    <div class="advantage-icon">🏆</div>
-                    <h3>Onshore Quality Control</h3>
-                    <p>Module 1 will provide offshore-competitive pricing while maintaining onshore advantages of direct communication, timezone alignment, and regulatory familiarity.</p>
-                    <ul class="advantage-features">
-                        <li>Real-time collaboration and feedback</li>
-                        <li>US timezone alignment for urgent changes</li>
-                        <li>Direct FDA regulatory experience</li>
-                        <li>Superior quality control processes</li>
-                    </ul>
+            <h2>Projected ROI with Module 1</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Based on typical biotech study volumes and Module 1 SDTM automation efficiencies
+            </p>
+            
+            <div class="roi-calculator">
+                <div class="roi-metric">
+                    <span>Studies per year:</span>
+                    <span><strong>5-8 studies</strong></span>
                 </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">⚡</div>
-                    <h3>Accelerated Development</h3>
-                    <p>Module 1 automation will compress traditional programming timelines, enabling faster study completion and accelerated time-to-market for your pipeline.</p>
-                    <ul class="advantage-features">
-                        <li>60-70% faster SDTM programming cycles</li>
-                        <li>Same-day SAP revision implementation</li>
-                        <li>Rapid interim analysis turnaround</li>
-                        <li>Accelerated database lock to NDA timeline</li>
-                    </ul>
+                <div class="roi-metric">
+                    <span>Cost savings per study:</span>
+                    <span><strong>$20,000-30,000</strong></span>
                 </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">🛡️</div>
-                    <h3>Risk Mitigation</h3>
-                    <p>Modular approach will minimize implementation risk. Start with Module 1 to prove value before expanding to additional modules.</p>
-                    <ul class="advantage-features">
-                        <li>Lower initial investment with Module 1</li>
-                        <li>Proven ROI before module expansion</li>
-                        <li>Reduced dependency on single providers</li>
-                        <li>Maintained in-house programming capabilities</li>
-                    </ul>
+                <div class="roi-metric">
+                    <span>Time savings per study:</span>
+                    <span><strong>4-6 weeks</strong></span>
+                </div>
+                <div class="roi-metric">
+                    <span>Annual cost reduction:</span>
+                    <span><strong>$100,000-240,000</strong></span>
+                </div>
+                <div class="roi-metric" style="background: rgba(255, 255, 255, 0.2); font-size: 1.1rem;">
+                    <span>ROI Timeline:</span>
+                    <span><strong>3-6 months</strong></span>
                 </div>
             </div>
+            
+            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
+                *Projections based on Module 1 SDTM automation capabilities and typical biotech study complexity
+            </p>
         </div>
     </section>
 
-    <!-- Case Studies -->
-    <section class="case-studies">
+    <!-- CTA Section -->
+    <section style="padding: 4rem 0; background: white; text-align: center;">
         <div class="container">
-            <h2>Industry Challenge Scenarios</h2>
-            <div class="studies-grid">
-                <div class="study-card">
-                    <div class="study-header">
-                        <div class="study-type">Mid-Size Biotech Challenge</div>
-                        <h4>Offshore Quality & Communication Issues</h4>
-                    </div>
-                    <div class="study-content">
-                        <p>A biotech company struggled with offshore programming quality inconsistencies, timezone communication delays, and multiple revision cycles that extended study timelines.</p>
-                        <div class="study-metrics">
-                            <div class="stat-row">
-                                <span class="stat-label">Challenge:</span>
-                                <span class="stat-value">6-8 week SDTM cycles</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Module 1 Target:</span>
-                                <span class="stat-value">2-3 week cycles</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Projected Impact:</span>
-                                <span class="stat-value">4-6 months faster to market</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="study-card">
-                    <div class="study-header">
-                        <div class="study-type">Growing Biotech Challenge</div>
-                        <h4>Scaling Programming Capacity</h4>
-                    </div>
-                    <div class="study-content">
-                        <p>A biotech with expanding pipeline needed to scale programming capacity without increasing headcount costs or offshore management overhead.</p>
-                        <div class="study-metrics">
-                            <div class="stat-row">
-                                <span class="stat-label">Challenge:</span>
-                                <span class="stat-value">Capacity constraints</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Module 1 Solution:</span>
-                                <span class="stat-value">Automated scaling</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Cost Impact:</span>
-                                <span class="stat-value">40% reduction vs hiring</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="study-card">
-                    <div class="study-header">
-                        <div class="study-type">Budget-Conscious Biotech</div>
-                        <h4>Cost Control with Quality</h4>
-                    </div>
-                    <div class="study-content">
-                        <p>A biotech needed to reduce programming costs while maintaining quality for investor milestones and regulatory submissions.</p>
-                        <div class="study-metrics">
-                            <div class="stat-row">
-                                <span class="stat-label">Requirement:</span>
-                                <span class="stat-value">50% cost reduction</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Module 1 Target:</span>
-                                <span class="stat-value">60% cost reduction</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">Quality Control:</span>
-                                <span class="stat-value">Enhanced via automation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Early Access -->
-    <section class="early-access">
-        <div class="container">
-            <div class="early-access-content">
-                <h2>Join Module 1 Early Access for Biotechs</h2>
-                <p>Be among the first biotech companies to experience SDTM automation when beta testing begins Q4 2025. Influence development priorities, receive preferential pricing, and gain competitive advantage.</p>
-                
-                <div class="early-access-benefits">
-                    <div class="benefit-item">
-                        <strong>Priority Beta Access</strong><br>
-                        First access to Module 1 testing
-                    </div>
-                    <div class="benefit-item">
-                        <strong>Preferential Pricing</strong><br>
-                        Early adopter subscription discounts
-                    </div>
-                    <div class="benefit-item">
-                        <strong>Feature Influence</strong><br>
-                        Shape development for biotech needs
-                    </div>
-                    <div class="benefit-item">
-                        <strong>ROI Planning</strong><br>
-                        Custom implementation strategy
-                    </div>
-                </div>
-                
-                <div class="early-access-form">
-                    <form action="#" method="POST">
-                        <div class="form-row">
-                            <input type="email" placeholder="Enter your email address" required>
-                            <button type="submit">Join Module 1 Beta</button>
-                        </div>
-                    </form>
-                    <p style="margin-top: 1rem; opacity: 0.9;">Early access members will receive ROI analysis tools, implementation planning guides, and direct access to our development team for biotech-specific requirements.</p>
-                </div>
-            </div>
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Transform Your Programming Costs?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join our Module 1 early access program and be among the first biotechs to experience SDTM automation benefits.
+            </p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Join Module 1 Early Access</a>
         </div>
     </section>
 
@@ -996,56 +610,39 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Platform</h3>
-                    <a href="index.html">Home</a>
-                    <a href="platform.html">Platform Overview</a>
-                    <a href="contact.html">Module 1 Early Access</a>
-                    <a href="about.html">About Zinger</a>
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
+                </div>
+                
                 <div class="footer-section">
                     <h3>Solutions</h3>
-                    <a href="solutions-biotechs.html">Biotech Companies</a>
-                    <a href="solutions-cros.html">CROs</a>
-                    <a href="solutions-programmers.html">Programmers</a>
-                    <a href="solutions-biostatisticians.html">Biostatisticians</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="resources.html">Industry Resources</a>
-                    <a href="contact.html">Module 1 Resources</a>
-                    <a href="contact.html">Strategy Consultation</a>
-                    <a href="contact.html">Technical Documentation</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
-                    <a href="contact.html">Contact Form</a>
-                    <a href="contact.html">Schedule Strategy Call</a>
-                    <p style="margin-top: 1rem;">Apex, NC</p>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. ZinClin is a trademark of Zinger Software Solutions.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Early access form handling
-        document.querySelector('.early-access-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for joining our Module 1 early access program! You\'ll receive ROI analysis and implementation planning specifically for biotech companies when beta testing begins Q4 2025.');
-        });
-
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact ZinClin | Module 1 Early Access & Strategy Calls | Zinger Software Solutions</title>
-    <meta name="description" content="Join ZinClin's Module 1 (SDTM) early access program or schedule a strategy call. Contact Zinger Software Solutions for modular AI-powered clinical programming automation.">
+    <title>Contact ZinClin - Early Access Program & Current Services | Zinger Software Solutions</title>
+    <meta name="description" content="Contact ZinClin for early access program or current clinical programming services. Technical staffing, SAS programming, and strategic consulting available now.">
     
     <style>
         /* Reset and Base Styles */
@@ -18,6 +18,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
 
         .container {
@@ -31,10 +32,7 @@
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .header-content {
@@ -46,53 +44,49 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #4ecdc4;
+            color: white;
             text-decoration: none;
         }
-        
+
         .logo-sub {
-            font-size: 0.9rem;
-            color: #b8d4f0;
-            font-weight: normal;
-            margin-top: -5px;
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #4ecdc4;
         }
 
         .cta-button {
             background: #4ecdc4;
             color: #1f4788;
-            padding: 0.7rem 1.5rem;
-            border: none;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            text-decoration: none;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .cta-button:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
         }
 
-        /* Page Header */
+        /* Page Hero */
         .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
@@ -108,7 +102,7 @@
         .page-hero p {
             font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
@@ -166,53 +160,6 @@
             background: #45b5aa;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-        }
-
-        /* Module 1 Focus */
-        .module-focus {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
-            color: white;
-        }
-
-        .module-focus h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .module-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .module-timeline {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .timeline-date {
-            background: white;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-
-        .timeline-desc {
-            font-size: 1.1rem;
         }
 
         /* Contact Form */
@@ -334,26 +281,16 @@
 
         .info-item h3 {
             color: #1f4788;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .info-item a {
-            color: #1f4788;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .info-item a:hover {
-            color: #4ecdc4;
-        }
-
-        /* FAQ */
-        .faq {
+        /* FAQ Section */
+        .faq-section {
             padding: 4rem 0;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .faq h2 {
+        .faq-section h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
@@ -362,36 +299,27 @@
 
         .faq-grid {
             display: grid;
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .faq-item {
-            background: white;
+            background: #f8f9fa;
+            padding: 2rem;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #4ecdc4;
         }
 
         .faq-question {
-            background: #1f4788;
-            color: white;
-            padding: 1.5rem;
             font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: #1f4788;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            display: none;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
+            color: #666;
+            line-height: 1.6;
         }
 
         /* Footer */
@@ -413,6 +341,7 @@
             margin-bottom: 1rem;
         }
 
+        .footer-section p,
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
@@ -431,22 +360,6 @@
             color: #bdc3c7;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .timeline-item {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
         /* Development Stage Banner */
         .dev-banner {
             background: #f39c12;
@@ -455,12 +368,31 @@
             padding: 0.5rem;
             font-weight: bold;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
     </div>
 
     <!-- Header -->
@@ -474,10 +406,12 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
+                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
+                    <a href="resources.html">Resources</a>
                 </nav>
-                <a href="#early-access" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
@@ -485,8 +419,8 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Get Started with ZinClin Module 1</h1>
-            <p>Join our Module 1 (SDTM) early access program or schedule a strategy call to discuss how modular AI automation can transform your clinical programming operations.</p>
+            <h1>Get Started Today</h1>
+            <p>Join our ZinClin early access program for AI-powered automation or contact us for immediate clinical programming services. Both paths benefit from our 12+ years of industry expertise.</p>
         </div>
     </section>
 
@@ -496,51 +430,24 @@
             <div class="options-grid">
                 <div class="option-card">
                     <div class="option-icon">🚀</div>
-                    <h3>Module 1 Early Access</h3>
-                    <p>Be among the first to experience ZinClin's SDTM automation. Get exclusive beta access for Module 1 CRF annotation, mapping specifications, and SDTM code generation.</p>
-                    <a href="#early-access" class="btn-primary">Join Module 1 Beta</a>
+                    <h3>ZinClin Early Access</h3>
+                    <p>Join our early access program to be among the first to experience AI-powered SDTM automation. Influence development priorities and receive preferential pricing.</p>
+                    <a href="#contact-form" class="btn-primary">Join Early Access</a>
                 </div>
-                
-                <div class="option-card">
-                    <div class="option-icon">📧</div>
-                    <h3>Direct Contact</h3>
-                    <p>Email us directly to discuss your clinical programming challenges and how our modular SaaS platform can address them progressively, starting with SDTM automation.</p>
-                    <a href="mailto:admin@zingersoftwaresolutions.com" class="btn-primary">Email Us</a>
-                </div>
-                
-                <div class="option-card">
-                    <div class="option-icon">🏢</div>
-                    <h3>Enterprise SaaS Strategy</h3>
-                    <p>Interested in enterprise SaaS deployment, multi-user licensing, or modular adoption strategy? Let's discuss scalable subscription solutions starting with Module 1.</p>
-                    <a href="#contact-form" class="btn-primary">Strategy Consultation</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Module 1 Focus -->
-    <section class="module-focus">
-        <div class="container">
-            <div class="module-content">
-                <h2>Module 1 (SDTM) Timeline</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Our SDTM module is in active development with a clear timeline for beta testing and general availability.</p>
-                
-                <div class="module-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Q4 2025</div>
-                        <div class="timeline-desc">Module 1 Beta Testing with Early Access Participants</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Q1 2026</div>
-                        <div class="timeline-desc">Module 1 General Availability with SaaS Subscriptions</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Ongoing</div>
-                        <div class="timeline-desc">Early Access Program Enrollment Open</div>
-                    </div>
+                <div class="option-card">
+                    <div class="option-icon">⚡</div>
+                    <h3>Current Services</h3>
+                    <p>Need immediate help? Access our proven clinical programming services, technical staffing, and strategic consulting available today with quality guarantees.</p>
+                    <a href="#contact-form" class="btn-primary">Contact for Services</a>
                 </div>
-                
-                <p style="font-size: 1.1rem; margin-top: 2rem;">Join our early access program to influence Module 1 development, get priority beta access, and receive preferential pricing.</p>
+
+                <div class="option-card">
+                    <div class="option-icon">💬</div>
+                    <h3>Strategy Consultation</h3>
+                    <p>Schedule a consultation to discuss your clinical programming challenges, automation roadmap, or how our services can support your current and future needs.</p>
+                    <a href="#contact-form" class="btn-primary">Schedule Consultation</a>
+                </div>
             </div>
         </div>
     </section>
@@ -549,32 +456,24 @@
     <section class="contact-form" id="contact-form">
         <div class="container">
             <div class="form-container">
-                <h2>Get in Touch</h2>
-                <form id="early-access" action="#" method="POST">
+                <h2>Contact Us</h2>
+                <form>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
                         </div>
                         <div class="form-group">
-                            <label for="company">Company/Organization *</label>
-                            <input type="text" id="company" name="company" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Your Role *</label>
-                            <select id="role" name="role" required>
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role">
                                 <option value="">Select your role</option>
                                 <option value="statistical-programmer">Statistical Programmer</option>
                                 <option value="biostatistician">Biostatistician</option>
@@ -582,33 +481,34 @@
                                 <option value="director-manager">Director/Manager</option>
                                 <option value="cro-executive">CRO Executive</option>
                                 <option value="biotech-executive">Biotech Executive</option>
+                                <option value="consultant">Consultant</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label for="interest">Primary Interest *</label>
-                            <select id="interest" name="interest" required>
+                            <label for="inquiry-type">Type of Inquiry *</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
                                 <option value="">Select your primary interest</option>
-                                <option value="module1-early-access">Module 1 (SDTM) Early Access Program</option>
-                                <option value="module1-strategy">Module 1 Implementation Strategy</option>
-                                <option value="enterprise-saas">Enterprise SaaS Licensing</option>
-                                <option value="modular-roadmap">Modular Platform Roadmap Discussion</option>
+                                <option value="zinclin-early-access">ZinClin Early Access Program</option>
+                                <option value="current-services">Current Services (Staffing/Programming/Consulting)</option>
+                                <option value="strategy-consultation">Strategy Consultation</option>
+                                <option value="enterprise-licensing">Enterprise Licensing Discussion</option>
                                 <option value="partnership">Partnership Opportunities</option>
-                                <option value="general-info">General Information</option>
+                                <option value="general-information">General Information</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label for="challenges">Current SDTM/Programming Challenges</label>
-                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current SDTM programming challenges, offshore experiences, or automation goals..."></textarea>
+                            <label for="challenges">Current Challenges & Goals</label>
+                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current clinical programming challenges, automation goals, or immediate service needs..."></textarea>
                         </div>
                         <div class="form-group full-width">
-                            <label for="timeline">Module 1 Interest Timeline</label>
+                            <label for="timeline">Implementation Timeline</label>
                             <select id="timeline" name="timeline">
-                                <option value="">When are you interested in Module 1?</option>
-                                <option value="beta-testing">Beta Testing (Q4 2025)</option>
-                                <option value="early-adoption">Early Adoption (Q1 2026)</option>
-                                <option value="general-availability">General Availability (2026)</option>
-                                <option value="future-modules">Future Modules (ADaM/TLF)</option>
+                                <option value="">When are you looking to implement solutions?</option>
+                                <option value="immediate">Immediate (within 1-3 months)</option>
+                                <option value="short-term">Short-term (3-6 months)</option>
+                                <option value="medium-term">Medium-term (6-12 months)</option>
+                                <option value="long-term">Long-term (12+ months)</option>
                                 <option value="exploring">Just exploring options</option>
                             </select>
                         </div>
@@ -624,96 +524,65 @@
     <!-- Contact Info -->
     <section class="contact-info">
         <div class="container">
-            <h2>Contact Information</h2>
+            <h2>Connect With Us</h2>
             <div class="info-grid">
                 <div class="info-item">
                     <div class="info-icon">📧</div>
                     <h3>Email</h3>
-                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
-                    <p>Primary contact for all inquiries</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Response within 24 hours</p>
                 </div>
                 
                 <div class="info-item">
                     <div class="info-icon">📍</div>
                     <h3>Location</h3>
-                    <p>Apex, NC<br>United States</p>
-                    <p>Serving clients globally</p>
+                    <p>Apex, NC</p>
+                    <p>Eastern Time Zone</p>
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">⏰</div>
-                    <h3>Response Time</h3>
-                    <p>Within 24 hours<br>Monday - Friday</p>
-                    <p>Same-day for urgent inquiries</p>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon">🧩</div>
-                    <h3>Modular SaaS Platform</h3>
-                    <p>Cloud-based modules<br>Progressive adoption</p>
-                    <p>Start with Module 1 (SDTM)</p>
+                    <div class="info-icon">🤝</div>
+                    <h3>Consultation</h3>
+                    <p>Strategy calls available</p>
+                    <p>Flexible scheduling</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        What is the Module 1 Early Access Program? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The Module 1 Early Access Program gives you exclusive beta access to ZinClin's SDTM automation capabilities before public launch. You'll test CRF annotation, mapping specifications, and SDTM code generation while providing feedback to shape the final product.</p>
-                    </div>
+                    <div class="faq-question">What is the ZinClin early access program?</div>
+                    <div class="faq-answer">Our early access program gives you the opportunity to test Module 1 (SDTM automation) during development, influence feature priorities, and receive preferential pricing when the platform launches.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        When will Module 1 (SDTM) be available? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Module 1 beta testing begins Q4 2025 with selected early access participants. General availability is planned for Q1 2026 with full SaaS subscription options and enterprise licensing.</p>
-                    </div>
+                    <div class="faq-question">What current services do you offer?</div>
+                    <div class="faq-answer">We provide technical staffing (clinical programmers, data managers), SAS programming services, and strategic consulting. All services come with quality guarantees and are available immediately.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Is ZinClin a modular platform or complete solution? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>ZinClin is designed as a modular SaaS platform. Start with Module 1 (SDTM) for immediate ROI, then add Module 2 (ADaM) and Module 3 (TLF) based on your needs and budget. This approach minimizes risk and maximizes flexibility.</p>
-                    </div>
+                    <div class="faq-question">When will ZinClin be available?</div>
+                    <div class="faq-answer">Module 1 (SDTM automation) is currently in development with early access program now open. Beta testing will begin soon, followed by general availability.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        How much will Module 1 SaaS subscriptions cost? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Module 1 subscription pricing will be announced closer to general availability, with individual, team, and enterprise tiers. Early access participants receive preferential pricing and priority access to future modules.</p>
-                    </div>
+                    <div class="faq-question">Can I use both current services and ZinClin?</div>
+                    <div class="faq-answer">Absolutely! Many clients start with our current services for immediate needs while joining the ZinClin early access program for future automation benefits.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Can I schedule a demo or strategy consultation? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! Email us at admin@zingersoftwaresolutions.com to schedule a consultation. We can discuss your current SDTM challenges and how Module 1 will address them based on our 12+ years of industry experience.</p>
-                    </div>
+                    <div class="faq-question">What makes Zinger different?</div>
+                    <div class="faq-answer">We combine 12+ years of proven clinical programming expertise with cutting-edge AI automation. Our boutique approach ensures personal attention whether you need services today or automation tomorrow.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        What about Module 2 (ADaM) and Module 3 (TLF)? <span>+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Module 2 (ADaM) and Module 3 (TLF) development timelines will be determined based on Module 1 feedback and market validation. Early access participants will have priority access and input on future module priorities.</p>
-                    </div>
+                    <div class="faq-question">How do I schedule a strategy consultation?</div>
+                    <div class="faq-answer">Simply fill out the contact form above and select "Strategy Consultation" as your inquiry type. We'll respond within 24 hours to schedule a call at your convenience.</div>
                 </div>
             </div>
         </div>
@@ -724,88 +593,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Modules</h3>
-                    <a href="platform.html">Module Overview</a>
-                    <a href="contact.html">Module 1 Early Access</a>
-                    <a href="contact.html">Request Demo</a>
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
+                </div>
+                
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="about.html">Leadership Team</a>
-                    <a href="contact.html">Careers</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Services Legacy</h3>
-                    <a href="about.html">12+ Years Experience</a>
-                    <a href="about.html">Clinical Programming</a>
-                    <a href="about.html">Technical Staffing</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>📧 admin@zingersoftwaresolutions.com</p>
-                    <p>📍 Apex, NC</p>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. | Contact us for Module 1 (SDTM) early access and modular AI automation strategy.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-question span').textContent = '+';
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                    question.querySelector('span').textContent = '-';
-                }
-            });
-        });
-
-        // Form submission
-        document.getElementById('early-access').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const firstName = formData.get('firstName');
-            const email = formData.get('email');
-            const interest = formData.get('interest');
-            
-            // Simple validation
-            if (!firstName || !email || !interest) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Show success message based on interest
-            let message = `Thank you ${firstName}! We've received your inquiry.`;
-            if (interest === 'module1-early-access') {
-                message = `Thank you ${firstName}! You've been added to Module 1 (SDTM) early access program. We'll notify you when beta testing begins Q4 2025.`;
-            } else if (interest === 'module1-strategy') {
-                message = `Thank you ${firstName}! We'll contact you within 24 hours to schedule your Module 1 strategy consultation.`;
-            } else {
-                message = `Thank you ${firstName}! We've received your ${interest} inquiry and will be in touch within 24 hours.`;
-            }
-            
-            alert(message);
-            
-            // In production, this would submit to your form processing service
-            this.reset();
-        });
-    </script>
 </body>
 </html>

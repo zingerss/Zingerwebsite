@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industry Resources & Module 1 Insights - ZinClin by Zinger Software Solutions</title>
-    <meta name="description" content="Expert insights on SDTM automation, modular AI adoption strategies, and clinical programming efficiency. Module 1 beta Q4 2025.">
+    <title>Clinical Programming Resources | Module 1 SDTM Automation Insights | ZinClin by Zinger Software Solutions</title>
+    <meta name="description" content="Expert insights on Module 1 SDTM automation, clinical programming best practices, and industry resources. Early access program now open.">
     
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -17,50 +18,39 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Development Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            padding: 0 20px;
         }
 
         /* Header */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #1f4788;
+            color: white;
             text-decoration: none;
         }
 
         .logo-sub {
             font-size: 0.7rem;
-            color: #4ecdc4;
-            font-weight: normal;
+            opacity: 0.8;
+            margin-top: -0.2rem;
         }
 
         .nav-links {
@@ -69,10 +59,10 @@
         }
 
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .nav-links a:hover,
@@ -82,10 +72,10 @@
 
         .cta-button {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 0.8rem 1.5rem;
-            border-radius: 5px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -95,64 +85,30 @@
             transform: translateY(-2px);
         }
 
-        /* Page Hero */
+        /* Hero Section */
         .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 3rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
         }
 
         .page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .page-hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .expertise-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .badge {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-weight: bold;
-            color: #4ecdc4;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         /* Featured Resources */
         .featured-resources {
             padding: 4rem 0;
-            background: #f8f9fa;
+            background: white;
         }
 
         .featured-resources h2 {
@@ -164,15 +120,15 @@
 
         .featured-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
         .featured-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #4ecdc4;
             transition: transform 0.3s ease;
         }
 
@@ -180,73 +136,29 @@
             transform: translateY(-5px);
         }
 
-        .card-header {
-            background: linear-gradient(135deg, #4ecdc4, #45b5aa);
-            color: white;
-            padding: 2rem;
+        .featured-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
         }
 
         .resource-type {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .card-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card-content {
-            padding: 2rem;
-        }
-
-        .key-insights {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-        }
-
-        .key-insights li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .key-insights li::before {
-            content: '💡';
-            position: absolute;
-            left: 0;
-        }
-
-        .download-btn {
             background: #4ecdc4;
             color: white;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
             font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            margin-bottom: 1rem;
             display: inline-block;
-            margin-top: 1rem;
         }
 
-        .download-btn:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
-        /* Module Resource Categories */
-        .module-categories {
+        /* Resource Categories */
+        .resource-categories {
             padding: 4rem 0;
+            background: #f8f9fa;
         }
 
-        .module-categories h2 {
+        .resource-categories h2 {
             text-align: center;
             color: #1f4788;
             font-size: 2.5rem;
@@ -255,7 +167,7 @@
 
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -263,6 +175,7 @@
             background: white;
             padding: 2.5rem;
             border-radius: 15px;
+            text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
             border-top: 4px solid #4ecdc4;
@@ -313,16 +226,6 @@
             color: #666;
         }
 
-        .resource-status {
-            background: #f39c12;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 10px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            margin-left: 0.5rem;
-        }
-
         /* Industry Insights */
         .industry-insights {
             padding: 4rem 0;
@@ -362,84 +265,43 @@
             margin-bottom: 1rem;
         }
 
-        /* Module 1 Preview */
-        .module-preview {
+        /* Newsletter Signup */
+        .newsletter-signup {
             padding: 4rem 0;
-            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
-            color: white;
-        }
-
-        .preview-content {
+            background: white;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
-        .preview-content h2 {
+        .newsletter-signup h2 {
+            color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 2rem;
         }
 
-        .beta-timeline {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-
-        .timeline-date {
-            font-weight: bold;
-            color: #1f4788;
-            background: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-        }
-
-        /* Newsletter Signup */
-        .newsletter-signup {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .newsletter-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .newsletter-content h2 {
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
         .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .newsletter-form input {
             flex: 1;
             padding: 1rem;
-            border: 2px solid #ddd;
+            border: 2px solid #e9ecef;
             border-radius: 5px;
             font-size: 1rem;
         }
 
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
         .newsletter-form button {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 1rem 2rem;
             border: none;
             border-radius: 5px;
@@ -450,6 +312,7 @@
 
         .newsletter-form button:hover {
             background: #45b5aa;
+            transform: translateY(-2px);
         }
 
         .newsletter-benefits {
@@ -457,13 +320,21 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
-            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #4ecdc4;
         }
 
         /* Footer */
@@ -485,6 +356,7 @@
             margin-bottom: 1rem;
         }
 
+        .footer-section p,
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
@@ -503,32 +375,27 @@
             color: #bdc3c7;
         }
 
-        /* Mobile Responsive */
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+            .page-hero h1 {
+                font-size: 2.2rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .page-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .featured-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .newsletter-form {
                 flex-direction: column;
-            }
-            
-            .timeline-item {
-                flex-direction: column;
-                gap: 1rem;
             }
         }
     </style>
@@ -536,7 +403,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
     </div>
 
     <!-- Header -->
@@ -550,11 +417,12 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
+                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html" class="active">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Module 1 Early Access</a>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
             </div>
         </div>
     </header>
@@ -562,175 +430,127 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Module 1 Resources & Industry Expertise</h1>
-                <p>Access expert insights on SDTM automation, modular AI adoption strategies, and clinical programming efficiency. Built on 24+ years of industry experience, preparing for Module 1 beta launch.</p>
-                
-                <div class="expertise-badges">
-                    <div class="badge">Module 1: SDTM Focus</div>
-                    <div class="badge">Beta Q4 2025</div>
-                    <div class="badge">Modular Strategy</div>
-                    <div class="badge">Industry Expertise</div>
-                </div>
-            </div>
+            <h1>Clinical Programming Resources</h1>
+            <p>Expert insights on Module 1 SDTM automation, industry best practices, and thought leadership from 12+ years of clinical programming expertise.</p>
         </div>
     </section>
 
     <!-- Featured Resources -->
     <section class="featured-resources">
         <div class="container">
-            <h2>Featured Module 1 Resources</h2>
+            <h2>Featured Resources</h2>
+            
             <div class="featured-grid">
                 <div class="featured-card">
-                    <div class="card-header">
-                        <div class="resource-type">Strategic Guide</div>
-                        <h3>Module 1 Adoption Strategy</h3>
-                        <p>Complete roadmap for implementing SDTM automation in your clinical programming workflow</p>
-                    </div>
-                    <div class="card-content">
-                        <ul class="key-insights">
-                            <li>Why every clinical study needs SDTM automation first</li>
-                            <li>ROI expectations for CRF annotation and mapping automation</li>
-                            <li>Integration planning with existing SAS programming workflows</li>
-                            <li>Team training and change management for AI tools</li>
-                            <li>Measuring success: KPIs for Module 1 implementation</li>
-                        </ul>
-                        <a href="contact.html" class="download-btn">Request Early Access Guide</a>
-                    </div>
+                    <div class="resource-type">ROI Guide</div>
+                    <h3>Module 1 SDTM Automation ROI Calculator</h3>
+                    <p>Comprehensive guide to calculating ROI for SDTM automation implementation, including cost-benefit analysis templates and industry benchmarks for different organization sizes.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Coming Soon - Early access participants receive priority access</p>
                 </div>
 
                 <div class="featured-card">
-                    <div class="card-header">
-                        <div class="resource-type">Industry Analysis</div>
-                        <h3>SDTM Market Opportunity Report</h3>
-                        <p>Comprehensive analysis of SDTM automation market trends and competitive landscape</p>
-                    </div>
-                    <div class="card-content">
-                        <ul class="key-insights">
-                            <li>Market size and growth projections for SDTM automation</li>
-                            <li>Onshore vs offshore cost analysis with AI augmentation</li>
-                            <li>Regulatory compliance considerations for automated SDTM</li>
-                            <li>Competitive advantages of modular AI implementation</li>
-                            <li>Future outlook: ADaM and TLF module roadmap</li>
-                        </ul>
-                        <a href="contact.html" class="download-btn">Download Report Preview</a>
-                    </div>
+                    <div class="resource-type">Industry Report</div>
+                    <h3>State of Clinical Programming Automation</h3>
+                    <p>Annual industry analysis covering automation trends, offshore challenges, and the evolving role of AI in clinical programming based on 100+ industry surveys.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Available to newsletter subscribers</p>
                 </div>
 
                 <div class="featured-card">
-                    <div class="card-header">
-                        <div class="resource-type">Technical Preview</div>
-                        <h3>Module 1 Feature Deep Dive</h3>
-                        <p>Technical overview of CRF annotation, mapping specifications, and SDTM code generation capabilities</p>
-                    </div>
-                    <div class="card-content">
-                        <ul class="key-insights">
-                            <li>AI-powered CRF annotation automation workflow</li>
-                            <li>SDTM domain mapping specification generation</li>
-                            <li>Production-ready SAS code output and validation</li>
-                            <li>CDISC compliance checking and quality assurance</li>
-                            <li>Integration with existing clinical data management systems</li>
-                        </ul>
-                        <a href="contact.html" class="download-btn">Schedule Technical Demo</a>
-                    </div>
+                    <div class="resource-type">Best Practices</div>
+                    <h3>SDTM Quality Assurance Framework</h3>
+                    <p>Proven methodology for ensuring SDTM quality and compliance, developed from 12+ years of regulatory submission experience across 200+ studies.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Module 1 participants receive enhanced version</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Module Resource Categories -->
-    <section class="module-categories">
+    <!-- Resource Categories -->
+    <section class="resource-categories">
         <div class="container">
             <h2>Resource Categories</h2>
+            
             <div class="categories-grid">
                 <div class="category-card">
-                    <div class="category-icon">🧩</div>
-                    <h3>Modular AI Strategy</h3>
-                    <p>Strategic frameworks for implementing AI automation progressively, starting with SDTM foundation and scaling based on proven ROI.</p>
-                    <ul class="resource-list">
-                        <li>
-                            <div class="resource-title">Modular Implementation Roadmap</div>
-                            <div class="resource-desc">Step-by-step guide for progressive AI adoption</div>
-                            <span class="resource-status">Coming Soon</span>
-                        </li>
-                        <li>
-                            <div class="resource-title">ROI Measurement Framework</div>
-                            <div class="resource-desc">Metrics and KPIs for Module 1 success tracking</div>
-                            <span class="resource-status">Beta Q4 2025</span>
-                        </li>
-                        <li>
-                            <div class="resource-title">Change Management Guide</div>
-                            <div class="resource-desc">Best practices for team adoption and training</div>
-                            <span class="resource-status">Available Now</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="category-card">
                     <div class="category-icon">📊</div>
-                    <h3>SDTM & CDISC Standards</h3>
-                    <p>Deep dive resources on SDTM automation, CDISC compliance, and best practices for clinical data standardization.</p>
+                    <h3>CDISC & Standards</h3>
+                    <p>Comprehensive resources on CDISC implementation, SDTM best practices, and regulatory compliance requirements.</p>
+                    
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">SDTM Automation Best Practices</div>
-                            <div class="resource-desc">Industry standards for automated SDTM generation</div>
-                            <span class="resource-status">Module 1 Focus</span>
+                            <div class="resource-title">SDTM Implementation Checklist</div>
+                            <div class="resource-desc">Step-by-step guide for SDTM compliance</div>
                         </li>
                         <li>
-                            <div class="resource-title">CRF Annotation Techniques</div>
-                            <div class="resource-desc">AI-powered annotation strategies and validation</div>
-                            <span class="resource-status">Beta Q4 2025</span>
+                            <div class="resource-title">CDISC Mapping Templates</div>
+                            <div class="resource-desc">Standardized templates for common study types</div>
                         </li>
                         <li>
-                            <div class="resource-title">Mapping Specification Templates</div>
-                            <div class="resource-desc">Standardized templates for SDTM domain mapping</div>
-                            <span class="resource-status">Available Now</span>
+                            <div class="resource-title">Regulatory Submission Guide</div>
+                            <div class="resource-desc">Best practices for regulatory-ready datasets</div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="category-card">
-                    <div class="category-icon">🎯</div>
-                    <h3>Industry Trends & Analysis</h3>
-                    <p>Market insights, competitive analysis, and forward-looking perspectives on clinical programming automation.</p>
+                    <div class="category-icon">🤖</div>
+                    <h3>AI & Automation</h3>
+                    <p>Insights into AI-powered clinical programming, automation strategies, and future-proofing your programming career.</p>
+                    
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">AI Impact on Clinical Programming</div>
-                            <div class="resource-desc">Market trends and technology adoption patterns</div>
-                            <span class="resource-status">Quarterly Updates</span>
+                            <div class="resource-title">Module 1 Automation Guide</div>
+                            <div class="resource-desc">Understanding SDTM automation capabilities</div>
                         </li>
                         <li>
-                            <div class="resource-title">Onshore vs Offshore Cost Analysis</div>
-                            <div class="resource-desc">Economic models with AI augmentation factors</div>
-                            <span class="resource-status">Available Now</span>
+                            <div class="resource-title">AI Programming Best Practices</div>
+                            <div class="resource-desc">How to collaborate effectively with AI tools</div>
                         </li>
                         <li>
-                            <div class="resource-title">Regulatory Technology Landscape</div>
-                            <div class="resource-desc">FDA/EMA perspectives on AI in clinical data</div>
-                            <span class="resource-status">Coming Soon</span>
+                            <div class="resource-title">Career Future-Proofing</div>
+                            <div class="resource-desc">Building AI-era programming skills</div>
                         </li>
                     </ul>
                 </div>
-                
+
+                <div class="category-card">
+                    <div class="category-icon">💼</div>
+                    <h3>Business Strategy</h3>
+                    <p>Strategic guidance for organizations evaluating clinical programming automation and efficiency improvements.</p>
+                    
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">Automation ROI Framework</div>
+                            <div class="resource-desc">Calculating business impact of SDTM automation</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Offshore vs. Onshore Analysis</div>
+                            <div class="resource-desc">Comprehensive cost-benefit comparison</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Implementation Planning</div>
+                            <div class="resource-desc">Step-by-step automation adoption strategy</div>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="category-card">
                     <div class="category-icon">🔧</div>
-                    <h3>Technical Implementation</h3>
-                    <p>Hands-on guides, integration strategies, and technical documentation for Module 1 SDTM automation implementation.</p>
+                    <h3>Technical Guides</h3>
+                    <p>Deep-dive technical content on clinical programming methodologies, code optimization, and quality assurance.</p>
+                    
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">SAS Integration Patterns</div>
-                            <div class="resource-desc">Best practices for ZinClin-SAS workflow integration</div>
-                            <span class="resource-status">Beta Q4 2025</span>
+                            <div class="resource-title">SDTM Programming Patterns</div>
+                            <div class="resource-desc">Reusable code patterns and techniques</div>
                         </li>
                         <li>
-                            <div class="resource-title">Quality Validation Protocols</div>
-                            <div class="resource-desc">QC procedures for AI-generated SDTM code</div>
-                            <span class="resource-status">Module 1 Focus</span>
+                            <div class="resource-title">Quality Control Methods</div>
+                            <div class="resource-desc">Comprehensive QC validation approaches</div>
                         </li>
                         <li>
-                            <div class="resource-title">API Documentation Preview</div>
-                            <div class="resource-desc">Technical specifications for Module 1 APIs</div>
-                            <span class="resource-status">Coming Soon</span>
+                            <div class="resource-title">Performance Optimization</div>
+                            <div class="resource-desc">Techniques for efficient programming workflows</div>
                         </li>
                     </ul>
                 </div>
@@ -741,74 +561,26 @@
     <!-- Industry Insights -->
     <section class="industry-insights">
         <div class="container">
-            <h2>Clinical Programming Industry Insights</h2>
+            <h2>Industry Insights</h2>
+            
             <div class="insights-grid">
                 <div class="insight-card">
-                    <div class="insight-number">$5.2B</div>
+                    <div class="insight-number">$5B</div>
                     <div class="insight-title">Clinical Data Services Market</div>
-                    <p>Total addressable market for clinical programming services, with SDTM representing the universal foundation across all studies.</p>
+                    <p>Annual market size for clinical programming and data management services, with 8% annual growth driven by increasing study complexity.</p>
                 </div>
                 
                 <div class="insight-card">
-                    <div class="insight-number">60-80%</div>
-                    <div class="insight-title">Target Efficiency Gains</div>
-                    <p>Projected efficiency improvements for SDTM programming tasks through Module 1 automation, based on industry benchmarks.</p>
+                    <div class="insight-number">40-60%</div>
+                    <div class="insight-title">Offshore Cost Pressure</div>
+                    <p>Organizations report 40-60% cost pressure driving offshore adoption, despite quality and security concerns with data transfer.</p>
                 </div>
                 
                 <div class="insight-card">
-                    <div class="insight-number">100%</div>
-                    <div class="insight-title">Studies Require SDTM</div>
-                    <p>Every clinical study needs SDTM datasets for regulatory submission, making Module 1 the logical starting point for automation.</p>
+                    <div class="insight-number">70%</div>
+                    <div class="insight-title">Time Spent on Routine Tasks</div>
+                    <p>Clinical programmers spend 70% of time on routine SDTM mapping and annotation - prime targets for automation efficiency gains.</p>
                 </div>
-                
-                <div class="insight-card">
-                    <div class="insight-number">24+</div>
-                    <div class="insight-title">Years Industry Experience</div>
-                    <p>Combined expertise from Zinger Software Solutions and founder Amit Ahuja, embedded in ZinClin's modular architecture.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Module 1 Preview -->
-    <section class="module-preview">
-        <div class="container">
-            <div class="preview-content">
-                <h2>Module 1 Development Timeline</h2>
-                <p>Stay updated on our progress toward SDTM automation beta testing and general availability.</p>
-                
-                <div class="beta-timeline">
-                    <div class="timeline-item">
-                        <div>
-                            <strong>Alpha Development</strong><br>
-                            Core SDTM automation features and AI model training
-                        </div>
-                        <div class="timeline-date">Q3 2025</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div>
-                            <strong>Beta Testing Program</strong><br>
-                            Early access customers test CRF annotation and mapping
-                        </div>
-                        <div class="timeline-date">Q4 2025</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div>
-                            <strong>General Availability</strong><br>
-                            Module 1 SDTM automation available to all customers
-                        </div>
-                        <div class="timeline-date">Q1 2026</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div>
-                            <strong>Module 2 Planning</strong><br>
-                            ADaM module development based on Module 1 feedback
-                        </div>
-                        <div class="timeline-date">TBD</div>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="download-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">Join Module 1 Early Access Program</a>
             </div>
         </div>
     </section>
@@ -816,32 +588,36 @@
     <!-- Newsletter Signup -->
     <section class="newsletter-signup">
         <div class="container">
-            <div class="newsletter-content">
-                <h2>Stay Updated on Module 1 Progress</h2>
-                <p>Get exclusive updates on SDTM automation development, beta testing opportunities, and industry insights delivered monthly.</p>
-                
-                <form class="newsletter-form" action="#" method="post">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-                
-                <div class="newsletter-benefits">
-                    <div class="benefit-item">
-                        <span>✅</span>
-                        <span>Module 1 beta testing invitations</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span>📊</span>
-                        <span>Monthly industry trend reports</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span>🎯</span>
-                        <span>Exclusive resource downloads</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span>📅</span>
-                        <span>Early access to webinars</span>
-                    </div>
+            <h2>Stay Updated on Module 1 Development</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem;">
+                Get exclusive insights, early access updates, and industry analysis delivered to your inbox.
+            </p>
+            
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            
+            <div class="newsletter-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">📧</div>
+                    <strong>Weekly Updates</strong>
+                    <p>Module 1 development progress and feature announcements</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📊</div>
+                    <strong>Industry Reports</strong>
+                    <p>Exclusive market analysis and automation trend insights</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <strong>Early Access</strong>
+                    <p>Priority access to new resources and beta features</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎓</div>
+                    <strong>Expert Content</strong>
+                    <p>Best practices from 12+ years of programming expertise</p>
                 </div>
             </div>
         </div>
@@ -852,56 +628,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Platform</h3>
-                    <a href="index.html">Home</a>
-                    <a href="platform.html">Platform Overview</a>
-                    <a href="contact.html">Module 1 Early Access</a>
-                    <a href="about.html">About Zinger</a>
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Solutions</h3>
-                    <a href="solutions-biotechs.html">Biotech Companies</a>
-                    <a href="solutions-cros.html">CROs</a>
-                    <a href="solutions-programmers.html">Programmers</a>
-                    <a href="solutions-biostatisticians.html">Biostatisticians</a>
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="resources.html">Industry Resources</a>
-                    <a href="contact.html">Module 1 Resources</a>
-                    <a href="contact.html">Strategy Consultation</a>
-                    <a href="contact.html">Technical Documentation</a>
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Contact</h3>
-                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
-                    <a href="contact.html">Contact Form</a>
-                    <a href="contact.html">Schedule Strategy Call</a>
-                    <p style="margin-top: 1rem;">Apex, NC</p>
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. ZinClin is a trademark of Zinger Software Solutions.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Newsletter form handling
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing! You\'ll receive updates on Module 1 development and beta testing opportunities.');
-        });
-
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>

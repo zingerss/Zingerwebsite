@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for Clinical Programmers - AI Proficiency Career Enhancement Module 1 SDTM Automation Beta Q4 2025 - Zinger Software Solutions</title>
-    <meta name="description" content="Enhance clinical programming career with AI proficiency. Module 1 SDTM automation skills. Beta Q4 2025.">
+    <title>ZinClin for Programmers - Module 1 SDTM Career Enhancement | Zinger Software Solutions</title>
+    <meta name="description" content="Enhance clinical programming career with AI proficiency. Module 1 SDTM automation skills. Early access program now open.">
     
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -17,50 +18,40 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Development Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            padding: 0 20px;
         }
 
         /* Header */
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+            position: relative;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #1f4788;
+            color: white;
             text-decoration: none;
         }
 
         .logo-sub {
             font-size: 0.7rem;
-            color: #4ecdc4;
-            font-weight: normal;
+            opacity: 0.8;
+            margin-top: -0.2rem;
         }
 
         .nav-links {
@@ -69,10 +60,10 @@
         }
 
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .nav-links a:hover,
@@ -82,10 +73,10 @@
 
         .cta-button {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 0.8rem 1.5rem;
-            border-radius: 5px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -95,161 +86,101 @@
             transform: translateY(-2px);
         }
 
-        /* Page Hero */
-        .page-hero {
+        /* Hero Section */
+        .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text h1 {
+        .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .career-benefits {
-            list-style: none;
-            padding: 0;
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .career-benefits li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
+        .stat-item {
+            text-align: center;
         }
 
-        .career-benefits li::before {
-            content: '🚀';
-            position: absolute;
-            left: 0;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn-primary {
             background: #4ecdc4;
-            color: white;
+            color: #1f4788;
             padding: 1rem 2rem;
+            border: none;
             border-radius: 5px;
-            text-decoration: none;
+            font-size: 1.1rem;
             font-weight: bold;
+            text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
         }
 
         .btn-primary:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #1f4788;
-        }
-
-        .skill-preview {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .preview-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
-        }
-
-        .skill-categories {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        .skill-category h4 {
-            margin-bottom: 0.5rem;
-            color: #4ecdc4;
-        }
-
-        .skill-category p {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
         /* Career Enhancement */
         .career-enhancement {
-            padding: 4rem 0;
-            background: #f8f9fa;
+            padding: 5rem 0;
+            background: white;
         }
 
         .career-enhancement h2 {
             text-align: center;
-            color: #1f4788;
             font-size: 2.5rem;
+            color: #1f4788;
             margin-bottom: 3rem;
         }
 
         .enhancement-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .enhancement-card {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #4ecdc4;
             transition: transform 0.3s ease;
         }
 
@@ -260,7 +191,7 @@
         .enhancement-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #4ecdc4;
+            color: #28a745;
         }
 
         .enhancement-card h3 {
@@ -268,61 +199,147 @@
             margin-bottom: 1rem;
         }
 
+        /* Skills Development */
+        .skills-development {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .skills-development h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill-level {
+            background: #4ecdc4;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .skill-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
         .skill-benefits {
-            background: #e8f9f5;
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .skill-benefits li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .skill-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Job Security */
+        .job-security {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .job-security h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .security-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .comparison-content h3 {
+            color: #1f4788;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .future-skills {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .future-skill-item {
+            margin-bottom: 1rem;
             padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
+            background: white;
+            border-radius: 5px;
             border-left: 4px solid #4ecdc4;
         }
 
-        .skill-benefits h5 {
+        .skill-title {
+            font-weight: bold;
             color: #1f4788;
             margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .skill-benefits p {
-            font-size: 0.9rem;
-            line-height: 1.4;
         }
 
         /* Learning Path */
         .learning-path {
-            padding: 4rem 0;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+            text-align: center;
         }
 
         .learning-path h2 {
-            text-align: center;
-            color: #1f4788;
             font-size: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .path-container {
-            max-width: 1000px;
+        .path-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .path-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .step-card {
-            background: white;
+        .path-step {
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            position: relative;
+            border-radius: 10px;
         }
 
         .step-number {
-            background: #4ecdc4;
-            color: white;
+            background: white;
+            color: #1f4788;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -333,254 +350,8 @@
             margin: 0 auto 1rem;
         }
 
-        .step-card h4 {
-            color: #1f4788;
+        .path-step h3 {
             margin-bottom: 1rem;
-        }
-
-        .step-timeline {
-            background: #f39c12;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .timeline-available {
-            background: #27ae60;
-        }
-
-        .progression-summary {
-            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .progression-summary h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .progression-benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .benefit-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        .benefit-value {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Industry Perspectives */
-        .industry-perspectives {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .industry-perspectives h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .perspectives-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-
-        .perspective-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .perspective-header {
-            background: linear-gradient(135deg, #1f4788, #2558a0);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .perspective-type {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .perspective-header h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .perspective-content {
-            padding: 1.5rem;
-        }
-
-        .perspective-insight {
-            background: #e8f9f5;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border-left: 4px solid #4ecdc4;
-        }
-
-        .insight-label {
-            font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Skills Development */
-        .skills-development {
-            padding: 4rem 0;
-        }
-
-        .skills-development h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
-        }
-
-        .skill-card h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .skill-progression {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        .progression-stages {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.5rem;
-        }
-
-        .stage {
-            font-size: 0.8rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 10px;
-            background: #e9ecef;
-        }
-
-        .stage.active {
-            background: #4ecdc4;
-            color: white;
-        }
-
-        /* Early Access */
-        .early-access {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .early-access-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .early-access h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .career-benefits-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .career-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        .early-access-form {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-top: 2rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-row input {
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .form-row button {
-            background: #4ecdc4;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .form-row button:hover {
-            background: #45b5aa;
         }
 
         /* Footer */
@@ -602,6 +373,7 @@
             margin-bottom: 1rem;
         }
 
+        .footer-section p,
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
@@ -620,32 +392,30 @@
             color: #bdc3c7;
         }
 
-        /* Mobile Responsive */
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            
-            .progression-stages {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .form-row {
+            .security-comparison {
                 grid-template-columns: 1fr;
             }
         }
@@ -654,7 +424,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Beta testing Q4 2025, available Q1 2026
+        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
     </div>
 
     <!-- Header -->
@@ -668,58 +438,39 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
+                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Module 1 Early Access</a>
+                <a href="contact.html" class="cta-button">Join Early Access</a>
             </div>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>ZinClin for Clinical Programmers</h1>
-                    <p class="hero-subtitle">Enhance your career with AI proficiency and next-generation clinical programming skills. Module 1 will elevate your SDTM programming expertise while improving efficiency and reducing repetitive tasks.</p>
-                    
-                    <ul class="career-benefits">
-                        <li>Master AI-powered SDTM automation techniques</li>
-                        <li>Gain competitive edge in clinical programming job market</li>
-                        <li>Reduce manual coding work by 60-70% with Module 1</li>
-                        <li>Focus on high-value programming challenges and innovation</li>
-                        <li>Build expertise in next-generation clinical data tools</li>
-                    </ul>
-                    
-                    <div class="hero-cta">
-                        <a href="contact.html" class="btn-primary">Join Module 1 Beta</a>
-                        <a href="contact.html" class="btn-secondary">Request Skill Assessment</a>
-                    </div>
+            <h1>ZinClin for Programmers</h1>
+            <p class="hero-subtitle">Enhance your career with AI programming proficiency through Module 1 SDTM automation. Focus on high-value tasks while building cutting-edge skills that secure your future.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">AI Skills</span>
+                    <span class="stat-label">Career Enhancement</span>
                 </div>
-                
-                <div class="skill-preview">
-                    <div class="preview-title">Module 1 Skills Development</div>
-                    <div class="skill-categories">
-                        <div class="skill-category">
-                            <h4>AI Programming Integration</h4>
-                            <p>Learn to collaborate with AI for CRF annotation and mapping specifications</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Automated Code Review</h4>
-                            <p>Master quality validation techniques for AI-generated SDTM code</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Advanced CDISC Implementation</h4>
-                            <p>Deepen expertise in SDTM standards and compliance automation</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Workflow Optimization</h4>
-                            <p>Design efficient programming workflows combining AI and manual techniques</p>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">Focus on High-Value Work</span>
                 </div>
+                <div class="stat-item">
+                    <span class="stat-number">Module 1</span>
+                    <span class="stat-label">SDTM Foundation</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
             </div>
         </div>
     </section>
@@ -727,35 +478,121 @@
     <!-- Career Enhancement -->
     <section class="career-enhancement">
         <div class="container">
-            <h2>Career Enhancement Through Module 1</h2>
+            <h2>Module 1 Career Enhancement</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
+                Module 1 SDTM automation transforms routine programming into strategic, high-value work while building AI collaboration skills.
+            </p>
+            
             <div class="enhancement-grid">
                 <div class="enhancement-card">
-                    <div class="enhancement-icon">🎯</div>
-                    <h3>Market Differentiation</h3>
-                    <p>Module 1 proficiency will set you apart in the clinical programming job market as companies seek AI-skilled professionals for competitive advantage.</p>
-                    <div class="skill-benefits">
-                        <h5>Career Benefits:</h5>
-                        <p>• Premium salary positioning<br>• Enhanced job security<br>• Leadership opportunities<br>• Industry recognition</p>
-                    </div>
-                </div>
-                
-                <div class="enhancement-card">
-                    <div class="enhancement-icon">⚡</div>
-                    <h3>Productivity Amplification</h3>
-                    <p>Module 1 will enable you to accomplish SDTM programming tasks 60-70% faster, allowing focus on complex programming challenges and strategic initiatives.</p>
-                    <div class="skill-benefits">
-                        <h5>Productivity Gains:</h5>
-                        <p>• Faster project completion<br>• Reduced overtime requirements<br>• Higher project volume capacity<br>• Enhanced work-life balance</p>
-                    </div>
-                </div>
-                
-                <div class="enhancement-card">
                     <div class="enhancement-icon">🚀</div>
-                    <h3>Future-Ready Skills</h3>
-                    <p>Gain early expertise in AI-powered clinical programming, positioning yourself for future Module 2 (ADaM) and Module 3 (TLF) capabilities.</p>
-                    <div class="skill-benefits">
-                        <h5>Future Positioning:</h5>
-                        <p>• AI programming thought leadership<br>• Module expansion opportunities<br>• Technology innovation involvement<br>• Industry speaking opportunities</p>
+                    <h3>Advanced Skill Development</h3>
+                    <p>Master AI-assisted programming through Module 1, gaining expertise in prompt engineering, automation validation, and intelligent code review - skills that define the future of programming.</p>
+                </div>
+
+                <div class="enhancement-card">
+                    <div class="enhancement-icon">🎯</div>
+                    <h3>High-Value Task Focus</h3>
+                    <p>Spend 70% more time on complex derivations, custom logic, and quality validation while Module 1 handles routine SDTM mapping and annotation tasks automatically.</p>
+                </div>
+
+                <div class="enhancement-card">
+                    <div class="enhancement-icon">💼</div>
+                    <h3>Market Differentiation</h3>
+                    <p>Position yourself as an AI-proficient programmer who can deliver faster, higher-quality results while maintaining the critical thinking skills that AI cannot replace.</p>
+                </div>
+
+                <div class="enhancement-card">
+                    <div class="enhancement-icon">📈</div>
+                    <h3>Career Security</h3>
+                    <p>Build expertise in the collaboration between human intelligence and AI automation, ensuring your skills remain relevant and valuable as the industry evolves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Development -->
+    <section class="skills-development">
+        <div class="container">
+            <h2>Module 1 Skills Development Path</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-level">Foundation Level</div>
+                    <h3>AI Collaboration Basics</h3>
+                    <ul class="skill-benefits">
+                        <li>Module 1 platform navigation and setup</li>
+                        <li>SDTM automation workflow understanding</li>
+                        <li>Quality validation of AI-generated outputs</li>
+                        <li>Basic prompt engineering for programming tasks</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-level">Intermediate Level</div>
+                    <h3>Advanced Module 1 Usage</h3>
+                    <ul class="skill-benefits">
+                        <li>Complex SDTM mapping customization</li>
+                        <li>Custom derivation logic integration</li>
+                        <li>Automation workflow optimization</li>
+                        <li>Error detection and correction techniques</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-level">Expert Level</div>
+                    <h3>AI Programming Leadership</h3>
+                    <ul class="skill-benefits">
+                        <li>Team training on Module 1 best practices</li>
+                        <li>Automation strategy development</li>
+                        <li>Process improvement and efficiency optimization</li>
+                        <li>Future module evaluation and adoption planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Security -->
+    <section class="job-security">
+        <div class="container">
+            <h2>Building AI-Era Job Security</h2>
+            
+            <div class="security-comparison">
+                <div class="comparison-content">
+                    <h3>The Reality of AI in Programming</h3>
+                    <p>AI won't replace programmers - but programmers who use AI will replace those who don't. Module 1 early access gives you a head start in developing the collaboration skills that define future programming roles.</p>
+                    
+                    <p>By mastering Module 1 SDTM automation, you'll understand how to:</p>
+                    <ul style="margin-left: 2rem; margin-top: 1rem;">
+                        <li>Validate and refine AI-generated code effectively</li>
+                        <li>Identify when human expertise is essential vs automatable</li>
+                        <li>Design automation workflows that enhance rather than replace human skills</li>
+                        <li>Lead teams in AI-augmented programming environments</li>
+                    </ul>
+                </div>
+                
+                <div class="future-skills">
+                    <h3 style="color: #1f4788; margin-bottom: 1.5rem;">Future-Proof Skills</h3>
+                    
+                    <div class="future-skill-item">
+                        <div class="skill-title">AI Prompt Engineering</div>
+                        <div>Craft effective instructions for AI programming tools</div>
+                    </div>
+                    
+                    <div class="future-skill-item">
+                        <div class="skill-title">Automation Quality Assurance</div>
+                        <div>Validate and improve AI-generated programming outputs</div>
+                    </div>
+                    
+                    <div class="future-skill-item">
+                        <div class="skill-title">Hybrid Workflow Design</div>
+                        <div>Optimize the balance between automation and human expertise</div>
+                    </div>
+                    
+                    <div class="future-skill-item">
+                        <div class="skill-title">Strategic Problem Solving</div>
+                        <div>Focus on complex challenges that require human creativity</div>
                     </div>
                 </div>
             </div>
@@ -765,218 +602,47 @@
     <!-- Learning Path -->
     <section class="learning-path">
         <div class="container">
-            <div class="path-container">
-                <h2>Progressive Learning Path</h2>
-                <div class="path-steps">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <h4>Module 1 Foundation</h4>
-                        <p>Learn SDTM automation principles, AI collaboration techniques, and automated code validation methods.</p>
-                        <div class="step-timeline">Q4 2025 Beta</div>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <h4>Advanced Implementation</h4>
-                        <p>Master complex SDTM scenarios, custom derivations, and integration with existing programming workflows.</p>
-                        <div class="step-timeline">Q1 2026 GA</div>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <h4>Module 2 Preparation</h4>
-                        <p>Prepare for ADaM automation capabilities, advanced statistical programming AI integration.</p>
-                        <div class="step-timeline">TBD 2026</div>
-                    </div>
-                    
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <h4>Full Stack Expertise</h4>
-                        <p>Achieve comprehensive clinical programming AI proficiency across all modules and programming domains.</p>
-                        <div class="step-timeline">Future</div>
-                    </div>
+            <h2>Your Module 1 Learning Journey</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Structured path to mastering AI-assisted SDTM programming
+            </p>
+            
+            <div class="path-steps">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <h3>Early Access Enrollment</h3>
+                    <p>Join our early access program to begin hands-on experience with Module 1 SDTM automation tools and workflows.</p>
                 </div>
                 
-                <div class="progression-summary">
-                    <h3>Career Progression Timeline</h3>
-                    <p>Strategic skill development plan for clinical programming AI mastery</p>
-                    <div class="progression-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-value">6 months</div>
-                            <div class="benefit-label">Module 1 proficiency</div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-value">60-70%</div>
-                            <div class="benefit-label">Productivity gain</div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-value">Premium</div>
-                            <div class="benefit-label">Market positioning</div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-value">Future-ready</div>
-                            <div class="benefit-label">Technology skills</div>
-                        </div>
-                    </div>
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <h3>Foundation Training</h3>
+                    <p>Complete comprehensive training on Module 1 capabilities, best practices, and quality assurance techniques.</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <h3>Practical Application</h3>
+                    <p>Apply Module 1 skills to real projects, building proficiency in AI-assisted programming and validation workflows.</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <h3>Advanced Mastery</h3>
+                    <p>Develop expertise in complex scenarios, team leadership, and preparing for future module adoption and integration.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industry Perspectives -->
-    <section class="industry-perspectives">
+    <!-- CTA Section -->
+    <section style="padding: 4rem 0; background: white; text-align: center;">
         <div class="container">
-            <h2>Industry Expert Perspectives</h2>
-            <div class="perspectives-grid">
-                <div class="perspective-card">
-                    <div class="perspective-header">
-                        <div class="perspective-type">Market Analysis</div>
-                        <h4>AI Skills Demand in Clinical Programming</h4>
-                    </div>
-                    <div class="perspective-content">
-                        <p>Industry analysts predict that AI proficiency will become essential for clinical programmers within the next 2-3 years as automation tools transform the field.</p>
-                        <div class="perspective-insight">
-                            <div class="insight-label">Market Insight:</div>
-                            <p>Companies are actively seeking programmers with AI automation experience to maintain competitive advantage and reduce offshore dependency.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="perspective-card">
-                    <div class="perspective-header">
-                        <div class="perspective-type">Career Strategy</div>
-                        <h4>Future-Proofing Programming Careers</h4>
-                    </div>
-                    <div class="perspective-content">
-                        <p>Career experts recommend that clinical programmers gain AI automation skills now to avoid skill obsolescence and position for leadership roles.</p>
-                        <div class="perspective-insight">
-                            <div class="insight-label">Strategic Recommendation:</div>
-                            <p>Early adoption of Module 1 skills will create competitive advantage and career advancement opportunities in an evolving market.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="perspective-card">
-                    <div class="perspective-header">
-                        <div class="perspective-type">Technology Evolution</div>
-                        <h4>The Evolution of Clinical Programming</h4>
-                    </div>
-                    <div class="perspective-content">
-                        <p>Technology experts observe that AI will augment rather than replace programmers, creating opportunities for higher-level programming challenges and innovation.</p>
-                        <div class="perspective-insight">
-                            <div class="insight-label">Technology Perspective:</div>
-                            <p>Module 1 represents the beginning of a transformation that will elevate the clinical programming profession to focus on strategy and complex problem-solving.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Development -->
-    <section class="skills-development">
-        <div class="container">
-            <h2>Module 1 Skills Development Framework</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <h3>AI Collaboration</h3>
-                    <p>Learn to effectively collaborate with AI systems for CRF annotation, mapping specifications, and code generation while maintaining programming oversight.</p>
-                    <div class="skill-progression">
-                        <strong>Progression Path:</strong>
-                        <div class="progression-stages">
-                            <div class="stage active">Basic</div>
-                            <div class="stage">Intermediate</div>
-                            <div class="stage">Advanced</div>
-                            <div class="stage">Expert</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <h3>Quality Validation</h3>
-                    <p>Master techniques for validating AI-generated code, ensuring CDISC compliance, and maintaining regulatory standards in automated workflows.</p>
-                    <div class="skill-progression">
-                        <strong>Progression Path:</strong>
-                        <div class="progression-stages">
-                            <div class="stage active">Basic</div>
-                            <div class="stage">Intermediate</div>
-                            <div class="stage">Advanced</div>
-                            <div class="stage">Expert</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Workflow Optimization</h3>
-                    <p>Design and implement efficient programming workflows that combine AI automation with manual programming expertise for maximum productivity.</p>
-                    <div class="skill-progression">
-                        <strong>Progression Path:</strong>
-                        <div class="progression-stages">
-                            <div class="stage active">Basic</div>
-                            <div class="stage">Intermediate</div>
-                            <div class="stage">Advanced</div>
-                            <div class="stage">Expert</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">📈</div>
-                    <h3>Innovation Leadership</h3>
-                    <p>Develop capabilities to lead AI adoption initiatives, mentor team members, and drive technology innovation within your organization.</p>
-                    <div class="skill-progression">
-                        <strong>Progression Path:</strong>
-                        <div class="progression-stages">
-                            <div class="stage active">Basic</div>
-                            <div class="stage">Intermediate</div>
-                            <div class="stage">Advanced</div>
-                            <div class="stage">Expert</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Early Access -->
-    <section class="early-access">
-        <div class="container">
-            <div class="early-access-content">
-                <h2>Join Module 1 Early Access for Programmers</h2>
-                <p>Be among the first clinical programmers to master SDTM automation when beta testing begins Q4 2025. Gain competitive career advantage, influence feature development, and build next-generation programming skills.</p>
-                
-                <div class="career-benefits-summary">
-                    <div class="career-item">
-                        <strong>Skill Development</strong><br>
-                        First access to AI programming training
-                    </div>
-                    <div class="career-item">
-                        <strong>Career Advantage</strong><br>
-                        Market differentiation and premium positioning
-                    </div>
-                    <div class="career-item">
-                        <strong>Industry Recognition</strong><br>
-                        Thought leadership opportunities
-                    </div>
-                    <div class="career-item">
-                        <strong>Professional Network</strong><br>
-                        Connect with AI programming pioneers
-                    </div>
-                </div>
-                
-                <div class="early-access-form">
-                    <form action="#" method="POST">
-                        <div class="form-row">
-                            <input type="email" placeholder="Enter your email address" required>
-                            <button type="submit">Join Module 1 Beta</button>
-                        </div>
-                    </form>
-                    <p style="margin-top: 1rem; opacity: 0.9;">Early access members will receive skill development resources, career advancement guides, and direct mentorship opportunities with our development team.</p>
-                </div>
-            </div>
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Future-Proof Your Programming Career?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join our Module 1 early access program and be among the first programmers to master AI-assisted SDTM automation.
+            </p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Join Module 1 Early Access</a>
         </div>
     </section>
 
@@ -985,56 +651,39 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin Platform</h3>
-                    <a href="index.html">Home</a>
-                    <a href="platform.html">Platform Overview</a>
-                    <a href="contact.html">Module 1 Early Access</a>
-                    <a href="about.html">About Zinger</a>
+                    <h3>ZinClin by Zinger Software Solutions</h3>
+                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <a href="platform.html">ZinClin Overview</a>
+                    <a href="contact.html">Early Access Program</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Technical Staffing</a>
+                    <a href="services.html">SAS Programming</a>
+                    <a href="services.html">Consulting</a>
+                </div>
+                
                 <div class="footer-section">
                     <h3>Solutions</h3>
-                    <a href="solutions-biotechs.html">Biotech Companies</a>
-                    <a href="solutions-cros.html">CROs</a>
-                    <a href="solutions-programmers.html">Programmers</a>
-                    <a href="solutions-biostatisticians.html">Biostatisticians</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="resources.html">Industry Resources</a>
-                    <a href="contact.html">Module 1 Resources</a>
-                    <a href="contact.html">Strategy Consultation</a>
-                    <a href="contact.html">Technical Documentation</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <a href="mailto:admin@zingersoftwaresolutions.com">admin@zingersoftwaresolutions.com</a>
-                    <a href="contact.html">Contact Form</a>
-                    <a href="contact.html">Schedule Strategy Call</a>
-                    <p style="margin-top: 1rem;">Apex, NC</p>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved. ZinClin is a trademark of Zinger Software Solutions.</p>
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Early access form handling
-        document.querySelector('.early-access-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for joining our Module 1 early access program! You\'ll receive skill development resources and career advancement opportunities when beta testing begins Q4 2025.');
-        });
-
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
