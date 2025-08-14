@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for Biotechs - Module 1 SDTM Cost Reduction & ROI | Zinger Software Solutions</title>
-    <meta name="description" content="40-60% cost reduction with Module 1 SDTM automation for biotech companies. Onshore AI programming excellence. Early access program now open.">
-    
+    <title>ZinClin TLF Code Generator for Biotechs - Faster Time to Publication | Zinger Software Solutions</title>
+    <meta name="description" content="Accelerate biotech time to publication with automated TLF generation. Reduce programming bottlenecks and get results to market faster. Beta coming soon.">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +16,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
         }
 
         .container {
@@ -27,43 +24,48 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
             color: white;
-            padding: 1rem 0;
-            position: relative;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
         }
 
-        .header-content {
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: -0.2rem;
+            color: #1f4788;
         }
 
         .nav-links {
             display: flex;
+            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: #333;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -71,48 +73,33 @@
             color: #4ecdc4;
         }
 
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
         }
 
-        .hero h1 {
+        .hero-content h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
-        .hero-subtitle {
+        .hero-content p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
         }
 
         .hero-stats {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
         }
 
@@ -121,33 +108,35 @@
         }
 
         .stat-number {
+            display: block;
             font-size: 2.5rem;
             font-weight: bold;
             color: #4ecdc4;
-            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             opacity: 0.8;
         }
 
         .hero-cta {
-            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .btn-primary {
             background: #4ecdc4;
             color: #1f4788;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
-            margin: 0.5rem;
         }
 
         .btn-primary:hover {
@@ -156,89 +145,214 @@
             box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
-        /* Cost Reduction Section */
-        .cost-reduction {
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid #4ecdc4;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #4ecdc4;
+            color: #1f4788;
+        }
+
+        /* Biotech Benefits */
+        .biotech-benefits {
             padding: 5rem 0;
             background: white;
         }
 
-        .cost-reduction h2 {
+        .biotech-benefits h2 {
             text-align: center;
             font-size: 2.5rem;
             color: #1f4788;
             margin-bottom: 3rem;
         }
 
-        .reduction-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .reduction-card {
+        .benefit-card {
             background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
+            padding: 2.5rem;
+            border-radius: 15px;
             text-align: center;
-            border-left: 5px solid #4ecdc4;
+            transition: transform 0.3s ease;
         }
 
-        .reduction-icon {
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #28a745;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
         }
 
-        .reduction-card h3 {
+        .benefit-card h3 {
             color: #1f4788;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .cost-comparison {
-            padding: 4rem 0;
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-metric {
+            background: #e8f9f5;
+            color: #1f4788;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Time to Market */
+        .time-to-market {
+            padding: 5rem 0;
             background: #f8f9fa;
         }
 
-        .comparison-table {
+        .time-to-market h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .timeline-card {
             background: white;
-            border-radius: 10px;
-            overflow: hidden;
+            padding: 3rem;
+            border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .table-header {
-            background: #1f4788;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
+        .traditional-timeline {
+            border-left: 5px solid #e74c3c;
         }
 
-        .table-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+        .zinclin-timeline {
+            border-left: 5px solid #27ae60;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .traditional-timeline .timeline-title {
+            color: #e74c3c;
+        }
+
+        .zinclin-timeline .timeline-title {
+            color: #27ae60;
+        }
+
+        .timeline-steps {
+            list-style: none;
+        }
+
+        .timeline-steps li {
+            padding: 1rem 0;
             border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .table-cell {
-            padding: 1rem;
-            text-align: center;
+        .timeline-steps li:last-child {
+            border-bottom: none;
         }
 
-        .table-cell:first-child {
-            text-align: left;
+        .step-duration {
             font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
         }
 
-        .highlight {
-            background: #e8f9f5;
-            color: #1f4788;
-            font-weight: bold;
+        .traditional-timeline .step-duration {
+            background: #ffeaea;
+            color: #e74c3c;
         }
 
-        /* Implementation Strategy */
-        .implementation {
+        .zinclin-timeline .step-duration {
+            background: #eafaf1;
+            color: #27ae60;
+        }
+
+        /* ROI Section */
+        .roi-section {
             padding: 5rem 0;
             background: white;
+        }
+
+        .roi-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .roi-calculator {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .roi-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.1rem;
+        }
+
+        .roi-metric:last-child {
+            border-bottom: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .roi-total {
+            color: #4ecdc4;
+            font-size: 2rem;
+        }
+
+        /* Implementation */
+        .implementation {
+            padding: 5rem 0;
+            background: #f8f9fa;
         }
 
         .implementation h2 {
@@ -248,66 +362,141 @@
             margin-bottom: 3rem;
         }
 
-        .implementation-timeline {
+        .implementation-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
-        .timeline-phase {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
+        .step-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
             text-align: center;
-            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .phase-number {
+        .step-number {
             background: #4ecdc4;
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.5rem;
             font-weight: bold;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
         }
 
-        .timeline-phase h3 {
+        .step-card h3 {
             color: #1f4788;
             margin-bottom: 1rem;
         }
 
-        /* ROI Calculator */
-        .roi-section {
+        .step-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .success-stories h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 2rem;
+        }
+
+        .stories-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .story-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #4ecdc4;
+        }
+
+        .story-title {
+            color: #1f4788;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .story-challenge {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-solution {
+            background: #e8f9f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .solution-title {
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
             padding: 5rem 0;
             background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
             color: white;
             text-align: center;
         }
 
-        .roi-section h2 {
+        .final-cta h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .roi-calculator {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .roi-metric {
-            display: flex;
-            justify-content: space-between;
             margin-bottom: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1f4788;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         /* Footer */
@@ -345,21 +534,16 @@
             border-top: 1px solid #34495e;
             padding-top: 1rem;
             text-align: center;
-            color: #bdc3c7;
-        }
-
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            color: #95a5a6;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
                 font-size: 2.2rem;
             }
             
@@ -367,17 +551,8 @@
                 gap: 1.5rem;
             }
             
-            .nav-links {
-                display: none;
-            }
-            
-            .table-row {
+            .timeline-comparison {
                 grid-template-columns: 1fr;
-            }
-            
-            .table-cell {
-                text-align: left;
-                border-bottom: 1px solid #eee;
             }
         }
     </style>
@@ -385,173 +560,160 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator - Beta coming soon
     </div>
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    ZinClin
-                    <div class="logo-sub">by Zinger Software Solutions</div>
-                </a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="resources.html">Resources</a>
-                </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
-            </div>
-        </div>
+        <nav class="container">
+            <div class="logo">ZinClin by Zinger Software Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="platform.html">Platform</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>ZinClin for Biotechs</h1>
-            <p class="hero-subtitle">Reduce clinical programming costs by 40-60% while maintaining quality and accelerating study timelines. Start with Module 1 SDTM automation - the foundation every study needs.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">40-60%</span>
-                    <span class="stat-label">Target Cost Reduction</span>
+            <div class="hero-content">
+                <h1>Accelerate Your Time to Publication</h1>
+                <p>Generate publication-ready Tables, Listings, and Figures automatically. Reduce programming bottlenecks and get your biotech results to market faster with AI-powered TLF automation.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">60-70%</span>
+                        <span class="stat-label">Faster TLF Generation</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4-6</span>
+                        <span class="stat-label">Weeks Time Savings</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Beta</span>
+                        <span class="stat-label">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">Module 1</span>
-                    <span class="stat-label">SDTM Foundation</span>
+                
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary">Sign Up for Early Access Now</a>
+                    <a href="platform.html" class="btn-secondary">Explore TLF Generator</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">Onshore</span>
-                    <span class="stat-label">Quality & Security</span>
-                </div>
-            </div>
-            
-            <div class="hero-cta">
-                <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
-                <a href="contact.html" class="btn-primary">Request ROI Analysis</a>
             </div>
         </div>
     </section>
 
-    <!-- Cost Reduction -->
-    <section class="cost-reduction">
+    <!-- Biotech Benefits -->
+    <section class="biotech-benefits">
         <div class="container">
-            <h2>Immediate Cost Reduction Through Module 1</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Module 1 SDTM automation targets the universal need across all studies, providing immediate value and the fastest path to cost reduction.
-            </p>
+            <h2>TLF Generator Benefits for Biotechs</h2>
             
-            <div class="reduction-grid">
-                <div class="reduction-card">
-                    <div class="reduction-icon">💰</div>
-                    <h3>Programming Cost Reduction</h3>
-                    <p>Reduce SDTM programming costs by 40-60% through intelligent automation while maintaining the same quality standards as your internal teams.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Faster Market Entry</h3>
+                    <p>Reduce the time from study completion to publication-ready deliverables, accelerating your path to market and regulatory submissions.</p>
+                    <div class="benefit-metric">4-6 weeks time savings per study</div>
                 </div>
-
-                <div class="reduction-card">
-                    <div class="reduction-icon">⚡</div>
-                    <h3>Faster Study Timelines</h3>
-                    <p>Accelerate SDTM delivery by 50-70% with automated CRF annotation and mapping specification generation, reducing critical path dependencies.</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Publication-Ready Output</h3>
+                    <p>Generate Tables, Listings, and Figures that meet journal publication standards immediately, with proper formatting and CDISC compliance built-in.</p>
+                    <div class="benefit-metric">Zero formatting delays</div>
                 </div>
-
-                <div class="reduction-card">
-                    <div class="reduction-icon">🔒</div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Reduced Programming Costs</h3>
+                    <p>Eliminate TLF programming bottlenecks that slow down study completion and increase costs through manual coding inefficiencies.</p>
+                    <div class="benefit-metric">40-60% cost reduction</div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Focus on What Matters</h3>
+                    <p>Let your programming team focus on complex analysis and study design while TLF generation is automated for standard deliverables.</p>
+                    <div class="benefit-metric">More strategic work focus</div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
                     <h3>Onshore Data Security</h3>
-                    <p>Maintain complete data control and security with onshore processing, eliminating offshore data transfer risks and compliance complexities.</p>
+                    <p>Keep sensitive study data secure with US-based processing, avoiding offshore data transfer risks while achieving competitive efficiency.</p>
+                    <div class="benefit-metric">100% data security compliance</div>
                 </div>
-
-                <div class="reduction-card">
-                    <div class="reduction-icon">📈</div>
-                    <h3>Scalable Resource Management</h3>
-                    <p>Handle 2-3x more concurrent studies with existing programming teams through Module 1 automation, improving resource utilization significantly.</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Immediate Results</h3>
+                    <p>Start generating TLF code from day one without needing to build up data infrastructure - focus on the deliverables that drive publications.</p>
+                    <div class="benefit-metric">Day 1 productivity</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cost Comparison -->
-    <section class="cost-comparison">
+    <!-- Time to Market Comparison -->
+    <section class="time-to-market">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; color: #1f4788; margin-bottom: 3rem;">Module 1 SDTM Cost Comparison</h2>
+            <h2>Publication Timeline Comparison</h2>
             
-            <div class="comparison-table">
-                <div class="table-header">
-                    <h3>Annual Programming Costs (5 Studies/Year)</h3>
+            <div class="timeline-comparison">
+                <div class="timeline-card traditional-timeline">
+                    <div class="timeline-title">Traditional TLF Programming</div>
+                    <ul class="timeline-steps">
+                        <li>
+                            <span>Manual TLF shell review</span>
+                            <span class="step-duration">2-3 weeks</span>
+                        </li>
+                        <li>
+                            <span>Code development and testing</span>
+                            <span class="step-duration">4-6 weeks</span>
+                        </li>
+                        <li>
+                            <span>Quality control and validation</span>
+                            <span class="step-duration">2-3 weeks</span>
+                        </li>
+                        <li>
+                            <span>Formatting and finalization</span>
+                            <span class="step-duration">1-2 weeks</span>
+                        </li>
+                        <li>
+                            <span><strong>Total Time to Publication</strong></span>
+                            <span class="step-duration">9-14 weeks</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="table-row" style="background: #f8f9fa; font-weight: bold;">
-                    <div class="table-cell">Approach</div>
-                    <div class="table-cell">Cost/Study</div>
-                    <div class="table-cell">Annual Cost</div>
-                    <div class="table-cell">Time/Study</div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell">Internal Team (US)</div>
-                    <div class="table-cell">$45,000</div>
-                    <div class="table-cell">$225,000</div>
-                    <div class="table-cell">8-10 weeks</div>
-                </div>
-                
-                <div class="table-row">
-                    <div class="table-cell">Offshore Programming</div>
-                    <div class="table-cell">$25,000</div>
-                    <div class="table-cell">$125,000</div>
-                    <div class="table-cell">10-12 weeks</div>
-                </div>
-                
-                <div class="table-row highlight">
-                    <div class="table-cell">ZinClin Module 1</div>
-                    <div class="table-cell">$18,000</div>
-                    <div class="table-cell">$90,000</div>
-                    <div class="table-cell">3-4 weeks</div>
-                </div>
-                
-                <div class="table-row" style="background: #e8f9f5;">
-                    <div class="table-cell"><strong>Annual Savings vs Internal</strong></div>
-                    <div class="table-cell"><strong>$27,000</strong></div>
-                    <div class="table-cell"><strong>$135,000</strong></div>
-                    <div class="table-cell"><strong>5-6 weeks</strong></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Implementation Strategy -->
-    <section class="implementation">
-        <div class="container">
-            <h2>Module 1 Implementation Strategy</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Start with Module 1 SDTM automation for immediate impact, then scale based on your team's needs and success metrics.
-            </p>
-            
-            <div class="implementation-timeline">
-                <div class="timeline-phase">
-                    <div class="phase-number">1</div>
-                    <h3>Early Access Enrollment</h3>
-                    <p>Join our early access program to begin testing Module 1 SDTM automation with your current studies and provide feedback on features.</p>
-                </div>
-
-                <div class="timeline-phase">
-                    <div class="phase-number">2</div>
-                    <h3>Pilot Study Implementation</h3>
-                    <p>Run 1-2 pilot studies through Module 1 to validate efficiency gains and quality standards while your team learns the platform.</p>
-                </div>
-
-                <div class="timeline-phase">
-                    <div class="phase-number">3</div>
-                    <h3>Production Rollout</h3>
-                    <p>Scale Module 1 across all new studies once validation is complete, capturing immediate cost savings and timeline improvements.</p>
-                </div>
-
-                <div class="timeline-phase">
-                    <div class="phase-number">4</div>
-                    <h3>Module Expansion</h3>
-                    <p>Evaluate Module 2 (ADaM) and Module 3 (TLF) based on your experience with Module 1 and evolving automation needs.</p>
+                <div class="timeline-card zinclin-timeline">
+                    <div class="timeline-title">ZinClin TLF Generator</div>
+                    <ul class="timeline-steps">
+                        <li>
+                            <span>AI-powered shell analysis</span>
+                            <span class="step-duration">1-2 days</span>
+                        </li>
+                        <li>
+                            <span>Automated code generation</span>
+                            <span class="step-duration">1-2 weeks</span>
+                        </li>
+                        <li>
+                            <span>Programmer review and customization</span>
+                            <span class="step-duration">1-2 weeks</span>
+                        </li>
+                        <li>
+                            <span>Final validation and delivery</span>
+                            <span class="step-duration">3-5 days</span>
+                        </li>
+                        <li>
+                            <span><strong>Total Time to Publication</strong></span>
+                            <span class="step-duration">3-5 weeks</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -560,48 +722,121 @@
     <!-- ROI Calculator -->
     <section class="roi-section">
         <div class="container">
-            <h2>Projected ROI with Module 1</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Based on typical biotech study volumes and Module 1 SDTM automation efficiencies
-            </p>
+            <h2>Projected ROI for Biotech Companies</h2>
             
             <div class="roi-calculator">
+                <h3 style="margin-bottom: 2rem;">Typical Small-Mid Size Biotech (3-5 studies/year)</h3>
+                
                 <div class="roi-metric">
-                    <span>Studies per year:</span>
-                    <span><strong>5-8 studies</strong></span>
+                    <span>Traditional TLF programming cost per study:</span>
+                    <span><strong>$35,000 - $50,000</strong></span>
                 </div>
+                
+                <div class="roi-metric">
+                    <span>ZinClin TLF Generator cost per study:</span>
+                    <span><strong>$15,000 - $25,000</strong></span>
+                </div>
+                
                 <div class="roi-metric">
                     <span>Cost savings per study:</span>
-                    <span><strong>$20,000-30,000</strong></span>
+                    <span><strong>$20,000 - $25,000</strong></span>
                 </div>
+                
                 <div class="roi-metric">
                     <span>Time savings per study:</span>
-                    <span><strong>4-6 weeks</strong></span>
+                    <span><strong>4-6 weeks faster to market</strong></span>
                 </div>
+                
                 <div class="roi-metric">
-                    <span>Annual cost reduction:</span>
-                    <span><strong>$100,000-240,000</strong></span>
-                </div>
-                <div class="roi-metric" style="background: rgba(255, 255, 255, 0.2); font-size: 1.1rem;">
-                    <span>ROI Timeline:</span>
-                    <span><strong>3-6 months</strong></span>
+                    <span class="roi-total">Annual savings (4 studies):</span>
+                    <span class="roi-total">$80,000 - $100,000</span>
                 </div>
             </div>
-            
-            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
-                *Projections based on Module 1 SDTM automation capabilities and typical biotech study complexity
-            </p>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 4rem 0; background: white; text-align: center;">
+    <!-- Implementation Steps -->
+    <section class="implementation">
         <div class="container">
-            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Transform Your Programming Costs?</h2>
-            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Join our Module 1 early access program and be among the first biotechs to experience SDTM automation benefits.
-            </p>
-            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Join Module 1 Early Access</a>
+            <h2>Simple Implementation Process</h2>
+            
+            <div class="implementation-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Early Access Signup</h3>
+                    <p>Join our early access program to be among the first biotech companies to experience TLF automation when beta testing begins.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Pilot Study Selection</h3>
+                    <p>Choose 1-2 upcoming studies to pilot the TLF Generator, validating efficiency gains and quality standards with your team.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Team Training</h3>
+                    <p>Brief training session for your programming team on reviewing and customizing AI-generated TLF code to your standards.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Production Rollout</h3>
+                    <p>Scale TLF automation across all new studies once validation is complete, capturing immediate time and cost savings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Scenarios -->
+    <section class="success-stories">
+        <div class="container">
+            <h2>Biotech Challenge Scenarios</h2>
+            <p class="stories-subtitle">Common publication challenges that ZinClin TLF Generator addresses for biotech companies</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-title">Accelerating Phase 2 Publication</div>
+                    <div class="story-challenge">
+                        A mid-size biotech needs to publish Phase 2 results quickly for investor presentations and partnering discussions, but TLF programming is creating a 3-month bottleneck.
+                    </div>
+                    <div class="story-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        TLF Generator reduces programming time from 12 weeks to 4 weeks, enabling faster publication and earlier partnering discussions.
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-title">Managing Multiple Studies</div>
+                    <div class="story-challenge">
+                        A growing biotech has 4 concurrent studies approaching completion but limited programming resources to handle simultaneous TLF generation requirements.
+                    </div>
+                    <div class="story-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        Automated TLF generation allows one programmer to manage multiple studies simultaneously, eliminating resource bottlenecks.
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-title">Cost Control Under Pressure</div>
+                    <div class="story-challenge">
+                        A startup biotech needs to demonstrate efficient operations to investors while maintaining high-quality study deliverables on a tight budget.
+                    </div>
+                    <div class="story-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        40-60% reduction in TLF programming costs while maintaining publication-ready quality demonstrates operational efficiency to investors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Get Early Access to TLF Automation</h2>
+            <p>Join the biotech companies already signed up for early access to ZinClin TLF Generator. Be first to experience publication-ready automation.</p>
+            <a href="contact.html" class="btn-white">Sign Up for Early Access Now</a>
         </div>
     </section>
 
@@ -610,24 +845,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin by Zinger Software Solutions</h3>
-                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Platform</h3>
-                    <a href="platform.html">ZinClin Overview</a>
+                    <h3>ZinClin Platform</h3>
+                    <a href="platform.html">TLF Code Generator</a>
                     <a href="contact.html">Early Access Program</a>
-                    <a href="resources.html">Resources</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
+                    <a href="resources.html">Documentation</a>
                 </div>
                 
                 <div class="footer-section">
@@ -636,6 +857,20 @@
                     <a href="solutions-cros.html">For CROs</a>
                     <a href="solutions-programmers.html">For Programmers</a>
                     <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Zinger Software Solutions</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: admin@zingersoftwaresolutions.com</p>
+                    <p>Location: Apex, NC</p>
+                    <p>Founded: 2013</p>
                 </div>
             </div>
             

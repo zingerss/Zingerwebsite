@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Programming Resources | Module 1 SDTM Automation Insights | ZinClin by Zinger Software Solutions</title>
-    <meta name="description" content="Expert insights on Module 1 SDTM automation, clinical programming best practices, and industry resources. Early access program now open.">
+    <title>TLF Automation Resources | Publication Programming Insights | ZinClin by Zinger Software Solutions</title>
+    <meta name="description" content="Expert insights on TLF automation, publication programming best practices, and clinical programming resources. TLF Code Generator development updates and early access program.">
     
     <style>
         /* Reset and Base Styles */
@@ -89,17 +89,18 @@
         .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
         }
 
         .page-hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .page-hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -107,7 +108,7 @@
 
         /* Featured Resources */
         .featured-resources {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: white;
         }
 
@@ -154,7 +155,7 @@
 
         /* Resource Categories */
         .resource-categories {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: #f8f9fa;
         }
 
@@ -199,6 +200,7 @@
         .resource-list {
             list-style: none;
             padding: 0;
+            text-align: left;
             margin-top: 1.5rem;
         }
 
@@ -228,7 +230,7 @@
 
         /* Industry Insights */
         .industry-insights {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
         }
@@ -267,7 +269,7 @@
 
         /* Newsletter Signup */
         .newsletter-signup {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: white;
             text-align: center;
         }
@@ -384,10 +386,33 @@
             font-weight: bold;
         }
 
+        /* Buttons */
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .page-hero h1 {
                 font-size: 2.2rem;
+            }
+            
+            .featured-grid,
+            .categories-grid,
+            .insights-grid {
+                grid-template-columns: 1fr;
             }
             
             .nav-links {
@@ -403,7 +428,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator in development - Beta coming soon
     </div>
 
     <!-- Header -->
@@ -417,12 +442,11 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html" class="active">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
@@ -430,8 +454,8 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Clinical Programming Resources</h1>
-            <p>Expert insights on Module 1 SDTM automation, industry best practices, and thought leadership from 12+ years of clinical programming expertise.</p>
+            <h1>TLF Automation Resources</h1>
+            <p>Expert insights on publication programming, TLF automation, and clinical programming best practices from our 12+ years of industry experience.</p>
         </div>
     </section>
 
@@ -442,24 +466,21 @@
             
             <div class="featured-grid">
                 <div class="featured-card">
-                    <div class="resource-type">ROI Guide</div>
-                    <h3>Module 1 SDTM Automation ROI Calculator</h3>
-                    <p>Comprehensive guide to calculating ROI for SDTM automation implementation, including cost-benefit analysis templates and industry benchmarks for different organization sizes.</p>
-                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Coming Soon - Early access participants receive priority access</p>
+                    <div class="resource-type">White Paper</div>
+                    <h3>The ROI of TLF Automation in Clinical Programming</h3>
+                    <p>Comprehensive analysis of time savings, cost reduction, and quality improvements achievable through automated TLF generation. Based on real-world implementation data and industry benchmarks.</p>
                 </div>
-
+                
                 <div class="featured-card">
-                    <div class="resource-type">Industry Report</div>
-                    <h3>State of Clinical Programming Automation</h3>
-                    <p>Annual industry analysis covering automation trends, offshore challenges, and the evolving role of AI in clinical programming based on 100+ industry surveys.</p>
-                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Available to newsletter subscribers</p>
+                    <div class="resource-type">Best Practices Guide</div>
+                    <h3>Publication-Ready TLF Standards and Guidelines</h3>
+                    <p>Essential guidelines for creating TLFs that meet regulatory requirements and publication standards. Covers formatting, validation, and compliance considerations for automated workflows.</p>
                 </div>
-
+                
                 <div class="featured-card">
-                    <div class="resource-type">Best Practices</div>
-                    <h3>SDTM Quality Assurance Framework</h3>
-                    <p>Proven methodology for ensuring SDTM quality and compliance, developed from 12+ years of regulatory submission experience across 200+ studies.</p>
-                    <p style="margin-top: 1rem; font-style: italic; color: #666;">Module 1 participants receive enhanced version</p>
+                    <div class="resource-type">Market Report</div>
+                    <h3>The Future of Clinical Programming: Automation Trends 2025</h3>
+                    <p>Industry analysis of automation adoption in clinical programming, emerging technologies, and strategic considerations for biotech and pharmaceutical companies.</p>
                 </div>
             </div>
         </div>
@@ -473,84 +494,80 @@
             <div class="categories-grid">
                 <div class="category-card">
                     <div class="category-icon">📊</div>
-                    <h3>CDISC & Standards</h3>
-                    <p>Comprehensive resources on CDISC implementation, SDTM best practices, and regulatory compliance requirements.</p>
-                    
+                    <h3>TLF Automation</h3>
+                    <p>Resources focused on Tables, Listings, and Figures automation, publication workflows, and delivery optimization.</p>
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">SDTM Implementation Checklist</div>
-                            <div class="resource-desc">Step-by-step guide for SDTM compliance</div>
+                            <div class="resource-title">TLF Automation Implementation Guide</div>
+                            <div class="resource-desc">Step-by-step guide to implementing automated TLF generation in clinical programming workflows.</div>
                         </li>
                         <li>
-                            <div class="resource-title">CDISC Mapping Templates</div>
-                            <div class="resource-desc">Standardized templates for common study types</div>
+                            <div class="resource-title">Publication Timeline Optimization</div>
+                            <div class="resource-desc">Strategies for reducing publication cycles from 12-18 weeks to 4-6 weeks through automation.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Regulatory Submission Guide</div>
-                            <div class="resource-desc">Best practices for regulatory-ready datasets</div>
+                            <div class="resource-title">Quality Validation for Automated TLFs</div>
+                            <div class="resource-desc">Best practices for validating AI-generated TLFs while maintaining regulatory compliance.</div>
                         </li>
                     </ul>
                 </div>
-
+                
                 <div class="category-card">
                     <div class="category-icon">🤖</div>
                     <h3>AI & Automation</h3>
-                    <p>Insights into AI-powered clinical programming, automation strategies, and future-proofing your programming career.</p>
-                    
+                    <p>Insights on artificial intelligence applications in clinical programming and automation strategy.</p>
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">Module 1 Automation Guide</div>
-                            <div class="resource-desc">Understanding SDTM automation capabilities</div>
+                            <div class="resource-title">AI vs Traditional Programming: Performance Comparison</div>
+                            <div class="resource-desc">Detailed analysis of efficiency gains and quality metrics when using AI-assisted programming.</div>
                         </li>
                         <li>
-                            <div class="resource-title">AI Programming Best Practices</div>
-                            <div class="resource-desc">How to collaborate effectively with AI tools</div>
+                            <div class="resource-title">Human-AI Collaboration in Clinical Programming</div>
+                            <div class="resource-desc">Framework for effective collaboration between programming teams and AI automation tools.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Career Future-Proofing</div>
-                            <div class="resource-desc">Building AI-era programming skills</div>
+                            <div class="resource-title">Automation ROI Calculator</div>
+                            <div class="resource-desc">Interactive tool to calculate potential cost savings from TLF automation implementation.</div>
                         </li>
                     </ul>
                 </div>
-
+                
                 <div class="category-card">
-                    <div class="category-icon">💼</div>
-                    <h3>Business Strategy</h3>
-                    <p>Strategic guidance for organizations evaluating clinical programming automation and efficiency improvements.</p>
-                    
+                    <div class="category-icon">📋</div>
+                    <h3>Strategy & Planning</h3>
+                    <p>Strategic guidance for clinical programming automation adoption and implementation planning.</p>
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">Automation ROI Framework</div>
-                            <div class="resource-desc">Calculating business impact of SDTM automation</div>
+                            <div class="resource-title">Clinical Programming Automation Roadmap</div>
+                            <div class="resource-desc">Strategic planning guide for implementing automation across clinical programming functions.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Offshore vs. Onshore Analysis</div>
-                            <div class="resource-desc">Comprehensive cost-benefit comparison</div>
+                            <div class="resource-title">Team Training for Automation Adoption</div>
+                            <div class="resource-desc">Curriculum and resources for training clinical programming teams on automation tools.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Implementation Planning</div>
-                            <div class="resource-desc">Step-by-step automation adoption strategy</div>
+                            <div class="resource-title">Vendor Evaluation Framework</div>
+                            <div class="resource-desc">Criteria and processes for evaluating clinical programming automation solutions.</div>
                         </li>
                     </ul>
                 </div>
-
+                
                 <div class="category-card">
                     <div class="category-icon">🔧</div>
-                    <h3>Technical Guides</h3>
-                    <p>Deep-dive technical content on clinical programming methodologies, code optimization, and quality assurance.</p>
-                    
+                    <h3>Technical Resources</h3>
+                    <p>Technical documentation, integration guides, and development resources for automation implementation.</p>
                     <ul class="resource-list">
                         <li>
-                            <div class="resource-title">SDTM Programming Patterns</div>
-                            <div class="resource-desc">Reusable code patterns and techniques</div>
+                            <div class="resource-title">API Integration Guide</div>
+                            <div class="resource-desc">Technical documentation for integrating TLF automation into existing clinical programming workflows.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Quality Control Methods</div>
-                            <div class="resource-desc">Comprehensive QC validation approaches</div>
+                            <div class="resource-title">Data Validation Frameworks</div>
+                            <div class="resource-desc">Technical specifications for validating automated programming outputs and maintaining data integrity.</div>
                         </li>
                         <li>
-                            <div class="resource-title">Performance Optimization</div>
-                            <div class="resource-desc">Techniques for efficient programming workflows</div>
+                            <div class="resource-title">Security and Compliance Standards</div>
+                            <div class="resource-desc">Security protocols and compliance requirements for automated clinical programming systems.</div>
                         </li>
                     </ul>
                 </div>
@@ -561,25 +578,43 @@
     <!-- Industry Insights -->
     <section class="industry-insights">
         <div class="container">
-            <h2>Industry Insights</h2>
+            <h2>Industry Insights & Statistics</h2>
             
             <div class="insights-grid">
                 <div class="insight-card">
-                    <div class="insight-number">$5B</div>
-                    <div class="insight-title">Clinical Data Services Market</div>
-                    <p>Annual market size for clinical programming and data management services, with 8% annual growth driven by increasing study complexity.</p>
+                    <div class="insight-number">60-70%</div>
+                    <div class="insight-title">Time Savings Potential</div>
+                    <p>Average time reduction achievable through TLF automation based on industry benchmarks and pilot implementations.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">85%</div>
+                    <div class="insight-title">Manual TLF Programming</div>
+                    <p>Percentage of clinical programming teams still using primarily manual processes for TLF creation and formatting.</p>
                 </div>
                 
                 <div class="insight-card">
                     <div class="insight-number">40-60%</div>
-                    <div class="insight-title">Offshore Cost Pressure</div>
-                    <p>Organizations report 40-60% cost pressure driving offshore adoption, despite quality and security concerns with data transfer.</p>
+                    <div class="insight-title">Cost Reduction</div>
+                    <p>Typical cost savings achieved through TLF automation implementation in clinical programming operations.</p>
                 </div>
                 
                 <div class="insight-card">
-                    <div class="insight-number">70%</div>
-                    <div class="insight-title">Time Spent on Routine Tasks</div>
-                    <p>Clinical programmers spend 70% of time on routine SDTM mapping and annotation - prime targets for automation efficiency gains.</p>
+                    <div class="insight-number">12-18</div>
+                    <div class="insight-title">Weeks Traditional Timeline</div>
+                    <p>Average timeline for traditional TLF programming from SAP finalization to publication-ready deliverables.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">4-6</div>
+                    <div class="insight-title">Weeks Automated Timeline</div>
+                    <p>Achievable timeline with TLF automation from SAP finalization to publication-ready deliverables.</p>
+                </div>
+                
+                <div class="insight-card">
+                    <div class="insight-number">92%</div>
+                    <div class="insight-title">Quality Consistency</div>
+                    <p>Improvement in output consistency and regulatory compliance when using automated TLF generation systems.</p>
                 </div>
             </div>
         </div>
@@ -588,10 +623,8 @@
     <!-- Newsletter Signup -->
     <section class="newsletter-signup">
         <div class="container">
-            <h2>Stay Updated on Module 1 Development</h2>
-            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem;">
-                Get exclusive insights, early access updates, and industry analysis delivered to your inbox.
-            </p>
+            <h2>Stay Updated on TLF Automation</h2>
+            <p>Get the latest insights on publication automation, industry trends, and ZinClin development updates.</p>
             
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email address" required>
@@ -601,25 +634,36 @@
             <div class="newsletter-benefits">
                 <div class="benefit-item">
                     <div class="benefit-icon">📧</div>
-                    <strong>Weekly Updates</strong>
-                    <p>Module 1 development progress and feature announcements</p>
+                    <strong>Weekly Insights</strong>
+                    <p>Industry trends and automation updates</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <strong>Early Access Updates</strong>
+                    <p>First access to new features and resources</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">📊</div>
-                    <strong>Industry Reports</strong>
-                    <p>Exclusive market analysis and automation trend insights</p>
+                    <strong>Exclusive Content</strong>
+                    <p>Subscriber-only resources and case studies</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">🎯</div>
-                    <strong>Early Access</strong>
-                    <p>Priority access to new resources and beta features</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎓</div>
-                    <strong>Expert Content</strong>
-                    <p>Best practices from 12+ years of programming expertise</p>
+                    <strong>No Spam</strong>
+                    <p>Relevant content only, unsubscribe anytime</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 4rem 0; background: #f8f9fa; text-align: center;">
+        <div class="container">
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Experience TLF Automation?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join our early access program to be among the first to experience automated publication deliverables and shape the future of clinical programming.
+            </p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Sign Up for Early Access Now</a>
         </div>
     </section>
 
@@ -642,10 +686,11 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
                 </div>
                 
                 <div class="footer-section">

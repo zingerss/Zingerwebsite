@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for Biostatisticians - Module 1 SDTM Workflow Acceleration | Zinger Software Solutions</title>
-    <meta name="description" content="Accelerate biostatistical workflows with Module 1 SDTM automation. Reduce programming cycle times and improve collaboration. Early access program now open.">
+    <title>TLF Workflow Acceleration for Biostatisticians | ZinClin by Zinger Software Solutions</title>
+    <meta name="description" content="Get publication-ready deliverables faster with automated TLF generation. Accelerate your biostatistical workflows and focus on analysis, not formatting. Early access program now open.">
     
     <style>
         /* Reset and Base Styles */
@@ -86,25 +86,24 @@
         }
 
         /* Hero Section */
-        .hero {
+        .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
         }
 
-        .hero h1 {
+        .page-hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
-        .hero-subtitle {
+        .page-hero p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 3rem;
         }
 
         .hero-stats {
@@ -176,6 +175,11 @@
             border-radius: 10px;
             text-align: center;
             border-left: 5px solid #4ecdc4;
+            transition: transform 0.3s ease;
+        }
+
+        .acceleration-card:hover {
+            transform: translateY(-5px);
         }
 
         .acceleration-icon {
@@ -189,10 +193,48 @@
             margin-bottom: 1rem;
         }
 
+        /* Collaboration Benefits */
+        .collaboration-benefits {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .collaboration-benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+            display: block;
+        }
+
         /* Integration Flow */
         .integration {
             padding: 5rem 0;
-            background: #f8f9fa;
+            background: white;
         }
 
         .integration h2 {
@@ -209,7 +251,7 @@
         }
 
         .flow-step {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -240,6 +282,74 @@
             margin-top: 1rem;
             font-size: 0.9rem;
             font-style: italic;
+        }
+
+        /* Publication Timeline */
+        .publication-timeline {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .publication-timeline h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .traditional {
+            border-top: 4px solid #dc3545;
+        }
+
+        .traditional .timeline-title {
+            color: #dc3545;
+        }
+
+        .automated {
+            border-top: 4px solid #28a745;
+        }
+
+        .automated .timeline-title {
+            color: #28a745;
+        }
+
+        .timeline-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-steps li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timeline-duration {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
         }
 
         /* Efficiency Metrics */
@@ -297,8 +407,9 @@
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
-            display: block;
             margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
@@ -323,16 +434,26 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-hero h1 {
                 font-size: 2.2rem;
             }
             
-            .hero-stats {
-                gap: 1.5rem;
+            .acceleration-grid,
+            .benefits-grid,
+            .integration-flow {
+                grid-template-columns: 1fr;
             }
             
             .nav-links {
                 display: none;
+            }
+            
+            .timeline-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
             }
         }
     </style>
@@ -340,7 +461,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator in development - Beta coming soon
     </div>
 
     <!-- Header -->
@@ -354,30 +475,32 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>ZinClin for Biostatisticians</h1>
-            <p class="hero-subtitle">Accelerate your analytical workflows with Module 1 SDTM automation. Reduce programming cycle times by 70% and improve collaboration between biostatistics and programming teams.</p>
+            <h1>Get Publication-Ready Deliverables Faster</h1>
+            <p>
+                Accelerate your biostatistical workflows with automated TLF generation. 
+                Focus on analysis and interpretation while publication deliverables are created automatically.
+            </p>
             
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">70%</span>
-                    <span class="stat-label">Faster Programming Cycles</span>
+                    <span class="stat-number">60-70%</span>
+                    <span class="stat-label">Faster Publication Cycles</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">Module 1</span>
-                    <span class="stat-label">SDTM Foundation</span>
+                    <span class="stat-number">TLF</span>
+                    <span class="stat-label">Automation</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">Real-time</span>
@@ -386,7 +509,7 @@
             </div>
             
             <div style="margin-top: 2rem;">
-                <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
+                <a href="contact.html" class="btn-primary">Sign Up for Early Access Now</a>
             </div>
         </div>
     </section>
@@ -394,34 +517,91 @@
     <!-- Workflow Acceleration -->
     <section class="workflow-acceleration">
         <div class="container">
-            <h2>Module 1 Workflow Acceleration</h2>
+            <h2>TLF Workflow Acceleration</h2>
             <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Module 1 SDTM automation creates the foundation for faster, more efficient biostatistical analysis workflows.
+                Automated TLF generation creates the foundation for faster, more efficient publication workflows and better cross-functional collaboration.
             </p>
             
             <div class="acceleration-grid">
                 <div class="acceleration-card">
                     <div class="acceleration-icon">⚡</div>
-                    <h3>Faster Data Availability</h3>
-                    <p>Module 1 reduces SDTM programming time from weeks to days, getting analysis datasets to biostatisticians 70% faster for timely statistical analysis and reporting.</p>
+                    <h3>Faster Time to Publication</h3>
+                    <p>Generate publication-ready tables, listings, and figures in minutes instead of days. Spend more time on analysis validation and scientific interpretation.</p>
                 </div>
-
-                <div class="acceleration-card">
-                    <div class="acceleration-icon">🔍</div>
-                    <h3>Enhanced Data Quality</h3>
-                    <p>Automated SDTM validation and quality checks ensure higher data quality from the start, reducing downstream analysis delays and revision cycles significantly.</p>
-                </div>
-
-                <div class="acceleration-card">
-                    <div class="acceleration-icon">🤝</div>
-                    <h3>Improved Collaboration</h3>
-                    <p>Real-time visibility into SDTM programming progress and automated status updates improve communication and coordination between biostat and programming teams.</p>
-                </div>
-
+                
                 <div class="acceleration-card">
                     <div class="acceleration-icon">📊</div>
-                    <h3>Analysis-Ready Datasets</h3>
-                    <p>Module 1 ensures SDTM datasets are consistently structured and validated, providing reliable foundations for ADaM dataset creation and statistical analysis.</p>
+                    <h3>Consistent Output Quality</h3>
+                    <p>Standardized formatting and regulatory-compliant structure ensure every TLF meets publication standards without manual formatting effort.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🔄</div>
+                    <h3>Streamlined Revisions</h3>
+                    <p>Automated regeneration means protocol amendments and data updates result in updated TLFs within minutes, not weeks of reprogramming.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🤝</div>
+                    <h3>Enhanced Collaboration</h3>
+                    <p>Provide programming teams with clear specifications while focusing on statistical methodology and regulatory strategy.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">📈</div>
+                    <h3>Higher Study Capacity</h3>
+                    <p>Handle multiple studies simultaneously with automated TLF generation freeing up time for complex analytical work.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🎯</div>
+                    <h3>Focus on Science</h3>
+                    <p>Dedicate more time to statistical methodology, data interpretation, and regulatory interactions rather than formatting logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Benefits -->
+    <section class="collaboration-benefits">
+        <div class="container">
+            <h2>Transform Team Collaboration</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">📋</span>
+                    <h3>Clear Specifications</h3>
+                    <p>Provide programmers with detailed TLF specifications automatically generated from statistical analysis plans, reducing back-and-forth communication.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🔄</span>
+                    <h3>Real-time Updates</h3>
+                    <p>See TLF outputs updated immediately as analysis specifications change, enabling faster iteration and validation cycles.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">📝</span>
+                    <h3>Medical Writer Integration</h3>
+                    <p>Generate publication-ready formats that medical writers can directly integrate into regulatory submissions and manuscripts.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">✅</span>
+                    <h3>Quality Assurance</h3>
+                    <p>Built-in validation checks ensure TLF outputs meet CDISC standards and regulatory requirements without manual review effort.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">📊</span>
+                    <h3>Version Control</h3>
+                    <p>Maintain complete audit trails of TLF changes linked to statistical analysis plan modifications for regulatory transparency.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🚀</span>
+                    <h3>Parallel Processing</h3>
+                    <p>Enable simultaneous work on multiple analysis components while TLF generation happens automatically in the background.</p>
                 </div>
             </div>
         </div>
@@ -430,42 +610,85 @@
     <!-- Integration Flow -->
     <section class="integration">
         <div class="container">
-            <h2>Simple Integration with Your Current Process</h2>
+            <h2>Seamless Integration with Your Workflow</h2>
+            
             <div class="integration-flow">
                 <div class="flow-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Upload Your SAP</h4>
-                        <p>Simply upload your Statistical Analysis Plan to ZinClin as you would to any document management system.</p>
-                        <div class="step-benefit">Benefit: Zero change to your SAP development process</div>
+                        <h4>Define Analysis Plan</h4>
+                        <p>Create your statistical analysis plan using familiar biostatistical planning tools and methodologies.</p>
+                        <div class="step-benefit">
+                            ✓ Use existing SAP templates and processes
+                        </div>
                     </div>
                 </div>
                 
                 <div class="flow-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Review Generated Structure</h4>
-                        <p>Review the automatically extracted analysis plan structure and variable mappings within hours of upload.</p>
-                        <div class="step-benefit">Benefit: Immediate validation of programming interpretation</div>
+                        <h4>Automatic TLF Generation</h4>
+                        <p>ZinClin automatically generates TLF specifications and code based on your analysis requirements.</p>
+                        <div class="step-benefit">
+                            ✓ No manual programming coordination needed
+                        </div>
                     </div>
                 </div>
                 
                 <div class="flow-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>Accelerated SDTM Delivery</h4>
-                        <p>Receive completed, validated SDTM datasets 70% faster than traditional programming timelines.</p>
-                        <div class="step-benefit">Benefit: Earlier start on ADaM development and statistical analysis</div>
+                        <h4>Review & Validate</h4>
+                        <p>Review generated TLFs for scientific accuracy and regulatory compliance using automated validation reports.</p>
+                        <div class="step-benefit">
+                            ✓ Focus on scientific content, not formatting
+                        </div>
                     </div>
                 </div>
                 
                 <div class="flow-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h4>Enhanced Analysis Foundation</h4>
-                        <p>Begin statistical analysis with consistently high-quality, validated SDTM datasets that support reliable ADaM creation.</p>
-                        <div class="step-benefit">Benefit: Reduced analysis delays and higher quality outcomes</div>
+                        <h4>Publication Delivery</h4>
+                        <p>Deliver publication-ready TLFs to medical writers and regulatory teams in standardized formats.</p>
+                        <div class="step-benefit">
+                            ✓ Accelerated submission timelines
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Timeline -->
+    <section class="publication-timeline">
+        <div class="container">
+            <h2>Publication Timeline Comparison</h2>
+            
+            <div class="timeline-comparison">
+                <div class="timeline-card traditional">
+                    <div class="timeline-title">Traditional Process</div>
+                    <ul class="timeline-steps">
+                        <li>SAP finalization</li>
+                        <li>TLF specification creation</li>
+                        <li>Programming resource allocation</li>
+                        <li>Iterative programming cycles</li>
+                        <li>QC and validation</li>
+                        <li>Format revisions</li>
+                        <li>Final delivery preparation</li>
+                    </ul>
+                    <div class="timeline-duration">12-18 weeks</div>
+                </div>
+                
+                <div class="timeline-card automated">
+                    <div class="timeline-title">ZinClin Automated</div>
+                    <ul class="timeline-steps">
+                        <li>SAP finalization</li>
+                        <li>Automatic TLF generation</li>
+                        <li>Scientific validation review</li>
+                        <li>Publication-ready delivery</li>
+                    </ul>
+                    <div class="timeline-duration">4-6 weeks</div>
                 </div>
             </div>
         </div>
@@ -474,25 +697,25 @@
     <!-- Efficiency Metrics -->
     <section class="efficiency-metrics">
         <div class="container">
-            <h2>Module 1 Impact on Biostatistical Workflows</h2>
+            <h2>TLF Automation Impact on Biostatistical Workflows</h2>
             <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Quantifiable improvements in workflow efficiency and collaboration
+                Quantifiable improvements in workflow efficiency and publication timelines
             </p>
             
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <div class="impact-value">70%</div>
-                    <div>Faster SDTM Delivery</div>
+                    <div class="impact-value">60-70%</div>
+                    <div>Faster TLF Delivery</div>
                 </div>
                 
                 <div class="metric-card">
-                    <div class="impact-value">50%</div>
+                    <div class="impact-value">80%</div>
                     <div>Reduced Revision Cycles</div>
                 </div>
                 
                 <div class="metric-card">
                     <div class="impact-value">3x</div>
-                    <div>Improved Communication</div>
+                    <div>Improved Team Communication</div>
                 </div>
                 
                 <div class="metric-card">
@@ -506,11 +729,11 @@
     <!-- CTA Section -->
     <section style="padding: 4rem 0; background: white; text-align: center;">
         <div class="container">
-            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Accelerate Your Biostatistical Workflows?</h2>
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Accelerate Your Publication Workflows?</h2>
             <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Join our Module 1 early access program and experience the benefits of automated SDTM foundations for your analytical work.
+                Join our TLF Code Generator early access program and experience the benefits of automated publication deliverables for your biostatistical work.
             </p>
-            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Join Module 1 Early Access</a>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Sign Up for Early Access Now</a>
         </div>
     </section>
 
@@ -533,18 +756,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
-                </div>
-                
-                <div class="footer-section">
                     <h3>Solutions</h3>
                     <a href="solutions-biotechs.html">For Biotechs</a>
                     <a href="solutions-cros.html">For CROs</a>
                     <a href="solutions-programmers.html">For Programmers</a>
                     <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
             

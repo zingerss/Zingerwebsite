@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for CROs - Module 1 SDTM Competitive Advantage | Zinger Software Solutions</title>
-    <meta name="description" content="Competitive advantage through modular AI automation. Win more bids with Module 1 SDTM capabilities. Early access program now open.">
-    
+    <title>ZinClin TLF Code Generator for CROs - Win More Bids with Competitive Advantage | Zinger Software Solutions</title>
+    <meta name="description" content="Win more CRO bids with competitive TLF delivery timelines. Differentiate your services with publication-ready automation. Beta coming soon.">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +16,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
         }
 
         .container {
@@ -27,43 +24,48 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
             color: white;
-            padding: 1rem 0;
-            position: relative;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
         }
 
-        .header-content {
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: -0.2rem;
+            color: #1f4788;
         }
 
         .nav-links {
             display: flex;
+            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: #333;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -71,48 +73,33 @@
             color: #4ecdc4;
         }
 
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
         }
 
-        .hero h1 {
+        .hero-content h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
-        .hero-subtitle {
+        .hero-content p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
         }
 
         .hero-stats {
             display: flex;
             justify-content: center;
             gap: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
         }
 
@@ -121,33 +108,35 @@
         }
 
         .stat-number {
+            display: block;
             font-size: 2.5rem;
             font-weight: bold;
             color: #4ecdc4;
-            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             opacity: 0.8;
         }
 
         .hero-cta {
-            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .btn-primary {
             background: #4ecdc4;
             color: #1f4788;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
-            margin: 0.5rem;
         }
 
         .btn-primary:hover {
@@ -159,21 +148,18 @@
         .btn-secondary {
             background: transparent;
             color: white;
-            padding: 1rem 2rem;
-            border: 2px solid white;
+            padding: 1rem 2.5rem;
+            border: 2px solid #4ecdc4;
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
-            margin: 0.5rem;
         }
 
         .btn-secondary:hover {
-            background: white;
+            background: #4ecdc4;
             color: #1f4788;
-            transform: translateY(-2px);
         }
 
         /* Competitive Advantages */
@@ -191,111 +177,206 @@
 
         .advantages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .advantage-card {
             background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
+            padding: 2.5rem;
+            border-radius: 15px;
             border-left: 5px solid #4ecdc4;
-            transition: transform 0.3s ease;
-        }
-
-        .advantage-card:hover {
-            transform: translateY(-5px);
         }
 
         .advantage-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #1f4788;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
         }
 
         .advantage-card h3 {
             color: #1f4788;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .module-focus {
+        .advantage-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tlf-advantage {
             background: #e8f9f5;
             padding: 1rem;
-            border-radius: 5px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .tlf-advantage strong {
+            color: #27ae60;
         }
 
         .client-benefit {
-            background: #fff3cd;
+            background: #e6f3ff;
             padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
         }
 
-        /* Service Tiers */
-        .service-tiers {
+        .client-benefit strong {
+            color: #3498db;
+        }
+
+        /* Bid Win Strategy */
+        .bid-strategy {
             padding: 5rem 0;
             background: #f8f9fa;
         }
 
-        .service-tiers h2 {
+        .bid-strategy h2 {
             text-align: center;
             font-size: 2.5rem;
             color: #1f4788;
             margin-bottom: 3rem;
         }
 
-        .tiers-grid {
+        .strategy-comparison {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .tier-card {
+        .strategy-card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
+            padding: 3rem;
+            border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
-        .tier-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 1rem;
+        .traditional-strategy {
+            border-left: 5px solid #e74c3c;
         }
 
-        .tier-modules {
-            background: #4ecdc4;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+        .zinclin-strategy {
+            border-left: 5px solid #27ae60;
+        }
+
+        .strategy-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .traditional-strategy .strategy-title {
+            color: #e74c3c;
+        }
+
+        .zinclin-strategy .strategy-title {
+            color: #27ae60;
+        }
+
+        .strategy-metrics {
+            list-style: none;
+        }
+
+        .strategy-metrics li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .strategy-metrics li:last-child {
+            border-bottom: none;
+        }
+
+        .metric-value {
+            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
             font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            display: inline-block;
         }
 
-        .tier-advantage {
-            background: #28a745;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
+        .traditional-strategy .metric-value {
+            background: #ffeaea;
+            color: #e74c3c;
         }
 
-        /* Partnership Strategy */
-        .partnership-strategy {
+        .zinclin-strategy .metric-value {
+            background: #eafaf1;
+            color: #27ae60;
+        }
+
+        /* Service Differentiation */
+        .service-differentiation {
             padding: 5rem 0;
             background: white;
         }
 
-        .partnership-strategy h2 {
+        .service-differentiation h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .differentiation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .differentiation-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .differentiation-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .differentiation-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .differentiation-card h3 {
+            color: #1f4788;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .differentiation-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-tier {
+            background: #e8f9f5;
+            color: #1f4788;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        /* Partnership Opportunities */
+        .partnership-opportunities {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .partnership-opportunities h2 {
             text-align: center;
             font-size: 2.5rem;
             color: #1f4788;
@@ -309,10 +390,11 @@
         }
 
         .partnership-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-top: 4px solid #4ecdc4;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
         }
 
         .partnership-card h3 {
@@ -320,44 +402,177 @@
             margin-bottom: 1rem;
         }
 
-        /* ROI Calculator */
-        .roi-section {
+        .partnership-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ROI Analysis */
+        .roi-analysis {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .roi-analysis h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .roi-calculator {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .roi-comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .roi-column {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .roi-column h3 {
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .roi-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1rem;
+        }
+
+        .roi-metric:last-child {
+            border-bottom: none;
+        }
+
+        .roi-total {
+            background: rgba(255,255,255,0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .roi-total-value {
+            color: #4ecdc4;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Success Scenarios */
+        .success-scenarios {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .success-scenarios h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 2rem;
+        }
+
+        .scenarios-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .scenario-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #4ecdc4;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .scenario-title {
+            color: #1f4788;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .scenario-challenge {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .scenario-solution {
+            background: #e8f9f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .solution-title {
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
             padding: 5rem 0;
             background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
             color: white;
             text-align: center;
         }
 
-        .roi-section h2 {
+        .final-cta h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .roi-comparison {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .roi-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .roi-card h3 {
             margin-bottom: 1rem;
         }
 
-        .roi-metric {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1f4788;
+            padding: 1rem 3rem;
+            border: none;
             border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         /* Footer */
@@ -395,21 +610,16 @@
             border-top: 1px solid #34495e;
             padding-top: 1rem;
             text-align: center;
-            color: #bdc3c7;
-        }
-
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            color: #95a5a6;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
                 font-size: 2.2rem;
             }
             
@@ -417,11 +627,11 @@
                 gap: 1.5rem;
             }
             
-            .nav-links {
-                display: none;
+            .strategy-comparison {
+                grid-template-columns: 1fr;
             }
             
-            .tiers-grid {
+            .roi-comparison-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -430,54 +640,49 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator - Beta coming soon
     </div>
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    ZinClin
-                    <div class="logo-sub">by Zinger Software Solutions</div>
-                </a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="resources.html">Resources</a>
-                </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
-            </div>
-        </div>
+        <nav class="container">
+            <div class="logo">ZinClin by Zinger Software Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="platform.html">Platform</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>ZinClin for CROs</h1>
-            <p class="hero-subtitle">Win more bids and differentiate your services through Module 1 SDTM automation. Deliver competitive pricing and faster timelines while maintaining superior quality and data security.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">Module 1</span>
-                    <span class="stat-label">SDTM Competitive Edge</span>
+            <div class="hero-content">
+                <h1>Win More Bids with TLF Competitive Advantage</h1>
+                <p>Differentiate your CRO services with publication-ready TLF automation. Deliver competitive timelines while maintaining superior quality and data security.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50-60%</span>
+                        <span class="stat-label">Higher Bid Win Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4-6</span>
+                        <span class="stat-label">Weeks Faster Delivery</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Beta</span>
+                        <span class="stat-label">Coming Soon</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">30-40%</span>
-                    <span class="stat-label">Faster Delivery</span>
+                
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary">Request Partnership Demo</a>
+                    <a href="contact.html" class="btn-secondary">Sign Up for Early Access Now</a>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">Onshore</span>
-                    <span class="stat-label">Quality & Security</span>
-                </div>
-            </div>
-            
-            <div class="hero-cta">
-                <a href="contact.html" class="btn-primary">Request Partnership Demo</a>
-                <a href="contact.html" class="btn-secondary">Join Module 1 Early Access</a>
             </div>
         </div>
     </section>
@@ -485,29 +690,26 @@
     <!-- Competitive Advantages -->
     <section class="competitive-advantages">
         <div class="container">
-            <h2>Module 1 Competitive Advantages</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Start with SDTM for immediate competitive advantage, scale based on client needs and market positioning.
-            </p>
+            <h2>TLF Generator Competitive Advantages</h2>
             
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <div class="advantage-icon">💰</div>
                     <h3>Competitive Pricing Power</h3>
-                    <p>Offer 20-30% lower SDTM programming costs than competitors while maintaining higher profit margins through Module 1 automation efficiency gains.</p>
-                    <div class="module-focus">
-                        <strong>Module 1 Advantage:</strong> Automated CRF annotation and SDTM mapping reduce manual programming hours by 60-70%.
+                    <p>Offer 30-40% lower TLF programming costs than competitors while maintaining higher profit margins through automated code generation efficiency.</p>
+                    <div class="tlf-advantage">
+                        <strong>TLF Advantage:</strong> Automated publication-ready deliverables reduce manual programming hours by 60-70%.
                     </div>
                     <div class="client-benefit">
-                        <strong>Client Value:</strong> Best-of-both-worlds pricing with superior service quality and data security compliance.
+                        <strong>Client Value:</strong> Best-of-both-worlds pricing with superior service quality and faster publication timelines.
                     </div>
                 </div>
                 
                 <div class="advantage-card">
                     <div class="advantage-icon">🔒</div>
                     <h3>Data Security Leadership</h3>
-                    <p>Keep all client data within controlled infrastructure while achieving efficiency benefits, addressing growing data security concerns in the industry.</p>
-                    <div class="module-focus">
+                    <p>Keep all client data within controlled onshore infrastructure while achieving efficiency benefits, addressing growing data security concerns.</p>
+                    <div class="tlf-advantage">
                         <strong>Security Advantage:</strong> No data transmission to offshore locations, complete audit trails, full compliance control.
                     </div>
                     <div class="client-benefit">
@@ -516,154 +718,269 @@
                 </div>
                 
                 <div class="advantage-card">
-                    <div class="advantage-icon">📈</div>
-                    <h3>Scalable Capacity</h3>
-                    <p>Handle 2-3x more concurrent studies with existing programming teams, improving resource utilization and profit margins significantly.</p>
-                    <div class="module-focus">
-                        <strong>Capacity Multiplication:</strong> AI automation enables existing teams to handle larger study portfolios efficiently.
+                    <div class="advantage-icon">📊</div>
+                    <h3>Publication-Ready Deliverables</h3>
+                    <p>Generate Tables, Listings, and Figures that meet journal publication standards immediately, eliminating formatting delays and revisions.</p>
+                    <div class="tlf-advantage">
+                        <strong>Quality Advantage:</strong> CDISC-compliant formatting built-in, publication standards automatically applied.
                     </div>
                     <div class="client-benefit">
-                        <strong>Client Value:</strong> Shorter wait times for programming resources, ability to accept more aggressive timelines.
+                        <strong>Client Value:</strong> Faster time to publication, reduced revision cycles, immediate submission readiness.
                     </div>
                 </div>
                 
                 <div class="advantage-card">
-                    <div class="advantage-icon">🤝</div>
-                    <h3>Enhanced Collaboration</h3>
-                    <p>Real-time collaboration and immediate responsiveness that offshore models cannot match, strengthening client relationships and satisfaction.</p>
-                    <div class="module-focus">
-                        <strong>Partnership Advantage:</strong> Same time zone collaboration, immediate query resolution, proactive communication.
+                    <div class="advantage-icon">⚡</div>
+                    <h3>Scalable Capacity</h3>
+                    <p>Handle 2-3x more concurrent TLF projects with existing programming teams, improving resource utilization and profit margins significantly.</p>
+                    <div class="tlf-advantage">
+                        <strong>Capacity Multiplication:</strong> TLF automation enables teams to handle larger study portfolios efficiently.
                     </div>
                     <div class="client-benefit">
-                        <strong>Client Value:</strong> Stronger working relationships, faster problem resolution, improved project communication.
+                        <strong>Client Value:</strong> Shorter wait times for deliverables, ability to accept more aggressive publication timelines.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Tiers -->
-    <section class="service-tiers">
+    <!-- Bid Win Strategy -->
+    <section class="bid-strategy">
         <div class="container">
-            <h2>Modular Service Differentiation</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Position different automation levels for various client segments and budget requirements.
-            </p>
+            <h2>Bid Win Rate Comparison</h2>
             
-            <div class="tiers-grid">
-                <div class="tier-card">
-                    <div class="tier-title">Essential</div>
-                    <div class="tier-modules">Module 1: SDTM</div>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Competitive SDTM automation for cost-conscious clients</p>
-                    <div class="tier-advantage">Win Price-Sensitive Bids</div>
+            <div class="strategy-comparison">
+                <div class="strategy-card traditional-strategy">
+                    <div class="strategy-title">Traditional TLF Programming</div>
+                    <ul class="strategy-metrics">
+                        <li>
+                            <span>TLF Cost per Study</span>
+                            <span class="metric-value">$35,000 - $50,000</span>
+                        </li>
+                        <li>
+                            <span>Delivery Timeline</span>
+                            <span class="metric-value">8-12 weeks</span>
+                        </li>
+                        <li>
+                            <span>Profit Margin</span>
+                            <span class="metric-value">25-30%</span>
+                        </li>
+                        <li>
+                            <span>Bid Win Rate</span>
+                            <span class="metric-value">30-40%</span>
+                        </li>
+                        <li>
+                            <span>Revision Cycles</span>
+                            <span class="metric-value">2-3 rounds</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="tier-card">
-                    <div class="tier-title">Advanced</div>
-                    <div class="tier-modules">Modules 1+2: SDTM+ADaM</div>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Enhanced analytics capability for biostat-heavy clients</p>
-                    <div class="tier-advantage">Premium Service Tier</div>
-                </div>
-                
-                <div class="tier-card">
-                    <div class="tier-title">Complete</div>
-                    <div class="tier-modules">All Modules: SDTM+ADaM+TLF</div>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">End-to-end automation for full-service engagements</p>
-                    <div class="tier-advantage">Market Differentiation</div>
+                <div class="strategy-card zinclin-strategy">
+                    <div class="strategy-title">ZinClin TLF Generator</div>
+                    <ul class="strategy-metrics">
+                        <li>
+                            <span>TLF Cost per Study</span>
+                            <span class="metric-value">$20,000 - $30,000</span>
+                        </li>
+                        <li>
+                            <span>Delivery Timeline</span>
+                            <span class="metric-value">3-5 weeks</span>
+                        </li>
+                        <li>
+                            <span>Profit Margin</span>
+                            <span class="metric-value">40-50%</span>
+                        </li>
+                        <li>
+                            <span>Bid Win Rate</span>
+                            <span class="metric-value">50-60%</span>
+                        </li>
+                        <li>
+                            <span>Revision Cycles</span>
+                            <span class="metric-value">Minimal</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partnership Strategy -->
-    <section class="partnership-strategy">
+    <!-- Service Differentiation -->
+    <section class="service-differentiation">
+        <div class="container">
+            <h2>TLF Service Differentiation Strategy</h2>
+            
+            <div class="differentiation-grid">
+                <div class="differentiation-card">
+                    <div class="differentiation-icon">⚡</div>
+                    <h3>Express TLF Service</h3>
+                    <p>Offer rapid TLF generation for time-sensitive publications and regulatory submissions with automated quality checks.</p>
+                    <div class="service-tier">Premium Pricing Tier</div>
+                </div>
+                
+                <div class="differentiation-card">
+                    <div class="differentiation-icon">🎯</div>
+                    <h3>Publication Support Package</h3>
+                    <p>Complete publication readiness service including TLF generation, formatting, and journal submission compliance.</p>
+                    <div class="service-tier">Value-Added Service</div>
+                </div>
+                
+                <div class="differentiation-card">
+                    <div class="differentiation-icon">🔄</div>
+                    <h3>Revision-Free Guarantee</h3>
+                    <p>Guarantee publication-ready TLF deliverables on first submission, backed by automated quality and formatting validation.</p>
+                    <div class="service-tier">Competitive Differentiator</div>
+                </div>
+                
+                <div class="differentiation-card">
+                    <div class="differentiation-icon">🛡️</div>
+                    <h3>Onshore Data Security</h3>
+                    <p>Market your data security advantage over offshore competitors while delivering competitive timelines and pricing.</p>
+                    <div class="service-tier">Regulatory Advantage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Opportunities -->
+    <section class="partnership-opportunities">
         <div class="container">
             <h2>Strategic Partnership Opportunities</h2>
             
             <div class="partnership-grid">
                 <div class="partnership-card">
                     <h3>Early Access Partnership</h3>
-                    <p>Join our Module 1 early access program to beta test capabilities, influence development priorities, and secure preferential pricing for competitive advantage.</p>
+                    <p>Join our TLF Generator early access program to beta test capabilities, influence development priorities, and secure preferential pricing for competitive advantage.</p>
                 </div>
                 
                 <div class="partnership-card">
                     <h3>Co-Development Opportunities</h3>
-                    <p>Collaborate on module development priorities based on your client needs, ensuring ZinClin evolution aligns with your market positioning strategy.</p>
+                    <p>Collaborate on TLF automation features based on your client needs, ensuring ZinClin evolution aligns with your market positioning strategy.</p>
                 </div>
                 
                 <div class="partnership-card">
                     <h3>White-Label Potential</h3>
-                    <p>Explore white-label automation capabilities that allow you to offer AI-powered programming under your brand while leveraging our technology platform.</p>
+                    <p>Explore white-label TLF automation capabilities that allow you to offer AI-powered publication services under your brand while leveraging our technology.</p>
                 </div>
                 
                 <div class="partnership-card">
                     <h3>Training & Implementation</h3>
-                    <p>Comprehensive team training and implementation support to ensure successful adoption and maximum competitive advantage from Module 1 capabilities.</p>
+                    <p>Comprehensive team training and implementation support to ensure successful adoption and maximum competitive advantage from TLF automation capabilities.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ROI Analysis -->
-    <section class="roi-section">
+    <section class="roi-analysis">
         <div class="container">
             <h2>CRO Competitive ROI Analysis</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Module 1 SDTM automation impact on bid competitiveness and margin improvement
-            </p>
             
-            <div class="roi-comparison">
-                <div class="roi-card">
-                    <h3>Traditional Approach</h3>
-                    <div class="roi-metric">
-                        <span>SDTM Cost/Study:</span>
-                        <span>$35,000</span>
+            <div class="roi-calculator">
+                <h3 style="margin-bottom: 2rem;">TLF Automation Impact on CRO Profitability</h3>
+                
+                <div class="roi-comparison-grid">
+                    <div class="roi-column">
+                        <h3>Traditional Approach</h3>
+                        <div class="roi-metric">
+                            <span>TLF Cost/Study</span>
+                            <span>$35,000</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Timeline</span>
+                            <span>8-12 weeks</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Margin</span>
+                            <span>25-30%</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Bid Win Rate</span>
+                            <span>30-40%</span>
+                        </div>
                     </div>
-                    <div class="roi-metric">
-                        <span>Timeline:</span>
-                        <span>8-10 weeks</span>
-                    </div>
-                    <div class="roi-metric">
-                        <span>Margin:</span>
-                        <span>25-30%</span>
-                    </div>
-                    <div class="roi-metric">
-                        <span>Bid Win Rate:</span>
-                        <span>30-40%</span>
+                    
+                    <div class="roi-column">
+                        <h3>ZinClin TLF Generator</h3>
+                        <div class="roi-metric">
+                            <span>TLF Cost/Study</span>
+                            <span>$22,000</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Timeline</span>
+                            <span>3-5 weeks</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Margin</span>
+                            <span>40-50%</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span>Bid Win Rate</span>
+                            <span>50-60%</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="roi-card">
-                    <h3>Module 1 Advantage</h3>
-                    <div class="roi-metric">
-                        <span>SDTM Cost/Study:</span>
-                        <span>$22,000</span>
-                    </div>
-                    <div class="roi-metric">
-                        <span>Timeline:</span>
-                        <span>3-4 weeks</span>
-                    </div>
-                    <div class="roi-metric">
-                        <span>Margin:</span>
-                        <span>40-45%</span>
-                    </div>
-                    <div class="roi-metric">
-                        <span>Bid Win Rate:</span>
-                        <span>50-60%</span>
+                <div class="roi-total">
+                    <div>Annual Revenue Impact (20 studies)</div>
+                    <div class="roi-total-value">+$260,000 - $400,000</div>
+                    <div style="margin-top: 1rem; font-size: 1rem; opacity: 0.9;">
+                        From increased margins + higher bid win rates
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section style="padding: 4rem 0; background: white; text-align: center;">
+    <!-- Success Scenarios -->
+    <section class="success-scenarios">
         <div class="container">
-            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Transform Your Competitive Position?</h2>
-            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Join our Module 1 early access program and be among the first CROs to leverage AI automation for competitive advantage.
-            </p>
-            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Request Partnership Demo</a>
+            <h2>CRO Market Opportunity Scenarios</h2>
+            <p class="scenarios-subtitle">Competitive challenges that ZinClin TLF Generator addresses for CRO success</p>
+            
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-title">Winning Price-Sensitive Bids</div>
+                    <div class="scenario-challenge">
+                        A mid-size CRO consistently loses bids to lower-cost competitors despite having superior quality and experience, particularly for TLF-heavy studies with tight publication deadlines.
+                    </div>
+                    <div class="scenario-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        TLF Generator enables 30-40% cost reduction while maintaining superior quality, winning price-sensitive bids with better margins.
+                    </div>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-title">Differentiating Premium Services</div>
+                    <div class="scenario-challenge">
+                        A CRO wants to offer premium publication support services but lacks the capacity to handle rapid TLF turnaround times that biotech clients demand for competitive advantages.
+                    </div>
+                    <div class="scenario-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        Express TLF service offering with 3-5 week delivery creates new premium tier with publication-ready guarantees.
+                    </div>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-title">Data Security Competitive Edge</div>
+                    <div class="scenario-challenge">
+                        Large pharmaceutical clients increasingly prefer onshore CROs for data security but expect offshore-competitive pricing for TLF programming services.
+                    </div>
+                    <div class="scenario-solution">
+                        <div class="solution-title">ZinClin Solution:</div>
+                        Onshore TLF automation achieves competitive pricing while maintaining superior data security and compliance standards.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Transform Your CRO Competitive Position</h2>
+            <p>Join the CROs already securing early access to ZinClin TLF Generator. Be first to leverage publication automation for competitive advantage.</p>
+            <a href="contact.html" class="btn-white">Request Partnership Demo</a>
         </div>
     </section>
 
@@ -672,24 +989,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin by Zinger Software Solutions</h3>
-                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Platform</h3>
-                    <a href="platform.html">ZinClin Overview</a>
+                    <h3>ZinClin Platform</h3>
+                    <a href="platform.html">TLF Code Generator</a>
                     <a href="contact.html">Early Access Program</a>
-                    <a href="resources.html">Resources</a>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
+                    <a href="resources.html">Documentation</a>
                 </div>
                 
                 <div class="footer-section">
@@ -698,6 +1001,20 @@
                     <a href="solutions-cros.html">For CROs</a>
                     <a href="solutions-programmers.html">For Programmers</a>
                     <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Zinger Software Solutions</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: admin@zingersoftwaresolutions.com</p>
+                    <p>Location: Apex, NC</p>
+                    <p>Founded: 2013</p>
                 </div>
             </div>
             

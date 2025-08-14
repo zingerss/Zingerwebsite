@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin for Programmers - Module 1 SDTM Career Enhancement | Zinger Software Solutions</title>
-    <meta name="description" content="Enhance clinical programming career with AI proficiency. Module 1 SDTM automation skills. Early access program now open.">
+    <title>TLF Programming Career Enhancement | ZinClin by Zinger Software Solutions</title>
+    <meta name="description" content="Elevate your programming career with TLF automation expertise. Focus on high-value strategic work while publication generation is automated. Early access program now open.">
     
     <style>
         /* Reset and Base Styles */
@@ -32,7 +32,6 @@
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 1rem 0;
-            position: relative;
         }
 
         .header-content {
@@ -87,79 +86,73 @@
         }
 
         /* Hero Section */
-        .hero {
+        .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
         }
 
-        .hero h1 {
+        .page-hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
-        .hero-subtitle {
+        .page-hero p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
             opacity: 0.9;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+        /* Career Benefits */
+        .career-benefits {
+            padding: 5rem 0;
+            background: white;
         }
 
-        .stat-item {
+        .career-benefits h2 {
             text-align: center;
-        }
-
-        .stat-number {
             font-size: 2.5rem;
-            font-weight: bold;
-            color: #4ecdc4;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .hero-cta {
-            margin-top: 2rem;
-        }
-
-        .btn-primary {
-            background: #4ecdc4;
             color: #1f4788;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin: 0.5rem;
+            margin-bottom: 3rem;
         }
 
-        .btn-primary:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #4ecdc4;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
         }
 
         /* Career Enhancement */
         .career-enhancement {
             padding: 5rem 0;
-            background: white;
+            background: #f8f9fa;
         }
 
         .career-enhancement h2 {
@@ -171,27 +164,15 @@
 
         .enhancement-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
         .enhancement-card {
-            background: #f8f9fa;
+            background: white;
             padding: 2rem;
             border-radius: 10px;
-            text-align: center;
-            border-left: 5px solid #4ecdc4;
-            transition: transform 0.3s ease;
-        }
-
-        .enhancement-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .enhancement-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #28a745;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         .enhancement-card h3 {
@@ -202,7 +183,7 @@
         /* Skills Development */
         .skills-development {
             padding: 5rem 0;
-            background: #f8f9fa;
+            background: white;
         }
 
         .skills-development h2 {
@@ -219,7 +200,7 @@
         }
 
         .skill-card {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
@@ -266,7 +247,7 @@
         /* Job Security */
         .job-security {
             padding: 5rem 0;
-            background: white;
+            background: #f8f9fa;
         }
 
         .job-security h2 {
@@ -290,7 +271,7 @@
         }
 
         .future-skills {
-            background: #f8f9fa;
+            background: white;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -299,7 +280,7 @@
         .future-skill-item {
             margin-bottom: 1rem;
             padding: 1rem;
-            background: white;
+            background: #f8f9fa;
             border-radius: 5px;
             border-left: 4px solid #4ecdc4;
         }
@@ -377,8 +358,9 @@
         .footer-section a {
             color: #bdc3c7;
             text-decoration: none;
-            display: block;
             margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
@@ -401,14 +383,33 @@
             font-weight: bold;
         }
 
+        /* Buttons */
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-hero h1 {
                 font-size: 2.2rem;
             }
             
-            .hero-stats {
-                gap: 1.5rem;
+            .benefits-grid,
+            .enhancement-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
             
             .nav-links {
@@ -424,7 +425,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator in development - Beta coming soon
     </div>
 
     <!-- Header -->
@@ -438,74 +439,63 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>ZinClin for Programmers</h1>
-            <p class="hero-subtitle">Enhance your career with AI programming proficiency through Module 1 SDTM automation. Focus on high-value tasks while building cutting-edge skills that secure your future.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">AI Skills</span>
-                    <span class="stat-label">Career Enhancement</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">70%</span>
-                    <span class="stat-label">Focus on High-Value Work</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Module 1</span>
-                    <span class="stat-label">SDTM Foundation</span>
-                </div>
-            </div>
-            
-            <div class="hero-cta">
-                <a href="contact.html" class="btn-primary">Join Module 1 Early Access</a>
-            </div>
+            <h1>Elevate Your Programming Career with TLF Automation</h1>
+            <p>Focus on high-value strategic work while Tables, Listings, and Figures generation is automated. Master the future of clinical programming and become indispensable in the AI era.</p>
         </div>
     </section>
 
-    <!-- Career Enhancement -->
-    <section class="career-enhancement">
+    <!-- Career Benefits -->
+    <section class="career-benefits">
         <div class="container">
-            <h2>Module 1 Career Enhancement</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Module 1 SDTM automation transforms routine programming into strategic, high-value work while building AI collaboration skills.
-            </p>
+            <h2>Transform Your Career with TLF Expertise</h2>
             
-            <div class="enhancement-grid">
-                <div class="enhancement-card">
-                    <div class="enhancement-icon">🚀</div>
-                    <h3>Advanced Skill Development</h3>
-                    <p>Master AI-assisted programming through Module 1, gaining expertise in prompt engineering, automation validation, and intelligent code review - skills that define the future of programming.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Strategic Value Creation</h3>
+                    <p>Move beyond manual TLF coding to focus on publication strategy, data interpretation, and stakeholder collaboration that drives business value.</p>
                 </div>
-
-                <div class="enhancement-card">
-                    <div class="enhancement-icon">🎯</div>
-                    <h3>High-Value Task Focus</h3>
-                    <p>Spend 70% more time on complex derivations, custom logic, and quality validation while Module 1 handles routine SDTM mapping and annotation tasks automatically.</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Career Acceleration</h3>
+                    <p>Become the programmer who delivers publication-ready TLFs in days, not weeks. Position yourself as the efficiency expert teams depend on.</p>
                 </div>
-
-                <div class="enhancement-card">
-                    <div class="enhancement-icon">💼</div>
-                    <h3>Market Differentiation</h3>
-                    <p>Position yourself as an AI-proficient programmer who can deliver faster, higher-quality results while maintaining the critical thinking skills that AI cannot replace.</p>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Publication Focus</h3>
+                    <p>Spend more time ensuring regulatory compliance and scientific accuracy rather than wrestling with formatting and repetitive coding tasks.</p>
                 </div>
-
-                <div class="enhancement-card">
-                    <div class="enhancement-icon">📈</div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔮</div>
+                    <h3>Future-Proof Skills</h3>
+                    <p>Master AI-assisted programming workflows that will define the next decade of clinical programming careers.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Increased Market Value</h3>
+                    <p>TLF automation expertise makes you more valuable to employers and clients who need faster time-to-publication.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
                     <h3>Career Security</h3>
-                    <p>Build expertise in the collaboration between human intelligence and AI automation, ensuring your skills remain relevant and valuable as the industry evolves.</p>
+                    <p>Build expertise in the collaboration between human intelligence and AI automation, ensuring your skills remain relevant and valuable.</p>
                 </div>
             </div>
         </div>
@@ -514,39 +504,39 @@
     <!-- Skills Development -->
     <section class="skills-development">
         <div class="container">
-            <h2>Module 1 Skills Development Path</h2>
+            <h2>TLF Automation Skills Development Path</h2>
             
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-level">Foundation Level</div>
-                    <h3>AI Collaboration Basics</h3>
+                    <h3>TLF Automation Basics</h3>
                     <ul class="skill-benefits">
-                        <li>Module 1 platform navigation and setup</li>
-                        <li>SDTM automation workflow understanding</li>
-                        <li>Quality validation of AI-generated outputs</li>
-                        <li>Basic prompt engineering for programming tasks</li>
+                        <li>ZinClin TLF platform navigation and setup</li>
+                        <li>Publication workflow understanding</li>
+                        <li>Quality validation of automated TLF outputs</li>
+                        <li>Basic customization of TLF templates</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-level">Intermediate Level</div>
-                    <h3>Advanced Module 1 Usage</h3>
+                    <h3>Advanced TLF Customization</h3>
                     <ul class="skill-benefits">
-                        <li>Complex SDTM mapping customization</li>
-                        <li>Custom derivation logic integration</li>
-                        <li>Automation workflow optimization</li>
-                        <li>Error detection and correction techniques</li>
+                        <li>Complex table structure modifications</li>
+                        <li>Custom figure and listing formatting</li>
+                        <li>Publication-ready output optimization</li>
+                        <li>Regulatory compliance verification techniques</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-level">Expert Level</div>
-                    <h3>AI Programming Leadership</h3>
+                    <h3>TLF Strategy Leadership</h3>
                     <ul class="skill-benefits">
-                        <li>Team training on Module 1 best practices</li>
-                        <li>Automation strategy development</li>
+                        <li>Team training on TLF automation best practices</li>
+                        <li>Publication strategy development</li>
                         <li>Process improvement and efficiency optimization</li>
-                        <li>Future module evaluation and adoption planning</li>
+                        <li>Cross-functional collaboration with medical writers</li>
                     </ul>
                 </div>
             </div>
@@ -560,39 +550,35 @@
             
             <div class="security-comparison">
                 <div class="comparison-content">
-                    <h3>The Reality of AI in Programming</h3>
-                    <p>AI won't replace programmers - but programmers who use AI will replace those who don't. Module 1 early access gives you a head start in developing the collaboration skills that define future programming roles.</p>
+                    <h3>The Reality of AI in TLF Programming</h3>
+                    <p>AI won't replace programmers - but programmers who use AI for TLF generation will replace those who don't. The key is becoming expert at human-AI collaboration for publication deliverables.</p>
                     
-                    <p>By mastering Module 1 SDTM automation, you'll understand how to:</p>
-                    <ul style="margin-left: 2rem; margin-top: 1rem;">
-                        <li>Validate and refine AI-generated code effectively</li>
-                        <li>Identify when human expertise is essential vs automatable</li>
-                        <li>Design automation workflows that enhance rather than replace human skills</li>
-                        <li>Lead teams in AI-augmented programming environments</li>
-                    </ul>
+                    <p><strong>Traditional TLF Programming:</strong> Hours spent on formatting, manual table creation, repetitive coding patterns, and endless revisions.</p>
+                    
+                    <p><strong>AI-Enhanced TLF Programming:</strong> Focus on scientific accuracy, regulatory compliance, publication strategy, and stakeholder communication while automation handles generation.</p>
                 </div>
                 
                 <div class="future-skills">
-                    <h3 style="color: #1f4788; margin-bottom: 1.5rem;">Future-Proof Skills</h3>
+                    <h3>Future-Proof TLF Skills</h3>
                     
                     <div class="future-skill-item">
-                        <div class="skill-title">AI Prompt Engineering</div>
-                        <div>Craft effective instructions for AI programming tools</div>
+                        <div class="skill-title">Publication Strategy</div>
+                        Understanding what makes TLFs publication-ready and how to optimize for regulatory review.
                     </div>
                     
                     <div class="future-skill-item">
-                        <div class="skill-title">Automation Quality Assurance</div>
-                        <div>Validate and improve AI-generated programming outputs</div>
+                        <div class="skill-title">Quality Validation</div>
+                        Developing expertise in validating AI-generated TLFs for accuracy and compliance.
                     </div>
                     
                     <div class="future-skill-item">
-                        <div class="skill-title">Hybrid Workflow Design</div>
-                        <div>Optimize the balance between automation and human expertise</div>
+                        <div class="skill-title">Cross-Functional Collaboration</div>
+                        Working effectively with medical writers, biostatisticians, and regulatory teams on publication deliverables.
                     </div>
                     
                     <div class="future-skill-item">
-                        <div class="skill-title">Strategic Problem Solving</div>
-                        <div>Focus on complex challenges that require human creativity</div>
+                        <div class="skill-title">Automation Optimization</div>
+                        Continuously improving TLF automation workflows for maximum efficiency and quality.
                     </div>
                 </div>
             </div>
@@ -602,34 +588,31 @@
     <!-- Learning Path -->
     <section class="learning-path">
         <div class="container">
-            <h2>Your Module 1 Learning Journey</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Structured path to mastering AI-assisted SDTM programming
-            </p>
+            <h2>Your TLF Automation Learning Journey</h2>
             
             <div class="path-steps">
                 <div class="path-step">
                     <div class="step-number">1</div>
-                    <h3>Early Access Enrollment</h3>
-                    <p>Join our early access program to begin hands-on experience with Module 1 SDTM automation tools and workflows.</p>
+                    <h3>Early Access</h3>
+                    <p>Join the TLF Code Generator early access program to get hands-on experience with automation tools.</p>
                 </div>
                 
                 <div class="path-step">
                     <div class="step-number">2</div>
                     <h3>Foundation Training</h3>
-                    <p>Complete comprehensive training on Module 1 capabilities, best practices, and quality assurance techniques.</p>
+                    <p>Complete comprehensive training on TLF automation capabilities, best practices, and quality assurance techniques.</p>
                 </div>
                 
                 <div class="path-step">
                     <div class="step-number">3</div>
                     <h3>Practical Application</h3>
-                    <p>Apply Module 1 skills to real projects, building proficiency in AI-assisted programming and validation workflows.</p>
+                    <p>Apply TLF automation skills to real projects, building proficiency in publication-ready deliverable creation.</p>
                 </div>
                 
                 <div class="path-step">
                     <div class="step-number">4</div>
                     <h3>Advanced Mastery</h3>
-                    <p>Develop expertise in complex scenarios, team leadership, and preparing for future module adoption and integration.</p>
+                    <p>Develop expertise in complex publication scenarios, team leadership, and strategic TLF optimization.</p>
                 </div>
             </div>
         </div>
@@ -640,9 +623,9 @@
         <div class="container">
             <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Future-Proof Your Programming Career?</h2>
             <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Join our Module 1 early access program and be among the first programmers to master AI-assisted SDTM automation.
+                Join our TLF Code Generator early access program and be among the first programmers to master AI-assisted publication automation.
             </p>
-            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Join Module 1 Early Access</a>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Sign Up for Early Access Now</a>
         </div>
     </section>
 
@@ -665,18 +648,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
-                </div>
-                
-                <div class="footer-section">
                     <h3>Solutions</h3>
                     <a href="solutions-biotechs.html">For Biotechs</a>
                     <a href="solutions-cros.html">For CROs</a>
                     <a href="solutions-programmers.html">For Programmers</a>
                     <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
             

@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinClin Modular Platform | AI-Powered Clinical Programming Automation | Zinger Software Solutions</title>
-    <meta name="description" content="ZinClin modular platform delivers AI-powered clinical programming automation. Start with Module 1 SDTM foundation, scale to complete automation. Early access program now open.">
-    
+    <title>ZinClin TLF Code Generator - From Protocol to Publication Automatically | Zinger Software Solutions</title>
+    <meta name="description" content="Automate Tables, Listings, and Figures generation with AI-powered clinical programming. Built by industry experts. Beta coming soon.">
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +16,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
         }
 
         .container {
@@ -27,43 +24,48 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
             color: white;
-            padding: 1rem 0;
-            position: relative;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
         }
 
-        .header-content {
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: -0.2rem;
+            color: #1f4788;
         }
 
         .nav-links {
             display: flex;
+            list-style: none;
             gap: 2rem;
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: #333;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover,
@@ -71,26 +73,11 @@
             color: #4ecdc4;
         }
 
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
-        /* Page Hero */
-        .page-hero {
+        /* Hero Section */
+        .hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
         }
 
@@ -121,87 +108,197 @@
             font-size: 0.9rem;
         }
 
-        /* Module Overview */
-        .module-overview {
+        /* Platform Overview */
+        .platform-overview {
             padding: 5rem 0;
             background: white;
         }
 
-        .module-overview h2 {
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-content h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 2rem;
+        }
+
+        .overview-content p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .overview-features {
+            list-style: none;
+        }
+
+        .overview-features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            color: #555;
+        }
+
+        .overview-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .platform-diagram {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: #1f4788;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .workflow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: #4ecdc4;
+            margin: 1rem 0;
+        }
+
+        /* Key Benefits */
+        .key-benefits {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .key-benefits h2 {
             text-align: center;
             font-size: 2.5rem;
             color: #1f4788;
             margin-bottom: 3rem;
         }
 
-        .modules-grid {
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .module-card {
-            background: #f8f9fa;
+        .benefit-card {
+            background: white;
             padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
-            border-top: 5px solid #4ecdc4;
         }
 
-        .module-card:hover {
+        .benefit-card:hover {
             transform: translateY(-10px);
         }
 
-        .module-number {
-            background: #1f4788;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 1.5rem;
-        }
-
-        .module-card h3 {
-            color: #1f4788;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .module-description {
+        .benefit-icon {
+            font-size: 3rem;
             margin-bottom: 1.5rem;
-            color: #666;
-            line-height: 1.7;
+            color: #4ecdc4;
         }
 
-        .module-features {
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .module-features h4 {
+        .benefit-card h3 {
             color: #1f4788;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Differentiation Section */
+        .differentiation {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .differentiation h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            padding: 2.5rem;
+            border-radius: 15px;
             text-align: center;
         }
 
-        .module-features ul {
-            list-style: none;
-            padding: 0;
+        .zinclin-card {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
         }
 
-        .module-features li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+        .generic-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            color: #666;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .comparison-features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
             position: relative;
         }
 
-        .module-features li::before {
+        .zinclin-card .comparison-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
@@ -209,200 +306,39 @@
             font-weight: bold;
         }
 
-        .module-status {
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .status-active {
-            background: #28a745;
-            color: white;
-        }
-
-        .status-planned {
-            background: #ffc107;
-            color: #212529;
-        }
-
-        .status-future {
-            background: #6c757d;
-            color: white;
-        }
-
-        /* Development Phases */
-        .development-phases {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .development-phases h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .phases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .phase-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .phase-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
-        }
-
-        .phase-card h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .phase-description {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Feature Details */
-        .feature-details {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .feature-details h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .detail-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 4rem;
-        }
-
-        .detail-text h3 {
-            color: #1f4788;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .detail-text p {
-            margin-bottom: 1.5rem;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .feature-list li::before {
-            content: '⚡';
+        .generic-card .comparison-features li::before {
+            content: '✗';
             position: absolute;
             left: 0;
-            color: #4ecdc4;
-        }
-
-        .detail-visual {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .workflow-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-        }
-
-        .step-icon {
-            background: #4ecdc4;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #e74c3c;
             font-weight: bold;
-            margin-right: 1rem;
-            flex-shrink: 0;
         }
 
-        /* Early Access Section */
-        .early-access {
-            padding: 4rem 0;
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
             background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
             color: white;
             text-align: center;
         }
 
-        .early-access h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .early-access p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .access-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .access-feature {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .access-icon {
+        .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         .btn-primary {
             background: white;
             color: #1f4788;
-            padding: 1.2rem 3rem;
+            padding: 1rem 3rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: 1.2rem;
             font-weight: bold;
             text-decoration: none;
@@ -413,7 +349,7 @@
         .btn-primary:hover {
             background: #f8f9fa;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         /* Footer */
@@ -451,34 +387,26 @@
             border-top: 1px solid #34495e;
             padding-top: 1rem;
             text-align: center;
-            color: #bdc3c7;
-        }
-
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
+            color: #95a5a6;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .detail-content {
-                grid-template-columns: 1fr;
+            .nav-links {
+                display: none;
             }
             
-            .page-hero h1 {
+            .hero-content h1 {
                 font-size: 2.2rem;
             }
             
-            .hero-badges {
-                gap: 1rem;
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
-            .nav-links {
-                display: none;
+            .comparison-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -486,298 +414,175 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator - Beta coming soon
     </div>
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    ZinClin
-                    <div class="logo-sub">by Zinger Software Solutions</div>
-                </a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="platform.html" class="active">Platform</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="resources.html">Resources</a>
-                </nav>
-                <a href="contact.html" class="cta-button">Join Early Access</a>
-            </div>
-        </div>
+        <nav class="container">
+            <div class="logo">ZinClin by Zinger Software Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="platform.html" class="active">Platform</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>ZinClin Modular Platform</h1>
-                <p>AI-powered clinical programming automation delivered as focused modules. Start with SDTM foundations, scale to complete automation based on your needs and timeline.</p>
+                <h1>TLF Code Generator</h1>
+                <p>From protocol to publication automatically. Generate production-ready Tables, Listings, and Figures code with AI-powered clinical programming expertise built in.</p>
                 
                 <div class="hero-badges">
-                    <div class="badge">Module 1 Development</div>
-                    <div class="badge">Modular SaaS</div>
-                    <div class="badge">CDISC Compliant</div>
-                    <div class="badge">Early Access Open</div>
+                    <div class="badge">🤖 AI-Powered</div>
+                    <div class="badge">📊 TLF Focused</div>
+                    <div class="badge">🔒 CDISC Compliant</div>
+                    <div class="badge">🚀 Beta Coming Soon</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Module Overview -->
-    <section class="module-overview">
+    <!-- Platform Overview -->
+    <section class="platform-overview">
         <div class="container">
-            <h2>Progressive Module Strategy</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Start with the module that matters most to your immediate needs, then expand your automation capabilities as your team and processes evolve.
-            </p>
-            
-            <div class="modules-grid">
-                <div class="module-card">
-                    <div class="module-number">1</div>
-                    <h3>SDTM Foundation</h3>
-                    <div class="module-description">
-                        Automate the foundation of clinical programming with CRF annotation, SDTM mapping specifications, and code generation. Every study needs SDTM - making this your logical starting point.
-                    </div>
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>Publication-Ready Deliverables</h2>
+                    <p>ZinClin TLF Code Generator will transform your Statistical Analysis Plans (SAPs) and shell specifications into production-ready code for Tables, Listings, and Figures.</p>
                     
-                    <div class="module-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>CRF Annotation Automation</li>
-                            <li>SDTM Mapping Specifications</li>
-                            <li>SDTM Code Generation</li>
-                            <li>CDISC Compliance Validation</li>
-                            <li>Quality Control Reports</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="module-status status-active">In Development - Early Access Available</div>
-                </div>
-
-                <div class="module-card">
-                    <div class="module-number">2</div>
-                    <h3>ADaM Enhancement</h3>
-                    <div class="module-description">
-                        Scale up with analysis dataset automation, building on your SDTM foundation to accelerate biostatistical programming and analytics workflows.
-                    </div>
-                    
-                    <div class="module-features">
-                        <h4>Planned Features:</h4>
-                        <ul>
-                            <li>ADaM Specifications Generation</li>
-                            <li>Analysis Dataset Code Creation</li>
-                            <li>Statistical Analysis Integration</li>
-                            <li>Biostatistician Workflow Tools</li>
-                            <li>Data Quality Validation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="module-status status-planned">Development Priority Based on Module 1 Feedback</div>
-                </div>
-
-                <div class="module-card">
-                    <div class="module-number">3</div>
-                    <h3>TLF Completion</h3>
-                    <div class="module-description">
-                        Complete the automation circle with Tables, Listings, and Figures generation - from protocol to publication-ready outputs automatically.
-                    </div>
-                    
-                    <div class="module-features">
-                        <h4>Future Capabilities:</h4>
-                        <ul>
-                            <li>TLF Code Generation</li>
-                            <li>Output Formatting Automation</li>
-                            <li>Publication Standards Compliance</li>
-                            <li>Regulatory Submission Ready</li>
-                            <li>Template Management System</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="module-status status-future">Under Consideration - Market Demand Dependent</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Development Phases -->
-    <section class="development-phases">
-        <div class="container">
-            <h2>Development Phases</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
-                Our modular approach ensures you get value quickly while building toward comprehensive automation capabilities.
-            </p>
-            
-            <div class="phases-grid">
-                <div class="phase-card">
-                    <div class="phase-icon">🔬</div>
-                    <h3>Active Development</h3>
-                    <div class="phase-description">Module 1 SDTM automation in active development with core features being refined and tested. Early access program participants providing valuable feedback.</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-icon">🧪</div>
-                    <h3>Beta Testing</h3>
-                    <div class="phase-description">Closed beta testing with selected early access participants for CRF annotation, mapping specifications, and SDTM code generation features.</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-icon">🚀</div>
-                    <h3>General Availability</h3>
-                    <div class="phase-description">Public release of Module 1 with full SaaS subscription tiers and enterprise licensing options, establishing foundation for Module 2 development.</div>
-                </div>
-                
-                <div class="phase-card">
-                    <div class="phase-icon">📈</div>
-                    <h3>Progressive Expansion</h3>
-                    <div class="phase-description">Module 2 and 3 development prioritized based on Module 1 customer feedback, market validation, and strategic business value assessment.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Details -->
-    <section class="feature-details">
-        <div class="container">
-            <h2>Module 1: SDTM Automation in Detail</h2>
-            
-            <div class="detail-content">
-                <div class="detail-text">
-                    <h3>CRF Annotation</h3>
-                    <p>Transform manual CRF annotation into an automated process that understands clinical data context and generates accurate SDTM variable mappings.</p>
-                    <ul class="feature-list">
-                        <li>AI-powered CRF analysis and interpretation</li>
-                        <li>Automatic SDTM domain identification</li>
-                        <li>Variable mapping suggestions with confidence scoring</li>
-                        <li>Annotation quality validation and error detection</li>
+                    <ul class="overview-features">
+                        <li>Upload SAPs and TLF shell specifications directly</li>
+                        <li>AI extracts variables, formatting, and output requirements</li>
+                        <li>Generate CDISC-compliant TLF code automatically</li>
+                        <li>Produce publication-ready formatting and structure</li>
+                        <li>Review, customize, and deploy with programmer oversight</li>
+                        <li>Integrate seamlessly with existing workflows</li>
                     </ul>
                 </div>
                 
-                <div class="detail-visual">
-                    <h4 style="margin-bottom: 1.5rem; text-align: center; color: #1f4788;">CRF Annotation Workflow</h4>
-                    
+                <div class="platform-diagram">
                     <div class="workflow-step">
-                        <div class="step-icon">📋</div>
-                        <div>
-                            <strong>Upload CRF</strong><br>
-                            Upload Case Report Forms in PDF or structured format
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Upload Specifications</h4>
+                            <p>Upload SAPs and TLF shell documents</p>
                         </div>
                     </div>
+                    <div class="workflow-arrow">⬇️</div>
                     
                     <div class="workflow-step">
-                        <div class="step-icon">🤖</div>
-                        <div>
-                            <strong>AI Analysis</strong><br>
-                            Parse form structure and identify data collection elements
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>AI Analysis</h4>
+                            <p>Extract variables and formatting requirements</p>
                         </div>
                     </div>
+                    <div class="workflow-arrow">⬇️</div>
                     
                     <div class="workflow-step">
-                        <div class="step-icon">🏷️</div>
-                        <div>
-                            <strong>Auto-Annotation</strong><br>
-                            Generate SDTM domain and variable mappings automatically
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-icon">✅</div>
-                        <div>
-                            <strong>Review & Validate</strong><br>
-                            Human review with confidence scores and validation tools
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Code Generation</h4>
+                            <p>Production-ready TLF code with formatting</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="key-benefits">
+        <div class="container">
+            <h2>Why Choose ZinClin TLF Generator</h2>
             
-            <div class="detail-content">
-                <div class="detail-visual">
-                    <h4 style="margin-bottom: 1.5rem; text-align: center; color: #1f4788;">SDTM Code Generation</h4>
-                    
-                    <div class="workflow-step">
-                        <div class="step-icon">📝</div>
-                        <div>
-                            <strong>Specifications Input</strong><br>
-                            Import mapping specifications and study metadata
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-icon">⚙️</div>
-                        <div>
-                            <strong>Code Generation</strong><br>
-                            Generate SAS/R code for SDTM dataset creation
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-icon">🔍</div>
-                        <div>
-                            <strong>Quality Control</strong><br>
-                            Automated QC checks and validation reports
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-step">
-                        <div class="step-icon">📊</div>
-                        <div>
-                            <strong>SDTM Datasets</strong><br>
-                            Production-ready SDTM datasets and documentation
-                        </div>
-                    </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Faster Delivery</h3>
+                    <p>Reduce TLF programming time by 60-70% compared to manual coding, getting your publications ready faster.</p>
                 </div>
                 
-                <div class="detail-text">
-                    <h3>SDTM Code Generation</h3>
-                    <p>Convert your mapping specifications into production-ready SAS or R code that creates compliant SDTM datasets with comprehensive quality controls.</p>
-                    <ul class="feature-list">
-                        <li>Multi-language code generation (SAS, R)</li>
-                        <li>CDISC compliance validation built-in</li>
-                        <li>Automated QC report generation</li>
-                        <li>Custom derivation logic support</li>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Clinical Expertise Built-In</h3>
+                    <p>12+ years of clinical programming knowledge embedded in every output, not generic AI learning from scratch.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Publication Standards</h3>
+                    <p>CDISC-compliant outputs ready for regulatory submission and journal publication without additional formatting.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Programmer Oversight</h3>
+                    <p>Generated code is reviewable and customizable by clinical programmers, maintaining quality and control.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Onshore Advantage</h3>
+                    <p>US-based development team with deep pharmaceutical industry understanding and responsive support.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Immediate Results</h3>
+                    <p>Start generating TLF code immediately - no need to build up from data mapping foundations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiation -->
+    <section class="differentiation">
+        <div class="container">
+            <h2>ZinClin vs Off-the-Shelf AI</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card zinclin-card">
+                    <h3>ZinClin TLF Generator</h3>
+                    <ul class="comparison-features">
+                        <li>Built by clinical programming experts</li>
+                        <li>12+ years industry knowledge embedded</li>
+                        <li>CDISC standards built-in</li>
+                        <li>Publication-ready formatting</li>
+                        <li>Regulatory compliance focus</li>
+                        <li>Pharma-specific training data</li>
+                        <li>Onshore development and support</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card generic-card">
+                    <h3>Generic AI Tools</h3>
+                    <ul class="comparison-features">
+                        <li>General purpose coding assistance</li>
+                        <li>Requires extensive industry training</li>
+                        <li>No built-in compliance standards</li>
+                        <li>Generic output formatting</li>
+                        <li>Manual compliance checking needed</li>
+                        <li>Mixed training data quality</li>
+                        <li>Variable support quality</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Early Access -->
-    <section class="early-access">
+    <!-- Call to Action -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Join the Early Access Program</h2>
-            <p>
-                Be among the first to experience Module 1 SDTM automation. Early access participants influence development priorities, receive preferential pricing, and get hands-on experience with the future of clinical programming.
-            </p>
-            
-            <div class="access-features">
-                <div class="access-feature">
-                    <div class="access-icon">🎯</div>
-                    <h3>Influence Development</h3>
-                    <p>Your feedback directly shapes feature priorities and platform capabilities</p>
-                </div>
-                
-                <div class="access-feature">
-                    <div class="access-icon">💰</div>
-                    <h3>Preferential Pricing</h3>
-                    <p>Lock in early adopter pricing before general availability launch</p>
-                </div>
-                
-                <div class="access-feature">
-                    <div class="access-icon">🚀</div>
-                    <h3>Priority Access</h3>
-                    <p>First access to new features and modules as they become available</p>
-                </div>
-                
-                <div class="access-feature">
-                    <div class="access-icon">🤝</div>
-                    <h3>Direct Support</h3>
-                    <p>Direct access to development team for support and feature requests</p>
-                </div>
-            </div>
-            
-            <a href="contact.html" class="btn-primary">Join Early Access Program</a>
+            <h2>Get Early Access to TLF Automation</h2>
+            <p>Be among the first to experience AI-powered TLF code generation when beta testing begins.</p>
+            <a href="contact.html" class="btn-primary">Sign Up for Early Access Now</a>
         </div>
     </section>
 
@@ -786,30 +591,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ZinClin by Zinger Software Solutions</h3>
-                    <p>Transforming clinical programming through AI automation and proven expertise.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Platform</h3>
-                    <a href="platform.html">ZinClin Overview</a>
+                    <h3>ZinClin Platform</h3>
+                    <a href="platform.html">TLF Code Generator</a>
                     <a href="contact.html">Early Access Program</a>
-                    <a href="resources.html">Resources</a>
+                    <a href="resources.html">Documentation</a>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About Zinger Software Solutions</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: admin@zingersoftwaresolutions.com</p>
+                    <p>Location: Apex, NC</p>
+                    <p>Founded: 2013</p>
                 </div>
             </div>
             

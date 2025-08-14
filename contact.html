@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact ZinClin - Early Access Program & Current Services | Zinger Software Solutions</title>
-    <meta name="description" content="Contact ZinClin for early access program or current clinical programming services. Technical staffing, SAS programming, and strategic consulting available now.">
+    <title>Contact ZinClin | TLF Code Generator Early Access | Zinger Software Solutions</title>
+    <meta name="description" content="Join ZinClin TLF Code Generator early access program. Get automated publication deliverables and current clinical programming services. Beta coming soon.">
     
     <style>
         /* Reset and Base Styles */
@@ -32,7 +32,6 @@
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             padding: 1rem 0;
-            position: relative;
         }
 
         .header-content {
@@ -86,21 +85,22 @@
             transform: translateY(-2px);
         }
 
-        /* Page Hero */
+        /* Hero Section */
         .page-hero {
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
         }
 
         .page-hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .page-hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -108,22 +108,22 @@
 
         /* Contact Options */
         .contact-options {
-            padding: 4rem 0;
+            padding: 5rem 0;
+            background: white;
         }
 
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
 
         .option-card {
-            background: white;
+            background: #f8f9fa;
             padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 15px;
             text-align: center;
+            border-top: 4px solid #4ecdc4;
             transition: transform 0.3s ease;
         }
 
@@ -132,58 +132,64 @@
         }
 
         .option-icon {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
+            color: #4ecdc4;
         }
 
         .option-card h3 {
             color: #1f4788;
-            font-size: 1.5rem;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .option-card p {
+            margin-bottom: 2rem;
+            color: #666;
         }
 
         .btn-primary {
-            background: #4ecdc4;
-            color: #1f4788;
+            background: #1f4788;
+            color: white;
             padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
             text-decoration: none;
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-weight: bold;
             display: inline-block;
-            margin-top: 1rem;
+            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background: #45b5aa;
+            background: #2558a0;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
         /* Contact Form */
         .contact-form {
-            padding: 4rem 0;
+            padding: 5rem 0;
             background: #f8f9fa;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
         }
 
         .form-container {
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .contact-form h2 {
-            text-align: center;
-            color: #1f4788;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .form-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
@@ -198,8 +204,8 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
+            font-weight: bold;
             color: #1f4788;
-            font-weight: 500;
         }
 
         .form-group input,
@@ -227,6 +233,7 @@
 
         .form-submit {
             text-align: center;
+            margin-top: 2rem;
         }
 
         .form-submit button {
@@ -244,18 +251,18 @@
         .form-submit button:hover {
             background: #45b5aa;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
         }
 
         /* Contact Info */
         .contact-info {
-            padding: 4rem 0;
+            padding: 5rem 0;
+            background: white;
         }
 
         .contact-info h2 {
             text-align: center;
-            color: #1f4788;
             font-size: 2.5rem;
+            color: #1f4788;
             margin-bottom: 3rem;
         }
 
@@ -263,14 +270,13 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            text-align: center;
         }
 
         .info-item {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
         }
 
         .info-icon {
@@ -286,8 +292,8 @@
 
         /* FAQ Section */
         .faq-section {
-            padding: 4rem 0;
-            background: white;
+            padding: 5rem 0;
+            background: #f8f9fa;
         }
 
         .faq-section h2 {
@@ -304,7 +310,7 @@
         }
 
         .faq-item {
-            background: #f8f9fa;
+            background: white;
             padding: 2rem;
             border-radius: 10px;
             border-left: 4px solid #4ecdc4;
@@ -392,7 +398,7 @@
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin Module 1 (SDTM) in development - Early access program now open
+        🚧 ZinClin TLF Code Generator in development - Beta coming soon
     </div>
 
     <!-- Header -->
@@ -406,7 +412,6 @@
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="platform.html">Platform</a>
-                    <a href="services.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
                     <a href="resources.html">Resources</a>
@@ -419,8 +424,8 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Get Started Today</h1>
-            <p>Join our ZinClin early access program for AI-powered automation or contact us for immediate clinical programming services. Both paths benefit from our 12+ years of industry expertise.</p>
+            <h1>Get Started with TLF Automation</h1>
+            <p>Join our TLF Code Generator early access program or contact us for immediate clinical programming services. Both paths benefit from our 12+ years of industry expertise.</p>
         </div>
     </section>
 
@@ -430,23 +435,23 @@
             <div class="options-grid">
                 <div class="option-card">
                     <div class="option-icon">🚀</div>
-                    <h3>ZinClin Early Access</h3>
-                    <p>Join our early access program to be among the first to experience AI-powered SDTM automation. Influence development priorities and receive preferential pricing.</p>
+                    <h3>TLF Early Access</h3>
+                    <p>Join our early access program to be among the first to experience automated publication deliverables. Influence development priorities and receive preferential access.</p>
                     <a href="#contact-form" class="btn-primary">Join Early Access</a>
                 </div>
 
                 <div class="option-card">
                     <div class="option-icon">⚡</div>
                     <h3>Current Services</h3>
-                    <p>Need immediate help? Access our proven clinical programming services, technical staffing, and strategic consulting available today with quality guarantees.</p>
-                    <a href="#contact-form" class="btn-primary">Contact for Services</a>
+                    <p>Need immediate help with SDTM, ADaM, or TLF programming? Our experienced team delivers high-quality clinical programming services while you wait for automation.</p>
+                    <a href="#contact-form" class="btn-primary">Request Services</a>
                 </div>
 
                 <div class="option-card">
-                    <div class="option-icon">💬</div>
+                    <div class="option-icon">💡</div>
                     <h3>Strategy Consultation</h3>
-                    <p>Schedule a consultation to discuss your clinical programming challenges, automation roadmap, or how our services can support your current and future needs.</p>
-                    <a href="#contact-form" class="btn-primary">Schedule Consultation</a>
+                    <p>Schedule a consultation to discuss your publication automation strategy, timeline planning, and how TLF automation fits your workflow.</p>
+                    <a href="#contact-form" class="btn-primary">Schedule Call</a>
                 </div>
             </div>
         </div>
@@ -455,51 +460,57 @@
     <!-- Contact Form -->
     <section class="contact-form" id="contact-form">
         <div class="container">
+            <h2>Contact Us</h2>
+            
             <div class="form-container">
-                <h2>Contact Us</h2>
-                <form>
+                <form action="#" method="POST">
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company/Organization</label>
-                            <input type="text" id="company" name="company">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" required>
                         </div>
                         <div class="form-group">
-                            <label for="role">Your Role</label>
-                            <select id="role" name="role">
-                                <option value="">Select your role</option>
-                                <option value="statistical-programmer">Statistical Programmer</option>
-                                <option value="biostatistician">Biostatistician</option>
-                                <option value="data-manager">Clinical Data Manager</option>
-                                <option value="director-manager">Director/Manager</option>
-                                <option value="cro-executive">CRO Executive</option>
-                                <option value="biotech-executive">Biotech Executive</option>
-                                <option value="consultant">Consultant</option>
+                            <label for="title">Job Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-type">Company Type</label>
+                            <select id="company-type" name="company-type">
+                                <option value="">Select company type</option>
+                                <option value="biotech">Biotech Company</option>
+                                <option value="pharma">Pharmaceutical Company</option>
+                                <option value="cro">Contract Research Organization (CRO)</option>
+                                <option value="consultant">Independent Consultant</option>
+                                <option value="academic">Academic Institution</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label for="inquiry-type">Type of Inquiry *</label>
+                            <label for="inquiry-type">Primary Interest</label>
                             <select id="inquiry-type" name="inquiry-type" required>
-                                <option value="">Select your primary interest</option>
-                                <option value="zinclin-early-access">ZinClin Early Access Program</option>
-                                <option value="current-services">Current Services (Staffing/Programming/Consulting)</option>
+                                <option value="">What are you most interested in?</option>
+                                <option value="tlf-early-access">TLF Code Generator Early Access</option>
+                                <option value="current-services">Current Programming Services</option>
                                 <option value="strategy-consultation">Strategy Consultation</option>
-                                <option value="enterprise-licensing">Enterprise Licensing Discussion</option>
                                 <option value="partnership">Partnership Opportunities</option>
                                 <option value="general-information">General Information</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
                             <label for="challenges">Current Challenges & Goals</label>
-                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current clinical programming challenges, automation goals, or immediate service needs..."></textarea>
+                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current TLF programming challenges, publication automation goals, or immediate service needs..."></textarea>
                         </div>
                         <div class="form-group full-width">
                             <label for="timeline">Implementation Timeline</label>
@@ -525,6 +536,7 @@
     <section class="contact-info">
         <div class="container">
             <h2>Connect With Us</h2>
+            
             <div class="info-grid">
                 <div class="info-item">
                     <div class="info-icon">📧</div>
@@ -536,15 +548,15 @@
                 <div class="info-item">
                     <div class="info-icon">📍</div>
                     <h3>Location</h3>
-                    <p>Apex, NC</p>
+                    <p>Apex, North Carolina</p>
                     <p>Eastern Time Zone</p>
                 </div>
                 
                 <div class="info-item">
                     <div class="info-icon">🤝</div>
-                    <h3>Consultation</h3>
-                    <p>Strategy calls available</p>
-                    <p>Flexible scheduling</p>
+                    <h3>Partnership</h3>
+                    <p>Strategic partnerships welcome</p>
+                    <p>Early access co-development opportunities</p>
                 </div>
             </div>
         </div>
@@ -554,35 +566,36 @@
     <section class="faq-section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
+            
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">What is the ZinClin early access program?</div>
-                    <div class="faq-answer">Our early access program gives you the opportunity to test Module 1 (SDTM automation) during development, influence feature priorities, and receive preferential pricing when the platform launches.</div>
+                    <div class="faq-question">What is the TLF Code Generator early access program?</div>
+                    <div class="faq-answer">Our early access program gives you first access to ZinClin TLF automation tools as they become available. You'll help shape development priorities and receive preferential access when we launch.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">What current services do you offer?</div>
-                    <div class="faq-answer">We provide technical staffing (clinical programmers, data managers), SAS programming services, and strategic consulting. All services come with quality guarantees and are available immediately.</div>
+                    <div class="faq-question">When will the TLF Code Generator be available?</div>
+                    <div class="faq-answer">We're currently in active development with beta testing coming soon. Early access members will be the first to know specific timelines and testing opportunities.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">When will ZinClin be available?</div>
-                    <div class="faq-answer">Module 1 (SDTM automation) is currently in development with early access program now open. Beta testing will begin soon, followed by general availability.</div>
+                    <div class="faq-question">Can I use current services while waiting for automation?</div>
+                    <div class="faq-answer">Absolutely! Many clients start with our current programming services for immediate needs while joining the early access program for future automation benefits.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">Can I use both current services and ZinClin?</div>
-                    <div class="faq-answer">Absolutely! Many clients start with our current services for immediate needs while joining the ZinClin early access program for future automation benefits.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What makes Zinger different?</div>
-                    <div class="faq-answer">We combine 12+ years of proven clinical programming expertise with cutting-edge AI automation. Our boutique approach ensures personal attention whether you need services today or automation tomorrow.</div>
+                    <div class="faq-question">What makes Zinger different from other providers?</div>
+                    <div class="faq-answer">We combine 12+ years of proven clinical programming expertise with cutting-edge TLF automation. Our boutique approach ensures personal attention whether you need services today or automation tomorrow.</div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">How do I schedule a strategy consultation?</div>
                     <div class="faq-answer">Simply fill out the contact form above and select "Strategy Consultation" as your inquiry type. We'll respond within 24 hours to schedule a call at your convenience.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer partnership opportunities?</div>
+                    <div class="faq-answer">Yes! We're interested in strategic partnerships, co-development opportunities, and early access collaborations. Contact us to discuss how we might work together.</div>
                 </div>
             </div>
         </div>
@@ -607,10 +620,11 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Technical Staffing</a>
-                    <a href="services.html">SAS Programming</a>
-                    <a href="services.html">Consulting</a>
+                    <h3>Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
                 </div>
                 
                 <div class="footer-section">
