@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinger Software Solutions - AI-Powered Software for Complex Industries</title>
+    <meta name="description" content="Zinger Software Solutions builds specialized AI applications for clinical programming and financial markets. ZinClin TLF generator and ZinTrade stock analysis tools.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Development Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1f4788;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(78,205,196,0.2);
+            border: 1px solid #4ecdc4;
+            color: #4ecdc4;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 750px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid #4ecdc4;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #4ecdc4;
+            color: #1f4788;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #4ecdc4;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card.zintrade {
+            border-top-color: #27ae60;
+        }
+
+        .product-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-icon {
+            font-size: 2.5rem;
+        }
+
+        .product-status {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            border-radius: 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .product-status.green {
+            background: #d1e7dd;
+            color: #0a5a2f;
+        }
+
+        .product-name {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1f4788;
+            margin-bottom: 0.3rem;
+        }
+
+        .product-tagline {
+            color: #4ecdc4;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .product-card.zintrade .product-tagline {
+            color: #27ae60;
+        }
+
+        .product-desc {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .product-features li {
+            padding: 0.4rem 0;
+            color: #444;
+            font-size: 0.98rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .product-card.zintrade .product-features li::before {
+            color: #27ae60;
+        }
+
+        .product-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .btn-card-primary {
+            background: #1f4788;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-card-primary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        .btn-card-secondary {
+            background: transparent;
+            color: #1f4788;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid #1f4788;
+            transition: all 0.3s ease;
+        }
+
+        .btn-card-secondary:hover {
+            background: #1f4788;
+            color: white;
+        }
+
+        /* Difference Section */
+        .difference-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .prop-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .prop-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .prop-card h3 {
+            color: #1f4788;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .prop-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Industries Section */
+        .industries-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .audiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .audience-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #4ecdc4;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .audience-tag.fintech {
+            color: #27ae60;
+        }
+
+        .audience-card h3 {
+            color: #1f4788;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .audience-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-link {
+            color: #1f4788;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .audience-link:hover {
+            color: #4ecdc4;
+        }
+
+        .audience-link.fintech-link:hover {
+            color: #27ae60;
+        }
+
+        /* Education Section */
+        .education-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .edu-column h3 {
+            font-size: 1.4rem;
+            color: #1f4788;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid #4ecdc4;
+        }
+
+        .edu-column:last-child h3 {
+            border-bottom-color: #27ae60;
+        }
+
+        .edu-article {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .edu-article-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .edu-article h4 {
+            color: #333;
+            font-size: 0.97rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-article p {
+            color: #777;
+            font-size: 0.88rem;
+        }
+
+        .edu-tag {
+            display: inline-block;
+            padding: 0.15rem 0.55rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-top: 0.4rem;
+        }
+
+        .edu-tag.clinical {
+            background: #e3f0ff;
+            color: #1f4788;
+        }
+
+        .edu-tag.trading {
+            background: #d1e7dd;
+            color: #0a5a2f;
+        }
+
+        /* Company Credibility */
+        .company-credibility {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .company-credibility h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .credibility-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .cred-stat {
+            text-align: center;
+        }
+
+        .cred-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+        }
+
+        .cred-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-trade {
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta-trade:hover {
+            background: #219a52;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credibility-stats {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Zinger Software Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">AI SOFTWARE COMPANY</div>
+                <h1>AI-Powered Software Built for Complex Industries</h1>
+                <p>Zinger Software Solutions builds specialized AI applications where domain expertise matters. Our products are designed by practitioners, for practitioners — delivering automation that generic tools simply cannot match.</p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">AI Products in Development</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Years Industry Expertise</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24+</span>
+                        <span class="stat-label">Years Combined Experience</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="products.html" class="btn-primary">Explore Our Products</a>
+                    <a href="contact.html" class="btn-secondary">Get Early Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Software Products</h2>
+                <p>Purpose-built AI applications where deep domain knowledge is the competitive advantage.</p>
+            </div>
+
+            <div class="products-grid">
+
+                <!-- ZinClin -->
+                <div class="product-card">
+                    <div class="product-card-header">
+                        <span class="product-icon">🧬</span>
+                        <span class="product-status">Beta Coming Soon</span>
+                    </div>
+                    <div class="product-name">ZinClin</div>
+                    <div class="product-tagline">AI-Powered TLF Code Generator</div>
+                    <p class="product-desc">Automate Tables, Listings, and Figures generation for clinical trials. Built with 12+ years of pharmaceutical programming expertise to produce publication-ready, CDISC-compliant code automatically.</p>
+                    <ul class="product-features">
+                        <li>60–70% faster TLF generation</li>
+                        <li>CDISC-compliant output built in</li>
+                        <li>From SAP to production-ready code</li>
+                    </ul>
+                    <div class="product-cta">
+                        <a href="platform.html" class="btn-card-primary">Learn More</a>
+                        <a href="contact.html" class="btn-card-secondary">Early Access</a>
+                    </div>
+                </div>
+
+                <!-- ZinTrade -->
+                <div class="product-card zintrade">
+                    <div class="product-card-header">
+                        <span class="product-icon">📈</span>
+                        <span class="product-status green">Early Access Coming Soon</span>
+                    </div>
+                    <div class="product-name">ZinTrade</div>
+                    <div class="product-tagline">AI-Powered Stock Analysis &amp; Trading Tools</div>
+                    <p class="product-desc">Intelligent market signal detection, portfolio risk analysis, and automated trade screening. Built by practitioners who trade, for traders who demand more than generic screeners.</p>
+                    <ul class="product-features">
+                        <li>AI-driven buy/sell signal detection</li>
+                        <li>Portfolio risk and exposure analysis</li>
+                        <li>Backtesting against historical market data</li>
+                    </ul>
+                    <div class="product-cta">
+                        <a href="stock-trading.html" class="btn-card-primary">Learn More</a>
+                        <a href="contact.html" class="btn-card-secondary">Join Waitlist</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Zinger Software Difference -->
+    <section class="difference-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Zinger Software Difference</h2>
+                <p>We don't build general-purpose AI. We build specialized tools where practitioners would design them.</p>
+            </div>
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon">🏗️</div>
+                    <h3>Built by Domain Experts</h3>
+                    <p>Every product is designed by people with 10+ years working in the target industry — not computer scientists guessing at your workflow.</p>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">🎯</div>
+                    <h3>Narrow Focus, Deep Value</h3>
+                    <p>We solve one high-value problem per product rather than building broad platforms that solve everything poorly.</p>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">🇺🇸</div>
+                    <h3>US-Based, Responsive Support</h3>
+                    <p>Onshore development and support ensures data security, regulatory awareness, and accountability that offshore models can't match.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve</h2>
+                <p>Deep expertise in clinical programming and financial markets — where domain knowledge makes all the difference.</p>
+            </div>
+
+            <div class="audiences-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">🧬</div>
+                    <div class="audience-tag">CLINICAL PROGRAMMING</div>
+                    <h3>Biotechs &amp; Pharma</h3>
+                    <p>Accelerate time to publication with AI-powered TLF generation, reducing programming bottlenecks and getting results to market sooner.</p>
+                    <a href="solutions-biotechs.html" class="audience-link">Learn More →</a>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🏢</div>
+                    <div class="audience-tag">CLINICAL PROGRAMMING</div>
+                    <h3>CROs</h3>
+                    <p>Win more bids with competitive TLF delivery timelines while maintaining superior quality and data security compliance.</p>
+                    <a href="solutions-cros.html" class="audience-link">Learn More →</a>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">📊</div>
+                    <div class="audience-tag fintech">FINANCIAL MARKETS</div>
+                    <h3>Individual Investors</h3>
+                    <p>AI-ranked signals you can act on — without spending hours screening thousands of securities manually.</p>
+                    <a href="stock-trading.html" class="audience-link fintech-link">Learn More →</a>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">💼</div>
+                    <div class="audience-tag fintech">FINANCIAL MARKETS</div>
+                    <h3>Professional Traders</h3>
+                    <p>Backtested signals, portfolio heat maps, and intraday screening tools built by practitioners who understand real market dynamics.</p>
+                    <a href="stock-trading.html" class="audience-link fintech-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources Preview -->
+    <section class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free Learning Resources</h2>
+                <p>Educational content for clinical programmers and traders — from beginner to advanced.</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="edu-column">
+                    <h3>🧬 Clinical Programming</h3>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>What is SDTM? A Complete Guide</h4>
+                            <p>Learn the Study Data Tabulation Model standard from the ground up.</p>
+                            <span class="edu-tag clinical">SDTM</span>
+                        </div>
+                    </div>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>ADaM Dataset Creation Best Practices</h4>
+                            <p>Build analysis datasets that pass regulatory review the first time.</p>
+                            <span class="edu-tag clinical">ADaM</span>
+                        </div>
+                    </div>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>Common SDTM Mapping Pitfalls</h4>
+                            <p>Avoid the mistakes that cause FDA submission rejections.</p>
+                            <span class="edu-tag clinical">CDISC</span>
+                        </div>
+                    </div>
+                    <div style="padding-top: 1.5rem;">
+                        <a href="resources.html" style="color: #1f4788; font-weight: 600; text-decoration: none;">View All Clinical Resources →</a>
+                    </div>
+                </div>
+
+                <div class="edu-column">
+                    <h3>📈 Stock Trading</h3>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>How to Read Stock Charts</h4>
+                            <p>Technical analysis basics every investor should know before trading.</p>
+                            <span class="edu-tag trading">BEGINNER</span>
+                        </div>
+                    </div>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>Risk Management: Position Sizing &amp; Stop-Loss</h4>
+                            <p>Protect your capital with proven risk management strategies.</p>
+                            <span class="edu-tag trading">INTERMEDIATE</span>
+                        </div>
+                    </div>
+                    <div class="edu-article">
+                        <span class="edu-article-icon">📄</span>
+                        <div>
+                            <h4>Backtesting Trading Strategies</h4>
+                            <p>Validate your ideas against historical data before risking capital.</p>
+                            <span class="edu-tag trading">ADVANCED</span>
+                        </div>
+                    </div>
+                    <div style="padding-top: 1.5rem;">
+                        <a href="resources.html" style="color: #27ae60; font-weight: 600; text-decoration: none;">View All Trading Resources →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Credibility -->
+    <section class="company-credibility">
+        <div class="container">
+            <h2>Built on Proven Expertise</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem;">Zinger Software Solutions has been delivering technology solutions since 2013</p>
+
+            <div class="credibility-stats">
+                <div class="cred-stat">
+                    <span class="cred-number">2</span>
+                    <span class="cred-label">AI Products in Development</span>
+                </div>
+                <div class="cred-stat">
+                    <span class="cred-number">12+</span>
+                    <span class="cred-label">Years Company Track Record</span>
+                </div>
+                <div class="cred-stat">
+                    <span class="cred-number">24+</span>
+                    <span class="cred-label">Years Industry Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Get Early Access to Our AI Products</h2>
+            <p>Be among the first to use ZinClin TLF automation or ZinTrade market intelligence tools.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-primary">ZinClin Early Access</a>
+                <a href="contact.html" class="btn-cta-trade">ZinTrade Early Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

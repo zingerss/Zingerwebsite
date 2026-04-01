@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact ZinClin | TLF Code Generator Early Access | Zinger Software Solutions</title>
+    <meta name="description" content="Join ZinClin TLF Code Generator early access program. Get automated publication deliverables and current clinical programming services. Beta coming soon.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Contact Options */
+        .contact-options {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .option-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #4ecdc4;
+            transition: transform 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .option-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .option-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .option-card p {
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #1f4788;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .form-submit button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .contact-info h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .info-item h3 {
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get Started with TLF Automation</h1>
+            <p>Join our TLF Code Generator early access program or contact us for immediate clinical programming services. Both paths benefit from our 12+ years of industry expertise.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">🚀</div>
+                    <h3>TLF Early Access</h3>
+                    <p>Join our early access program to be among the first to experience automated publication deliverables. Influence development priorities and receive preferential access.</p>
+                    <a href="#contact-form" class="btn-primary">Join Early Access</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">⚡</div>
+                    <h3>Current Services</h3>
+                    <p>Need immediate help with SDTM, ADaM, or TLF programming? Our experienced team delivers high-quality clinical programming services while you wait for automation.</p>
+                    <a href="#contact-form" class="btn-primary">Request Services</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="option-icon">💡</div>
+                    <h3>Strategy Consultation</h3>
+                    <p>Schedule a consultation to discuss your publication automation strategy, timeline planning, and how TLF automation fits your workflow.</p>
+                    <a href="#contact-form" class="btn-primary">Schedule Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form" id="contact-form">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div class="form-container">
+                <form action="#" method="POST">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Job Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-type">Company Type</label>
+                            <select id="company-type" name="company-type">
+                                <option value="">Select company type</option>
+                                <option value="biotech">Biotech Company</option>
+                                <option value="pharma">Pharmaceutical Company</option>
+                                <option value="cro">Contract Research Organization (CRO)</option>
+                                <option value="consultant">Independent Consultant</option>
+                                <option value="academic">Academic Institution</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="inquiry-type">Primary Interest</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">What are you most interested in?</option>
+                                <option value="tlf-early-access">ZinClin TLF Code Generator Early Access</option>
+                                <option value="zintrade-early-access">ZinTrade Stock Analysis Early Access</option>
+                                <option value="current-services">Current Programming Services</option>
+                                <option value="strategy-consultation">Strategy Consultation</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="general-information">General Information</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="challenges">Current Challenges & Goals</label>
+                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current TLF programming challenges, publication automation goals, or immediate service needs..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="timeline">Implementation Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">When are you looking to implement solutions?</option>
+                                <option value="immediate">Immediate (within 1-3 months)</option>
+                                <option value="short-term">Short-term (3-6 months)</option>
+                                <option value="medium-term">Medium-term (6-12 months)</option>
+                                <option value="long-term">Long-term (12+ months)</option>
+                                <option value="exploring">Just exploring options</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <h2>Connect With Us</h2>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Apex, North Carolina</p>
+                    <p>Eastern Time Zone</p>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">🤝</div>
+                    <h3>Partnership</h3>
+                    <p>Strategic partnerships welcome</p>
+                    <p>Early access co-development opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">What is the TLF Code Generator early access program?</div>
+                    <div class="faq-answer">Our early access program gives you first access to ZinClin TLF automation tools as they become available. You'll help shape development priorities and receive preferential access when we launch.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">When will the TLF Code Generator be available?</div>
+                    <div class="faq-answer">We're currently in active development with beta testing coming soon. Early access members will be the first to know specific timelines and testing opportunities.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use current services while waiting for automation?</div>
+                    <div class="faq-answer">Absolutely! Many clients start with our current programming services for immediate needs while joining the early access program for future automation benefits.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What makes Zinger different from other providers?</div>
+                    <div class="faq-answer">We combine 12+ years of proven clinical programming expertise with cutting-edge TLF automation. Our boutique approach ensures personal attention whether you need services today or automation tomorrow.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I schedule a strategy consultation?</div>
+                    <div class="faq-answer">Simply fill out the contact form above and select "Strategy Consultation" as your inquiry type. We'll respond within 24 hours to schedule a call at your convenience.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer partnership opportunities?</div>
+                    <div class="faq-answer">Yes! We're interested in strategic partnerships, co-development opportunities, and early access collaborations. Contact us to discuss how we might work together.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

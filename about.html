@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Zinger Software Solutions | AI Software for Complex Industries</title>
+    <meta name="description" content="Zinger Software Solutions builds specialized AI software for clinical programming and financial markets. 12+ years expertise. ZinClin and ZinTrade products in development.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Company Story */
+        .company-story {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .company-story h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .story-content p {
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            background: #e8f9f5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #4ecdc4;
+        }
+
+        /* Evolution Timeline */
+        .evolution-timeline {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .evolution-timeline h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4ecdc4;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 0 2rem;
+        }
+
+        .timeline-year {
+            background: #4ecdc4;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-content h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        /* Leadership Team */
+        .leadership-team {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .leadership-team h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #4ecdc4;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Mission Vision */
+        .mission-vision {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .mission-vision h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .mv-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+        }
+
+        .mv-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mv-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .mv-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline-line {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                padding-left: 3rem;
+            }
+            
+            .timeline-content {
+                margin: 0;
+                margin-left: 1rem;
+            }
+            
+            .timeline-year {
+                position: absolute;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Building AI Software Across Industries</h1>
+            <p>From clinical programming automation to financial market intelligence — Zinger Software Solutions applies deep domain expertise to build AI tools that solve real practitioner problems.</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="company-story">
+        <div class="container">
+            <h2>Our Story</h2>
+
+            <div class="story-content">
+                <p>
+                    Zinger Software Solutions began in 2013 with a simple mission: provide high-quality clinical programming services to biotechnology and pharmaceutical companies. Over 12 years, we've delivered thousands of successful SDTM datasets, ADaM analyses, and TLF outputs for studies ranging from early-phase biotech trials to large global submissions.
+                </p>
+
+                <div class="highlight">
+                    <strong>The Pattern We Keep Seeing:</strong> In every complex industry, practitioners spend enormous time on work that follows predictable patterns. We build the AI tools that automate those patterns — starting with clinical programming, and now expanding into financial markets.
+                </div>
+
+                <p>
+                    This insight led to the development of ZinClin TLF Code Generator — an AI-powered platform that automates the creation of publication-ready Tables, Listings, and Figures. Instead of weeks of manual programming, clinical teams can now generate compliant TLFs in hours.
+                </p>
+
+                <p>
+                    In 2025, we applied the same approach to financial markets. Traders and investors face a data overload problem — thousands of securities, endless indicators, and no systematic way to surface the few genuine opportunities that match their criteria. ZinTrade brings the same practitioner-first philosophy: built by people who trade, tested against real market data, transparent in its methodology.
+                </p>
+
+                <p>
+                    Zinger Software Solutions is now a multi-product AI software company. We remain a focused team with deep expertise in our chosen domains. Our competitive advantage is not the size of our engineering team — it is the practitioner knowledge embedded in every product we build.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Timeline -->
+    <section class="evolution-timeline">
+        <div class="container">
+            <h2>Company Evolution</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <h3>Company Founded</h3>
+                        <p>Zinger Software Solutions established as a boutique clinical programming consultancy serving biotech and pharmaceutical companies with SDTM, ADaM, and TLF services.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <h3>TLF Expertise Recognition</h3>
+                        <p>Became recognized as specialists in publication-ready TLF creation, developing standardized processes that consistently delivered regulatory-compliant outputs ahead of submission deadlines.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Automation Research Begins</h3>
+                        <p>Started research into AI-powered automation for TLF generation after identifying repeatable patterns across hundreds of client deliverables. Initial feasibility studies showed 60-70% efficiency gains were achievable.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>ZinClin Development Launched</h3>
+                        <p>Began full development of ZinClin TLF Code Generator platform, combining our 12+ years of hands-on TLF creation experience with cutting-edge AI automation technology.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>ZinClin Beta &amp; ZinTrade Development</h3>
+                        <p>ZinClin TLF Code Generator enters beta testing with select clinical programming clients. Simultaneously, development of ZinTrade AI stock analysis tools begins, marking Zinger's expansion into financial technology.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3>ZinTrade Early Access</h3>
+                        <p>ZinTrade stock analysis platform enters early access program. First users gain access to AI-powered signal detection, portfolio risk tools, and backtested trade screening.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="leadership-team">
+        <div class="container">
+            <h2>Leadership Team</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">AA</div>
+                    <div class="member-name">Amit Ahuja</div>
+                    <div class="member-title">Founder & CEO</div>
+                    <div class="member-bio">
+                        With 24+ years in clinical programming and 12+ years leading Zinger Software Solutions, Amit brings deep expertise in SDTM, ADaM, and TLF creation. His vision for publication automation drives ZinClin's development toward solving the industry's most time-consuming challenges.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2>Mission & Vision</h2>
+            
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        Build specialized AI software that automates high-value, pattern-based work in complex industries — giving practitioners time back for the decisions that actually require human judgment.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">🔮</div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        A portfolio of domain-specific AI tools — each the best in its category — across the industries where deep expertise creates the most value. Starting with clinical programming and financial markets.
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">💡</div>
+                    <h3>Our Values</h3>
+                    <p>
+                        Quality excellence, domain expertise, and practical innovation that solves real problems — not technology for its own sake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 4rem 0; background: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Join Us at the Frontier of Industry AI</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Whether you're a clinical programmer, a trader, or an organization looking for specialized automation — we're building for you.
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="platform.html" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Explore ZinClin</a>
+                <a href="stock-trading.html" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem; background: #27ae60;">Explore ZinTrade</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLF Workflow Acceleration for Biostatisticians | ZinClin by Zinger Software Solutions</title>
+    <meta name="description" content="Get publication-ready deliverables faster with automated TLF generation. Accelerate your biostatistical workflows and focus on analysis, not formatting. Early access program now open.">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-top: -0.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .btn-primary {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Workflow Acceleration */
+        .workflow-acceleration {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .workflow-acceleration h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .acceleration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .acceleration-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 5px solid #4ecdc4;
+            transition: transform 0.3s ease;
+        }
+
+        .acceleration-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .acceleration-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #28a745;
+        }
+
+        .acceleration-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        /* Collaboration Benefits */
+        .collaboration-benefits {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .collaboration-benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        /* Integration Flow */
+        .integration {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .integration h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .integration-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .flow-step {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            background: #4ecdc4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 1rem;
+        }
+
+        .step-benefit {
+            background: #e8f9f5;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Publication Timeline */
+        .publication-timeline {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .publication-timeline h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .traditional {
+            border-top: 4px solid #dc3545;
+        }
+
+        .traditional .timeline-title {
+            color: #dc3545;
+        }
+
+        .automated {
+            border-top: 4px solid #28a745;
+        }
+
+        .automated .timeline-title {
+            color: #28a745;
+        }
+
+        .timeline-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-steps li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timeline-duration {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Efficiency Metrics */
+        .efficiency-metrics {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .efficiency-metrics h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .impact-value {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #4ecdc4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Development Stage Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .acceleration-grid,
+            .benefits-grid,
+            .integration-flow {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Development Banner -->
+    <div class="dev-banner">
+        🚧 ZinClin TLF Code Generator in development - Beta coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get Publication-Ready Deliverables Faster</h1>
+            <p>
+                Accelerate your biostatistical workflows with automated TLF generation. 
+                Focus on analysis and interpretation while publication deliverables are created automatically.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">60-70%</span>
+                    <span class="stat-label">Faster Publication Cycles</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">TLF</span>
+                    <span class="stat-label">Automation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Real-time</span>
+                    <span class="stat-label">Collaboration</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <a href="contact.html" class="btn-primary">Sign Up for Early Access Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Acceleration -->
+    <section class="workflow-acceleration">
+        <div class="container">
+            <h2>TLF Workflow Acceleration</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto 3rem;">
+                Automated TLF generation creates the foundation for faster, more efficient publication workflows and better cross-functional collaboration.
+            </p>
+            
+            <div class="acceleration-grid">
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">⚡</div>
+                    <h3>Faster Time to Publication</h3>
+                    <p>Generate publication-ready tables, listings, and figures in minutes instead of days. Spend more time on analysis validation and scientific interpretation.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">📊</div>
+                    <h3>Consistent Output Quality</h3>
+                    <p>Standardized formatting and regulatory-compliant structure ensure every TLF meets publication standards without manual formatting effort.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🔄</div>
+                    <h3>Streamlined Revisions</h3>
+                    <p>Automated regeneration means protocol amendments and data updates result in updated TLFs within minutes, not weeks of reprogramming.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🤝</div>
+                    <h3>Enhanced Collaboration</h3>
+                    <p>Provide programming teams with clear specifications while focusing on statistical methodology and regulatory strategy.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">📈</div>
+                    <h3>Higher Study Capacity</h3>
+                    <p>Handle multiple studies simultaneously with automated TLF generation freeing up time for complex analytical work.</p>
+                </div>
+                
+                <div class="acceleration-card">
+                    <div class="acceleration-icon">🎯</div>
+                    <h3>Focus on Science</h3>
+                    <p>Dedicate more time to statistical methodology, data interpretation, and regulatory interactions rather than formatting logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Benefits -->
+    <section class="collaboration-benefits">
+        <div class="container">
+            <h2>Transform Team Collaboration</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">📋</span>
+                    <h3>Clear Specifications</h3>
+                    <p>Provide programmers with detailed TLF specifications automatically generated from statistical analysis plans, reducing back-and-forth communication.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🔄</span>
+                    <h3>Real-time Updates</h3>
+                    <p>See TLF outputs updated immediately as analysis specifications change, enabling faster iteration and validation cycles.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">📝</span>
+                    <h3>Medical Writer Integration</h3>
+                    <p>Generate publication-ready formats that medical writers can directly integrate into regulatory submissions and manuscripts.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">✅</span>
+                    <h3>Quality Assurance</h3>
+                    <p>Built-in validation checks ensure TLF outputs meet CDISC standards and regulatory requirements without manual review effort.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">📊</span>
+                    <h3>Version Control</h3>
+                    <p>Maintain complete audit trails of TLF changes linked to statistical analysis plan modifications for regulatory transparency.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🚀</span>
+                    <h3>Parallel Processing</h3>
+                    <p>Enable simultaneous work on multiple analysis components while TLF generation happens automatically in the background.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Flow -->
+    <section class="integration">
+        <div class="container">
+            <h2>Seamless Integration with Your Workflow</h2>
+            
+            <div class="integration-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Define Analysis Plan</h4>
+                        <p>Create your statistical analysis plan using familiar biostatistical planning tools and methodologies.</p>
+                        <div class="step-benefit">
+                            ✓ Use existing SAP templates and processes
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Automatic TLF Generation</h4>
+                        <p>ZinClin automatically generates TLF specifications and code based on your analysis requirements.</p>
+                        <div class="step-benefit">
+                            ✓ No manual programming coordination needed
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Review & Validate</h4>
+                        <p>Review generated TLFs for scientific accuracy and regulatory compliance using automated validation reports.</p>
+                        <div class="step-benefit">
+                            ✓ Focus on scientific content, not formatting
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Publication Delivery</h4>
+                        <p>Deliver publication-ready TLFs to medical writers and regulatory teams in standardized formats.</p>
+                        <div class="step-benefit">
+                            ✓ Accelerated submission timelines
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Timeline -->
+    <section class="publication-timeline">
+        <div class="container">
+            <h2>Publication Timeline Comparison</h2>
+            
+            <div class="timeline-comparison">
+                <div class="timeline-card traditional">
+                    <div class="timeline-title">Traditional Process</div>
+                    <ul class="timeline-steps">
+                        <li>SAP finalization</li>
+                        <li>TLF specification creation</li>
+                        <li>Programming resource allocation</li>
+                        <li>Iterative programming cycles</li>
+                        <li>QC and validation</li>
+                        <li>Format revisions</li>
+                        <li>Final delivery preparation</li>
+                    </ul>
+                    <div class="timeline-duration">12-18 weeks</div>
+                </div>
+                
+                <div class="timeline-card automated">
+                    <div class="timeline-title">ZinClin Automated</div>
+                    <ul class="timeline-steps">
+                        <li>SAP finalization</li>
+                        <li>Automatic TLF generation</li>
+                        <li>Scientific validation review</li>
+                        <li>Publication-ready delivery</li>
+                    </ul>
+                    <div class="timeline-duration">4-6 weeks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Efficiency Metrics -->
+    <section class="efficiency-metrics">
+        <div class="container">
+            <h2>TLF Automation Impact on Biostatistical Workflows</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Quantifiable improvements in workflow efficiency and publication timelines
+            </p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="impact-value">60-70%</div>
+                    <div>Faster TLF Delivery</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="impact-value">80%</div>
+                    <div>Reduced Revision Cycles</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="impact-value">3x</div>
+                    <div>Improved Team Communication</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="impact-value">2x</div>
+                    <div>Study Capacity</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 4rem 0; background: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Ready to Accelerate Your Publication Workflows?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join our TLF Code Generator early access program and experience the benefits of automated publication deliverables for your biostatistical work.
+            </p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Sign Up for Early Access Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

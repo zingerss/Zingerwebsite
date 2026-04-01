@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | ZinClin &amp; ZinTrade | Zinger Software Solutions</title>
+    <meta name="description" content="Explore Zinger Software Solutions AI products: ZinClin TLF code generator for clinical programming and ZinTrade AI stock analysis tools. Both coming soon.">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Dev Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            padding-bottom: 5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .product-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .product-block.reverse {
+            direction: rtl;
+        }
+
+        .product-block.reverse > * {
+            direction: ltr;
+        }
+
+        .product-info h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-subtitle {
+            color: #4ecdc4;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-subtitle.trade {
+            color: #27ae60;
+        }
+
+        .product-status-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .product-status-badge.green {
+            background: #d1e7dd;
+            color: #0a5a2f;
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+            color: #444;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .feature-list.trade li::before {
+            color: #27ae60;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-learn {
+            background: #1f4788;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-learn:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        .btn-access {
+            background: transparent;
+            color: #1f4788;
+            padding: 0.9rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #1f4788;
+            transition: all 0.3s ease;
+        }
+
+        .btn-access:hover {
+            background: #1f4788;
+            color: white;
+        }
+
+        /* Product Visual Card */
+        .product-visual {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .product-visual-icon {
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .product-visual h3 {
+            color: #1f4788;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .visual-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .visual-stat {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .visual-stat .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .visual-stat.trade .number {
+            color: #27ae60;
+        }
+
+        .visual-stat .label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Early Access CTA */
+        .early-access-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .early-access-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .early-access-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-green:hover {
+            background: #219a52;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover { color: #4ecdc4; }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .product-block { grid-template-columns: 1fr; direction: ltr; }
+            .product-block.reverse { direction: ltr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dev Banner -->
+    <div class="dev-banner">
+        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html" class="active">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Software Products</h1>
+            <p>Purpose-built AI applications for clinical programming and financial markets — designed by practitioners who've spent careers in these industries.</p>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+        <div class="container">
+
+            <!-- ZinClin -->
+            <div class="product-block">
+                <div class="product-info">
+                    <h2>ZinClin</h2>
+                    <div class="product-subtitle">AI-Powered TLF Code Generator</div>
+                    <span class="product-status-badge">Beta Coming Soon</span>
+                    <p>ZinClin transforms Statistical Analysis Plans (SAPs) and shell specifications into production-ready Tables, Listings, and Figures code automatically. Built with 12+ years of pharmaceutical programming expertise, every output is CDISC-compliant and publication-ready.</p>
+                    <p>Stop spending weeks on manual TLF programming. ZinClin reduces that to hours — with clinical expertise baked in, not bolted on.</p>
+                    <ul class="feature-list">
+                        <li>Upload SAPs and TLF shell specifications directly</li>
+                        <li>AI extracts variables, formatting, and output requirements</li>
+                        <li>Generate CDISC-compliant TLF code automatically</li>
+                        <li>60–70% faster than manual programming</li>
+                        <li>Programmer review and customization built in</li>
+                        <li>Publication-ready output from day one</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="platform.html" class="btn-learn">Explore ZinClin</a>
+                        <a href="contact.html" class="btn-access">Get Early Access</a>
+                    </div>
+                </div>
+                <div class="product-visual">
+                    <span class="product-visual-icon">🧬</span>
+                    <h3>Clinical Programming Automation</h3>
+                    <p style="color:#666; font-size:0.95rem;">From SAP to publication-ready TLF code automatically</p>
+                    <div class="visual-stats">
+                        <div class="visual-stat">
+                            <span class="number">60–70%</span>
+                            <span class="label">Faster TLF Generation</span>
+                        </div>
+                        <div class="visual-stat">
+                            <span class="number">12+</span>
+                            <span class="label">Years Expertise Built In</span>
+                        </div>
+                        <div class="visual-stat">
+                            <span class="number">100%</span>
+                            <span class="label">CDISC Compliant</span>
+                        </div>
+                        <div class="visual-stat">
+                            <span class="number">3</span>
+                            <span class="label">Steps: Upload → AI → Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ZinTrade -->
+            <div class="product-block reverse">
+                <div class="product-info">
+                    <h2>ZinTrade</h2>
+                    <div class="product-subtitle trade">AI-Powered Stock Analysis &amp; Trading Tools</div>
+                    <span class="product-status-badge green">Early Access Coming Soon</span>
+                    <p>ZinTrade delivers intelligent market signal detection, portfolio risk analysis, and automated trade screening for individual investors and professional traders. Built by practitioners who trade, using methodologies validated against real market data.</p>
+                    <p>Stop drowning in noise. ZinTrade surfaces the signals worth your attention — ranked, explained, and backtested.</p>
+                    <ul class="feature-list trade">
+                        <li>AI-driven buy/sell signal detection across thousands of securities</li>
+                        <li>Portfolio risk and exposure analysis</li>
+                        <li>Backtesting against 5+ years of historical market data</li>
+                        <li>Transparent signal explanations — no black boxes</li>
+                        <li>Customizable screening rules and watchlists</li>
+                        <li>Ranked opportunity lists with confidence scores</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="stock-trading.html" class="btn-learn">Explore ZinTrade</a>
+                        <a href="contact.html" class="btn-access">Join Waitlist</a>
+                    </div>
+                </div>
+                <div class="product-visual">
+                    <span class="product-visual-icon">📈</span>
+                    <h3>Financial Market Intelligence</h3>
+                    <p style="color:#666; font-size:0.95rem;">From market noise to ranked, actionable signals</p>
+                    <div class="visual-stats">
+                        <div class="visual-stat trade">
+                            <span class="number">AI</span>
+                            <span class="label">Signal Detection</span>
+                        </div>
+                        <div class="visual-stat trade">
+                            <span class="number">5+</span>
+                            <span class="label">Years Backtested</span>
+                        </div>
+                        <div class="visual-stat trade">
+                            <span class="number">Real</span>
+                            <span class="label">Portfolio Risk Analysis</span>
+                        </div>
+                        <div class="visual-stat trade">
+                            <span class="number">0</span>
+                            <span class="label">Black Boxes — All Explained</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Early Access CTA -->
+    <section class="early-access-cta">
+        <div class="container">
+            <h2>Join Our Early Access Programs</h2>
+            <p>Be among the first to shape our products. Early access members influence roadmap priorities and receive preferential launch pricing.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-white">ZinClin Early Access</a>
+                <a href="contact.html" class="btn-green">ZinTrade Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

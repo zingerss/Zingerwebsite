@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Resources | Clinical Programming &amp; Stock Trading | Zinger Software Solutions</title>
+    <meta name="description" content="Free educational resources on SDTM, ADaM programming, TLF automation, stock trading, and technical analysis. Expert content from Zinger Software Solutions.">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Dev Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: #4ecdc4; }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover { background: #45b5aa; transform: translateY(-2px); }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        .page-hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+        /* Topic Filter Tabs */
+        .topic-filter {
+            background: white;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 2px solid #e9ecef;
+            background: white;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active { background: #1f4788; color: white; border-color: #1f4788; }
+
+        .filter-tab.clinical.active { background: #1f4788; border-color: #1f4788; }
+        .filter-tab.trading.active { background: #27ae60; border-color: #27ae60; }
+
+        /* Featured Resources */
+        .featured-resources {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .featured-resources h2 {
+            text-align: center;
+            color: #1f4788;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .featured-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #4ecdc4;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-card.trading { border-left-color: #27ae60; }
+        .featured-card.ai { border-left-color: #9b59b6; }
+
+        .featured-card:hover { transform: translateY(-5px); }
+
+        .featured-card h3 { color: #1f4788; margin-bottom: 1rem; }
+
+        .resource-type {
+            background: #4ecdc4;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .resource-type.trading { background: #27ae60; }
+        .resource-type.ai { background: #9b59b6; }
+
+        /* Clinical Programming Education */
+        .clinical-education {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 { font-size: 2.5rem; color: #1f4788; margin-bottom: 0.8rem; }
+        .section-header p { color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .section-label.clinical { background: #e3f0ff; color: #1f4788; }
+        .section-label.trading { background: #d1e7dd; color: #0a5a2f; }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .edu-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            border-top: 4px solid #1f4788;
+            transition: transform 0.3s ease;
+        }
+
+        .edu-card.trading { border-top-color: #27ae60; }
+
+        .edu-card:hover { transform: translateY(-5px); }
+
+        .edu-tag {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 10px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .edu-tag.sdtm { background: #e3f0ff; color: #1f4788; }
+        .edu-tag.adam { background: #d4edff; color: #0c5a8a; }
+        .edu-tag.cdisc { background: #e8f5e9; color: #1b5e20; }
+        .edu-tag.beginner { background: #fff3cd; color: #856404; }
+        .edu-tag.intermediate { background: #ffe5d0; color: #7d3c00; }
+        .edu-tag.advanced { background: #f8d7da; color: #721c24; }
+
+        .edu-card h3 { color: #1f4788; font-size: 1.1rem; margin-bottom: 0.8rem; }
+        .edu-card.trading h3 { color: #1a3a2a; }
+        .edu-card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+
+        /* Resource Category Cards */
+        .resource-categories {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4ecdc4;
+        }
+
+        .category-card.trading { border-top-color: #27ae60; }
+        .category-card:hover { transform: translateY(-5px); }
+
+        .category-icon { font-size: 3rem; margin-bottom: 1.5rem; }
+        .category-card h3 { color: #1f4788; margin-bottom: 1rem; }
+
+        .resource-list { list-style: none; text-align: left; margin-top: 1.5rem; }
+
+        .resource-list li {
+            margin-bottom: 0.8rem;
+            padding: 0.8rem;
+            background: white;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .resource-list li:hover { background: #e8f9f5; }
+        .category-card.trading .resource-list li:hover { background: #d1e7dd; }
+
+        .resource-title { font-weight: bold; color: #1f4788; margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .resource-desc { font-size: 0.88rem; color: #666; }
+
+        /* Industry Insights */
+        .industry-insights {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+        }
+
+        .industry-insights h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .insight-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .insight-number { font-size: 2.5rem; font-weight: bold; color: #4ecdc4; margin-bottom: 1rem; }
+        .insight-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.8rem; }
+
+        /* Newsletter */
+        .newsletter-signup {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .newsletter-signup h2 { color: #1f4788; font-size: 2.5rem; margin-bottom: 1rem; }
+        .newsletter-signup p { color: #666; margin-bottom: 2rem; font-size: 1.1rem; }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form input:focus { outline: none; border-color: #4ecdc4; }
+
+        .newsletter-form button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover { background: #45b5aa; transform: translateY(-2px); }
+
+        .newsletter-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-item { padding: 1rem; background: #f8f9fa; border-radius: 8px; }
+        .benefit-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+        /* CTA */
+        .btn-primary {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover { background: #2558a0; transform: translateY(-2px); }
+
+        /* Footer */
+        footer { background: #2c3e50; color: white; padding: 3rem 0 1rem; }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 { color: #4ecdc4; margin-bottom: 1rem; }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover { color: #4ecdc4; }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .featured-grid, .edu-grid, .categories-grid, .insights-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dev Banner -->
+    <div class="dev-banner">
+        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html" class="active">Resources</a>
+                </nav>
+                <a href="contact.html" class="cta-button">Get Early Access</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Learning Resources</h1>
+            <p>Free educational content for clinical programmers and traders — from SDTM &amp; ADaM fundamentals to stock trading strategies and market analysis.</p>
+        </div>
+    </section>
+
+    <!-- Topic Filter -->
+    <div class="topic-filter">
+        <div class="container">
+            <div class="filter-tabs">
+                <a href="#all" class="filter-tab active">All Resources</a>
+                <a href="#clinical" class="filter-tab clinical">🧬 Clinical Programming</a>
+                <a href="#trading" class="filter-tab trading">📈 Stock Trading</a>
+                <a href="#automation" class="filter-tab">🤖 AI &amp; Automation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Resources -->
+    <section class="featured-resources" id="all">
+        <div class="container">
+            <h2>Featured Resources</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="resource-type">White Paper</div>
+                    <h3>The ROI of TLF Automation in Clinical Programming</h3>
+                    <p>Comprehensive analysis of time savings, cost reduction, and quality improvements achievable through automated TLF generation. Based on real-world implementation data and industry benchmarks.</p>
+                </div>
+                <div class="featured-card trading">
+                    <div class="resource-type trading">Beginner Guide</div>
+                    <h3>Your First Week in the Stock Market: What You Actually Need to Know</h3>
+                    <p>A no-nonsense introduction to stock market basics — how prices move, what drives them, and how to start building a systematic approach to investing without getting overwhelmed.</p>
+                </div>
+                <div class="featured-card ai">
+                    <div class="resource-type ai">Market Report</div>
+                    <h3>The Future of Clinical Programming: Automation Trends 2025</h3>
+                    <p>Industry analysis of automation adoption in clinical programming, emerging technologies, and strategic considerations for biotech and pharmaceutical companies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Programming Education -->
+    <section class="clinical-education" id="clinical">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label clinical">CLINICAL PROGRAMMING</span>
+                <h2>SDTM &amp; ADaM Programming Guides</h2>
+                <p>Educational content from our 12+ years of hands-on clinical programming experience.</p>
+            </div>
+
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <span class="edu-tag sdtm">SDTM</span>
+                    <h3>What is SDTM? A Complete Guide for Clinical Programmers</h3>
+                    <p>Learn the Study Data Tabulation Model standard from the ground up — domain structure, controlled terminology, and how SDTM maps raw clinical trial data into submission-ready datasets.</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-tag adam">ADaM</span>
+                    <h3>ADaM Dataset Creation Best Practices</h3>
+                    <p>Build analysis datasets that pass regulatory review the first time. Covers ADSL, ADAE, ADLB structures, traceability requirements, and the most common FDA reviewer expectations.</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-tag cdisc">CDISC</span>
+                    <h3>CDISC Standards Overview &amp; Compliance Checklist</h3>
+                    <p>A practical overview of CDISC SDTM, ADaM, and define.xml requirements — with a step-by-step compliance checklist for eCTD submissions to FDA and EMA.</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-tag sdtm">SDTM</span>
+                    <h3>Common SDTM Mapping Pitfalls &amp; How to Avoid Them</h3>
+                    <p>The mapping mistakes that cause FDA submission rejections — wrong supplemental qualifier usage, SUPPQUAL errors, timing variable misuse, and how to catch them before submission.</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-tag adam">ADaM</span>
+                    <h3>Introduction to define.xml and Submission Metadata</h3>
+                    <p>How to build a compliant define.xml file from scratch — variable-level metadata, value-level metadata, and annotated CRF linkage that reviewers actually expect to see.</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-tag cdisc">TLF</span>
+                    <h3>TLF Shell Specification Interpretation Guide</h3>
+                    <p>How to read and interpret TLF shell specifications — translating SAP requirements into programmable output formats with the correct CDISC display standards applied.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stock Trading Education -->
+    <section class="featured-resources" id="trading" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label trading">STOCK TRADING</span>
+                <h2>Stock Trading &amp; Market Analysis</h2>
+                <p>Practical trading education — from reading your first chart to building a systematic trading strategy.</p>
+            </div>
+
+            <div class="edu-grid">
+                <div class="edu-card trading">
+                    <span class="edu-tag beginner">BEGINNER</span>
+                    <h3>How to Read Stock Charts: Technical Analysis Basics</h3>
+                    <p>Candlestick patterns, support and resistance levels, moving averages, and volume interpretation — the foundation every trader needs before entering a position.</p>
+                </div>
+                <div class="edu-card trading">
+                    <span class="edu-tag beginner">BEGINNER</span>
+                    <h3>Fundamental vs. Technical Analysis — When to Use Each</h3>
+                    <p>Understanding what moves stock prices: earnings, revenue growth, P/E ratios (fundamental) vs. chart patterns and momentum indicators (technical). When each approach is most useful.</p>
+                </div>
+                <div class="edu-card trading">
+                    <span class="edu-tag intermediate">INTERMEDIATE</span>
+                    <h3>Risk Management: Position Sizing &amp; Stop-Loss Strategies</h3>
+                    <p>The most important skill in trading isn't picking winners — it's managing losses. Learn position sizing formulas, stop-loss placement, and how to define your risk per trade.</p>
+                </div>
+                <div class="edu-card trading">
+                    <span class="edu-tag intermediate">INTERMEDIATE</span>
+                    <h3>Understanding Options: Calls, Puts &amp; Basic Strategies</h3>
+                    <p>How options contracts work, intrinsic vs. time value, and the most common strategies — covered calls, protective puts, and spreads — explained without the jargon.</p>
+                </div>
+                <div class="edu-card trading">
+                    <span class="edu-tag advanced">ADVANCED</span>
+                    <h3>Backtesting Trading Strategies: A Practical Guide</h3>
+                    <p>How to validate your trading ideas against historical data before risking capital — backtesting methodology, avoiding overfitting, and interpreting results honestly.</p>
+                </div>
+                <div class="edu-card trading">
+                    <span class="edu-tag advanced">ADVANCED</span>
+                    <h3>Portfolio Construction &amp; Correlation Analysis</h3>
+                    <p>Building a portfolio that doesn't move as one — correlation between positions, sector concentration risk, and how to diversify without diluting your best ideas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="resource-categories" id="automation">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Resource Categories</h2>
+                <p>Browse all resource types by topic.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">📊</div>
+                    <h3>TLF Automation</h3>
+                    <p>Tables, Listings, and Figures automation, publication workflows, and delivery optimization.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">TLF Automation Implementation Guide</div>
+                            <div class="resource-desc">Step-by-step guide for clinical programming teams.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Publication Timeline Optimization</div>
+                            <div class="resource-desc">Reduce publication cycles from 12–18 weeks to 4–6 weeks.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Quality Validation for Automated TLFs</div>
+                            <div class="resource-desc">Best practices for validating AI-generated TLFs.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🧬</div>
+                    <h3>SDTM &amp; ADaM</h3>
+                    <p>Foundational and advanced clinical data standards for submission-ready programming.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">SDTM Domain Reference Guide</div>
+                            <div class="resource-desc">Complete reference for all SDTM domains and controlled terminology.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">ADaM ADSL Construction Guide</div>
+                            <div class="resource-desc">Building the subject-level analysis dataset from scratch.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">FDA Submission Readiness Checklist</div>
+                            <div class="resource-desc">Pre-submission checklist covering SDTM, ADaM, and define.xml.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category-card trading">
+                    <div class="category-icon">📈</div>
+                    <h3>Stock Trading Fundamentals</h3>
+                    <p>Core trading skills for individual investors and active traders just getting started.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">Chart Pattern Recognition Guide</div>
+                            <div class="resource-desc">Head and shoulders, flags, wedges, and breakout patterns.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Building a Trading Plan</div>
+                            <div class="resource-desc">Entry criteria, exit rules, risk limits, and review process.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Common Trading Mistakes &amp; How to Avoid Them</div>
+                            <div class="resource-desc">The errors that consistently cost retail traders money.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category-card trading">
+                    <div class="category-icon">🔍</div>
+                    <h3>Market Analysis</h3>
+                    <p>Intermediate and advanced market analysis techniques for systematic traders.</p>
+                    <ul class="resource-list">
+                        <li>
+                            <div class="resource-title">Sector Rotation Strategy Guide</div>
+                            <div class="resource-desc">How to track money flow between sectors across market cycles.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Earnings Season Trading Guide</div>
+                            <div class="resource-desc">How to position around earnings reports and manage the volatility.</div>
+                        </li>
+                        <li>
+                            <div class="resource-title">Options Flow &amp; Dark Pool Signals</div>
+                            <div class="resource-desc">Reading unusual options activity and institutional positioning data.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Insights -->
+    <section class="industry-insights">
+        <div class="container">
+            <h2>Industry Insights &amp; Statistics</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-number">60–70%</div>
+                    <div class="insight-title">TLF Time Savings</div>
+                    <p>Average time reduction achievable through TLF automation based on industry benchmarks.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">85%</div>
+                    <div class="insight-title">Still Manual</div>
+                    <p>Clinical programming teams still using primarily manual processes for TLF creation.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">70%+</div>
+                    <div class="insight-title">Retail Traders Lose</div>
+                    <p>Percentage of retail traders who underperform a simple index fund — often due to lack of systematic process.</p>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-number">4–6</div>
+                    <div class="insight-title">Weeks Automated TLF</div>
+                    <p>Achievable timeline with TLF automation vs. traditional 12–18 week manual process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Get new resources on clinical programming and stock trading — plus early access updates for ZinClin and ZinTrade.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="newsletter-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧬</div>
+                    <strong>Clinical Programming</strong>
+                    <p>SDTM, ADaM &amp; TLF guides</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <strong>Trading Education</strong>
+                    <p>Strategies &amp; market analysis</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <strong>Product Updates</strong>
+                    <p>ZinClin &amp; ZinTrade news</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <strong>No Spam</strong>
+                    <p>Relevant content only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 4rem 0; background: #f8f9fa; text-align: center;">
+        <div class="container">
+            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 1rem;">Ready to Try Our AI Products?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Apply what you've learned with AI-powered tools built by domain experts.
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="platform.html" class="btn-primary">Explore ZinClin</a>
+                <a href="stock-trading.html" class="btn-primary" style="background: #27ae60;">Explore ZinTrade</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

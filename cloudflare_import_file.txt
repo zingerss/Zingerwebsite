@@ -1,0 +1,33 @@
+$TTL 3600
+$ORIGIN zingersoftwaresolutions.com.
+
+@   IN  SOA lucas.ns.cloudflare.com. dns.cloudflare.com. (
+        2025080701  ; Serial
+        7200        ; Refresh
+        3600        ; Retry
+        604800      ; Expire
+        1800        ; Minimum TTL
+)
+
+; A Records (GitHub Pages Hosting)
+@   300 IN  A   185.199.108.153
+@   300 IN  A   185.199.109.153
+@   300 IN  A   185.199.110.153
+@   300 IN  A   185.199.111.153
+
+; CNAME Records (www redirect)
+www 300 IN  CNAME   @
+
+; MX Records (Google Workspace Email)
+@   IN  MX  1   aspmx.l.google.com.
+@   IN  MX  5   alt1.aspmx.l.google.com.
+@   IN  MX  5   alt2.aspmx.l.google.com.
+@   IN  MX  10  alt3.aspmx.l.google.com.
+@   IN  MX  10  alt4.aspmx.l.google.com.
+
+; TXT Records (Authentication & Verification)
+@   IN  TXT "google-site-verification=CseOm4bnu-iP1AJS8b0IjS04dWA6LaVaYbb-bmvSmeM"
+@   IN  TXT "v=spf1 include:_spf.google.com ~all"
+
+; DMARC Record (Email Security - Optional but Recommended)
+_dmarc  IN  TXT "v=DMARC1; p=none; rua=mailto:admin@zingersoftwaresolutions.com"

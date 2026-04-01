@@ -1,0 +1,78 @@
+;;
+;; Domain:     zingersoftwaresolutions.com.
+;; Exported:   2025-08-07 00:12:23
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+zingersoftwaresolutions.com	3600	IN	SOA	elsa.ns.cloudflare.com. dns.cloudflare.com. 2050619214 10000 2400 604800 3600
+
+;; NS Records
+zingersoftwaresolutions.com.	86400	IN	NS	elsa.ns.cloudflare.com.
+zingersoftwaresolutions.com.	86400	IN	NS	jim.ns.cloudflare.com.
+
+;; A Records
+zingersoftwaresolutions.com.	1	IN	A	185.199.111.153 ; cf_tags=cf-proxied:true
+zingersoftwaresolutions.com.	1	IN	A	185.199.110.153 ; cf_tags=cf-proxied:true
+zingersoftwaresolutions.com.	1	IN	A	185.199.109.153 ; cf_tags=cf-proxied:true
+zingersoftwaresolutions.com.	1	IN	A	185.199.108.153 ; cf_tags=cf-proxied:true
+zingersoftwaresolutions.com.	1	IN	A	15.197.148.33 ; cf_tags=cf-proxied:true
+zingersoftwaresolutions.com.	1	IN	A	3.33.130.190 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+autodiscover.zingersoftwaresolutions.com.	1	IN	CNAME	autodiscover.outlook.com. ; cf_tags=cf-proxied:true
+calendar.zingersoftwaresolutions.com.	1	IN	CNAME	calendar.secureserver.net. ; cf_tags=cf-proxied:true
+_domainconnect.zingersoftwaresolutions.com.	1	IN	CNAME	_domainconnect.gd.domaincontrol.com. ; cf_tags=cf-proxied:true
+email.zingersoftwaresolutions.com.	1	IN	CNAME	email.secureserver.net. ; cf_tags=cf-proxied:true
+fax.zingersoftwaresolutions.com.	1	IN	CNAME	fax.secureserver.net. ; cf_tags=cf-proxied:true
+files.zingersoftwaresolutions.com.	1	IN	CNAME	files.secureserver.net. ; cf_tags=cf-proxied:true
+ftp.zingersoftwaresolutions.com.	1	IN	CNAME	zingersoftwaresolutions.com. ; cf_tags=cf-proxied:true
+imap.zingersoftwaresolutions.com.	1	IN	CNAME	imap.secureserver.net. ; cf_tags=cf-proxied:true
+lyncdiscover.zingersoftwaresolutions.com.	1	IN	CNAME	webdir.online.lync.com. ; cf_tags=cf-proxied:true
+mail.zingersoftwaresolutions.com.	1	IN	CNAME	pop.secureserver.net. ; cf_tags=cf-proxied:true
+mobilemail.zingersoftwaresolutions.com.	1	IN	CNAME	mobilemail-v01.prod.mesa1.secureserver.net. ; cf_tags=cf-proxied:true
+msoid.zingersoftwaresolutions.com.	1	IN	CNAME	clientconfig.microsoftonline-p.net. ; cf_tags=cf-proxied:true
+pop.zingersoftwaresolutions.com.	1	IN	CNAME	pop.secureserver.net. ; cf_tags=cf-proxied:true
+sip.zingersoftwaresolutions.com.	1	IN	CNAME	sipdir.online.lync.com. ; cf_tags=cf-proxied:true
+smtp.zingersoftwaresolutions.com.	1	IN	CNAME	smtp.secureserver.net. ; cf_tags=cf-proxied:true
+www.zingersoftwaresolutions.com.	1	IN	CNAME	zingerss.github.io. ; cf_tags=cf-proxied:true
+
+;; MX Records
+zingersoftwaresolutions.com.	1	IN	MX	10 alt4.aspmx.l.google.com.
+zingersoftwaresolutions.com.	1	IN	MX	10 alt3.aspmx.l.google.com.
+zingersoftwaresolutions.com.	1	IN	MX	5 alt2.aspmx.l.google.com.
+zingersoftwaresolutions.com.	1	IN	MX	5 alt1.aspmx.l.google.com.
+zingersoftwaresolutions.com.	1	IN	MX	1 aspmx.l.google.com.
+
+;; NS Records
+zingersoftwaresolutions.com.	1	IN	NS	ns46.domaincontrol.com.
+zingersoftwaresolutions.com.	1	IN	NS	ns45.domaincontrol.com.
+
+;; SRV Records
+_sipfederationtls._tcp.zingersoftwaresolutions.com.	1	IN	SRV	100 1 5061 sipfed.online.lync.com.
+_sip._tls.zingersoftwaresolutions.com.	1	IN	SRV	100 1 443 sipdir.online.lync.com.
+
+;; TXT Records
+zingersoftwaresolutions.com.	1	IN	TXT	"NETORGFT12966547.onmicrosoft.com"
+zingersoftwaresolutions.com.	1	IN	TXT	"google-site-verification=CseOm4bnu-iP1AJS8b0IjS04dWA6LaVaYbb-bmvSmeM"
+zingersoftwaresolutions.com.	1	IN	TXT	"v=spf1 include:dc-aa8e722993._spfm.zingersoftwaresolutions.com ~all"
+zoho._domainkey.zingersoftwaresolutions.com.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJK/BNwbY/hGgD6AVN6TIsnHf36YYorYFZo1EFyDfKEsVZYg5iS+JBstAQEojA6UbdpZiZ8R9OEZusGh2AUfAFWDD95q4T+aAAXJjcOvaKQ4CZvXHd7qbb5M+yonf42Jp4bTaOqvl4n1cfVaeku2d7kZ5pN5GyGXcoxO+DDe0DWQIDAQAB"

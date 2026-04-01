@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZinTrade - AI-Powered Stock Analysis &amp; Trading Tools | Zinger Software Solutions</title>
+    <meta name="description" content="ZinTrade delivers AI-driven buy/sell signal detection, portfolio risk analysis, and backtested trade screening for individual investors and professional traders. Early access coming soon.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Dev Banner */
+        .dev-banner {
+            background: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1f4788;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #27ae60;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a3a2a 0%, #1f5c38 60%, #27ae60 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-content h1 span {
+            color: #4ecdc4;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.15);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Platform Overview */
+        .platform-overview {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-content h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 1.5rem;
+        }
+
+        .overview-content p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .overview-features {
+            list-style: none;
+        }
+
+        .overview-features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .overview-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .platform-diagram {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: #27ae60;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #1f4788;
+            margin-bottom: 0.3rem;
+        }
+
+        .step-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .workflow-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #27ae60;
+            margin: 0.5rem 0;
+        }
+
+        /* Key Benefits */
+        .key-benefits {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .key-benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            color: #1f4788;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Comparison */
+        .differentiation {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .differentiation h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .zintrade-card {
+            background: linear-gradient(135deg, #1a3a2a 0%, #1f5c38 100%);
+            color: white;
+        }
+
+        .generic-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            color: #666;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .comparison-features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .zintrade-card .comparison-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .generic-card .comparison-features li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Audience Cards */
+        .audience-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .audience-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #27ae60;
+            transition: transform 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-card h3 {
+            color: #1f4788;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .audience-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1a3a2a 0%, #27ae60 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1a3a2a;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover { color: #4ecdc4; }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .overview-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dev Banner -->
+    <div class="dev-banner">
+        🚀 ZinTrade AI Stock Analysis — Early Access Coming Soon
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Zinger Software Solutions</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span>ZinTrade</span> — AI-Powered Stock Analysis</h1>
+                <p>Intelligent market signal detection, portfolio risk analysis, and automated trade screening. Built by practitioners who trade, for traders who demand more than generic screeners.</p>
+                <div class="hero-badges">
+                    <div class="badge">🤖 AI-Powered Analysis</div>
+                    <div class="badge">📊 Real-Time Signals</div>
+                    <div class="badge">🛡️ Portfolio Risk Tools</div>
+                    <div class="badge">🚀 Early Access Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Overview -->
+    <section class="platform-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>From Noise to Signal, Automatically</h2>
+                    <p>ZinTrade will scan market data, earnings reports, and technical indicators to surface the trades worth your attention — ranked by confidence score, explained in plain language.</p>
+                    <ul class="overview-features">
+                        <li>Connect brokerage data or import watchlists</li>
+                        <li>AI analyzes price action, volume, and fundamentals</li>
+                        <li>Receive ranked buy/sell signal alerts with explanations</li>
+                        <li>Run portfolio-level risk exposure reports</li>
+                        <li>Backtest signals against 5+ years of historical data</li>
+                        <li>Customize screening rules to match your trading style</li>
+                    </ul>
+                </div>
+                <div class="platform-diagram">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Set Your Parameters</h4>
+                            <p>Define your watchlist, risk tolerance, and trading style</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">⬇️</div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>AI Signal Detection</h4>
+                            <p>Scans thousands of securities against your criteria</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">⬇️</div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Ranked Opportunities</h4>
+                            <p>Actionable ideas with confidence scores and explanations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="key-benefits">
+        <div class="container">
+            <h2>Why Choose ZinTrade</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Signal Over Noise</h3>
+                    <p>Filter thousands of tickers to a shortlist of high-conviction ideas ranked by AI-assessed confidence — so you focus on what matters.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Backtested Confidence</h3>
+                    <p>Every signal type is tested against historical data before deployment. Know how each signal has performed over time before acting on it.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Risk-Aware Recommendations</h3>
+                    <p>Portfolio exposure tracked at all times so no single position blindsides you. Risk-adjusted sizing suggestions included.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Practitioner-Designed</h3>
+                    <p>Built by traders who understand stops, position sizing, and drawdown — not just data scientists optimizing metrics in isolation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>Transparent Methodology</h3>
+                    <p>Understand why every signal fired. Plain-language explanations for every recommendation — no black boxes, ever.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Early Adopter Advantage</h3>
+                    <p>Early access members shape the roadmap and receive preferential pricing. Your feedback directly influences which signals and markets we prioritize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="differentiation">
+        <div class="container">
+            <h2>ZinTrade vs Generic Screeners</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card zintrade-card">
+                    <h3>ZinTrade</h3>
+                    <ul class="comparison-features">
+                        <li>AI-ranked signals, not raw filter results</li>
+                        <li>Backtested signal accuracy included</li>
+                        <li>Portfolio-level risk context built in</li>
+                        <li>Practitioner-designed methodology</li>
+                        <li>Plain-language signal explanations</li>
+                        <li>Confidence scores for every idea</li>
+                        <li>Early access pricing advantage</li>
+                    </ul>
+                </div>
+                <div class="comparison-card generic-card">
+                    <h3>Generic Screeners</h3>
+                    <ul class="comparison-features">
+                        <li>Raw filter output — you interpret it</li>
+                        <li>No historical signal validation</li>
+                        <li>No portfolio context provided</li>
+                        <li>Vendor-optimized for breadth, not accuracy</li>
+                        <li>No explanation of why results appeared</li>
+                        <li>No confidence ranking — all results equal</li>
+                        <li>Standard subscription pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="audience-section">
+        <div class="container">
+            <h2>Who ZinTrade Is Built For</h2>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">👤</div>
+                    <h3>Individual Investors</h3>
+                    <p>Move beyond gut instinct. Get AI-driven signal lists you can act on during your lunch break — without spending hours manually screening charts.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">⚡</div>
+                    <h3>Active Traders</h3>
+                    <p>Use backtested entry and exit signals, portfolio heat maps, and screening to trade with a systematic edge — not just intuition.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">📋</div>
+                    <h3>Portfolio Managers</h3>
+                    <p>Run multi-position risk exposure reports and customize signal criteria for your specific investment mandate and risk parameters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get Early Access to ZinTrade</h2>
+            <p>Join the waitlist to be among the first to test AI-powered trade signal detection and portfolio risk tools.</p>
+            <a href="contact.html" class="btn-primary">Join the ZinTrade Waitlist</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <a href="platform.html">ZinClin TLF Generator</a>
+                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <a href="products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>ZinClin Solutions</h3>
+                    <a href="solutions-biotechs.html">For Biotechs</a>
+                    <a href="solutions-cros.html">For CROs</a>
+                    <a href="solutions-programmers.html">For Programmers</a>
+                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resources.html">Resources</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

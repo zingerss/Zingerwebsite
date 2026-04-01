@@ -1,0 +1,13 @@
+Name,Type,Content,TTL
+zingersoftwaresolutions.com,A,185.199.108.153,300
+zingersoftwaresolutions.com,A,185.199.109.153,300
+zingersoftwaresolutions.com,A,185.199.110.153,300
+zingersoftwaresolutions.com,A,185.199.111.153,300
+www,CNAME,zingersoftwaresolutions.com,300
+zingersoftwaresolutions.com,MX,1 aspmx.l.google.com,3600
+zingersoftwaresolutions.com,MX,5 alt1.aspmx.l.google.com,3600
+zingersoftwaresolutions.com,MX,5 alt2.aspmx.l.google.com,3600
+zingersoftwaresolutions.com,MX,10 alt3.aspmx.l.google.com,3600
+zingersoftwaresolutions.com,MX,10 alt4.aspmx.l.google.com,3600
+zingersoftwaresolutions.com,TXT,"google-site-verification=CseOm4bnu-iP1AJS8b0IjS04dWA6LaVaYbb-bmvSmeM",3600
+zingersoftwaresolutions.com,TXT,"v=spf1 include:_spf.google.com ~all",3600
