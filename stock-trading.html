@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZinTrade - AI-Powered Stock Analysis &amp; Trading Tools | Zinger Software Solutions</title>
-    <meta name="description" content="ZinTrade delivers AI-driven buy/sell signal detection, portfolio risk analysis, and backtested trade screening for individual investors and professional traders. Early access coming soon.">
+    <title>ZinTrading | Risk-First Trading Software | Zinger Software Solutions</title>
+    <meta name="description" content="ZinTrading is risk-first trading software from Zinger Software Solutions: an options scalp panel with hard risk caps, a swing levels engine, an income radar, and a grading lab that tests every signal against random entries. In private development.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -22,7 +22,7 @@
 
         /* Dev Banner */
         .dev-banner {
-            background: #27ae60;
+            background: #1e8449;
             color: white;
             text-align: center;
             padding: 0.5rem;
@@ -66,12 +66,12 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-            color: #27ae60;
+            color: #1e8449;
         }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, #1a3a2a 0%, #1f5c38 60%, #27ae60 100%);
+            background: linear-gradient(135deg, #1a3a2a 0%, #1f5c38 60%, #1e8449 100%);
             color: white;
             padding: 5rem 0;
             text-align: center;
@@ -109,8 +109,8 @@
             font-size: 0.9rem;
         }
 
-        /* Platform Overview */
-        .platform-overview {
+        /* ZinTrading Overview */
+        .zt-overview {
             padding: 5rem 0;
             background: white;
         }
@@ -151,12 +151,12 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #27ae60;
+            color: #1e8449;
             font-weight: bold;
             font-size: 1.2rem;
         }
 
-        .platform-diagram {
+        .zt-diagram {
             background: #f8f9fa;
             padding: 3rem;
             border-radius: 15px;
@@ -173,7 +173,7 @@
         }
 
         .step-number {
-            background: #27ae60;
+            background: #1e8449;
             color: white;
             width: 40px;
             height: 40px;
@@ -186,7 +186,8 @@
             flex-shrink: 0;
         }
 
-        .step-content h4 {
+        .step-content h3 {
+            font-size: 1rem;
             color: #1f4788;
             margin-bottom: 0.3rem;
         }
@@ -199,7 +200,7 @@
         .workflow-arrow {
             text-align: center;
             font-size: 1.5rem;
-            color: #27ae60;
+            color: #1e8449;
             margin: 0.5rem 0;
         }
 
@@ -251,76 +252,6 @@
             line-height: 1.6;
         }
 
-        /* Comparison */
-        .differentiation {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .differentiation h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .comparison-card {
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .zintrade-card {
-            background: linear-gradient(135deg, #1a3a2a 0%, #1f5c38 100%);
-            color: white;
-        }
-
-        .generic-card {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            color: #666;
-        }
-
-        .comparison-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 2rem;
-        }
-
-        .comparison-features {
-            list-style: none;
-            text-align: left;
-        }
-
-        .comparison-features li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .zintrade-card .comparison-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-        }
-
-        .generic-card .comparison-features li::before {
-            content: '✗';
-            position: absolute;
-            left: 0;
-            color: #e74c3c;
-            font-weight: bold;
-        }
-
         /* Audience Cards */
         .audience-section {
             padding: 5rem 0;
@@ -346,7 +277,7 @@
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border-top: 4px solid #27ae60;
+            border-top: 4px solid #1e8449;
             transition: transform 0.3s ease;
         }
 
@@ -373,7 +304,7 @@
         /* CTA */
         .cta-section {
             padding: 5rem 0;
-            background: linear-gradient(135deg, #1a3a2a 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #1a3a2a 0%, #1e8449 100%);
             color: white;
             text-align: center;
         }
@@ -451,86 +382,253 @@
             .nav-links { display: none; }
             .hero-content h1 { font-size: 2.2rem; }
             .overview-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .comparison-grid { grid-template-columns: 1fr; }
+
+        }
+
+        .dev-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .thesis {
+            font-size: 1.5rem !important;
+            font-weight: 600;
+            opacity: 1 !important;
+        }
+
+        .tool-tag {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.25rem 0.8rem;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .benefit-card.tool {
+            text-align: left;
+            border-top: 4px solid #1e8449;
+        }
+
+        .benefit-card.tool .benefit-icon {
+            margin-bottom: 1rem;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #666;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: -2rem auto 3rem;
+        }
+
+        .status-box {
+            background: rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            max-width: 640px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline-white {
+            border: 2px solid white;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: #1a3a2a;
+        }
+
+        .disclaimer-section {
+            background: #f8f9fa;
+            padding: 2.5rem 0;
+        }
+
+        .disclaimer-section p {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+            color: #666;
+            font-size: 0.92rem;
+        }
+
+        /* Accessibility & polish */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid #1f4788;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px #ffffff;
+        }
+
+        .dev-banner {
+            background: #1f4788 !important;
+            color: white;
+        }
+
+        .dev-banner a {
+            color: #4ecdc4 !important;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            header {
+                position: static !important;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                padding: 0.6rem 0.5rem;
+            }
+        }
+
+        /* Page-specific polish */
+        a.logo {
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1f4788;
+            box-shadow: inset 0 -2px 0 #1e8449;
+        }
+
+        @media (min-width: 700px) {
+            .key-benefits .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile nav: wrap the links instead of hiding them */
+        @media (max-width: 768px) {
+            header nav,
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem 1.1rem;
+                padding: 0;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Dev Banner -->
     <div class="dev-banner">
-        🚀 ZinTrade AI Stock Analysis — Early Access Coming Soon
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a>
     </div>
 
-    <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">Zinger Software Solutions</div>
+            <a href="index.html" class="logo">Zinger Software Solutions</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="stock-trading.html" class="active">ZinTrading</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1><span>ZinTrade</span> — AI-Powered Stock Analysis</h1>
-                <p>Intelligent market signal detection, portfolio risk analysis, and automated trade screening. Built by practitioners who trade, for traders who demand more than generic screeners.</p>
+                <h1><span>ZinTrading</span> — Tools for Disciplined Traders</h1>
+                <p class="thesis">The edge is in the process and the risk control, not in a magic signal.</p>
+                <p>ZinTrading is the trading platform from Zinger Software Solutions: risk built in, every signal measured, and a commitment to publish honest results, including the ones that fail.</p>
                 <div class="hero-badges">
-                    <div class="badge">🤖 AI-Powered Analysis</div>
-                    <div class="badge">📊 Real-Time Signals</div>
-                    <div class="badge">🛡️ Portfolio Risk Tools</div>
-                    <div class="badge">🚀 Early Access Coming Soon</div>
+                    <div class="badge">🛡️ Risk First</div>
+                    <div class="badge">📏 Measured, Not Marketed</div>
+                    <div class="badge">🔒 Private Development</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Platform Overview -->
-    <section class="platform-overview">
+    <section class="zt-overview">
         <div class="container">
             <div class="overview-grid">
                 <div class="overview-content">
-                    <h2>From Noise to Signal, Automatically</h2>
-                    <p>ZinTrade will scan market data, earnings reports, and technical indicators to surface the trades worth your attention — ranked by confidence score, explained in plain language.</p>
+                    <h2>⚡ Options Scalp Panel</h2>
+                    <p>A fast, single-screen options trading panel with risk built in, not bolted on.</p>
                     <ul class="overview-features">
-                        <li>Connect brokerage data or import watchlists</li>
-                        <li>AI analyzes price action, volume, and fundamentals</li>
-                        <li>Receive ranked buy/sell signal alerts with explanations</li>
-                        <li>Run portfolio-level risk exposure reports</li>
-                        <li>Backtest signals against 5+ years of historical data</li>
-                        <li>Customize screening rules to match your trading style</li>
+                        <li>Hard per-trade size and risk caps that cannot be overridden</li>
+                        <li>Daily loss stops and profit goals that lock new entries automatically, while exits are never blocked</li>
+                        <li>Stops placed on the chart at the stock's own levels, then translated into the option</li>
+                        <li>Every order protected by a bracket, with live protection status on each position</li>
+                        <li>A full trade journal and market tape recorded for review</li>
                     </ul>
                 </div>
-                <div class="platform-diagram">
+                <div class="zt-diagram">
                     <div class="workflow-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h4>Set Your Parameters</h4>
-                            <p>Define your watchlist, risk tolerance, and trading style</p>
+                            <h3>Risk Caps Checked</h3>
+                            <p>Size and risk limits apply before any order can be sent</p>
                         </div>
                     </div>
                     <div class="workflow-arrow">⬇️</div>
                     <div class="workflow-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h4>AI Signal Detection</h4>
-                            <p>Scans thousands of securities against your criteria</p>
+                            <h3>Bracket-Protected Entry</h3>
+                            <p>Stop and target attached, with protection status shown live</p>
                         </div>
                     </div>
                     <div class="workflow-arrow">⬇️</div>
                     <div class="workflow-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>Ranked Opportunities</h4>
-                            <p>Actionable ideas with confidence scores and explanations</p>
+                            <h3>Journaled for Review</h3>
+                            <p>Every trade and the market tape are recorded</p>
                         </div>
                     </div>
                 </div>
@@ -538,144 +636,111 @@
         </div>
     </section>
 
-    <!-- Key Benefits -->
     <section class="key-benefits">
         <div class="container">
-            <h2>Why Choose ZinTrade</h2>
+            <h2>More of What We're Building</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Signal Over Noise</h3>
-                    <p>Filter thousands of tickers to a shortlist of high-conviction ideas ranked by AI-assessed confidence — so you focus on what matters.</p>
+                <div class="benefit-card tool">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Swing Levels Engine</h3>
+                    <p>A nightly engine that maps support, resistance and structure across 230+ stocks, applies strict gates (reward-to-risk, earnings, liquidity), then watches the qualifying setups live and alerts when price confirms.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
-                    <h3>Backtested Confidence</h3>
-                    <p>Every signal type is tested against historical data before deployment. Know how each signal has performed over time before acting on it.</p>
+                <div class="benefit-card tool">
+                    <div class="benefit-icon">💵</div>
+                    <h3>Income Radar</h3>
+                    <p>Scans for cash-secured put opportunities below real support levels, labels every idea with its earnings date, cross-checked across sources, and tracks each one to its outcome.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
-                    <h3>Risk-Aware Recommendations</h3>
-                    <p>Portfolio exposure tracked at all times so no single position blindsides you. Risk-adjusted sizing suggestions included.</p>
+                <div class="benefit-card tool">
+                    <div class="benefit-icon">🔎</div>
+                    <h3>Momentum Screener</h3>
+                    <p>A real-time screener for fast-moving stocks, with news and dilution labels, halt-risk flags and position sizing built into every alert.</p>
+                    <span class="tool-tag">In development</span>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🧠</div>
-                    <h3>Practitioner-Designed</h3>
-                    <p>Built by traders who understand stops, position sizing, and drawdown — not just data scientists optimizing metrics in isolation.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔍</div>
-                    <h3>Transparent Methodology</h3>
-                    <p>Understand why every signal fired. Plain-language explanations for every recommendation — no black boxes, ever.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⭐</div>
-                    <h3>Early Adopter Advantage</h3>
-                    <p>Early access members shape the roadmap and receive preferential pricing. Your feedback directly influences which signals and markets we prioritize.</p>
+                <div class="benefit-card tool">
+                    <div class="benefit-icon">🧪</div>
+                    <h3>The Grading Lab</h3>
+                    <p>Every alert any of our tools produces is logged and graded forward against random entries. If a signal doesn't beat chance, we say so, and we change it or drop it.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison -->
-    <section class="differentiation">
-        <div class="container">
-            <h2>ZinTrade vs Generic Screeners</h2>
-            <div class="comparison-grid">
-                <div class="comparison-card zintrade-card">
-                    <h3>ZinTrade</h3>
-                    <ul class="comparison-features">
-                        <li>AI-ranked signals, not raw filter results</li>
-                        <li>Backtested signal accuracy included</li>
-                        <li>Portfolio-level risk context built in</li>
-                        <li>Practitioner-designed methodology</li>
-                        <li>Plain-language signal explanations</li>
-                        <li>Confidence scores for every idea</li>
-                        <li>Early access pricing advantage</li>
-                    </ul>
-                </div>
-                <div class="comparison-card generic-card">
-                    <h3>Generic Screeners</h3>
-                    <ul class="comparison-features">
-                        <li>Raw filter output — you interpret it</li>
-                        <li>No historical signal validation</li>
-                        <li>No portfolio context provided</li>
-                        <li>Vendor-optimized for breadth, not accuracy</li>
-                        <li>No explanation of why results appeared</li>
-                        <li>No confidence ranking — all results equal</li>
-                        <li>Standard subscription pricing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who It's For -->
     <section class="audience-section">
         <div class="container">
-            <h2>Who ZinTrade Is Built For</h2>
+            <h2>How We Build</h2>
+            <p class="section-intro">Three rules every ZinTrading tool has to follow before it ships.</p>
             <div class="audience-grid">
                 <div class="audience-card">
-                    <div class="audience-icon">👤</div>
-                    <h3>Individual Investors</h3>
-                    <p>Move beyond gut instinct. Get AI-driven signal lists you can act on during your lunch break — without spending hours manually screening charts.</p>
+                    <div class="audience-icon">🛡️</div>
+                    <h3>Risk First</h3>
+                    <p>Caps, daily stops and protection checks come before features.</p>
                 </div>
                 <div class="audience-card">
-                    <div class="audience-icon">⚡</div>
-                    <h3>Active Traders</h3>
-                    <p>Use backtested entry and exit signals, portfolio heat maps, and screening to trade with a systematic edge — not just intuition.</p>
+                    <div class="audience-icon">📏</div>
+                    <h3>Measured, Not Marketed</h3>
+                    <p>Pre-registered tests, random-entry controls, and a commitment to publish results honestly, including the ones that fail.</p>
                 </div>
                 <div class="audience-card">
-                    <div class="audience-icon">📋</div>
-                    <h3>Portfolio Managers</h3>
-                    <p>Run multi-position risk exposure reports and customize signal criteria for your specific investment mandate and risk parameters.</p>
+                    <div class="audience-icon">🔍</div>
+                    <h3>Reviewed Before Release</h3>
+                    <p>Every release goes through an independent adversarial review before it touches real money.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2>Get Early Access to ZinTrade</h2>
-            <p>Join the waitlist to be among the first to test AI-powered trade signal detection and portfolio risk tools.</p>
-            <a href="contact.html" class="btn-primary">Join the ZinTrade Waitlist</a>
+            <h2>Get Notified When ZinTrading Opens</h2>
+            <div class="status-box">
+                ZinTrading is in <strong>private development</strong> and isn't open to members yet. Tell us you're interested and we'll invite you to our Discord community when it opens.
+            </div>
+            <div class="cta-buttons">
+                <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-primary">Get notified when ZinTrading opens</a>
+                <a href="resources.html" class="btn-outline-white">Free Trading Resources</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <p><strong>Disclaimer:</strong> ZinTrading tools are educational and analytical software. Nothing they produce is financial advice or a recommendation to buy or sell any security. Trading involves substantial risk of loss.</p>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Products</h3>
-                    <a href="platform.html">ZinClin TLF Generator</a>
-                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
-                    <a href="products.html">All Products</a>
+                    <h3>Services</h3>
+                    <a href="services.html#staffing">Technical Staffing</a>
+                    <a href="services.html#programming">Statistical Programming</a>
+                    <a href="services.html#consulting">Strategic Consulting</a>
+                    <a href="services.html#custom">Custom Solutions</a>
                 </div>
                 <div class="footer-section">
-                    <h3>ZinClin Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
-                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                    <h3>Products &amp; Community</h3>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="products.html">All Products</a>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
+                    <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>

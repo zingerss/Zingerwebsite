@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | ZinClin &amp; ZinTrade | Zinger Software Solutions</title>
-    <meta name="description" content="Explore Zinger Software Solutions AI products: ZinClin TLF code generator for clinical programming and ZinTrade AI stock analysis tools. Both coming soon.">
+    <title>Products &amp; Projects | ZinTrading &amp; Honest Odds | Zinger Software Solutions</title>
+    <meta name="description" content="Software from Zinger Software Solutions: ZinTrading, risk-first trading tools in private development, and Honest Odds, college admissions strategy with real admit odds.">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -148,7 +148,7 @@
         }
 
         .product-subtitle.trade {
-            color: #27ae60;
+            color: #1e8449;
         }
 
         .product-status-badge {
@@ -196,7 +196,7 @@
         }
 
         .feature-list.trade li::before {
-            color: #27ae60;
+            color: #1e8449;
         }
 
         .product-actions {
@@ -278,7 +278,7 @@
         }
 
         .visual-stat.trade .number {
-            color: #27ae60;
+            color: #1e8449;
         }
 
         .visual-stat .label {
@@ -286,20 +286,20 @@
             color: #666;
         }
 
-        /* Early Access CTA */
-        .early-access-cta {
+        /* Services CTA */
+        .services-cta {
             padding: 5rem 0;
             background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
             color: white;
             text-align: center;
         }
 
-        .early-access-cta h2 {
+        .services-cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .early-access-cta p {
+        .services-cta p {
             font-size: 1.2rem;
             opacity: 0.9;
             margin-bottom: 2.5rem;
@@ -331,7 +331,7 @@
         }
 
         .btn-green {
-            background: #27ae60;
+            background: #1e8449;
             color: white;
             padding: 1rem 2rem;
             border-radius: 5px;
@@ -341,7 +341,7 @@
         }
 
         .btn-green:hover {
-            background: #219a52;
+            background: #196f3d;
             transform: translateY(-2px);
         }
 
@@ -387,132 +387,215 @@
             .product-block { grid-template-columns: 1fr; direction: ltr; }
             .product-block.reverse { direction: ltr; }
         }
+
+        .dev-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .product-subtitle.odds {
+            color: #8a6416;
+        }
+
+        .feature-list.odds li::before {
+            color: #8a6416;
+        }
+
+        .visual-stat.odds .number {
+            color: #8a6416;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 1.5rem;
+        }
+
+        /* Accessibility & polish */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid #1f4788;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px #ffffff;
+        }
+
+        .dev-banner {
+            background: #1f4788 !important;
+            color: white;
+        }
+
+        .dev-banner a {
+            color: #4ecdc4 !important;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            header {
+                position: static !important;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                padding: 0.6rem 0.5rem;
+            }
+        }
+
+        /* Mobile nav: wrap the links instead of hiding them */
+        @media (max-width: 768px) {
+            header nav,
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem 1.1rem;
+                padding: 0;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Dev Banner -->
     <div class="dev-banner">
-        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">Zinger Software Solutions</a>
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html" class="active">Products</a>
-                    <a href="about.html">About</a>
                     <a href="services.html">Services</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
-                <a href="contact.html" class="cta-button">Get Early Access</a>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Our Software Products</h1>
-            <p>Purpose-built AI applications for clinical programming and financial markets — designed by practitioners who've spent careers in these industries.</p>
+            <h1>Products &amp; Projects</h1>
+            <p>Alongside our consulting and staffing work: ZinTrading, our trading software, and Honest Odds, a college admissions project.</p>
         </div>
     </section>
 
-    <!-- Product Showcase -->
     <section class="product-showcase">
         <div class="container">
 
-            <!-- ZinClin -->
             <div class="product-block">
                 <div class="product-info">
-                    <h2>ZinClin</h2>
-                    <div class="product-subtitle">AI-Powered TLF Code Generator</div>
-                    <span class="product-status-badge">Beta Coming Soon</span>
-                    <p>ZinClin transforms Statistical Analysis Plans (SAPs) and shell specifications into production-ready Tables, Listings, and Figures code automatically. Built with 12+ years of pharmaceutical programming expertise, every output is CDISC-compliant and publication-ready.</p>
-                    <p>Stop spending weeks on manual TLF programming. ZinClin reduces that to hours — with clinical expertise baked in, not bolted on.</p>
-                    <ul class="feature-list">
-                        <li>Upload SAPs and TLF shell specifications directly</li>
-                        <li>AI extracts variables, formatting, and output requirements</li>
-                        <li>Generate CDISC-compliant TLF code automatically</li>
-                        <li>60–70% faster than manual programming</li>
-                        <li>Programmer review and customization built in</li>
-                        <li>Publication-ready output from day one</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="platform.html" class="btn-learn">Explore ZinClin</a>
-                        <a href="contact.html" class="btn-access">Get Early Access</a>
-                    </div>
-                </div>
-                <div class="product-visual">
-                    <span class="product-visual-icon">🧬</span>
-                    <h3>Clinical Programming Automation</h3>
-                    <p style="color:#666; font-size:0.95rem;">From SAP to publication-ready TLF code automatically</p>
-                    <div class="visual-stats">
-                        <div class="visual-stat">
-                            <span class="number">60–70%</span>
-                            <span class="label">Faster TLF Generation</span>
-                        </div>
-                        <div class="visual-stat">
-                            <span class="number">12+</span>
-                            <span class="label">Years Expertise Built In</span>
-                        </div>
-                        <div class="visual-stat">
-                            <span class="number">100%</span>
-                            <span class="label">CDISC Compliant</span>
-                        </div>
-                        <div class="visual-stat">
-                            <span class="number">3</span>
-                            <span class="label">Steps: Upload → AI → Code</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ZinTrade -->
-            <div class="product-block reverse">
-                <div class="product-info">
-                    <h2>ZinTrade</h2>
-                    <div class="product-subtitle trade">AI-Powered Stock Analysis &amp; Trading Tools</div>
-                    <span class="product-status-badge green">Early Access Coming Soon</span>
-                    <p>ZinTrade delivers intelligent market signal detection, portfolio risk analysis, and automated trade screening for individual investors and professional traders. Built by practitioners who trade, using methodologies validated against real market data.</p>
-                    <p>Stop drowning in noise. ZinTrade surfaces the signals worth your attention — ranked, explained, and backtested.</p>
+                    <h2>ZinTrading</h2>
+                    <div class="product-subtitle trade">Risk-First Trading Software</div>
+                    <span class="product-status-badge green">Private Development</span>
+                    <p>ZinTrading is a set of tools built around one idea: the edge is in the process and the risk control, not in a magic signal. Risk caps, daily stops and protection checks come first. Every alert is graded against random entries, and we will publish the results honestly as tools are released.</p>
                     <ul class="feature-list trade">
-                        <li>AI-driven buy/sell signal detection across thousands of securities</li>
-                        <li>Portfolio risk and exposure analysis</li>
-                        <li>Backtesting against 5+ years of historical market data</li>
-                        <li>Transparent signal explanations — no black boxes</li>
-                        <li>Customizable screening rules and watchlists</li>
-                        <li>Ranked opportunity lists with confidence scores</li>
+                        <li>Options Scalp Panel with hard, non-overridable risk caps</li>
+                        <li>Swing Levels Engine covering 230+ stocks nightly</li>
+                        <li>Income Radar for cash-secured put ideas below real support</li>
+                        <li>Momentum Screener with dilution and halt-risk flags (in development)</li>
+                        <li>Grading Lab that tests every signal against random entries</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="stock-trading.html" class="btn-learn">Explore ZinTrade</a>
-                        <a href="contact.html" class="btn-access">Join Waitlist</a>
+                        <a href="stock-trading.html" class="btn-learn">Explore ZinTrading</a>
+                        <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-access">Get Notified</a>
                     </div>
+                    <p class="disclaimer">Educational and analytical software, not financial advice. Trading involves substantial risk of loss.</p>
                 </div>
                 <div class="product-visual">
                     <span class="product-visual-icon">📈</span>
-                    <h3>Financial Market Intelligence</h3>
-                    <p style="color:#666; font-size:0.95rem;">From market noise to ranked, actionable signals</p>
+                    <h3>Disciplined Trading Tools</h3>
+                    <p style="color:#666; font-size:0.95rem;">Risk built in, not bolted on</p>
                     <div class="visual-stats">
                         <div class="visual-stat trade">
-                            <span class="number">AI</span>
-                            <span class="label">Signal Detection</span>
+                            <span class="number">5</span>
+                            <span class="label">Tools (1 Still in Development)</span>
                         </div>
                         <div class="visual-stat trade">
-                            <span class="number">5+</span>
-                            <span class="label">Years Backtested</span>
+                            <span class="number">230+</span>
+                            <span class="label">Stocks Mapped Nightly</span>
                         </div>
                         <div class="visual-stat trade">
-                            <span class="number">Real</span>
-                            <span class="label">Portfolio Risk Analysis</span>
+                            <span class="number">Every</span>
+                            <span class="label">Alert Logged &amp; Graded</span>
                         </div>
                         <div class="visual-stat trade">
                             <span class="number">0</span>
-                            <span class="label">Black Boxes — All Explained</span>
+                            <span class="label">Overridable Risk Caps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-block reverse">
+                <div class="product-info">
+                    <h2>Honest Odds</h2>
+                    <div class="product-subtitle odds">College Admissions Strategy</div>
+                    <span class="product-status-badge green">Live</span>
+                    <p>Published admit rates include recruited athletes, legacies and other hooked applicants, so an unhooked student's real odds are often much lower. Honest Odds gives families those real numbers before they make a binding decision.</p>
+                    <ul class="feature-list odds">
+                        <li>Honest, deflated admit odds for your full school list</li>
+                        <li>Early Decision / Early Action strategy</li>
+                        <li>Essay review with line edits and an AI-authorship check</li>
+                        <li>Free sample review before you pay anything</li>
+                        <li>Full review free for families who qualify for a fee waiver</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="https://honest-odds.com/" class="btn-learn" target="_blank" rel="noopener">Visit Honest Odds</a>
+                    </div>
+                </div>
+                <div class="product-visual">
+                    <span class="product-visual-icon">🎓</span>
+                    <h3>Real Odds, Not Brochure Numbers</h3>
+                    <p style="color:#666; font-size:0.95rem;">A rigorous, unflinching application review</p>
+                    <div class="visual-stats">
+                        <div class="visual-stat odds">
+                            <span class="number">$0</span>
+                            <span class="label">Free Sample Review</span>
+                        </div>
+                        <div class="visual-stat odds">
+                            <span class="number">$49.99</span>
+                            <span class="label">Full Review</span>
+                        </div>
+                        <div class="visual-stat odds">
+                            <span class="number">7</span>
+                            <span class="label">Review Passes</span>
+                        </div>
+                        <div class="visual-stat odds">
+                            <span class="number">~4 min</span>
+                            <span class="label">To Get Your Odds</span>
                         </div>
                     </div>
                 </div>
@@ -521,51 +604,50 @@
         </div>
     </section>
 
-    <!-- Early Access CTA -->
-    <section class="early-access-cta">
+    <section class="services-cta">
         <div class="container">
-            <h2>Join Our Early Access Programs</h2>
-            <p>Be among the first to shape our products. Early access members influence roadmap priorities and receive preferential launch pricing.</p>
+            <h2>Our Core Business Is Clinical Programming</h2>
+            <p>Need statistical programmers, biostatistics support, technical staffing or a custom solution? That's what we've done since 2013.</p>
             <div class="cta-buttons">
-                <a href="contact.html" class="btn-white">ZinClin Early Access</a>
-                <a href="contact.html" class="btn-green">ZinTrade Waitlist</a>
+                <a href="services.html" class="btn-white">Explore Our Services</a>
+                <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-green">Get notified when ZinTrading opens</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Products</h3>
-                    <a href="platform.html">ZinClin TLF Generator</a>
-                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
-                    <a href="products.html">All Products</a>
+                    <h3>Services</h3>
+                    <a href="services.html#staffing">Technical Staffing</a>
+                    <a href="services.html#programming">Statistical Programming</a>
+                    <a href="services.html#consulting">Strategic Consulting</a>
+                    <a href="services.html#custom">Custom Solutions</a>
                 </div>
                 <div class="footer-section">
-                    <h3>ZinClin Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
-                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                    <h3>Products &amp; Community</h3>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="products.html">All Products</a>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
+                    <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>

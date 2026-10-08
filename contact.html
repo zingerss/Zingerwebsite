@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact ZinClin | TLF Code Generator Early Access | Zinger Software Solutions</title>
-    <meta name="description" content="Join ZinClin TLF Code Generator early access program. Get automated publication deliverables and current clinical programming services. Beta coming soon.">
+    <title>Contact Us | Clinical Programming, Staffing &amp; Consulting | Zinger Software Solutions</title>
+    <meta name="description" content="Contact Zinger Software Solutions for technical staffing, statistical programming (SDTM, ADaM, TLF, eCTD), biostatistics support, strategic consulting and custom solutions. Apex, NC.">
     
     <style>
         /* Reset and Base Styles */
@@ -45,12 +45,6 @@
             font-weight: bold;
             color: white;
             text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: -0.2rem;
         }
 
         .nav-links {
@@ -253,6 +247,24 @@
             transform: translateY(-2px);
         }
 
+        .form-note {
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+            overflow-wrap: anywhere;
+        }
+
+        .form-sent {
+            color: #0a5a2f;
+            background: #d1e7dd;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
         /* Contact Info */
         .contact-info {
             padding: 5rem 0;
@@ -393,12 +405,116 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Accessibility & polish */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid #1f4788;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px #ffffff;
+        }
+
+        .dev-banner {
+            background: #1f4788 !important;
+            color: white;
+        }
+
+        .dev-banner a {
+            color: #4ecdc4 !important;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            header {
+                position: static !important;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                padding: 0.6rem 0.5rem;
+            }
+        }
+
+        /* Page-specific polish */
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            border-color: #9aa5b1;
+        }
+
+        .req {
+            color: #b42318;
+        }
+
+        .form-legend {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-options h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .option-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option-card .btn-primary {
+            margin-top: auto;
+        }
+
+        /* Mobile nav: wrap the links instead of hiding them */
+        @media (max-width: 768px) {
+            header nav,
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem 1.1rem;
+                padding: 0;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 Zinger Software Solutions — ZinClin Beta &amp; ZinTrade Early Access coming soon
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form" style="color:white;text-decoration:underline;">get notified when it opens</a>
     </div>
 
     <!-- Header -->
@@ -408,11 +524,11 @@
                 <a href="index.html" class="logo">Zinger Software Solutions</a>
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html">Products</a>
-                    <a href="about.html">About</a>
                     <a href="services.html">Services</a>
-                    <a href="contact.html" class="active">Contact</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="contact.html" class="active">Contact</a>
                 </nav>
                 <a href="contact.html" class="cta-button">Get Started</a>
             </div>
@@ -422,34 +538,35 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Get Started with TLF Automation</h1>
-            <p>Join our TLF Code Generator early access program or contact us for immediate clinical programming services. Both paths benefit from our 12+ years of industry expertise.</p>
+            <h1>Let's Talk About Your Project</h1>
+            <p>Tell us what you need — a programmer on your team, a deliverable owned end to end, or advice on your submission strategy. We bring 12+ years of clinical programming, biostatistics and staffing experience.</p>
         </div>
     </section>
 
     <!-- Contact Options -->
     <section class="contact-options">
         <div class="container">
+            <h2>How Can We Help?</h2>
             <div class="options-grid">
                 <div class="option-card">
-                    <div class="option-icon">🚀</div>
-                    <h3>TLF Early Access</h3>
-                    <p>Join our early access program to be among the first to experience automated publication deliverables. Influence development priorities and receive preferential access.</p>
-                    <a href="#contact-form" class="btn-primary">Join Early Access</a>
+                    <div class="option-icon">👥</div>
+                    <h3>Technical Staffing</h3>
+                    <p>Need experienced SAS programmers or biostatistics support on your team? We place contract, contract-to-hire and full-time talent.</p>
+                    <a href="?interest=technical-staffing#contact-form" class="btn-primary">Request Talent</a>
                 </div>
 
                 <div class="option-card">
                     <div class="option-icon">⚡</div>
-                    <h3>Current Services</h3>
-                    <p>Need immediate help with SDTM, ADaM, or TLF programming? Our experienced team delivers high-quality clinical programming services while you wait for automation.</p>
-                    <a href="#contact-form" class="btn-primary">Request Services</a>
+                    <h3>Statistical Programming</h3>
+                    <p>Need help with SDTM, ADaM, TLF or eCTD submission deliverables? Our team delivers high-quality clinical programming with biostatistics support.</p>
+                    <a href="?interest=statistical-programming#contact-form" class="btn-primary">Request Services</a>
                 </div>
 
                 <div class="option-card">
                     <div class="option-icon">💡</div>
-                    <h3>Strategy Consultation</h3>
-                    <p>Schedule a consultation to discuss your publication automation strategy, timeline planning, and how TLF automation fits your workflow.</p>
-                    <a href="#contact-form" class="btn-primary">Schedule Call</a>
+                    <h3>Strategic Consulting</h3>
+                    <p>Schedule a consultation to discuss CDISC standards, submission readiness, programming team structure, or a custom solution for your workflow.</p>
+                    <a href="?interest=strategic-consulting#contact-form" class="btn-primary">Request a Call</a>
                 </div>
             </div>
         </div>
@@ -461,23 +578,24 @@
             <h2>Contact Us</h2>
             
             <div class="form-container">
-                <form action="#" method="POST">
+                <p class="form-legend"><span class="req" aria-hidden="true">*</span> Required field</p>
+                <form id="contact-form-el" action="mailto:admin@zingersoftwaresolutions.com" method="post" enctype="text/plain">
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="first-name">First Name</label>
+                            <label for="first-name">First Name <span class="req" aria-hidden="true">*</span></label>
                             <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="last-name">Last Name</label>
+                            <label for="last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
                             <input type="text" id="last-name" name="last-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" required>
+                            <label for="company">Company (optional)</label>
+                            <input type="text" id="company" name="company">
                         </div>
                         <div class="form-group">
                             <label for="title">Job Title</label>
@@ -496,20 +614,20 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label for="inquiry-type">Primary Interest</label>
+                            <label for="inquiry-type">Primary Interest <span class="req" aria-hidden="true">*</span></label>
                             <select id="inquiry-type" name="inquiry-type" required>
                                 <option value="">What are you most interested in?</option>
-                                <option value="tlf-early-access">ZinClin TLF Code Generator Early Access</option>
-                                <option value="zintrade-early-access">ZinTrade Stock Analysis Early Access</option>
-                                <option value="current-services">Current Programming Services</option>
-                                <option value="strategy-consultation">Strategy Consultation</option>
-                                <option value="partnership">Partnership Opportunities</option>
-                                <option value="general-information">General Information</option>
+                                <option value="technical-staffing">Technical Staffing</option>
+                                <option value="statistical-programming">Statistical Programming</option>
+                                <option value="strategic-consulting">Strategic Consulting</option>
+                                <option value="custom-solution">Custom Solution</option>
+                                <option value="zintrading-notify">ZinTrading — notify me when it opens</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
                             <label for="challenges">Current Challenges & Goals</label>
-                            <textarea id="challenges" name="challenges" placeholder="Tell us about your current TLF programming challenges, publication automation goals, or immediate service needs..."></textarea>
+                            <textarea id="challenges" name="challenges" maxlength="1500" placeholder="Tell us about your project, staffing needs, timelines, or questions..."></textarea>
                         </div>
                         <div class="form-group full-width">
                             <label for="timeline">Implementation Timeline</label>
@@ -525,6 +643,8 @@
                     </div>
                     <div class="form-submit">
                         <button type="submit">Send Message</button>
+                        <p class="form-note" id="form-default-note">This opens your email app with your message ready to send. You can also email us directly at <strong>admin@zingersoftwaresolutions.com</strong>.</p>
+                        <p class="form-note form-sent" id="form-sent" role="status" hidden>Your email app should open with your message ready. Remember to press Send there. If nothing opened, email us at <strong>admin@zingersoftwaresolutions.com</strong>.</p>
                     </div>
                 </form>
             </div>
@@ -555,7 +675,7 @@
                     <div class="info-icon">🤝</div>
                     <h3>Partnership</h3>
                     <p>Strategic partnerships welcome</p>
-                    <p>Early access co-development opportunities</p>
+                    <p>CROs, sponsors and consultants</p>
                 </div>
             </div>
         </div>
@@ -568,33 +688,33 @@
             
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">What is the TLF Code Generator early access program?</div>
-                    <div class="faq-answer">Our early access program gives you first access to ZinClin TLF automation tools as they become available. You'll help shape development priorities and receive preferential access when we launch.</div>
+                    <div class="faq-question">What engagement models do you offer?</div>
+                    <div class="faq-answer">We work on a contract, contract-to-hire, or full-time placement basis for staffing, and on a project or ongoing-support basis for statistical programming and consulting. We'll recommend the model that fits your study and budget.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">When will the TLF Code Generator be available?</div>
-                    <div class="faq-answer">We're currently in active development with beta testing coming soon. Early access members will be the first to know specific timelines and testing opportunities.</div>
+                    <div class="faq-question">How quickly can you staff a role?</div>
+                    <div class="faq-answer">It depends on the role, seniority and therapeutic area. Tell us what you need through the form above and we'll respond within 24 hours with realistic timing and next steps.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">Can I use current services while waiting for automation?</div>
-                    <div class="faq-answer">Absolutely! Many clients start with our current programming services for immediate needs while joining the early access program for future automation benefits.</div>
+                    <div class="faq-question">What statistical programming work do you cover?</div>
+                    <div class="faq-answer">SAS-based SDTM and ADaM dataset development, TLF programming, validation, and eCTD submission packages, with biostatistics support when your study needs it.</div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What makes Zinger different from other providers?</div>
-                    <div class="faq-answer">We combine 12+ years of proven clinical programming expertise with cutting-edge TLF automation. Our boutique approach ensures personal attention whether you need services today or automation tomorrow.</div>
+                    <div class="faq-answer">More than 12 years of hands-on clinical programming experience and a boutique approach — you work directly with experienced people who take ownership of your deliverables.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What is ZinTrading and when will it open?</div>
+                    <div class="faq-answer">ZinTrading is our trading software, currently in private development and not yet open to members. Select "ZinTrading — notify me when it opens" in the form above and we'll let you know when it launches. ZinTrading is not financial advice.</div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">How do I schedule a strategy consultation?</div>
-                    <div class="faq-answer">Simply fill out the contact form above and select "Strategy Consultation" as your inquiry type. We'll respond within 24 hours to schedule a call at your convenience.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Do you offer partnership opportunities?</div>
-                    <div class="faq-answer">Yes! We're interested in strategic partnerships, co-development opportunities, and early access collaborations. Contact us to discuss how we might work together.</div>
+                    <div class="faq-answer">Fill out the contact form above and select "Strategic Consulting" as your primary interest. We'll respond within 24 hours to schedule a call at your convenience.</div>
                 </div>
             </div>
         </div>
@@ -606,36 +726,79 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Products</h3>
-                    <a href="platform.html">ZinClin TLF Generator</a>
-                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
+                    <h3>Services</h3>
+                    <a href="services.html#staffing">Technical Staffing</a>
+                    <a href="services.html#programming">Statistical Programming</a>
+                    <a href="services.html#consulting">Strategic Consulting</a>
+                    <a href="services.html#custom">Custom Solutions</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products &amp; Community</h3>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="index.html#community">Community</a>
                     <a href="products.html">All Products</a>
                 </div>
-                <div class="footer-section">
-                    <h3>ZinClin Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
-                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
-                </div>
+
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
+                    <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            var form = document.getElementById('contact-form-el');
+            var interest = document.getElementById('inquiry-type');
+            var preset = new URLSearchParams(window.location.search).get('interest');
+            if (preset && interest.querySelector('option[value="' + CSS.escape(preset) + '"]')) {
+                interest.value = preset;
+            }
+
+            // GitHub Pages can't receive POSTs, so hand the message to the visitor's email app.
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var val = function (id) {
+                    var el = document.getElementById(id);
+                    if (!el) return '';
+                    if (el.tagName === 'SELECT') return el.value ? el.options[el.selectedIndex].text : '';
+                    return el.value.trim();
+                };
+                var name = (val('first-name') + ' ' + val('last-name')).trim();
+                var subject = 'Website inquiry: ' + (val('inquiry-type') || 'General') + ' — ' + name;
+                var lines = [
+                    'Name: ' + name,
+                    'Email: ' + val('email'),
+                    'Company: ' + val('company'),
+                    'Job title: ' + val('title'),
+                    'Company type: ' + val('company-type'),
+                    'Primary interest: ' + val('inquiry-type'),
+                    'Timeline: ' + val('timeline'),
+                    '',
+                    val('challenges')
+                ];
+                window.location.href = 'mailto:admin@zingersoftwaresolutions.com'
+                    + '?subject=' + encodeURIComponent(subject)
+                    + '&body=' + encodeURIComponent(lines.join('\r\n'));
+                document.getElementById('form-sent').hidden = false;
+                document.getElementById('form-default-note').hidden = true;
+            });
+        })();
+    </script>
 </body>
 </html>

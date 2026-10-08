@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Programming Services | TLF Automation Bridge | Zinger Software Solutions</title>
-    <meta name="description" content="12+ years of clinical programming excellence bridging to TLF automation. Technical staffing, SAS programming, and consulting services with proven CDISC expertise.">
+    <title>Services | Technical Staffing, Statistical Programming &amp; Consulting | Zinger Software Solutions</title>
+    <meta name="description" content="Technical staffing, SAS statistical programming (SDTM, ADaM, TLF, eCTD), biostatistics support, strategic consulting and custom solutions for biotechs, pharma and CROs. US-based, 12+ years.">
     
     <style>
         /* Reset and Base Styles */
@@ -46,12 +46,6 @@
             font-weight: bold;
             color: white;
             text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: -0.2rem;
         }
 
         .nav-links {
@@ -120,57 +114,6 @@
             font-weight: bold;
         }
 
-        /* Services Grid */
-        .services-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .services-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: #f8f9fa;
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border-top: 5px solid #4ecdc4;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: #1f4788;
-        }
-
-        .service-card h3 {
-            color: #1f4788;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-description {
-            margin-bottom: 2rem;
-            color: #666;
-            line-height: 1.7;
-        }
-
         .specialties-list {
             text-align: left;
             margin-bottom: 2rem;
@@ -200,50 +143,6 @@
             left: 0;
             color: #28a745;
             font-weight: bold;
-        }
-
-        /* Bridge to Automation */
-        .bridge-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #4ecdc4 0%, #45b5aa 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .bridge-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .bridge-section p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            line-height: 1.7;
-        }
-
-        .bridge-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .bridge-feature {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .bridge-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #4ecdc4;
-        }
-
-        .bridge-feature h3 {
-            margin-bottom: 1rem;
         }
 
         /* Dual CTAs */
@@ -385,225 +284,554 @@
             .nav-links {
                 display: none;
             }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
+
             .ctas-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        .dev-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .badge-row {
+            flex-wrap: wrap;
+        }
+
+        ul.specialties-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        /* Service Detail Blocks */
+        .service-detail-section {
+            padding: 4.5rem 0;
+            background: white;
+            scroll-margin-top: 1rem;
+        }
+
+        .service-detail-section.alt {
+            background: #f8f9fa;
+        }
+
+        .sd-header {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            max-width: 820px;
+        }
+
+        .sd-icon {
+            font-size: 3rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .sd-header h2 {
+            color: #1f4788;
+            font-size: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .sd-header p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .sd-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .sd-col {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
+            border-top: 4px solid #4ecdc4;
+        }
+
+        .service-detail-section.alt .sd-col {
+            background: white;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .sd-col h3 {
+            color: #1f4788;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Custom Solutions */
+        .custom-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            scroll-margin-top: 1rem;
+        }
+
+        .custom-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .custom-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .custom-section p {
+            font-size: 1.15rem;
+            opacity: 0.92;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .custom-list {
+            list-style: none;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .custom-list li {
+            padding: 0.6rem 0 0.6rem 1.8rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .custom-list li:last-child {
+            border-bottom: none;
+        }
+
+        .custom-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        /* Engagement Process */
+        .process-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .process-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 3rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .process-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #4ecdc4;
+            color: #1f4788;
+            font-weight: bold;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: #1f4788;
+            margin-bottom: 0.6rem;
+        }
+
+        .process-step p {
+            color: #666;
+        }
+
+        .btn-green {
+            background: #1e8449;
+            color: white;
+            padding: 1.2rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-green:hover {
+            background: #196f3d;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .custom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sd-header {
+                flex-direction: column;
+            }
+
+            .sd-header h2,
+            .custom-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Accessibility & polish */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid #1f4788;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px #ffffff;
+        }
+
+        .dev-banner {
+            background: #1f4788 !important;
+            color: white;
+        }
+
+        .dev-banner a {
+            color: #4ecdc4 !important;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            header {
+                position: static !important;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                padding: 0.6rem 0.5rem;
+            }
+        }
+
+        /* Page-specific polish */
+        .cta-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-card a {
+            margin-top: auto;
+        }
+
+        /* Mobile nav: wrap the links instead of hiding them */
+        @media (max-width: 768px) {
+            header nav,
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem 1.1rem;
+                padding: 0;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Development Banner -->
     <div class="dev-banner">
-        🚧 ZinClin TLF Code Generator in development - Beta coming soon
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">Zinger Software Solutions</a>
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html">Products</a>
-                    <a href="about.html">About</a>
                     <a href="services.html" class="active">Services</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
                 </nav>
                 <a href="contact.html" class="cta-button">Get Started</a>
             </div>
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Clinical Programming Services</h1>
+            <h1>Consulting &amp; Staffing Services</h1>
             <p>
-                12+ years of proven excellence in clinical programming, bridging today's immediate needs 
-                with tomorrow's TLF automation. Reliable services you can trust while automation develops.
+                Statistical programming, biostatistics support and technical staffing for biotechs,
+                pharma companies and CROs, delivered by a US-based team with 12+ years in clinical programming.
             </p>
-            <div class="hero-badges">
+            <div class="hero-badges badge-row">
                 <div class="badge">✓ 12+ Years Experience</div>
                 <div class="badge">✓ CDISC Expertise</div>
-                <div class="badge">✓ Proven Track Record</div>
+                <div class="badge">✓ US-Based Team</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-section">
+    <section class="service-detail-section" id="staffing">
         <div class="container">
-            <h2>Current Service Offerings</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
-                While ZinClin TLF automation is in development, our experienced team continues delivering 
-                high-quality clinical programming services with the same expertise that drives our automation innovation.
-            </p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">👥</div>
-                    <h3>Technical Staffing</h3>
-                    <div class="service-description">
-                        Experienced clinical programming professionals with deep CDISC expertise and proven track records in pharmaceutical and biotech environments.
-                    </div>
-                    <div class="specialties-list">
-                        <h4>Specialties:</h4>
-                        <ul>
-                            <li>Senior SAS Programmers (SDTM/ADaM)</li>
-                            <li>Statistical Programming Leads</li>
-                            <li>CDISC Standards Experts</li>
-                            <li>TLF Programming Specialists</li>
-                            <li>Regulatory Submission Programming</li>
-                        </ul>
-                    </div>
+            <div class="sd-header">
+                <div class="sd-icon">👥</div>
+                <div>
+                    <h2>Technical Staffing</h2>
+                    <p>Experienced clinical programming professionals with deep CDISC expertise, placed with your team when you need them, on the terms that fit your project.</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>SAS Programming</h3>
-                    <div class="service-description">
-                        End-to-end clinical programming services from study setup through regulatory submission, 
-                        with particular expertise in TLF creation and publication-ready deliverables.
-                    </div>
-                    <div class="specialties-list">
-                        <h4>Capabilities:</h4>
-                        <ul>
-                            <li>SDTM Dataset Creation & Validation</li>
-                            <li>ADaM Dataset Development</li>
-                            <li>Tables, Listings & Figures (TLF)</li>
-                            <li>eCTD Submission Programming</li>
-                            <li>Data Quality & Compliance Checks</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="sd-columns">
+                <div class="sd-col">
+                    <h3>Roles We Place</h3>
+                    <ul class="specialties-list">
+                        <li>Senior SAS Programmers (SDTM / ADaM)</li>
+                        <li>Statistical Programming Leads</li>
+                        <li>Biostatisticians for analysis support</li>
+                        <li>CDISC Standards Experts</li>
+                        <li>TLF Programming Specialists</li>
+                        <li>Regulatory Submission Programmers</li>
+                    </ul>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Strategic Consulting</h3>
-                    <div class="service-description">
-                        Strategic guidance on clinical programming automation, workflow optimization, and 
-                        preparing your organization for the future of AI-assisted clinical programming.
-                    </div>
-                    <div class="specialties-list">
-                        <h4>Focus Areas:</h4>
-                        <ul>
-                            <li>TLF Automation Readiness Assessment</li>
-                            <li>Programming Workflow Optimization</li>
-                            <li>CDISC Standards Implementation</li>
-                            <li>Technology Stack Evaluation</li>
-                            <li>Team Training & Development</li>
-                        </ul>
-                    </div>
+                <div class="sd-col">
+                    <h3>Engagement Models</h3>
+                    <ul class="specialties-list">
+                        <li>Contract staffing for study peaks</li>
+                        <li>Contract-to-hire</li>
+                        <li>Full-time placement</li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <h3>Who We Work With</h3>
+                    <ul class="specialties-list">
+                        <li>Biotech companies</li>
+                        <li>Pharmaceutical companies</li>
+                        <li>Contract Research Organizations (CROs)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bridge to Automation -->
-    <section class="bridge-section">
+    <section class="service-detail-section alt" id="programming">
         <div class="container">
-            <h2>Bridging Today's Services to Tomorrow's Automation</h2>
-            <p>
-                Our current service expertise directly informs ZinClin TLF automation development. 
-                Every manual TLF we create today teaches our AI how to automate tomorrow's publication deliverables. 
-                Start with proven services, evolve to automation when ready.
-            </p>
-
-            <div class="bridge-features">
-                <div class="bridge-feature">
-                    <div class="bridge-icon">🔄</div>
-                    <h3>Seamless Transition</h3>
-                    <p>Current clients get priority access to TLF automation as it becomes available, ensuring smooth workflow evolution.</p>
+            <div class="sd-header">
+                <div class="sd-icon">📊</div>
+                <div>
+                    <h2>Statistical Programming</h2>
+                    <p>End-to-end SAS programming for clinical trials, from study setup and raw data through analysis datasets, submission-ready outputs and regulatory submission.</p>
                 </div>
-
-                <div class="bridge-feature">
-                    <div class="bridge-icon">📊</div>
-                    <h3>TLF Expertise</h3>
-                    <p>Our 12+ years of manual TLF creation experience drives the intelligence behind automated publication generation.</p>
+            </div>
+            <div class="sd-columns">
+                <div class="sd-col">
+                    <h3>Core Capabilities</h3>
+                    <ul class="specialties-list">
+                        <li>SDTM Dataset Creation &amp; Validation</li>
+                        <li>ADaM Dataset Development</li>
+                        <li>Tables, Listings &amp; Figures (TLF)</li>
+                        <li>eCTD Submission Programming</li>
+                        <li>CDISC Compliance Checks</li>
+                        <li>Data Quality &amp; Discrepancy Reviews</li>
+                    </ul>
                 </div>
-
-                <div class="bridge-feature">
-                    <div class="bridge-icon">🚀</div>
-                    <h3>Future-Ready</h3>
-                    <p>Services designed with automation in mind, preparing your workflows for enhanced efficiency through TLF automation.</p>
-                </div>
-
-                <div class="bridge-feature">
-                    <div class="bridge-icon">🛡️</div>
-                    <h3>Risk Mitigation</h3>
-                    <p>Proven service delivery ensures project continuity while automation capabilities mature and become available.</p>
+                <div class="sd-col">
+                    <h3>Biostatistics Support</h3>
+                    <ul class="specialties-list">
+                        <li>Statistical Analysis Plan (SAP) review</li>
+                        <li>Efficacy &amp; safety endpoint programming</li>
+                        <li>Survival &amp; time-to-event outputs</li>
+                        <li>Interim analysis programming support</li>
+                        <li>CSR-ready data packages</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dual CTAs -->
+    <section class="service-detail-section" id="consulting">
+        <div class="container">
+            <div class="sd-header">
+                <div class="sd-icon">🎯</div>
+                <div>
+                    <h2>Strategic Consulting</h2>
+                    <p>Practical guidance for clinical programming teams that want to work faster, adopt standards cleanly, or choose the right tools.</p>
+                </div>
+            </div>
+            <div class="sd-columns">
+                <div class="sd-col">
+                    <h3>Focus Areas</h3>
+                    <ul class="specialties-list">
+                        <li>Programming Workflow Optimization</li>
+                        <li>CDISC Standards Implementation</li>
+                        <li>Technology Stack Evaluation</li>
+                        <li>Process Efficiency Assessment</li>
+                        <li>Team Training &amp; Development</li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <h3>What You Get</h3>
+                    <ul class="specialties-list">
+                        <li>Current-state review &amp; gap analysis</li>
+                        <li>Prioritized roadmap with quick wins</li>
+                        <li>Tool and vendor evaluation</li>
+                        <li>SOP and standards documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-section" id="custom">
+        <div class="container">
+            <div class="custom-grid">
+                <div>
+                    <h2>Need a Custom Solution?</h2>
+                    <p>Every sponsor's trial is different. When off-the-shelf approaches don't fit, we scope and build programming solutions around your protocol, timeline and submission requirements, and work inside your existing SAS environment.</p>
+                    <a href="contact.html" class="btn-primary">Discuss Your Project</a>
+                </div>
+                <ul class="custom-list">
+                    <li>Custom SAS macros &amp; automation utilities</li>
+                    <li>Study-specific SDTM / ADaM implementations</li>
+                    <li>QC frameworks &amp; validation pipelines</li>
+                    <li>Integration with your existing SAS infrastructure</li>
+                    <li>Reporting tools built for your team's workflow</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2>How We Engage</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-num">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>We learn about your study, timeline and the gaps on your team.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">2</div>
+                    <h3>Scope &amp; Proposal</h3>
+                    <p>A clear scope, the right people or approach, and a realistic schedule.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">3</div>
+                    <h3>Kickoff</h3>
+                    <p>Programmers onboard to your standards, systems and SOPs.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">4</div>
+                    <h3>Delivery &amp; QC</h3>
+                    <p>Validated deliverables with regular status updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="dual-ctas">
         <div class="container">
-            <h2>Choose Your Path Forward</h2>
-            
+            <h2>Ready to Get Started?</h2>
+
             <div class="ctas-grid">
                 <div class="cta-card">
-                    <h3>Current Services</h3>
+                    <h3>Clinical Programming Services</h3>
                     <p>
-                        Need immediate clinical programming support? Our experienced team delivers proven 
-                        SDTM, ADaM, and TLF programming services with 12+ years of industry expertise.
+                        Need programmers, biostatistics support or a custom solution? Tell us about your study
+                        and we'll respond promptly.
                     </p>
-                    <a href="contact.html" class="btn-secondary">Request Services Now</a>
+                    <a href="contact.html#contact-form" class="btn-secondary">Request Services</a>
                 </div>
 
                 <div class="cta-card">
-                    <h3>TLF Automation</h3>
+                    <h3>Custom Solutions</h3>
                     <p>
-                        Ready to explore the future of publication automation? Join our early access program 
-                        for ZinClin TLF Code Generator and be first to experience automated TLF generation.
+                        Have a problem off-the-shelf approaches don't solve? Tell us about it and we'll scope a solution around your study.
                     </p>
-                    <a href="contact.html" class="btn-primary">Sign Up for Early Access Now</a>
+                    <a href="contact.html?interest=custom-solution#contact-form" class="btn-primary">Discuss Your Project</a>
                 </div>
             </div>
+            <p style="margin-top: 2.5rem; color: #666;">Interested in our trading software? <a href="stock-trading.html" style="color: #1f4788; font-weight: 600;">Learn about ZinTrading</a>.</p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>AI software company since 2013. Building specialized tools for complex industries.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Products</h3>
-                    <a href="platform.html">ZinClin TLF Generator</a>
-                    <a href="stock-trading.html">ZinTrade Stock Analysis</a>
-                    <a href="products.html">All Products</a>
+                    <h3>Services</h3>
+                    <a href="services.html#staffing">Technical Staffing</a>
+                    <a href="services.html#programming">Statistical Programming</a>
+                    <a href="services.html#consulting">Strategic Consulting</a>
+                    <a href="services.html#custom">Custom Solutions</a>
                 </div>
                 <div class="footer-section">
-                    <h3>ZinClin Solutions</h3>
-                    <a href="solutions-biotechs.html">For Biotechs</a>
-                    <a href="solutions-cros.html">For CROs</a>
-                    <a href="solutions-programmers.html">For Programmers</a>
-                    <a href="solutions-biostatisticians.html">For Biostatisticians</a>
+                    <h3>Products &amp; Community</h3>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="products.html">All Products</a>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
                     <a href="contact.html">Contact</a>
                     <a href="resources.html">Resources</a>
+                    <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
