@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSLT Bridge | Keep XSLT and MSXML apps working in Chrome and Edge | Zinger Software Solutions</title>
+    <meta name="description" content="XSLT Bridge keeps XSLT and Internet Explorer era MSXML web applications working in Chrome and Edge after the browsers remove XSLT. For insurance, pharma and enterprise IT.">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Dev Banner */
+        .dev-banner {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4ecdc4;
+        }
+
+        .cta-button {
+            background: #4ecdc4;
+            color: #1f4788;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45b5aa;
+            transform: translateY(-2px);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            padding-bottom: 5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .product-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .product-block.reverse {
+            direction: rtl;
+        }
+
+        .product-block.reverse > * {
+            direction: ltr;
+        }
+
+        .product-info h2 {
+            font-size: 2.5rem;
+            color: #1f4788;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-subtitle {
+            color: #4ecdc4;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .product-subtitle.trade {
+            color: #1e8449;
+        }
+
+        .product-status-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .product-status-badge.green {
+            background: #d1e7dd;
+            color: #0a5a2f;
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+            color: #444;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .feature-list.trade li::before {
+            color: #1e8449;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-learn {
+            background: #1f4788;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-learn:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
+        .btn-access {
+            background: transparent;
+            color: #1f4788;
+            padding: 0.9rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #1f4788;
+            transition: all 0.3s ease;
+        }
+
+        .btn-access:hover {
+            background: #1f4788;
+            color: white;
+        }
+
+        /* Product Visual Card */
+        .product-visual {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .product-visual-icon {
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .product-visual h3 {
+            color: #1f4788;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .visual-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .visual-stat {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .visual-stat .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            display: block;
+        }
+
+        .visual-stat.trade .number {
+            color: #1e8449;
+        }
+
+        .visual-stat .label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Services CTA */
+        .services-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .services-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1f4788;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background: #1e8449;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-green:hover {
+            background: #196f3d;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover { color: #4ecdc4; }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            text-align: center;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .product-block { grid-template-columns: 1fr; direction: ltr; }
+            .product-block.reverse { direction: ltr; }
+        }
+
+        .dev-banner a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .product-subtitle.odds {
+            color: #8a6416;
+        }
+
+        .feature-list.odds li::before {
+            color: #8a6416;
+        }
+
+        .visual-stat.odds .number {
+            color: #8a6416;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 1.5rem;
+        }
+
+        /* Accessibility & polish */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible {
+            outline: 3px solid #1f4788;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px #ffffff;
+        }
+
+        .dev-banner {
+            background: #1f4788 !important;
+            color: white;
+        }
+
+        .dev-banner a {
+            color: #4ecdc4 !important;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.75rem !important;
+            }
+
+            header {
+                position: static !important;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                padding: 0.6rem 0.5rem;
+            }
+        }
+
+        /* Mobile nav: wrap the links instead of hiding them */
+        @media (max-width: 768px) {
+            header nav,
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.4rem 1.1rem;
+                padding: 0;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                display: none;
+            }
+        }
+    
+        .legal { max-width: 820px; margin: 0 auto; padding: 3rem 0; }
+        .legal h2 { color: #1f4788; margin: 2rem 0 0.75rem; font-size: 1.35rem; }
+        .legal p, .legal li { margin-bottom: 0.6rem; }
+        .legal ul { padding-left: 1.4rem; }
+        .legal .meta { color: #666; font-size: 0.95rem; }
+        .xb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+        .xb-card { background: #fff; border: 1px solid #e3e8f0; border-radius: 10px; padding: 1.25rem; }
+        .xb-card h3 { color: #1f4788; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .xb-note { background: #f3f8ff; border-left: 4px solid #4ecdc4; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/index.html" class="logo">Zinger Software Solutions</a>
+                <nav class="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/xslt-bridge/">XSLT Bridge</a>
+                    <a href="/stock-trading.html">ZinTrading</a>
+                    <a href="/about.html">About</a>
+                    <a href="/resources.html">Resources</a>
+                    <a href="/contact.html">Contact</a>
+                </nav>
+                <a href="/contact.html" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>XSLT Bridge</h1>
+            <p>Keep XSLT and Internet Explorer era (MSXML) web applications working in Chrome and Edge after the browsers remove XSLT.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container legal">
+            <div class="xb-note">Chrome and Edge remove their built-in XSLT support by default starting with version 158 (November 2026). Pages that turn XML into HTML with XSLT, and apps written for Internet Explorer's MSXML, stop working. XSLT Bridge restores them on the sites and folders you approve.</div>
+
+            <div class="xb-grid">
+                <div class="xb-card"><h3>XSLT restored</h3><p>XML pages with a stylesheet render again, and the standard XSLTProcessor API keeps working, using a libxslt engine that runs inside the browser.</p></div>
+                <div class="xb-card"><h3>MSXML compatibility</h3><p>ActiveXObject, DOMDocument, selectNodes, transformNode and XSLTemplate for Internet Explorer era insurance, claims and enterprise apps (paid edition).</p></div>
+                <div class="xb-card"><h3>Pharma: define.xml</h3><p>CDISC define.xml files render from web servers and from approved local submission folders, with their original stylesheets.</p></div>
+                <div class="xb-card"><h3>Enterprise ready</h3><p>Group Policy and Intune deployment, approved-site lists, offline license keys, an insurance security pack and a GxP validation pack.</p></div>
+            </div>
+
+            <h2>Privacy and security</h2>
+            <p>XSLT Bridge sends nothing to us automatically: no telemetry, no analytics and no license server. It runs only on the websites and local folders that you or your administrator approve. See the <a href="/xslt-bridge/privacy/">XSLT Bridge privacy policy</a>.</p>
+
+            <h2>Availability</h2>
+            <p>XSLT Bridge will be available from the Chrome Web Store, Microsoft Edge Add-ons and AWS Marketplace. To discuss licensing, a trial or a security review for your organization, contact <a href="mailto:support@zingersoftwaresolutions.com">support@zingersoftwaresolutions.com</a> or call 919-324-4479.</p>
+            <div class="product-actions">
+                <a href="/contact.html?interest=xslt-bridge#contact-form" class="btn-learn">Contact us about XSLT Bridge</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zinger Software Solutions</h3>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
+                    <p>admin@zingersoftwaresolutions.com</p>
+                    <p>Apex, NC</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="/services.html#staffing">Technical Staffing</a>
+                    <a href="/services.html#programming">Statistical Programming</a>
+                    <a href="/services.html#consulting">Strategic Consulting</a>
+                    <a href="/services.html#custom">Custom Solutions</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Products &amp; Community</h3>
+                    <a href="/xslt-bridge/">XSLT Bridge</a>
+                    <a href="/stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="/index.html#community">Community</a>
+                    <a href="/products.html">All Products</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="/about.html">About Us</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="/resources.html">Resources</a>
+                    <a href="/sitemap.html">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
