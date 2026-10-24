@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zinger Software Solutions | Clinical Programming, Biostatistics &amp; Technical Staffing</title>
-    <meta name="description" content="US-based statistical programming, biostatistics support, technical staffing and custom solutions for biotechs, pharma and CROs since 2013. Also building ZinTrading, risk-first trading software.">
+    <meta name="description" content="US-based statistical programming, biostatistics support, technical staffing and custom solutions for biotechs, pharma and CROs since 2013. Also building ZinTrading, risk-first trading software, and Zinvera, a review tool for CPA firms.">
     <style>
         * {
             margin: 0;
@@ -324,6 +324,7 @@
         .audience-link.fintech-link:hover {
             color: #1e8449;
         }
+        .audience-link.cpa-link:hover { color: #1f4788; }
 
         /* Education Section */
         .education-section {
@@ -670,6 +671,43 @@
             margin-top: 2.5rem;
         }
 
+        /* Zinvera Highlight */
+        .zv-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .zv-thesis {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #132e57;
+            font-weight: 600;
+            max-width: 760px;
+            margin: -1.5rem auto 2.5rem;
+        }
+
+        .tool-card.zv {
+            background: white;
+            border-left-color: #1f4788;
+        }
+
+        .btn-cta-zinvera {
+            background: #1f4788;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta-zinvera:hover {
+            background: #2558a0;
+            transform: translateY(-2px);
+        }
+
         .disclaimer {
             font-size: 0.85rem;
             color: #777;
@@ -802,6 +840,7 @@
         .audience-tag.fintech {
             color: #1e8449;
         }
+        .audience-tag.cpa { color: #1f4788; }
 
         .audience-card {
             display: flex;
@@ -858,7 +897,7 @@
 </head>
 <body>
     <div class="dev-banner">
-        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a>
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a> · Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a>
     </div>
 
     <header>
@@ -868,6 +907,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="stock-trading.html">ZinTrading</a></li>
+                <li><a href="zinvera.html">Zinvera</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -880,7 +920,7 @@
             <div class="hero-content">
                 <div class="hero-label">CLINICAL PROGRAMMING · BIOSTATISTICS · STAFFING</div>
                 <h1>Expert Clinical Programming. Disciplined Trading Software.</h1>
-                <p>Zinger Software Solutions delivers statistical programming, biostatistics support and technical staffing to life sciences teams, and builds risk-first trading tools. Practitioners serving practitioners, since 2013.</p>
+                <p>Zinger Software Solutions delivers statistical programming, biostatistics support and technical staffing to life sciences teams, and builds risk-first trading tools and Zinvera, a review tool for CPA firms. Practitioners serving practitioners, since 2013.</p>
 
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -900,6 +940,7 @@
                 <div class="hero-cta">
                     <a href="services.html" class="btn-primary">Our Services</a>
                     <a href="stock-trading.html" class="btn-secondary">Explore ZinTrading</a>
+                    <a href="zinvera.html" class="btn-secondary">Explore Zinvera</a>
                 </div>
             </div>
         </div>
@@ -978,7 +1019,7 @@
                 <div class="prop-card">
                     <div class="prop-icon">🎯</div>
                     <h3>Narrow Focus, Deep Value</h3>
-                    <p>We stay in the areas we know deeply, clinical programming and trading software, rather than offering everything to everyone.</p>
+                    <p>We stay in the areas we know deeply, clinical programming, trading software and review software for CPA firms, rather than offering everything to everyone.</p>
                 </div>
                 <div class="prop-card">
                     <div class="prop-icon">🇺🇸</div>
@@ -1029,6 +1070,48 @@
         </div>
     </section>
 
+    <section class="zv-section" id="zinvera">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zinvera</h2>
+                <!-- AI-COPY: verify against shipped AI layer -->
+                <p>Our review tool for CPA firms, in an invitation-only pilot. AI-assisted features (document reading, judgment flags, plain-language explanations, Ask the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</p>
+            </div>
+            <p class="zv-thesis">A second look at the return, before it goes out: the draft beside its K-1s, broker statements and last year's return, with the evidence attached to each finding.</p>
+
+            <div class="tools-grid">
+                <div class="tool-card zv">
+                    <h3>📒 Basis Continuity Ledger</h3>
+                    <p>A roll-forward for each partnership and S corporation: opening basis and its source, each adjustment, ending basis, suspended losses by character.</p>
+                </div>
+                <div class="tool-card zv">
+                    <h3>🔗 Cross-Document Checks</h3>
+                    <p>Rules that read the K-1, the broker composite, the W-2, the state K-1 and the prior-year return together and compare them with the draft, line by line.</p>
+                </div>
+                <div class="tool-card zv">
+                    <h3>🔁 Draft 1 → Draft 2 Tracking</h3>
+                    <p>Each first-draft finding followed into the second draft and marked fixed, not fixed, fixed incorrectly, regression or new.</p>
+                </div>
+                <div class="tool-card zv">
+                    <h3>✍️ Form 8879 Currency Check</h3>
+                    <p>The signed authorization's figures against the current draft, measured against the Publication 1345 tolerances.</p>
+                </div>
+                <div class="tool-card zv">
+                    <h3>📎 Evidence and Citations</h3>
+                    <p>The draft value, the expected value, the return line, the source-document field and the authority behind the rule, on each finding.</p>
+                </div>
+            </div>
+
+            <div class="zt-cta">
+                <a href="zinvera.html" class="btn-cta-zinvera">Learn About Zinvera</a>
+                <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn-cta-zinvera">Request Early Access</a>
+            </div>
+
+            <p class="disclaimer">Zinvera is in an invitation-only pilot on synthetic case files with pre-computed findings, its rule set is not yet signed off by a CPA, and it is not yet available for client data. Nothing it produces is tax, legal or accounting advice.</p>
+        </div>
+    </section>
+
     <section class="community-section" id="community">
         <div class="container">
             <div class="section-header">
@@ -1058,7 +1141,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Who We Serve</h2>
-                <p>Life sciences teams that need programming capacity, and people who want honest tools for big decisions.</p>
+                <p>Life sciences teams that need programming capacity, CPA firms that review complex returns, and people who want honest tools for big decisions.</p>
             </div>
 
             <div class="audiences-grid">
@@ -1084,6 +1167,14 @@
                     <h3>Disciplined Traders</h3>
                     <p>Risk-first tools with hard caps, honest signal grading and a full trade journal, now in private development.</p>
                     <a href="stock-trading.html" class="audience-link fintech-link">ZinTrading →</a>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🧾</div>
+                    <div class="audience-tag cpa">CPA FIRMS</div>
+                    <h3>Tax Reviewers and Signing Partners</h3>
+                    <p>A review tool designed to read the draft return beside its source documents and prior year, with the evidence shown on each finding. In an invitation-only pilot on synthetic case files.</p>
+                    <a href="zinvera.html" class="audience-link cpa-link">Zinvera →</a>
                 </div>
 
                 <div class="audience-card">
@@ -1199,6 +1290,7 @@
             <div class="cta-buttons">
                 <a href="contact.html" class="btn-primary">Request Services</a>
                 <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-cta-trade">Get notified when ZinTrading opens</a>
+                <a href="zinvera.html" class="btn-cta-zinvera">Learn about Zinvera</a>
             </div>
         </div>
     </section>
@@ -1208,7 +1300,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
@@ -1225,6 +1317,7 @@
                     <h3>Products &amp; Community</h3>
                     <a href="xslt-bridge/">XSLT Bridge</a>
                     <a href="stock-trading.html">ZinTrading</a>
+                    <a href="zinvera.html">Zinvera</a>
                     <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
                     <a href="index.html#community">Community</a>
                     <a href="products.html">All Products</a>

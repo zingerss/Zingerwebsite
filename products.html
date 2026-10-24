@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products &amp; Projects | ZinTrading &amp; Honest Odds | Zinger Software Solutions</title>
-    <meta name="description" content="Software from Zinger Software Solutions: ZinTrading, risk-first trading tools in private development, and Honest Odds, college admissions strategy with real admit odds.">
+    <title>Products &amp; Projects | XSLT Bridge, ZinTrading, Zinvera &amp; Honest Odds | Zinger Software Solutions</title>
+    <meta name="description" content="Software from Zinger Software Solutions: XSLT Bridge for legacy XML web apps, ZinTrading, risk-first trading tools in private development, Zinvera, a review tool for CPA firms in pilot, and Honest Odds, college admissions strategy.">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,7 +53,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.4rem;
         }
 
         .nav-links a {
@@ -150,6 +150,7 @@
         .product-subtitle.trade {
             color: #1e8449;
         }
+        .product-subtitle.zinvera { color: #1f4788; }
 
         .product-status-badge {
             display: inline-block;
@@ -198,6 +199,7 @@
         .feature-list.trade li::before {
             color: #1e8449;
         }
+        .feature-list.zinvera li::before { color: #1f4788; }
 
         .product-actions {
             display: flex;
@@ -280,6 +282,7 @@
         .visual-stat.trade .number {
             color: #1e8449;
         }
+        .visual-stat.zinvera .number { color: #1f4788; }
 
         .visual-stat .label {
             font-size: 0.8rem;
@@ -485,7 +488,7 @@
 <body>
 
     <div class="dev-banner">
-        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a>
+        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a> · Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a>
     </div>
 
     <header>
@@ -497,6 +500,7 @@
                     <a href="services.html">Services</a>
                     <a href="xslt-bridge/">XSLT Bridge</a>
                     <a href="stock-trading.html">ZinTrading</a>
+                    <a href="zinvera.html">Zinvera</a>
                     <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
                     <a href="contact.html">Contact</a>
@@ -509,7 +513,7 @@
     <section class="page-hero">
         <div class="container">
             <h1>Products &amp; Projects</h1>
-            <p>Alongside our consulting and staffing work: XSLT Bridge for legacy XML web apps, ZinTrading, our trading software, and Honest Odds, a college admissions project.</p>
+            <p>Alongside our consulting and staffing work: XSLT Bridge for legacy XML web apps, ZinTrading, our trading software, Zinvera, our review tool for CPA firms, and Honest Odds, a college admissions project.</p>
         </div>
     </section>
 
@@ -580,6 +584,54 @@
                 </div>
             </div>
 
+            <div class="product-block">
+                <div class="product-info">
+                    <h2>Zinvera</h2>
+                    <!-- AI-COPY: verify against shipped AI layer -->
+                    <div class="product-subtitle zinvera">Review Tool for CPA Firms</div>
+                    <span class="product-status-badge">Invitation-Only Pilot</span>
+                    <p>Zinvera is designed to read the draft return beside the K-1s, the broker statements and last year's return, carry each partner's basis forward year to year, follow each finding from one draft to the next, and show the reviewer the line each finding came from and the authority behind it. It sits after the firm's tax software and before sign-off, and it prepares, changes and files nothing. In the pilot, reviewers work through pre-computed findings on synthetic case files; the rule set's tax positions are not yet signed off by a CPA.</p>
+                    <ul class="feature-list zinvera">
+                        <li>Basis continuity ledger for each partnership and S corporation</li>
+                        <li>Cross-document checks against K-1s, broker composites, W-2s and the prior-year return</li>
+                        <li>Draft 1 → Draft 2 tracking: fixed, not fixed, fixed incorrectly, regression, new</li>
+                        <li>Form 8879 currency check against the current draft</li>
+                        <li>Evidence and citations on each finding, plus a planning preview</li>
+                        <!-- AI-COPY: verify against shipped AI layer -->
+                        <li>AI-assisted features (document reading, judgment flags, plain-language explanations, Ask the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="zinvera.html" class="btn-learn">Explore Zinvera</a>
+                        <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                        <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn-access">Request Early Access</a>
+                    </div>
+                    <p class="disclaimer">In pilot on synthetic case files with pre-computed findings; the rule set is not yet signed off by a CPA, and Zinvera is not yet available for client data. Not tax, legal or accounting advice.</p>
+                </div>
+                <div class="product-visual">
+                    <span class="product-visual-icon">🧾</span>
+                    <h3>Review With the Evidence Attached</h3>
+                    <p style="color:#666; font-size:0.95rem;">After the tax software, before sign-off</p>
+                    <div class="visual-stats">
+                        <div class="visual-stat zinvera">
+                            <span class="number">K-1</span>
+                            <span class="label">Basis Carried Year to Year</span>
+                        </div>
+                        <div class="visual-stat zinvera">
+                            <span class="number">D1 → D2</span>
+                            <span class="label">Findings Followed Across Drafts</span>
+                        </div>
+                        <div class="visual-stat zinvera">
+                            <span class="number">Cited</span>
+                            <span class="label">Findings Shown With Their Source</span>
+                        </div>
+                        <div class="visual-stat zinvera">
+                            <span class="number">0</span>
+                            <span class="label">Client Records in the Pilot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="product-block reverse">
                 <div class="product-info">
                     <h2>Honest Odds</h2>
@@ -641,7 +693,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software.</p>
+                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
                     <p>admin@zingersoftwaresolutions.com</p>
                     <p>Apex, NC</p>
                 </div>
@@ -656,6 +708,7 @@
                     <h3>Products &amp; Community</h3>
                     <a href="xslt-bridge/">XSLT Bridge</a>
                     <a href="stock-trading.html">ZinTrading</a>
+                    <a href="zinvera.html">Zinvera</a>
                     <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
                     <a href="index.html#community">Community</a>
                     <a href="products.html">All Products</a>
