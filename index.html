@@ -3,1339 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zinger Software Solutions | Clinical Programming, Biostatistics &amp; Technical Staffing</title>
-    <meta name="description" content="US-based statistical programming, biostatistics support, technical staffing and custom solutions for biotechs, pharma and CROs since 2013. Also building ZinTrading, risk-first trading software, and Zinvera, a review tool for CPA firms.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Development Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Header */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #1f4788;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #4ecdc4;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .hero-label {
-            display: inline-block;
-            background: rgba(78,205,196,0.2);
-            border: 1px solid #4ecdc4;
-            color: #4ecdc4;
-            padding: 0.4rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 750px;
-            margin: 0 auto 3rem;
-            line-height: 1.6;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #4ecdc4;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        .hero-cta {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2.5rem;
-            border: 2px solid #4ecdc4;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: #4ecdc4;
-            color: #1f4788;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.15rem;
-            color: #666;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .product-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .product-features li {
-            padding: 0.4rem 0;
-            color: #444;
-            font-size: 0.98rem;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-
-        .product-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-        }
-
-        /* Difference Section */
-        .difference-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .props-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .prop-card {
-            background: #f8f9fa;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .prop-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .prop-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .prop-card h3 {
-            color: #1f4788;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .prop-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Industries Section */
-        .industries-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .audiences-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .audience-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .audience-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .audience-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .audience-tag {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #4ecdc4;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .audience-tag.fintech {
-            color: #1e8449;
-        }
-
-        .audience-card h3 {
-            color: #1f4788;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .audience-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .audience-link {
-            color: #1f4788;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .audience-link:hover {
-            color: #4ecdc4;
-        }
-
-        .audience-link.fintech-link:hover {
-            color: #1e8449;
-        }
-        .audience-link.cpa-link:hover { color: #1f4788; }
-
-        /* Education Section */
-        .education-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .edu-column h3 {
-            font-size: 1.4rem;
-            color: #1f4788;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid #4ecdc4;
-        }
-
-        .edu-column:last-child h3 {
-            border-bottom-color: #1e8449;
-        }
-
-        .edu-article {
-            padding: 1.2rem 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .edu-article-icon {
-            font-size: 1.4rem;
-            flex-shrink: 0;
-        }
-
-        .edu-article h4 {
-            color: #333;
-            font-size: 0.97rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .edu-article p {
-            color: #777;
-            font-size: 0.88rem;
-        }
-
-        .edu-tag {
-            display: inline-block;
-            padding: 0.15rem 0.55rem;
-            border-radius: 8px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            margin-top: 0.4rem;
-        }
-
-        .edu-tag.clinical {
-            background: #e3f0ff;
-            color: #1f4788;
-        }
-
-        .edu-tag.trading {
-            background: #d1e7dd;
-            color: #0a5a2f;
-        }
-
-        /* Company Credibility */
-        .company-credibility {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .company-credibility h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .credibility-stats {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .cred-stat {
-            text-align: center;
-        }
-
-        .cred-number {
-            display: block;
-            font-size: 3rem;
-            font-weight: bold;
-            color: #4ecdc4;
-            margin-bottom: 0.5rem;
-        }
-
-        .cred-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Final CTA */
-        .final-cta {
-            padding: 5rem 0;
-            background: white;
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        .final-cta p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-cta-trade {
-            background: #1e8449;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-cta-trade:hover {
-            background: #196f3d;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #4ecdc4;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover {
-            color: #4ecdc4;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 1rem;
-            text-align: center;
-            color: #95a5a6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .credibility-stats {
-                gap: 2rem;
-            }
-        }
-
-        .dev-banner a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* Services Overview */
-        .services-overview {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .svc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .svc-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-top: 5px solid #4ecdc4;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .svc-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .svc-card h3 {
-            color: #1f4788;
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .svc-card p {
-            color: #555;
-            margin-bottom: 1.2rem;
-        }
-
-        .svc-link {
-            margin-top: auto;
-            color: #1f4788;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .svc-link:hover {
-            color: #4ecdc4;
-        }
-
-        .custom-band {
-            margin-top: 2.5rem;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .custom-band-text {
-            flex: 1;
-            min-width: 260px;
-        }
-
-        .custom-band h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .custom-band p {
-            opacity: 0.9;
-        }
-
-        /* ZinTrading Highlight */
-        .zt-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .zt-thesis {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #1a3a2a;
-            font-weight: 600;
-            max-width: 700px;
-            margin: -1.5rem auto 2.5rem;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .tool-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 1.8rem;
-            border-left: 4px solid #1e8449;
-        }
-
-        .tool-card h3 {
-            color: #1f4788;
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .tool-card p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        .tool-tag {
-            display: inline-block;
-            margin-top: 0.7rem;
-            padding: 0.2rem 0.7rem;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .zt-cta {
-            text-align: center;
-            margin-top: 2.5rem;
-        }
-
-        /* Zinvera Highlight */
-        .zv-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .zv-thesis {
-            text-align: center;
-            font-size: 1.3rem;
-            color: #132e57;
-            font-weight: 600;
-            max-width: 760px;
-            margin: -1.5rem auto 2.5rem;
-        }
-
-        .tool-card.zv {
-            background: white;
-            border-left-color: #1f4788;
-        }
-
-        .btn-cta-zinvera {
-            background: #1f4788;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-cta-zinvera:hover {
-            background: #2558a0;
-            transform: translateY(-2px);
-        }
-
-        .disclaimer {
-            font-size: 0.85rem;
-            color: #777;
-            text-align: center;
-            max-width: 760px;
-            margin: 2rem auto 0;
-        }
-
-        /* Community */
-        .community-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .community-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .community-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .community-card h3 {
-            color: #1f4788;
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .community-card p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .community-card .btn-primary,
-        .community-card .btn-discord {
-            margin-top: auto;
-        }
-
-        .btn-discord {
-            background: #5865F2;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-discord:hover {
-            background: #4752c4;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 480px) {
-            .svc-grid,
-            .community-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Accessibility & polish */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible,
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid #1f4788;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 6px #ffffff;
-        }
-
-        .dev-banner {
-            background: #1f4788 !important;
-            color: white;
-        }
-
-        .dev-banner a {
-            color: #4ecdc4 !important;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
-
-            header {
-                position: static !important;
-            }
-
-            .nav-links a {
-                display: inline-block;
-                padding: 0.6rem 0.5rem;
-            }
-        }
-
-        /* Page-specific polish */
-        a.logo {
-            text-decoration: none;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #1f4788;
-            box-shadow: inset 0 -2px 0 #4ecdc4;
-        }
-
-        .audience-tag {
-            color: #0f766e;
-        }
-
-        .audience-tag.fintech {
-            color: #1e8449;
-        }
-        .audience-tag.cpa { color: #1f4788; }
-
-        .audience-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .audience-link {
-            margin-top: auto;
-        }
-
-        @media (min-width: 900px) {
-            .tools-grid {
-                grid-template-columns: repeat(6, 1fr);
-            }
-
-            .tools-grid .tool-card {
-                grid-column: span 2;
-            }
-
-            .tools-grid .tool-card:nth-child(n+4) {
-                grid-column: span 3;
-            }
-        }
-
-        /* Mobile nav: wrap the links instead of hiding them */
-        @media (max-width: 768px) {
-            header nav,
-            .header-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-            }
-
-            .nav-links {
-                display: flex !important;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.4rem 1.1rem;
-                padding: 0;
-            }
-
-            .logo {
-                width: 100%;
-                text-align: center;
-                font-size: 1.4rem;
-            }
-
-            .cta-button {
-                display: none;
-            }
-        }
-    </style>
+    <title>AI Tools You Can Check | Zinger Software Solutions, an AI Product Studio</title>
+    <meta name="description" content="Zinger is an AI product studio building AI tools that show their work: Zinvera, AI-assisted tax return review for CPA firms (in pilot), ZinTrading, Honest Odds and Zinni, one assistant across Zinger products.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="AI Tools You Can Check | Zinger Software Solutions, an AI Product Studio">
+    <meta property="og:description" content="Zinger is an AI product studio building AI tools that show their work: Zinvera, AI-assisted tax return review for CPA firms (in pilot), ZinTrading, Honest Odds and Zinni, one assistant across Zinger products.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-    <div class="dev-banner">
-        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a> · Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a>
-    </div>
-
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Zinger Software Solutions</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="stock-trading.html">ZinTrading</a></li>
-                <li><a href="zinvera.html">Zinvera</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a> · ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="zinvera.html">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="xslt-bridge/">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="zinni.html">Zinni</a></li><li><a href="how-we-build.html">How we build</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-label">CLINICAL PROGRAMMING · BIOSTATISTICS · STAFFING</div>
-                <h1>Expert Clinical Programming. Disciplined Trading Software.</h1>
-                <p>Zinger Software Solutions delivers statistical programming, biostatistics support and technical staffing to life sciences teams, and builds risk-first trading tools and Zinvera, a review tool for CPA firms. Practitioners serving practitioners, since 2013.</p>
-
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">12+</span>
-                        <span class="stat-label">Years in Business</span>
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">AI product studio</span>
+                    <h1>AI tools you can check, <span class="accent">for work that has to be right.</span></h1>
+                    <p class="sub">Zinger builds tools for tax review, college decisions and trading. Where we use AI, the numbers come from code, the sources are shown, and people decide.</p>
+                    <div class="btn-row">
+                        <a href="zinvera.html" class="btn btn-teal">Meet Zinvera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a href="how-we-build.html" class="btn btn-ghost">How we build AI</a>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24+</span>
-                        <span class="stat-label">Years Combined Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">US</span>
-                        <span class="stat-label">Based Team &amp; Support</span>
-                    </div>
-                </div>
-
-                <div class="hero-cta">
-                    <a href="services.html" class="btn-primary">Our Services</a>
-                    <a href="stock-trading.html" class="btn-secondary">Explore ZinTrading</a>
-                    <a href="zinvera.html" class="btn-secondary">Explore Zinvera</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Consulting &amp; Staffing</h2>
-                <p>Our core business: clinical programming and biostatistics expertise for biotechs, pharma companies and CROs, from early-phase studies through regulatory submission.</p>
-            </div>
-
-            <div class="svc-grid">
-                <div class="svc-card">
-                    <div class="svc-icon">👥</div>
-                    <h3>Technical Staffing</h3>
-                    <p>Experienced, US-based clinical programming talent on contract, contract-to-hire or full-time terms.</p>
-                    <ul class="product-features">
-                        <li>Senior SAS Programmers (SDTM / ADaM)</li>
-                        <li>Statistical Programming Leads</li>
-                        <li>Biostatisticians for analysis support</li>
-                        <li>CDISC &amp; Submission Specialists</li>
+                    <ul class="hero-points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg> Numbers from code</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg> Sources shown</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></svg> People decide</li>
                     </ul>
-                    <a href="services.html#staffing" class="svc-link">Technical staffing →</a>
+                </div>
+                <div>
+                    <div class="shot">
+                        <div class="shot-bar"><i></i><i></i><i></i><span>Zinvera · findings · synthetic case</span></div>
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/zinvera-findings-640.webp 640w, assets/img/zinvera-findings.webp 1120w" sizes="(max-width: 920px) 100vw, 560px">
+                            <img src="assets/img/zinvera-findings.jpg" srcset="assets/img/zinvera-findings-640.jpg 640w, assets/img/zinvera-findings.jpg 1120w" sizes="(max-width: 920px) 100vw, 560px" width="1120" height="752" alt="Zinvera prototype findings list for a synthetic case file: each finding has a plain-English headline, a severity and its effect on taxable income.">
+                        </picture>
+                    </div>
+                    <p class="shot-caption">Zinvera prototype screen. Synthetic case file; fictional names and figures.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="section alt" id="products">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Products</span>
+                    <h2>What we're building</h2>
+                    <p class="lede">Each product does one job, shows how it got there, and leaves the decision to you.</p>
                 </div>
 
-                <div class="svc-card">
-                    <div class="svc-icon">📊</div>
-                    <h3>Statistical Programming</h3>
-                    <p>End-to-end SAS programming for clinical trials, from raw data to submission-ready deliverables.</p>
-                    <ul class="product-features">
-                        <li>SDTM &amp; ADaM dataset development</li>
-                        <li>Tables, Listings &amp; Figures (TLF)</li>
-                        <li>Efficacy, safety &amp; time-to-event outputs</li>
-                        <li>eCTD submission programming</li>
+                <article class="feature" id="zinvera">
+                    <div class="feature-body">
+                        <div class="feature-head"><h3>Zinvera</h3><span class="pill">In pilot</span></div>
+                        <p class="tagline">AI-assisted tax return review for CPA firms. A second look at the return, before it goes out.</p>
+                        <p>Zinvera is designed to read the draft beside its K-1s, broker statements and last year's return, and attach the evidence to each finding.</p>
+                        <!-- AI-COPY: verify against shipped AI layer -->
+                        <p class="small">AI-assisted features (document reading, judgment flags, plain-language explanations, and Zinni, an assistant that answers questions about the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</p>
+                        <div class="btn-row">
+                            <a href="zinvera.html" class="btn btn-primary">Explore Zinvera</a>
+                            <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                            <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn btn-outline">Request early access</a>
+                        </div>
+                    </div>
+                    <div class="feature-media">
+                        <div class="shot">
+                            <div class="shot-bar"><i></i><i></i><i></i><span>Zinvera · finding detail · synthetic case</span></div>
+                            <picture>
+                                <source type="image/webp" srcset="assets/img/zinvera-panel-640.webp 640w, assets/img/zinvera-panel.webp 1120w" sizes="(max-width: 920px) 100vw, 600px">
+                                <img src="assets/img/zinvera-panel.jpg" srcset="assets/img/zinvera-panel-640.jpg 640w, assets/img/zinvera-panel.jpg 1120w" sizes="(max-width: 920px) 100vw, 600px" width="1120" height="752" loading="lazy" alt="Zinvera prototype finding panel for a synthetic case: what's wrong, the rule for the CPA, the impact, the evidence on the return and in the documents, and the reviewer's verdict.">
+                            </picture>
+                        </div>
+                        <p class="shot-caption light-caption">Prototype screen on a synthetic case file. The reviewer gives the verdict.</p>
+                    </div>
+                </article>
+
+                <div class="grid grid-2 mt-2">
+                    <article class="card product-card" id="zintrading">
+                        <div class="product-visual"><svg viewBox="0 0 480 200" role="img" aria-label="Abstract illustration: a price path held above a fixed risk line">
+    <defs><linearGradient id="zt-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ecdc4" stop-opacity=".28"/><stop offset="1" stop-color="#4ecdc4" stop-opacity="0"/></linearGradient></defs>
+    <rect width="480" height="200" fill="#0f1a30"/>
+    <g stroke="rgba(255,255,255,.06)"><path d="M0 50H480M0 100H480M0 150H480"/><path d="M80 0V200M160 0V200M240 0V200M320 0V200M400 0V200"/></g>
+    <path d="M0 140 L40 128 L80 134 L120 110 L160 118 L200 92 L240 100 L280 76 L320 86 L360 62 L400 70 L440 48 L480 56 L480 200 L0 200Z" fill="url(#zt-fill)"/>
+    <path d="M0 140 L40 128 L80 134 L120 110 L160 118 L200 92 L240 100 L280 76 L320 86 L360 62 L400 70 L440 48 L480 56" fill="none" stroke="#4ecdc4" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M0 168H480" stroke="#e5484d" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
+    <g fill="#1e8449"><rect x="114" y="100" width="12" height="22" rx="2"/><rect x="234" y="88" width="12" height="20" rx="2"/><rect x="354" y="52" width="12" height="20" rx="2"/></g>
+</svg></div>
+                        <div class="product-head"><h3>ZinTrading</h3><span class="pill navy">Private development</span></div>
+                        <p>Risk-first trading tools. The edge is in the process and the risk control, not in a magic signal: hard risk caps, and every alert graded against random entries.</p>
+                        <p class="small">Educational and analytical software, not financial advice. Trading involves substantial risk of loss.</p>
+                        <a href="stock-trading.html" class="text-link">Explore ZinTrading <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </article>
+                    <article class="card product-card" id="honest-odds">
+                        <div class="product-visual"><svg viewBox="0 0 480 200" role="img" aria-label="Abstract illustration: a tall published bar beside a shorter, honest bar">
+    <rect width="480" height="200" fill="#0f1a30"/>
+    <g stroke="rgba(255,255,255,.06)"><path d="M0 50H480M0 100H480M0 150H480"/></g>
+    <g>
+        <rect x="70" y="40" width="70" height="130" rx="6" fill="rgba(255,255,255,.14)"/>
+        <rect x="160" y="105" width="70" height="65" rx="6" fill="#4ecdc4"/>
+        <rect x="270" y="60" width="70" height="110" rx="6" fill="rgba(255,255,255,.14)"/>
+        <rect x="360" y="125" width="70" height="45" rx="6" fill="#4ecdc4"/>
+    </g>
+    <path d="M40 170H450" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+</svg></div>
+                        <div class="product-head"><h3>Honest Odds</h3><span class="pill green">Live</span></div>
+                        <p>AI college-admissions strategy for families. Honest, deflated admit odds instead of brochure rates, Early Decision strategy and essay review. Start with a free sample.</p>
+                        <a href="https://honest-odds.com/" class="text-link" target="_blank" rel="noopener">Visit Honest Odds <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+                    </article>
+                </div>
+
+                <div class="mini-product" id="xslt-bridge">
+                    <div class="mini-text">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/><path d="M10 16l1.5-8M13 16h3"/></svg></span>
+                        <div>
+                            <h3>XSLT Bridge</h3>
+                            <p>A Chrome and Edge extension that keeps XSLT and Internet Explorer era MSXML web apps working after the browsers remove XSLT. Launching November 2026.</p>
+                        </div>
+                    </div>
+                    <a href="xslt-bridge/" class="text-link">Explore XSLT Bridge <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zinni -->
+        <section class="section darker" id="zinni">
+            <div class="container zinni-grid">
+                <div>
+                    <span class="eyebrow">Zinni</span>
+                    <h2>One assistant across Zinger products</h2>
+                    <!-- AI-COPY: verify against shipped AI layer -->
+                    <p class="lede">Ask a question in plain language. Zinni is designed to answer from the case in front of you and point to the lines and documents its answer rests on.</p>
+                    <ul class="status-list">
+                        <li><strong>Zinvera</strong><span class="st dev">In development for the first pilot release</span></li>
+                        <li><strong>ZinTrading</strong><span class="st">Planned</span></li>
+                        <li><strong>Honest Odds</strong><span class="st">Planned</span></li>
                     </ul>
-                    <a href="services.html#programming" class="svc-link">Statistical programming →</a>
-                </div>
-
-                <div class="svc-card">
-                    <div class="svc-icon">🎯</div>
-                    <h3>Strategic Consulting</h3>
-                    <p>Workflow, standards and technology advice for programming teams that need to modernize or scale.</p>
-                    <ul class="product-features">
-                        <li>Programming workflow optimization</li>
-                        <li>CDISC standards implementation</li>
-                        <li>Technology stack evaluation</li>
-                        <li>Team training &amp; development</li>
-                    </ul>
-                    <a href="services.html#consulting" class="svc-link">Strategic consulting →</a>
-                </div>
-            </div>
-
-            <div class="custom-band">
-                <div class="custom-band-text">
-                    <h3>Need a custom solution?</h3>
-                    <p>Every study is different. We scope and build custom programming solutions around your protocol, timeline and submission requirements: macros, QC frameworks, study-specific SDTM/ADaM implementations, and integrations with your SAS environment.</p>
-                </div>
-                <a href="contact.html" class="btn-primary">Discuss Your Project</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="difference-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Zinger Software Difference</h2>
-                <p>A boutique team of practitioners who have done the work themselves.</p>
-            </div>
-            <div class="props-grid">
-                <div class="prop-card">
-                    <div class="prop-icon">🏗️</div>
-                    <h3>Built by Domain Experts</h3>
-                    <p>Our people have spent 10+ years programming clinical trials. We know your protocols, your standards and your submission deadlines.</p>
-                </div>
-                <div class="prop-card">
-                    <div class="prop-icon">🎯</div>
-                    <h3>Narrow Focus, Deep Value</h3>
-                    <p>We stay in the areas we know deeply, clinical programming, trading software and review software for CPA firms, rather than offering everything to everyone.</p>
-                </div>
-                <div class="prop-card">
-                    <div class="prop-icon">🇺🇸</div>
-                    <h3>US-Based, Responsive Support</h3>
-                    <p>Onshore delivery gives you data security, regulatory awareness and accountability that offshore models struggle to match.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="zt-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>ZinTrading</h2>
-                <p>Our trading platform, currently in private development.</p>
-            </div>
-            <p class="zt-thesis">The edge is in the process and the risk control, not in a magic signal.</p>
-
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <h3>⚡ Options Scalp Panel</h3>
-                    <p>A single-screen options panel with hard per-trade risk caps that cannot be overridden, daily loss stops, and bracket protection on every order.</p>
-                </div>
-                <div class="tool-card">
-                    <h3>📈 Swing Levels Engine</h3>
-                    <p>Maps support, resistance and structure across 230+ stocks nightly, applies strict reward-to-risk, earnings and liquidity gates, and alerts when price confirms.</p>
-                </div>
-                <div class="tool-card">
-                    <h3>💵 Income Radar</h3>
-                    <p>Finds cash-secured put ideas below real support levels, labels each with a cross-checked earnings date, and tracks every idea to its outcome.</p>
-                </div>
-                <div class="tool-card">
-                    <h3>🔎 Momentum Screener</h3>
-                    <p>A real-time screener for fast-moving stocks, with news and dilution labels, halt-risk flags and position sizing in every alert.</p>
-                    <span class="tool-tag">In development</span>
-                </div>
-                <div class="tool-card">
-                    <h3>🧪 The Grading Lab</h3>
-                    <p>Every alert is logged and graded forward against random entries. If a signal doesn't beat chance, we say so, then change it or drop it.</p>
-                </div>
-            </div>
-
-            <div class="zt-cta">
-                <a href="stock-trading.html" class="btn-cta-trade">Learn About ZinTrading</a>
-            </div>
-
-            <p class="disclaimer">ZinTrading tools are educational and analytical software. Nothing they produce is financial advice or a recommendation to buy or sell any security. Trading involves substantial risk of loss.</p>
-        </div>
-    </section>
-
-    <section class="zv-section" id="zinvera">
-        <div class="container">
-            <div class="section-header">
-                <h2>Zinvera</h2>
-                <!-- AI-COPY: verify against shipped AI layer -->
-                <p>Our review tool for CPA firms, in an invitation-only pilot. AI-assisted features (document reading, judgment flags, plain-language explanations, and Zinni, an assistant that answers questions about the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</p>
-            </div>
-            <p class="zv-thesis">A second look at the return, before it goes out: the draft beside its K-1s, broker statements and last year's return, with the evidence attached to each finding.</p>
-
-            <div class="tools-grid">
-                <div class="tool-card zv">
-                    <h3>📒 Basis Continuity Ledger</h3>
-                    <p>A roll-forward for each partnership and S corporation: opening basis and its source, each adjustment, ending basis, suspended losses by character.</p>
-                </div>
-                <div class="tool-card zv">
-                    <h3>🔗 Cross-Document Checks</h3>
-                    <p>Rules that read the K-1, the broker composite, the W-2, the state K-1 and the prior-year return together and compare them with the draft, line by line.</p>
-                </div>
-                <div class="tool-card zv">
-                    <h3>🔁 Draft 1 → Draft 2 Tracking</h3>
-                    <p>Each first-draft finding followed into the second draft and marked fixed, not fixed, fixed incorrectly, regression or new.</p>
-                </div>
-                <div class="tool-card zv">
-                    <h3>✍️ Form 8879 Currency Check</h3>
-                    <p>The signed authorization's figures against the current draft, measured against the Publication 1345 tolerances.</p>
-                </div>
-                <div class="tool-card zv">
-                    <h3>📎 Evidence and Citations</h3>
-                    <p>The draft value, the expected value, the return line, the source-document field and the authority behind the rule, on each finding.</p>
-                </div>
-            </div>
-
-            <div class="zt-cta">
-                <a href="zinvera.html" class="btn-cta-zinvera">Learn About Zinvera</a>
-                <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
-                <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn-cta-zinvera">Request Early Access</a>
-            </div>
-
-            <p class="disclaimer">Zinvera is in an invitation-only pilot on synthetic case files with pre-computed findings, its rule set is not yet signed off by a CPA, and it is not yet available for client data. Nothing it produces is tax, legal or accounting advice.</p>
-        </div>
-    </section>
-
-    <section class="community-section" id="community">
-        <div class="container">
-            <div class="section-header">
-                <h2>Community &amp; Projects</h2>
-                <p>Follow our work and explore our other projects.</p>
-            </div>
-
-            <div class="community-grid">
-                <div class="community-card">
-                    <div class="prop-icon">💬</div>
-                    <h3>Discord Community</h3>
-                    <p>ZinTrading isn't open to members yet. Tell us you're interested and we'll invite you to our Discord when it opens.</p>
-                    <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-discord">Get notified when ZinTrading opens</a>
-                </div>
-
-                <div class="community-card">
-                    <div class="prop-icon">🎓</div>
-                    <h3>Honest Odds</h3>
-                    <p>College admissions strategy built on real numbers: honest admit odds instead of brochure rates, Early Decision strategy and essay review. Start with a free sample.</p>
-                    <a href="https://honest-odds.com/" class="btn-primary" target="_blank" rel="noopener">Visit Honest Odds</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="industries-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Who We Serve</h2>
-                <p>Life sciences teams that need programming capacity, CPA firms that review complex returns, and people who want honest tools for big decisions.</p>
-            </div>
-
-            <div class="audiences-grid">
-                <div class="audience-card">
-                    <div class="audience-icon">🧬</div>
-                    <div class="audience-tag">CLINICAL PROGRAMMING</div>
-                    <h3>Biotechs &amp; Pharma</h3>
-                    <p>Add experienced SAS programmers and biostatistics support without growing headcount, and keep studies on schedule.</p>
-                    <a href="services.html" class="audience-link">Our Services →</a>
-                </div>
-
-                <div class="audience-card">
-                    <div class="audience-icon">🏢</div>
-                    <div class="audience-tag">CLINICAL PROGRAMMING</div>
-                    <h3>CROs</h3>
-                    <p>Flexible, US-based programming capacity for peaks in your portfolio, with CDISC expertise from day one.</p>
-                    <a href="services.html#staffing" class="audience-link">Technical Staffing →</a>
-                </div>
-
-                <div class="audience-card">
-                    <div class="audience-icon">📊</div>
-                    <div class="audience-tag fintech">FINANCIAL MARKETS</div>
-                    <h3>Disciplined Traders</h3>
-                    <p>Risk-first tools with hard caps, honest signal grading and a full trade journal, now in private development.</p>
-                    <a href="stock-trading.html" class="audience-link fintech-link">ZinTrading →</a>
-                </div>
-
-                <div class="audience-card">
-                    <div class="audience-icon">🧾</div>
-                    <div class="audience-tag cpa">CPA FIRMS</div>
-                    <h3>Tax Reviewers and Signing Partners</h3>
-                    <p>A review tool designed to read the draft return beside its source documents and prior year, with the evidence shown on each finding. In an invitation-only pilot on synthetic case files.</p>
-                    <a href="zinvera.html" class="audience-link cpa-link">Zinvera →</a>
-                </div>
-
-                <div class="audience-card">
-                    <div class="audience-icon">🎓</div>
-                    <div class="audience-tag fintech">COLLEGE ADMISSIONS</div>
-                    <h3>Families Applying to College</h3>
-                    <p>Real, deflated admit odds and an honest strategy review before you commit to a binding decision.</p>
-                    <a href="https://honest-odds.com/" class="audience-link fintech-link" target="_blank" rel="noopener">Honest Odds →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="education-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Free Learning Resources</h2>
-                <p>Guides we're writing for clinical programmers and traders. Coming soon.</p>
-            </div>
-
-            <div class="education-grid">
-                <div class="edu-column">
-                    <h3>🧬 Clinical Programming</h3>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>What is SDTM? A Complete Guide</h3>
-                            <p>Learn the Study Data Tabulation Model standard from the ground up.</p>
-                            <span class="edu-tag clinical">SDTM</span>
-                        </div>
-                    </div>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>ADaM Dataset Creation Best Practices</h3>
-                            <p>Build analysis datasets that pass regulatory review the first time.</p>
-                            <span class="edu-tag clinical">ADaM</span>
-                        </div>
-                    </div>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>Common SDTM Mapping Pitfalls</h3>
-                            <p>Avoid the mistakes that cause FDA submission rejections.</p>
-                            <span class="edu-tag clinical">CDISC</span>
-                        </div>
-                    </div>
-                    <div style="padding-top: 1.5rem;">
-                        <a href="resources.html" style="color: #1f4788; font-weight: 600; text-decoration: none;">View All Clinical Resources →</a>
+                    <p class="note">Zinni is not live in any product yet.</p>
+                    <div class="btn-row mt-1">
+                        <a href="zinni.html" class="btn btn-teal">About Zinni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                     </div>
                 </div>
+                <div><svg viewBox="0 0 460 340" role="img" aria-label="Abstract illustration: a question and an answer, each part of the answer linked to a source document">
+    <defs><linearGradient id="zn-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs>
+    <rect x="1" y="1" width="458" height="338" rx="20" fill="#0f1a30" stroke="rgba(255,255,255,.1)"/>
+    <!-- question bubble -->
+    <rect x="190" y="30" width="240" height="52" rx="16" fill="rgba(255,255,255,.08)"/>
+    <rect x="210" y="50" width="150" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+    <!-- answer bubble -->
+    <rect x="30" y="104" width="290" height="120" rx="16" fill="rgba(78,205,196,.10)" stroke="rgba(78,205,196,.45)"/>
+    <circle cx="58" cy="132" r="14" fill="url(#zn-g)"/>
+    <rect x="84" y="126" width="200" height="10" rx="5" fill="rgba(255,255,255,.45)"/>
+    <rect x="52" y="156" width="230" height="10" rx="5" fill="rgba(255,255,255,.28)"/>
+    <rect x="52" y="178" width="180" height="10" rx="5" fill="rgba(255,255,255,.28)"/>
+    <rect x="52" y="200" width="120" height="10" rx="5" fill="rgba(255,255,255,.28)"/>
+    <!-- source cards -->
+    <g fill="none" stroke="#4ecdc4" stroke-width="1.6" stroke-dasharray="4 5" opacity=".8">
+        <path d="M282 161 C 330 161, 340 130, 360 130"/>
+        <path d="M232 183 C 300 183, 320 210, 360 214"/>
+        <path d="M172 205 C 190 260, 260 290, 360 292"/>
+    </g>
+    <g>
+        <rect x="360" y="108" width="72" height="46" rx="8" fill="#16243f" stroke="rgba(255,255,255,.16)"/>
+        <rect x="372" y="122" width="40" height="6" rx="3" fill="rgba(255,255,255,.4)"/><rect x="372" y="134" width="28" height="6" rx="3" fill="rgba(255,255,255,.22)"/>
+        <rect x="360" y="192" width="72" height="46" rx="8" fill="#16243f" stroke="rgba(255,255,255,.16)"/>
+        <rect x="372" y="206" width="40" height="6" rx="3" fill="rgba(255,255,255,.4)"/><rect x="372" y="218" width="28" height="6" rx="3" fill="rgba(255,255,255,.22)"/>
+        <rect x="360" y="270" width="72" height="46" rx="8" fill="#16243f" stroke="rgba(255,255,255,.16)"/>
+        <rect x="372" y="284" width="40" height="6" rx="3" fill="rgba(255,255,255,.4)"/><rect x="372" y="296" width="28" height="6" rx="3" fill="rgba(255,255,255,.22)"/>
+    </g>
+    <!-- person check -->
+    <g transform="translate(36 262)">
+        <rect width="200" height="44" rx="12" fill="rgba(30,132,73,.16)" stroke="rgba(30,132,73,.6)"/>
+        <path d="M18 22l6 6 12-13" fill="none" stroke="#7be3a0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="50" y="17" width="120" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+    </g>
+</svg></div>
+            </div>
+        </section>
 
-                <div class="edu-column">
-                    <h3>📈 Stock Trading</h3>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>How to Read Stock Charts</h3>
-                            <p>Technical analysis basics every investor should know before trading.</p>
-                            <span class="edu-tag trading">BEGINNER</span>
-                        </div>
+        <!-- How we build AI -->
+        <section class="section" id="how-we-build">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">How we build AI</span>
+                    <h2>AI that shows its work</h2>
+                    <p class="lede">The same three rules apply to every Zinger AI product.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="principle">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
+                        <span class="num">01</span>
+                        <h3>Numbers come from code</h3>
+                        <p>AI reads and explains. Rules written in code compute every figure you see.</p>
                     </div>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>Risk Management: Position Sizing &amp; Stop-Loss</h3>
-                            <p>Protect your capital with proven risk management strategies.</p>
-                            <span class="edu-tag trading">INTERMEDIATE</span>
-                        </div>
+                    <div class="principle">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>
+                        <span class="num">02</span>
+                        <h3>Sources are shown</h3>
+                        <p>Each result points to the line, field or document it came from.</p>
                     </div>
-                    <div class="edu-article">
-                        <span class="edu-article-icon">📄</span>
-                        <div>
-                            <h3>Backtesting Trading Strategies</h3>
-                            <p>Validate your ideas against historical data before risking capital.</p>
-                            <span class="edu-tag trading">ADVANCED</span>
-                        </div>
+                    <div class="principle">
+                        <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></svg></span>
+                        <span class="num">03</span>
+                        <h3>People decide</h3>
+                        <p>Our tools flag and explain. The reviewer, the family or the trader makes the call.</p>
                     </div>
-                    <div style="padding-top: 1.5rem;">
-                        <a href="resources.html" style="color: #1e8449; font-weight: 600; text-decoration: none;">View All Trading Resources →</a>
+                </div>
+                <div class="diagram-wrap">
+                    <svg class="d-desktop" viewBox="0 0 1000 190" role="img" aria-labelledby="dg-t dg-d">
+                        <title id="dg-t">How it works</title>
+                        <desc id="dg-d">Four steps: documents go in, AI reads them, code checks every number, and you decide.</desc>
+                        <defs>
+                            <marker id="dg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa8bd"/></marker>
+                        </defs>
+                        <g font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" text-anchor="middle">
+                            <g>
+                                <rect x="10" y="20" width="205" height="150" rx="16" fill="#f4f7fb" stroke="#d5deea"/>
+                                <circle cx="112" cy="62" r="24" fill="#e6eefb"/>
+                                <g transform="translate(100 50)" fill="none" stroke="#1f4788" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></g>
+                                <text x="112" y="118" font-size="19" font-weight="700" fill="#1b2333">Documents</text>
+                                <text x="112" y="142" font-size="13.5" fill="#5b6577">The source files</text>
+                            </g>
+                            <line x1="222" y1="95" x2="258" y2="95" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dg-arrow)"/>
+                            <g>
+                                <rect x="265" y="20" width="205" height="150" rx="16" fill="#e9f8f6" stroke="#4ecdc4"/>
+                                <circle cx="367" cy="62" r="24" fill="#c9efeb"/>
+                                <g transform="translate(355 50)" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z"/></g>
+                                <text x="367" y="118" font-size="19" font-weight="700" fill="#1b2333">AI reads</text>
+                                <text x="367" y="142" font-size="13.5" fill="#5b6577">Finds the fields, explains</text>
+                            </g>
+                            <line x1="477" y1="95" x2="513" y2="95" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dg-arrow)"/>
+                            <g>
+                                <rect x="520" y="20" width="205" height="150" rx="16" fill="#eef3fb" stroke="#1f4788"/>
+                                <circle cx="622" cy="62" r="24" fill="#d7e3f6"/>
+                                <g transform="translate(610 50)" fill="none" stroke="#1f4788" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></g>
+                                <text x="622" y="118" font-size="19" font-weight="700" fill="#1b2333">Code checks</text>
+                                <text x="622" y="142" font-size="13.5" fill="#5b6577">Every number from rules</text>
+                            </g>
+                            <line x1="732" y1="95" x2="768" y2="95" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dg-arrow)"/>
+                            <g>
+                                <rect x="775" y="20" width="205" height="150" rx="16" fill="#eaf6ef" stroke="#1e8449"/>
+                                <circle cx="877" cy="62" r="24" fill="#cdebd9"/>
+                                <g transform="translate(865 50)" fill="none" stroke="#1e8449" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></g>
+                                <text x="877" y="118" font-size="19" font-weight="700" fill="#1b2333">You decide</text>
+                                <text x="877" y="142" font-size="13.5" fill="#5b6577">With the evidence shown</text>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="d-mobile" viewBox="0 0 300 470" role="img" aria-labelledby="dgm-t dgm-d">
+                        <title id="dgm-t">How it works</title>
+                        <desc id="dgm-d">Four steps: documents go in, AI reads them, code checks every number, and you decide.</desc>
+                        <defs>
+                            <marker id="dgm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa8bd"/></marker>
+                        </defs>
+                        <g font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif">
+                            <rect x="5" y="5" width="290" height="88" rx="14" fill="#f4f7fb" stroke="#d5deea"/>
+                            <circle cx="50" cy="49" r="22" fill="#e6eefb"/>
+                            <g transform="translate(38 37)" fill="none" stroke="#1f4788" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></g>
+                            <text x="88" y="44" font-size="18" font-weight="700" fill="#1b2333">Documents</text>
+                            <text x="88" y="66" font-size="13.5" fill="#5b6577">The source files</text>
+                            <line x1="150" y1="97" x2="150" y2="117" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dgm-arrow)"/>
+
+                            <rect x="5" y="124" width="290" height="88" rx="14" fill="#e9f8f6" stroke="#4ecdc4"/>
+                            <circle cx="50" cy="168" r="22" fill="#c9efeb"/>
+                            <g transform="translate(38 156)" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z"/></g>
+                            <text x="88" y="163" font-size="18" font-weight="700" fill="#1b2333">AI reads</text>
+                            <text x="88" y="185" font-size="13.5" fill="#5b6577">Finds the fields, explains</text>
+                            <line x1="150" y1="216" x2="150" y2="236" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dgm-arrow)"/>
+
+                            <rect x="5" y="243" width="290" height="88" rx="14" fill="#eef3fb" stroke="#1f4788"/>
+                            <circle cx="50" cy="287" r="22" fill="#d7e3f6"/>
+                            <g transform="translate(38 275)" fill="none" stroke="#1f4788" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></g>
+                            <text x="88" y="282" font-size="18" font-weight="700" fill="#1b2333">Code checks</text>
+                            <text x="88" y="304" font-size="13.5" fill="#5b6577">Every number from rules</text>
+                            <line x1="150" y1="335" x2="150" y2="355" stroke="#9aa8bd" stroke-width="2" marker-end="url(#dgm-arrow)"/>
+
+                            <rect x="5" y="362" width="290" height="88" rx="14" fill="#eaf6ef" stroke="#1e8449"/>
+                            <circle cx="50" cy="406" r="22" fill="#cdebd9"/>
+                            <g transform="translate(38 394)" fill="none" stroke="#1e8449" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></g>
+                            <text x="88" y="401" font-size="18" font-weight="700" fill="#1b2333">You decide</text>
+                            <text x="88" y="423" font-size="13.5" fill="#5b6577">With the evidence shown</text>
+                        </g>
+                    </svg>
+                    <p class="diagram-caption">The pattern our AI products follow. In Zinvera, the review engine's rules run today; AI document reading is in development for the first pilot release.</p>
+                </div>
+                <p class="mt-2 link-row"><a href="how-we-build.html" class="text-link">How we build AI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="responsible-ai.html" class="text-link">Responsible AI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+            </div>
+        </section>
+
+        <!-- Who we serve -->
+        <section class="section alt" id="who-we-serve">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Who we serve</span>
+                    <h2>Built for people who check their work</h2>
+                </div>
+                <div class="grid grid-4">
+                    <div class="card aud-card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span>
+                        <span class="card-tag">Zinvera</span>
+                        <h3>CPAs and tax reviewers</h3>
+                        <p>A second look at complex returns, with the evidence on each finding. In an invitation-only pilot on synthetic case files.</p>
+                        <a href="zinvera.html" class="text-link">Zinvera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card aud-card">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 1.5 4 2 6 2s4-.5 6-2v-5"/><path d="M22 9v5"/></svg></span>
+                        <span class="card-tag">Honest Odds</span>
+                        <h3>Families applying to college</h3>
+                        <p>Real, deflated admit odds and an honest strategy review before you commit to a binding decision.</p>
+                        <a href="https://honest-odds.com/" class="text-link" target="_blank" rel="noopener">Honest Odds <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+                    </div>
+                    <div class="card aud-card">
+                        <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                        <span class="card-tag">ZinTrading</span>
+                        <h3>Disciplined traders</h3>
+                        <p>Risk-first tools with hard caps, honest signal grading and a full trade journal, now in private development.</p>
+                        <a href="stock-trading.html" class="text-link">ZinTrading <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card aud-card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/><path d="M16 5.2a3 3 0 0 1 0 5.6M18 14.8c1.4.6 2.5 1.9 3 4.2"/></svg></span>
+                        <span class="card-tag">Services</span>
+                        <h3>Life-sciences teams</h3>
+                        <p>Experienced SAS programmers and biostatistics support for biotechs, pharma and CROs, without growing headcount.</p>
+                        <a href="services.html" class="text-link">Our services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="company-credibility">
-        <div class="container">
-            <h2>Built on Proven Expertise</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem;">Zinger Software Solutions has delivered clinical programming services since 2013</p>
+        <!-- Services -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Services · since 2013</span>
+                    <h2>Consulting &amp; Staffing</h2>
+                    <p class="lede">Clinical programming and biostatistics expertise for biotechs, pharma companies and CROs, from early-phase studies through regulatory submission.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5"/><path d="M16 5.2a3 3 0 0 1 0 5.6M18 14.8c1.4.6 2.5 1.9 3 4.2"/></svg></span>
+                        <h3>Technical Staffing</h3>
+                        <p>Experienced, US-based clinical programming talent on contract, contract-to-hire or full-time terms.</p>
+                        <a href="services.html#staffing" class="text-link">Technical staffing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+                        <h3>Statistical Programming</h3>
+                        <p>End-to-end SAS programming for clinical trials, from raw data to submission-ready deliverables.</p>
+                        <a href="services.html#programming" class="text-link">Statistical programming <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span>
+                        <h3>Strategic Consulting</h3>
+                        <p>Workflow, standards and technology advice for programming teams that need to modernize or scale.</p>
+                        <a href="services.html#consulting" class="text-link">Strategic consulting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                </div>
+                <p class="mt-2 muted">Need a custom solution? We scope and build custom programming solutions around your protocol, timeline and submission requirements. <a href="services.html#custom" class="text-link">Custom solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+            </div>
+        </section>
 
-            <div class="credibility-stats">
-                <div class="cred-stat">
-                    <span class="cred-number">12+</span>
-                    <span class="cred-label">Years Company Track Record</span>
+        <!-- Resources -->
+        <section class="section alt" id="resources">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Resources</span>
+                    <h2>Guides and community</h2>
+                    <p class="lede">Guides we're writing for clinical programmers and traders. Coming soon.</p>
                 </div>
-                <div class="cred-stat">
-                    <span class="cred-number">24+</span>
-                    <span class="cred-label">Years Industry Experience</span>
-                </div>
-                <div class="cred-stat">
-                    <span class="cred-number">2013</span>
-                    <span class="cred-label">Founded in Apex, NC</span>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg></span>
+                        <span class="card-tag">Clinical programming</span>
+                        <h3>SDTM, ADaM and TLF guides</h3>
+                        <p>What SDTM is, ADaM dataset practice, and common mapping pitfalls.</p>
+                        <a href="resources.html#clinical" class="text-link">Clinical resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card">
+                        <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+                        <span class="card-tag">Trading</span>
+                        <h3>Trading education</h3>
+                        <p>Reading charts, position sizing and stop-losses, and backtesting honestly.</p>
+                        <a href="resources.html#trading" class="text-link">Trading resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <div class="card" id="community">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></span>
+                        <span class="card-tag">Community</span>
+                        <h3>Discord community</h3>
+                        <p>ZinTrading isn't open to members yet. Tell us you're interested and we'll invite you to our Discord when it opens.</p>
+                        <a href="contact.html?interest=zintrading-notify#contact-form" class="text-link">Get notified <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="final-cta">
-        <div class="container">
-            <h2>Let's Talk About Your Study</h2>
-            <p>Need programming capacity, biostatistics support or a custom solution? Tell us what you're working on.</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-primary">Request Services</a>
-                <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-cta-trade">Get notified when ZinTrading opens</a>
-                <a href="zinvera.html" class="btn-cta-zinvera">Learn about Zinvera</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="cta-band">
+                    <div>
+                        <span class="eyebrow">Contact</span>
+                        <h2>Tell us what you're working on</h2>
+                        <p>Early access to Zinvera, news when ZinTrading opens, or programming and staffing support for your study.</p>
+                    </div>
+                    <div class="btn-row">
+                        <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                        <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn btn-teal">Zinvera early access</a>
+                        <a href="contact.html" class="btn btn-ghost">Contact us</a>
+                    </div>
                 </div>
+                <p class="disclaimer">Zinvera is in an invitation-only pilot on synthetic case files with pre-computed findings, its rule set is not yet signed off by a CPA, and it is not yet available for client data. Nothing it produces is tax, legal or accounting advice. ZinTrading tools are educational and analytical software; nothing they produce is financial advice or a recommendation to buy or sell any security. Trading involves substantial risk of loss.</p>
+            </div>
+        </section>
 
-                <div class="footer-section">
-                    <h3>Services</h3>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <a href="zinvera.html">Zinvera</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="xslt-bridge/">XSLT Bridge</a>
+                    <a href="products.html">All products</a>
+                </div>
+                <div>
+                    <h4>AI</h4>
+                    <a href="zinni.html">Zinni</a>
+                    <a href="how-we-build.html">How we build AI</a>
+                    <a href="responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
                     <a href="services.html#staffing">Technical Staffing</a>
                     <a href="services.html#programming">Statistical Programming</a>
                     <a href="services.html#consulting">Strategic Consulting</a>
                     <a href="services.html#custom">Custom Solutions</a>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Products &amp; Community</h3>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
-                    <a href="index.html#community">Community</a>
-                    <a href="products.html">All Products</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="contact.html">Contact</a>
                     <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

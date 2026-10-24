@@ -3,680 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Zinger Software Solutions | Clinical Programming, Staffing &amp; Consulting</title>
-    <meta name="description" content="Zinger Software Solutions has provided clinical programming, biostatistics support, technical staffing and consulting since 2013. Based in Apex, NC. Now also building ZinTrading and Zinvera.">
-    
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.4rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #4ecdc4;
-        }
-
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .page-hero {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Company Story */
-        .company-story {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .company-story h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .story-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .story-content p {
-            margin-bottom: 2rem;
-        }
-
-        .highlight {
-            background: #e8f9f5;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 4px solid #4ecdc4;
-        }
-
-        /* Evolution Timeline */
-        .evolution-timeline {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .evolution-timeline h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .timeline-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #4ecdc4;
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            flex: 1;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            margin: 0 2rem;
-        }
-
-        .timeline-year {
-            background: #4ecdc4;
-            color: #1f4788;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
-
-        .timeline-content h3 {
-            color: #1f4788;
-            margin-bottom: 1rem;
-        }
-
-        /* Leadership Team */
-        .leadership-team {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .leadership-team h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .team-member {
-            text-align: center;
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .member-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: #4ecdc4;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #1f4788;
-        }
-
-        .member-name {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
-
-        .member-title {
-            color: #0f766e;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .member-bio {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Mission Vision */
-        .mission-vision {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .mission-vision h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .mv-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .mv-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            border-radius: 15px;
-        }
-
-        .mv-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .mv-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .mv-card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #4ecdc4;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            margin-bottom: 0.5rem;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #4ecdc4;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 1rem;
-            text-align: center;
-            color: #bdc3c7;
-        }
-
-        /* Development Stage Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background: #1f4788;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background: #2558a0;
-            transform: translateY(-2px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .page-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .timeline-line {
-                left: 20px;
-            }
-            
-            .timeline-item {
-                flex-direction: row !important;
-                padding-left: 3rem;
-            }
-            
-            .timeline-content {
-                margin: 0;
-                margin-left: 1rem;
-            }
-            
-            .timeline-year {
-                position: absolute;
-                left: 0;
-            }
-        }
-
-        /* Accessibility & polish */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible,
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid #1f4788;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 6px #ffffff;
-        }
-
-        .dev-banner {
-            background: #1f4788 !important;
-            color: white;
-        }
-
-        .dev-banner a {
-            color: #4ecdc4 !important;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
-
-            header {
-                position: static !important;
-            }
-
-            .nav-links a {
-                display: inline-block;
-                padding: 0.6rem 0.5rem;
-            }
-        }
-
-        /* Mobile nav: wrap the links instead of hiding them */
-        @media (max-width: 768px) {
-            header nav,
-            .header-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-            }
-
-            .nav-links {
-                display: flex !important;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.4rem 1.1rem;
-                padding: 0;
-            }
-
-            .logo {
-                width: 100%;
-                text-align: center;
-                font-size: 1.4rem;
-            }
-
-            .cta-button {
-                display: none;
-            }
-        }
-    </style>
+    <title>About Zinger Software Solutions | AI Product Studio in Apex, NC</title>
+    <meta name="description" content="Zinger Software Solutions is an AI product studio in Apex, NC, building Zinvera, ZinTrading and Zinni. Since 2013 we have also provided clinical programming, biostatistics support, technical staffing and consulting.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="About Zinger Software Solutions | AI Product Studio in Apex, NC">
+    <meta property="og:description" content="Zinger Software Solutions is an AI product studio in Apex, NC, building Zinvera, ZinTrading and Zinni. Since 2013 we have also provided clinical programming, biostatistics support, technical staffing and consulting.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/about.html">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-    <!-- Development Banner -->
-    <div class="dev-banner">
-        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form" style="color:white;text-decoration:underline;">get notified when it opens</a> · Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form" style="color:white;text-decoration:underline;">request early access</a>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">Zinger Software Solutions</a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="about.html" class="active">About</a>
-                    <a href="resources.html">Resources</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <a href="contact.html" class="cta-button">Get Started</a>
-            </div>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a> · ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="zinvera.html">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="xslt-bridge/">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="zinni.html">Zinni</a></li><li><a href="how-we-build.html">How we build</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Clinical Programming Expertise Since 2013</h1>
-            <p>Zinger Software Solutions helps biotech, pharmaceutical and CRO teams deliver submission-ready clinical data through statistical programming, biostatistics support, technical staffing and strategic consulting.</p>
-        </div>
-    </section>
-
-    <!-- Company Story -->
-    <section class="company-story">
-        <div class="container">
-            <h2>Our Story</h2>
-
-            <div class="story-content">
-                <p>
-                    Zinger Software Solutions began in 2013 with a simple mission: provide high-quality clinical programming services to biotechnology and pharmaceutical companies. For more than 12 years we have delivered SDTM datasets, ADaM analyses and TLF outputs for studies ranging from early-phase biotech trials to large global submissions.
-                </p>
-
-                <div class="highlight">
-                    <strong>What Clients Rely On Us For:</strong> Experienced people who understand CDISC standards, regulatory expectations and real study timelines — whether that means placing a programmer on your team, owning a deliverable end to end, or advising on how to structure your programming and biostatistics work.
-                </div>
-
-                <p>
-                    Over time our work has grown beyond hands-on programming. Today we provide technical staffing for clinical programming and biostatistics roles, statistical programming (SDTM, ADaM, TLF and eCTD submission packages) with biostatistics support, strategic consulting on standards and submission readiness, and custom solutions built around a client's specific workflow.
-                </p>
-
-                <p>
-                    Alongside our services business, we are building ZinTrading — trading software currently in private development — and Zinvera, a review tool for CPA firms that is in an invitation-only pilot. Both reflect the same approach we bring to client work: practical, transparent and built by people who use it.
-                </p>
-
-                <p>
-                    We remain a focused team based in Apex, North Carolina. Our advantage is not size — it is the practitioner knowledge and accountability behind every engagement.
-                </p>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">About</span>
+                <h1>Practitioners building <span class="accent">tools that show their work</span></h1>
+                <p>Zinger Software Solutions is an AI product studio. We build Zinvera, AI-assisted review for CPA firms; ZinTrading, risk-first tools for disciplined traders; and Zinni, one assistant across our products. Since 2013 we have also helped biotech, pharmaceutical and CRO teams deliver submission-ready clinical data through statistical programming, biostatistics support, technical staffing and strategic consulting.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Evolution Timeline -->
-    <section class="evolution-timeline">
-        <div class="container">
-            <h2>Company Evolution</h2>
-            
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">2013</div>
-                    <div class="timeline-content">
-                        <h3>Company Founded</h3>
-                        <p>Zinger Software Solutions established as a boutique clinical programming consultancy serving biotech and pharmaceutical companies with SDTM, ADaM, and TLF services.</p>
+        <section class="section">
+            <div class="container">
+                <div class="prose">
+                    <span class="eyebrow">Our story</span>
+                    <h2 style="margin-top:0">Our Story</h2>
+                    <p>Zinger Software Solutions began in 2013 with a simple mission: provide high-quality clinical programming services to biotechnology and pharmaceutical companies. For more than 12 years we have delivered SDTM datasets, ADaM analyses and TLF outputs for studies ranging from early-phase biotech trials to large global submissions.</p>
+                    <div class="callout"><strong>What clients rely on us for:</strong> Experienced people who understand CDISC standards, regulatory expectations and real study timelines — whether that means placing a programmer on your team, owning a deliverable end to end, or advising on how to structure your programming and biostatistics work.</div>
+                    <p class="mt-1">Over time our work has grown beyond hands-on programming. Today we provide technical staffing for clinical programming and biostatistics roles, statistical programming (SDTM, ADaM, TLF and eCTD submission packages) with biostatistics support, strategic consulting on standards and submission readiness, and custom solutions built around a client's specific workflow.</p>
+                    <p>Alongside our services business, we are building ZinTrading — trading software currently in private development — and Zinvera, a review tool for CPA firms that is in an invitation-only pilot. Both reflect the same approach we bring to client work: practical, transparent and built by people who use it.</p>
+                    <p>We remain a focused team based in Apex, North Carolina. Our advantage is not size — it is the practitioner knowledge and accountability behind every engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-head"><h2>Company Evolution</h2></div>
+                <ol class="timeline">
+                    <li><span class="yr">2013</span><div><h3>Company Founded</h3><p>Zinger Software Solutions established as a boutique clinical programming consultancy serving biotech and pharmaceutical companies with SDTM, ADaM, and TLF services.</p></div></li>
+                    <li><span class="yr">2018</span><div><h3>TLF &amp; Submission Expertise</h3><p>Became known for submission-ready TLF creation and regulatory support, developing standardized processes that consistently delivered regulatory-compliant outputs ahead of deadlines.</p></div></li>
+                    <li><span class="yr">2025</span><div><h3>ZinTrading Development Begins</h3><p>Began building ZinTrading, our trading software, as a separate effort alongside our core services business.</p></div></li>
+                    <li><span class="yr">2026</span><div><h3>Zinvera Pilot Being Prepared</h3><p>Started Zinvera, a review tool for CPA firms, and began preparing an invitation-only pilot on synthetic case files. We are working through the rule set's tax positions with a practising CPA; they are not yet signed off.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split">
+                <div>
+                    <div class="section-head"><h2>Leadership</h2></div>
+                    <div class="card">
+                        <span class="icon navy" aria-hidden="true" style="font-weight:700">AA</span>
+                        <h3>Amit Ahuja</h3>
+                        <span class="card-tag">Founder &amp; CEO</span>
+                        <p>With 24+ years in clinical programming and 12+ years leading Zinger Software Solutions, Amit brings deep expertise in SDTM, ADaM, and TLF creation and regulatory submissions. He leads Zinger's client engagements across statistical programming, staffing and consulting, and is also directing the development of ZinTrading and Zinvera.</p>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">2018</div>
-                    <div class="timeline-content">
-                        <h3>TLF &amp; Submission Expertise</h3>
-                        <p>Became known for submission-ready TLF creation and regulatory support, developing standardized processes that consistently delivered regulatory-compliant outputs ahead of deadlines.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content">
-                        <h3>ZinTrading Development Begins</h3>
-                        <p>Began building ZinTrading, our trading software, as a separate effort alongside our core services business.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">2026</div>
-                    <div class="timeline-content">
-                        <h3>Zinvera Pilot Being Prepared</h3>
-                        <p>Started Zinvera, a review tool for CPA firms, and began preparing an invitation-only pilot on synthetic case files. We are working through the rule set's tax positions with a practising CPA; they are not yet signed off.</p>
+                <div>
+                    <div class="section-head"><h2>Mission &amp; Vision</h2></div>
+                    <div class="grid">
+                        <div class="principle"><h3>Our Mission</h3><p>Help clinical research teams deliver accurate, submission-ready data on time — by providing experienced programmers, statisticians and advisors who take ownership of the work.</p></div>
+                        <div class="principle"><h3>Our Vision</h3><p>To be the partner sponsors and CROs call first when they need clinical programming done right — and to apply the same rigor to the software we build, starting with ZinTrading and Zinvera.</p></div>
+                        <div class="principle"><h3>Our Values</h3><p>Quality excellence, domain expertise, and practical innovation that solves real problems — not technology for its own sake.</p></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Leadership Team -->
-    <section class="leadership-team">
-        <div class="container">
-            <h2>Leadership Team</h2>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo">AA</div>
-                    <div class="member-name">Amit Ahuja</div>
-                    <div class="member-title">Founder & CEO</div>
-                    <div class="member-bio">
-                        With 24+ years in clinical programming and 12+ years leading Zinger Software Solutions, Amit brings deep expertise in SDTM, ADaM, and TLF creation and regulatory submissions. He leads Zinger's client engagements across statistical programming, staffing and consulting, and is also directing the development of ZinTrading and Zinvera.
+        <section class="section alt">
+            <div class="container">
+                <div class="cta-band">
+                    <div>
+                        <h2>Let's Work Together</h2>
+                        <p>Whether you need a programmer on your team next month, a partner to own a deliverable, or advice on your submission strategy — we would like to hear from you.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a href="services.html" class="btn btn-teal">Explore Our Services</a>
+                        <a href="products.html" class="btn btn-ghost">See our products</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Mission Vision -->
-    <section class="mission-vision">
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <h2>Mission & Vision</h2>
-            
-            <div class="mv-grid">
-                <div class="mv-card">
-                    <div class="mv-icon">🎯</div>
-                    <h3>Our Mission</h3>
-                    <p>
-                        Help clinical research teams deliver accurate, submission-ready data on time — by providing experienced programmers, statisticians and advisors who take ownership of the work.
-                    </p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
                 </div>
-
-                <div class="mv-card">
-                    <div class="mv-icon">🔮</div>
-                    <h3>Our Vision</h3>
-                    <p>
-                        To be the partner sponsors and CROs call first when they need clinical programming done right — and to apply the same rigor to the software we build, starting with ZinTrading and Zinvera.
-                    </p>
+                <div>
+                    <h4>Products</h4>
+                    <a href="zinvera.html">Zinvera</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="xslt-bridge/">XSLT Bridge</a>
+                    <a href="products.html">All products</a>
                 </div>
-
-                <div class="mv-card">
-                    <div class="mv-icon">💡</div>
-                    <h3>Our Values</h3>
-                    <p>
-                        Quality excellence, domain expertise, and practical innovation that solves real problems — not technology for its own sake.
-                    </p>
+                <div>
+                    <h4>AI</h4>
+                    <a href="zinni.html">Zinni</a>
+                    <a href="how-we-build.html">How we build AI</a>
+                    <a href="responsible-ai.html">Responsible AI</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section style="padding: 4rem 0; background: white; text-align: center;">
-        <div class="container">
-            <h2 style="color: #1f4788; font-size: 2.5rem; margin-bottom: 2rem;">Let's Work Together</h2>
-            <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Whether you need a programmer on your team next month, a partner to own a deliverable, or advice on your submission strategy — we would like to hear from you.
-            </p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="services.html" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Explore Our Services</a>
-            </div>
-            <p style="margin-top: 1.5rem; color: #666;">Interested in our trading software? <a href="stock-trading.html" style="color: #1f4788; font-weight: 600;">Learn about ZinTrading</a>. Or see <a href="zinvera.html" style="color: #1f4788; font-weight: 600;">Zinvera</a>, our review tool for CPA firms.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Services</h3>
+                <div>
+                    <h4>Services</h4>
                     <a href="services.html#staffing">Technical Staffing</a>
                     <a href="services.html#programming">Statistical Programming</a>
                     <a href="services.html#consulting">Strategic Consulting</a>
                     <a href="services.html#custom">Custom Solutions</a>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Products &amp; Community</h3>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
-                    <a href="index.html#community">Community</a>
-                    <a href="products.html">All Products</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="contact.html">Contact</a>
                     <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

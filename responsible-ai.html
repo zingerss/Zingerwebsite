@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible AI at Zinger | Synthetic Data in Pilots, No Training on Client Data</title>
+    <meta name="description" content="How Zinger handles AI and data: pilots run on synthetic data only, we do not use client data to train AI models, and the numbers come from code, not from the AI.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/responsible-ai.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="Responsible AI at Zinger | Synthetic Data in Pilots, No Training on Client Data">
+    <meta property="og:description" content="How Zinger handles AI and data: pilots run on synthetic data only, we do not use client data to train AI models, and the numbers come from code, not from the AI.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/responsible-ai.html">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a> · ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="zinvera.html">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="xslt-bridge/">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="zinni.html">Zinni</a></li><li><a href="how-we-build.html" aria-current="page">How we build</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Responsible AI</span>
+                <h1>Responsible AI, <span class="accent">in plain words</span></h1>
+                <p>Three commitments, and what they mean for your data.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="principle">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></span>
+                        <h3>Synthetic data only in pilots</h3>
+                        <p>Our pilots run on synthetic, fictional case files. The Zinvera pilot accepts no client data.</p>
+                    </div>
+                    <div class="principle">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v13c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-13"/><path d="M4 12c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg></span>
+                        <h3>No training on client data</h3>
+                        <p>We do not use client data to train AI models.</p>
+                    </div>
+                    <div class="principle">
+                        <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
+                        <h3>Numbers from code</h3>
+                        <p>AI reads and explains. Rules in code compute the numbers, sources are shown, and people decide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="prose">
+                    <h2>How data is handled</h2>
+                    <ul>
+                        <li><strong>Zinvera pilot.</strong> Reviewers work on synthetic case files with pre-computed findings. No client data is accepted. The only thing that leaves a reviewer's browser is the feedback they choose to save.</li>
+                        <li><strong>Before any real data.</strong> Before a Zinger product accepts real client data, we will publish how it is stored, who processes it, how long it is kept and how to delete it, on this page.</li>
+                        <li><strong>Contact form.</strong> Our contact form opens your own email app; the site does not collect form data itself.</li>
+                        <li><strong>Honest Odds</strong> runs on its own site, <a href="https://honest-odds.com/" target="_blank" rel="noopener">honest-odds.com</a>; see that site for how it handles information.</li>
+                        <li><strong>XSLT Bridge</strong> sends nothing to us automatically. See the <a href="xslt-bridge/privacy/">XSLT Bridge privacy policy</a>.</li>
+                    </ul>
+                    <h2>Questions</h2>
+                    <p>Privacy questions: <a href="mailto:privacy@zingersoftwaresolutions.com">privacy@zingersoftwaresolutions.com</a>. Security reports: <a href="mailto:security@zingersoftwaresolutions.com">security@zingersoftwaresolutions.com</a>.</p>
+                    <p class="note">See also <a href="how-we-build.html">how we build AI</a> and <a href="zinni.html">Zinni</a>.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <a href="zinvera.html">Zinvera</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="xslt-bridge/">XSLT Bridge</a>
+                    <a href="products.html">All products</a>
+                </div>
+                <div>
+                    <h4>AI</h4>
+                    <a href="zinni.html">Zinni</a>
+                    <a href="how-we-build.html">How we build AI</a>
+                    <a href="responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <a href="services.html#staffing">Technical Staffing</a>
+                    <a href="services.html#programming">Statistical Programming</a>
+                    <a href="services.html#consulting">Strategic Consulting</a>
+                    <a href="services.html#custom">Custom Solutions</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -3,609 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zinvera | Review Tool for CPA Firms | Zinger Software Solutions</title>
-    <meta name="description" content="Zinvera is a review tool for CPA firms from Zinger Software Solutions: it reads the draft return beside its K-1s, broker statements and last year's return, carries basis forward and tracks findings across drafts. In pilot.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Dev Banner */
-        .dev-banner {
-            background: #1e8449;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Header */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #1f4788;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #1e8449;
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #132e57 0%, #1f4788 60%, #2558a0 100%);
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero-content h1 span {
-            color: #4ecdc4;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .hero-badges {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.15);
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        /* ZinTrading Overview */
-        .zt-overview {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .overview-content h2 {
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 1.5rem;
-        }
-
-        .overview-content p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .overview-features {
-            list-style: none;
-        }
-
-        .overview-features li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-            color: #555;
-            font-size: 1.05rem;
-        }
-
-        .overview-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #1f4788;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .zt-diagram {
-            background: #f8f9fa;
-            padding: 3rem;
-            border-radius: 15px;
-        }
-
-        .workflow-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            background: #1f4788;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-
-        .step-content h3 {
-            font-size: 1rem;
-            color: #1f4788;
-            margin-bottom: 0.3rem;
-        }
-
-        .step-content p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        .workflow-arrow {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #1f4788;
-            margin: 0.5rem 0;
-        }
-
-        /* Key Benefits */
-        .key-benefits {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .key-benefits h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .benefit-card h3 {
-            color: #1f4788;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Audience Cards */
-        .audience-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .audience-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 3rem;
-        }
-
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .audience-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border-top: 4px solid #1f4788;
-            transition: transform 0.3s ease;
-        }
-
-        .audience-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .audience-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .audience-card h3 {
-            color: #1f4788;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .audience-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* CTA */
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #132e57 0%, #1f4788 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #1f4788;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #4ecdc4;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover { color: #4ecdc4; }
-
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 1rem;
-            text-align: center;
-            color: #95a5a6;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.2rem; }
-            .overview-grid { grid-template-columns: 1fr; gap: 2rem; }
-
-        }
-
-        .dev-banner a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .thesis {
-            font-size: 1.5rem !important;
-            font-weight: 600;
-            opacity: 1 !important;
-        }
-
-        .tool-tag {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.25rem 0.8rem;
-            border-radius: 10px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .benefit-card.tool {
-            text-align: left;
-            border-top: 4px solid #1f4788;
-        }
-
-        .benefit-card.tool .benefit-icon {
-            margin-bottom: 1rem;
-        }
-
-        .section-intro {
-            text-align: center;
-            color: #666;
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: -2rem auto 3rem;
-        }
-
-        .status-box {
-            background: rgba(255,255,255,0.12);
-            border-radius: 12px;
-            padding: 1.5rem 2rem;
-            max-width: 640px;
-            margin: 0 auto 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-outline-white {
-            border: 2px solid white;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-white:hover {
-            background: white;
-            color: #1f4788;
-        }
-
-        .disclaimer-section {
-            background: #f8f9fa;
-            padding: 2.5rem 0;
-        }
-
-        .disclaimer-section p {
-            max-width: 820px;
-            margin: 0 auto;
-            text-align: center;
-            color: #666;
-            font-size: 0.92rem;
-        }
-
-        /* Accessibility & polish */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible,
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid #1f4788;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 6px #ffffff;
-        }
-
-        .dev-banner {
-            background: #1f4788 !important;
-            color: white;
-        }
-
-        .dev-banner a {
-            color: #4ecdc4 !important;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
-
-            header {
-                position: static !important;
-            }
-
-            .nav-links a {
-                display: inline-block;
-                padding: 0.6rem 0.5rem;
-            }
-        }
-
-        /* Page-specific polish */
-        a.logo {
-            text-decoration: none;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #1f4788;
-            box-shadow: inset 0 -2px 0 #1f4788;
-        }
-
-        @media (min-width: 700px) {
-            .key-benefits .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Mobile nav: wrap the links instead of hiding them */
-        @media (max-width: 768px) {
-            header nav,
-            .header-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-            }
-
-            .nav-links {
-                display: flex !important;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.4rem 1.1rem;
-                padding: 0;
-            }
-
-            .logo {
-                width: 100%;
-                text-align: center;
-                font-size: 1.4rem;
-            }
-
-            .cta-button {
-                display: none;
-            }
-        }
-
-        .status-note { background: #f8f9fa; border-left: 4px solid #1f4788; padding: 1rem 1.5rem; max-width: 820px; margin: 0 auto 2.5rem; color: #444; font-size: 1.02rem; text-align: left; }
-        .step-content p strong { color: #1f4788; }
-    </style>
+    <title>AI-Assisted Tax Return Review for CPA Firms | Zinvera by Zinger (Pilot)</title>
+    <meta name="description" content="AI-assisted review for CPA firms, in pilot: Zinvera reads the draft return beside its K-1s, broker statements and last year's return, carries basis forward and tracks findings across drafts. AI features are in development; every number stays in code.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/zinvera.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="AI-Assisted Tax Return Review for CPA Firms | Zinvera by Zinger (Pilot)">
+    <meta property="og:description" content="AI-assisted review for CPA firms, in pilot: Zinvera reads the draft return beside its K-1s, broker statements and last year's return, carries basis forward and tracks findings across drafts. AI features are in development; every number stays in code.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/zinvera.html">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-
-    <div class="dev-banner">
-        Zinvera, our review tool for CPA firms, is in an invitation-only pilot — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a>
-    </div>
-
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Zinger Software Solutions</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="stock-trading.html">ZinTrading</a></li>
-                <li><a href="zinvera.html" class="active">Zinvera</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera, our review tool for CPA firms, is in an invitation-only pilot — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn is-current" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="zinvera.html" aria-current="page">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="xslt-bridge/">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="zinni.html">Zinni</a></li><li><a href="how-we-build.html">How we build</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1><span>Zinvera</span> — A Second Look at the Return</h1>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Zinvera · in pilot</span>
+                <h1><span class="accent">Zinvera</span>: a second look at the return</h1>
                 <p class="thesis">The right question, asked of the right documents, every time, with the evidence attached.</p>
                 <p>Zinvera is a review tool for CPA firms from Zinger Software Solutions. It is designed to read the draft return beside the K-1s, the broker statements and last year's return, carry each partner's basis forward year to year, and follow each finding from one draft to the next. In the pilot, reviewers work through pre-computed findings on synthetic case files; the rule set's tax positions are not yet signed off by a CPA.</p>
                 <!-- AI-COPY: verify against shipped AI layer -->
                 <p>AI-assisted features (document reading, judgment flags, plain-language explanations, and Zinni, an assistant that answers questions about the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</p>
-                <div class="hero-badges">
-                    <div class="badge">📎 Evidence on Every Finding</div>
-                    <div class="badge">📏 Evidence First, Claims Last</div>
-                    <div class="badge">🔒 Invitation-Only Pilot</div>
+                <div class="btn-row">
+                    <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                    <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn btn-teal">Request early access</a>
+                    <a href="#how-it-works" class="btn btn-ghost">How it works</a>
+                </div>
+                <div class="chips">
+                    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg> Evidence on every finding</span>
+                    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18M5 21h14"/><path d="M6 7h12"/><path d="M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></svg> Evidence first, claims last</span>
+                    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Invitation-only pilot</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="zt-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2>📂 Where It Sits</h2>
-                    <p>After the firm's tax software, before sign-off. Zinvera does not prepare, change or e-file a return. It is designed to read the package the reviewer already has and show what the sources support.</p>
-                    <ul class="overview-features">
+        <section class="section dark">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">The prototype</span>
+                    <h2>What a reviewer sees</h2>
+                    <p class="lede">A plain-English line first, the rule for the CPA underneath, and the evidence one click away.</p>
+                </div>
+                <div class="gallery">
+                    <figure>
+                        <div class="shot">
+                            <div class="shot-bar"><i></i><i></i><i></i><span>Findings · synthetic case</span></div>
+                            <picture>
+                                <source type="image/webp" srcset="assets/img/zinvera-findings-640.webp 640w, assets/img/zinvera-findings.webp 1120w" sizes="(max-width: 760px) 100vw, 560px">
+                                <img src="assets/img/zinvera-findings.jpg" srcset="assets/img/zinvera-findings-640.jpg 640w, assets/img/zinvera-findings.jpg 1120w" sizes="(max-width: 760px) 100vw, 560px" width="1120" height="752" loading="lazy" alt="Zinvera prototype findings list for a synthetic case file: each finding has a plain-English headline, a severity and its effect on taxable income.">
+                            </picture>
+                        </div>
+                        <figcaption>The findings list: each row has a plain headline, the rule in small text and its effect on taxable income.</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="shot">
+                            <div class="shot-bar"><i></i><i></i><i></i><span>Finding detail · synthetic case</span></div>
+                            <picture>
+                                <source type="image/webp" srcset="assets/img/zinvera-panel-640.webp 640w, assets/img/zinvera-panel.webp 1120w" sizes="(max-width: 760px) 100vw, 560px">
+                                <img src="assets/img/zinvera-panel.jpg" srcset="assets/img/zinvera-panel-640.jpg 640w, assets/img/zinvera-panel.jpg 1120w" sizes="(max-width: 760px) 100vw, 560px" width="1120" height="752" loading="lazy" alt="Zinvera prototype finding panel for a synthetic case: what's wrong, the rule for the CPA, the impact, the evidence on the return and in the documents, and the reviewer's verdict.">
+                            </picture>
+                        </div>
+                        <figcaption>The finding panel: what's wrong, impact, evidence from the return and the documents, and the reviewer's verdict.</figcaption>
+                    </figure>
+                </div>
+                <p class="note mt-2">Prototype screens on a synthetic case file. All names, EINs and figures are fictional.</p>
+            </div>
+        </section>
+
+        <section class="section" id="how-it-works">
+            <div class="container split">
+                <div>
+                    <span class="eyebrow">Where it sits</span>
+                    <h2>After the tax software, before sign-off</h2>
+                    <p class="lede">Zinvera does not prepare, change or e-file a return. It is designed to read the package the reviewer already has and show what the sources support.</p>
+                    <ul class="ticks mt-1">
                         <li>Basis continuity ledger for every partnership and S corporation, with the source of each opening balance</li>
                         <li>Cross-document checks that read the K-1, the broker composite, the W-2, the state K-1 and the prior-year return together</li>
                         <li>Draft 1 → Draft 2 tracking: each finding marked fixed, not fixed, fixed incorrectly, regression or new</li>
@@ -613,162 +103,156 @@
                         <li>The return line, the source field and the citation on every finding</li>
                     </ul>
                 </div>
-                <div class="zt-diagram">
-                    <div class="workflow-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Prepare as Usual</h3>
-                            <p>The return is prepared in the firm's own tax software</p>
-                        </div>
+                <ol class="steps">
+                    <li><h3>Prepare as usual</h3><p>The return is prepared in the firm's own tax software.</p></li>
+                    <li><h3>Zinvera checks the package</h3><p>Draft, source documents and prior year read together; findings with evidence and citations.</p></li>
+                    <li><h3>The reviewer decides</h3><p>Agree, disagree or ask for more; record clearance; export the review notes and roll-forward.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">What it looks for</span>
+                    <h2>The errors that survive review</h2>
+                    <p class="lede">The calculation is rarely the problem. The problems are in what the tax software never sees.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span>
+                        <h3>Basis that drifts across years</h3>
+                        <p>A partner's basis is built from every earlier K-1. When one year's ending balance is not the next year's beginning balance, a suspended loss is released too early or a distribution goes untaxed, and nothing on this year's return says so.</p>
                     </div>
-                    <div class="workflow-arrow">⬇️</div>
-                    <div class="workflow-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Zinvera Checks the Package</h3>
-                            <p>Draft, source documents and prior year read together; findings with evidence and citations</p>
-                        </div>
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg></span>
+                        <h3>Fixes that break something else</h3>
+                        <p>A corrected second draft can reopen an item the first draft had right. Reviewers compare drafts from memory, or not at all. Zinvera is designed to follow each finding into the next draft and say what happened to it.</p>
                     </div>
-                    <div class="workflow-arrow">⬇️</div>
-                    <div class="workflow-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>The Reviewer Decides</h3>
-                            <p>Agree, disagree or ask for more; record clearance; export the review notes and roll-forward</p>
-                        </div>
+                    <div class="card">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 4l5 5L9 20H4v-5z"/><path d="M13 6l5 5"/></svg></span>
+                        <h3>Signatures on stale numbers</h3>
+                        <p>A Form 8879 signed against an earlier draft while the figures kept moving. Zinvera is designed to compare the signed figures with the current draft and show by how much they differ.</p>
+                    </div>
+                    <div class="card">
+                        <span class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+                        <span class="pill amber">Preview</span>
+                        <h3>Planning preview</h3>
+                        <p>After clearance, a preview of planning opportunities projected from the same documents and ledger, labelled a preview with every assumed parameter marked.</p>
+                    </div>
+                    <!-- AI-COPY: verify against shipped AI layer -->
+                    <div class="card">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z"/></svg></span>
+                        <span class="pill">In development</span>
+                        <h3>AI-assisted features</h3>
+                        <p>Document reading, judgment flags and plain-language explanations are in development for the first pilot release. The review engine's tax rules run today, and every number stays in code.</p>
+                    </div>
+                    <!-- AI-COPY: verify against shipped AI layer -->
+                    <div class="card">
+                        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg></span>
+                        <span class="pill">In development</span>
+                        <h3>Zinni</h3>
+                        <p>Planned for the first pilot release: the reviewer asks a question about the case in plain language and gets an answer that points to the return lines and document fields it rests on.</p>
+                        <a href="zinni.html" class="text-link">About Zinni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="key-benefits">
-        <div class="container">
-            <h2>The Errors That Survive Review</h2>
-            <p class="section-intro">The calculation is rarely the problem. The problems are in what the tax software never sees.</p>
-            <div class="benefits-grid">
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">📒</div>
-                    <h3>Basis That Drifts Across Years</h3>
-                    <p>A partner's basis is built from every earlier K-1. When one year's ending balance is not the next year's beginning balance, a suspended loss is released too early or a distribution goes untaxed, and nothing on this year's return says so.</p>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">How we build</span>
+                    <h2>Evidence first, claims last</h2>
+                    <p class="lede">The same three rules as <a href="stock-trading.html">ZinTrading</a>, applied to a tool for the people who sign returns. See also <a href="how-we-build.html">how we build AI</a>.</p>
                 </div>
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">🔁</div>
-                    <h3>Fixes That Break Something Else</h3>
-                    <p>A corrected second draft can reopen an item the first draft had right. Reviewers compare drafts from memory, or not at all. Zinvera is designed to follow each finding into the next draft and say what happened to it.</p>
-                </div>
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">✍️</div>
-                    <h3>Signatures on Stale Numbers</h3>
-                    <p>A Form 8879 signed against an earlier draft while the figures kept moving. Zinvera is designed to compare the signed figures with the current draft and show by how much they differ.</p>
-                </div>
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">🧭</div>
-                    <h3>Planning Preview</h3>
-                    <p>After clearance, a preview of planning opportunities projected from the same documents and ledger, labelled a preview with every assumed parameter marked.</p>
-                    <span class="tool-tag">Preview</span>
-                </div>
-                <!-- AI-COPY: verify against shipped AI layer -->
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">🤖</div>
-                    <h3>AI-Assisted Features, in Development</h3>
-                    <p>Document reading, judgment flags and plain-language explanations are in development for the first pilot release. The review engine's tax rules run today, and every number stays in code.</p>
-                    <span class="tool-tag">In Development</span>
-                </div>
-                <!-- AI-COPY: verify against shipped AI layer -->
-                <div class="benefit-card tool">
-                    <div class="benefit-icon">💬</div>
-                    <h3>Ask the Return</h3>
-                    <p>Planned for the first pilot release: the reviewer asks a question about the case in plain language and gets an answer that points to the return lines and document fields it rests on.</p>
-                    <span class="tool-tag">In Development</span>
+                <div class="grid grid-3">
+                    <div class="principle">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>
+                        <h3>Evidence first</h3>
+                        <p>Each finding carries the line it came from and the authority behind it. If a rule cannot show its evidence, it does not ship.</p>
+                    </div>
+                    <div class="principle">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></span>
+                        <h3>Tested on synthetic cases only</h3>
+                        <p>We test against synthetic cases with known answers and check the results before we rely on them. We do not quote those figures in public, because they say nothing about client returns.</p>
+                    </div>
+                    <div class="principle">
+                        <span class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></span>
+                        <h3>Review before release</h3>
+                        <p>We are working through the rule set's tax positions with a practising CPA. They are not yet signed off, and open questions stay listed inside the product until they are closed.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="audience-section">
-        <div class="container">
-            <h2>How We Build</h2>
-            <p class="section-intro">The same three rules as <a href="stock-trading.html">ZinTrading</a>, applied to a tool for the people who sign returns.</p>
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <div class="audience-icon">📎</div>
-                    <h3>Evidence First</h3>
-                    <p>Each finding carries the line it came from and the authority behind it. If a rule cannot show its evidence, it does not ship.</p>
+        <section class="section alt">
+            <div class="container">
+                <div class="cta-band">
+                    <div>
+                        <span class="eyebrow">Join the pilot</span>
+                        <h2>Try Zinvera on fictional files</h2>
+                        <p>Zinvera is in an <strong>invitation-only pilot</strong>: reviewers work through pre-computed findings on synthetic case files, and no client data is accepted. The rule set's tax positions are not yet signed off by a CPA. We are inviting a small number of firms that review K-1-heavy individual returns to try it on fictional files and tell us what is useful and what is wrong.</p>
+                    </div>
+                    <div class="btn-row">
+                        <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                        <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn btn-teal">Request early access</a>
+                        <!-- ZINVERA-APP-LINK: at launch, restore "Visit zinvera.app" linking to https://zinvera.app -->
+                        <a href="products.html" class="btn btn-ghost">See all Zinger products</a>
+                    </div>
                 </div>
-                <div class="audience-card">
-                    <div class="audience-icon">📏</div>
-                    <h3>Tested on Synthetic Cases Only</h3>
-                    <p>We test against synthetic cases with known answers and check the results before we rely on them. We do not quote those figures in public, because they say nothing about client returns.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🔍</div>
-                    <h3>Review Before Release</h3>
-                    <p>We are working through the rule set's tax positions with a practising CPA. They are not yet signed off, and open questions stay listed inside the product until they are closed.</p>
-                </div>
+                <p class="disclaimer"><strong>Status:</strong> Zinvera is a working product name of Zinger Software Solutions Inc. It is in pilot on synthetic case files with pre-computed findings, its rule set is not yet signed off by a CPA, and it is not yet available for client data. Nothing on this page is tax, legal or accounting advice, and Zinvera has no relationship with the Internal Revenue Service or any state tax authority.</p>
+                <p class="note">Related: <a href="products.html">All products</a> · <a href="about.html">About Zinger</a> · <a href="stock-trading.html">ZinTrading</a> · <a href="responsible-ai.html">Responsible AI</a> · <a href="contact.html?interest=zinvera-early-access#contact-form">Ask about the Zinvera pilot</a></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Join the Zinvera Pilot</h2>
-            <div class="status-box">
-                Zinvera is in an <strong>invitation-only pilot</strong>: reviewers work through pre-computed findings on synthetic case files, and no client data is accepted. The rule set's tax positions are not yet signed off by a CPA. We are inviting a small number of firms that review K-1-heavy individual returns to try it on fictional files and tell us what is useful and what is wrong.
-            </div>
-            <div class="cta-buttons">
-                <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
-                <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn-primary">Request early access</a>
-                <!-- ZINVERA-APP-LINK: at launch, restore "Visit zinvera.app" linking to https://zinvera.app -->
-                <a href="products.html" class="btn-outline-white">See all Zinger products</a>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <section class="disclaimer-section">
+    <footer class="site-footer">
         <div class="container">
-            <p><strong>Status:</strong> Zinvera is a working product name of Zinger Software Solutions Inc. It is in pilot on synthetic case files with pre-computed findings, its rule set is not yet signed off by a CPA, and it is not yet available for client data. Nothing on this page is tax, legal or accounting advice, and Zinvera has no relationship with the Internal Revenue Service or any state tax authority.</p>
-            <p>Related: <a href="products.html">All products</a> · <a href="about.html">About Zinger</a> · <a href="stock-trading.html">ZinTrading</a> · <a href="contact.html?interest=zinvera-early-access#contact-form">Ask about the Zinvera pilot</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
+                <div>
+                    <h4>Products</h4>
+                    <a href="zinvera.html">Zinvera</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="xslt-bridge/">XSLT Bridge</a>
+                    <a href="products.html">All products</a>
+                </div>
+                <div>
+                    <h4>AI</h4>
+                    <a href="zinni.html">Zinni</a>
+                    <a href="how-we-build.html">How we build AI</a>
+                    <a href="responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
                     <a href="services.html#staffing">Technical Staffing</a>
                     <a href="services.html#programming">Statistical Programming</a>
                     <a href="services.html#consulting">Strategic Consulting</a>
                     <a href="services.html#custom">Custom Solutions</a>
                 </div>
-                <div class="footer-section">
-                    <h3>Products &amp; Community</h3>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
-                    <a href="index.html#community">Community</a>
-                    <a href="products.html">All Products</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="contact.html">Contact</a>
                     <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

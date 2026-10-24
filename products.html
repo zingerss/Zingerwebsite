@@ -3,728 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products &amp; Projects | XSLT Bridge, ZinTrading, Zinvera &amp; Honest Odds | Zinger Software Solutions</title>
-    <meta name="description" content="Software from Zinger Software Solutions: XSLT Bridge for legacy XML web apps, ZinTrading, risk-first trading tools in private development, Zinvera, a review tool for CPA firms in pilot, and Honest Odds, college admissions strategy.">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Dev Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.4rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #4ecdc4;
-        }
-
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Product Showcase */
-        .product-showcase {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .product-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-            padding-bottom: 5rem;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .product-block:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .product-block.reverse {
-            direction: rtl;
-        }
-
-        .product-block.reverse > * {
-            direction: ltr;
-        }
-
-        .product-info h2 {
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-subtitle {
-            color: #4ecdc4;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .product-subtitle.trade {
-            color: #1e8449;
-        }
-        .product-subtitle.zinvera { color: #1f4788; }
-
-        .product-status-badge {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .product-status-badge.green {
-            background: #d1e7dd;
-            color: #0a5a2f;
-        }
-
-        .product-info p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0 0.5rem 2rem;
-            position: relative;
-            color: #444;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .feature-list.trade li::before {
-            color: #1e8449;
-        }
-        .feature-list.zinvera li::before { color: #1f4788; }
-
-        .product-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-learn {
-            background: #1f4788;
-            color: white;
-            padding: 0.9rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-learn:hover {
-            background: #2558a0;
-            transform: translateY(-2px);
-        }
-
-        .btn-access {
-            background: transparent;
-            color: #1f4788;
-            padding: 0.9rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #1f4788;
-            transition: all 0.3s ease;
-        }
-
-        .btn-access:hover {
-            background: #1f4788;
-            color: white;
-        }
-
-        /* Product Visual Card */
-        .product-visual {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-        }
-
-        .product-visual-icon {
-            font-size: 6rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .product-visual h3 {
-            color: #1f4788;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .visual-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .visual-stat {
-            background: white;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .visual-stat .number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #4ecdc4;
-            display: block;
-        }
-
-        .visual-stat.trade .number {
-            color: #1e8449;
-        }
-        .visual-stat.zinvera .number { color: #1f4788; }
-
-        .visual-stat .label {
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        /* Services CTA */
-        .services-cta {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .services-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .services-cta p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-white {
-            background: white;
-            color: #1f4788;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .btn-white:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-        }
-
-        .btn-green {
-            background: #1e8449;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .btn-green:hover {
-            background: #196f3d;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #4ecdc4;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover { color: #4ecdc4; }
-
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 1rem;
-            text-align: center;
-            color: #95a5a6;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .page-hero h1 { font-size: 2.2rem; }
-            .product-block { grid-template-columns: 1fr; direction: ltr; }
-            .product-block.reverse { direction: ltr; }
-        }
-
-        .dev-banner a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .product-subtitle.odds {
-            color: #8a6416;
-        }
-
-        .feature-list.odds li::before {
-            color: #8a6416;
-        }
-
-        .visual-stat.odds .number {
-            color: #8a6416;
-        }
-
-        .disclaimer {
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 1.5rem;
-        }
-
-        /* Accessibility & polish */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible,
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid #1f4788;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 6px #ffffff;
-        }
-
-        .dev-banner {
-            background: #1f4788 !important;
-            color: white;
-        }
-
-        .dev-banner a {
-            color: #4ecdc4 !important;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
-
-            header {
-                position: static !important;
-            }
-
-            .nav-links a {
-                display: inline-block;
-                padding: 0.6rem 0.5rem;
-            }
-        }
-
-        /* Mobile nav: wrap the links instead of hiding them */
-        @media (max-width: 768px) {
-            header nav,
-            .header-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-            }
-
-            .nav-links {
-                display: flex !important;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.4rem 1.1rem;
-                padding: 0;
-            }
-
-            .logo {
-                width: 100%;
-                text-align: center;
-                font-size: 1.4rem;
-            }
-
-            .cta-button {
-                display: none;
-            }
-        }
-    </style>
+    <title>AI Products from Zinger | Zinvera, ZinTrading, Honest Odds &amp; XSLT Bridge</title>
+    <meta name="description" content="AI products from Zinger Software Solutions: Zinvera, AI-assisted tax return review for CPA firms (in pilot), ZinTrading, risk-first trading tools in private development, Honest Odds, AI college-admissions strategy, and XSLT Bridge.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/products.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="AI Products from Zinger | Zinvera, ZinTrading, Honest Odds &amp; XSLT Bridge">
+    <meta property="og:description" content="AI products from Zinger Software Solutions: Zinvera, AI-assisted tax return review for CPA firms (in pilot), ZinTrading, risk-first trading tools in private development, Honest Odds, AI college-admissions strategy, and XSLT Bridge.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/products.html">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-
-    <div class="dev-banner">
-        ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a> · Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a>
-    </div>
-
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">Zinger Software Solutions</a>
-                <nav class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="about.html">About</a>
-                    <a href="resources.html">Resources</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <a href="contact.html" class="cta-button">Get Started</a>
-            </div>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="contact.html?interest=zinvera-early-access#contact-form">request early access</a> · ZinTrading is in private development — <a href="contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn is-current" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="zinvera.html">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="xslt-bridge/">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="products.html" aria-current="page">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="zinni.html">Zinni</a></li><li><a href="how-we-build.html">How we build</a></li><li><a href="services.html">Services</a></li><li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="page-hero">
-        <div class="container">
-            <h1>Products &amp; Projects</h1>
-            <p>Alongside our consulting and staffing work: XSLT Bridge for legacy XML web apps, ZinTrading, our trading software, Zinvera, our review tool for CPA firms, and Honest Odds, a college admissions project.</p>
-        </div>
-    </section>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Products</span>
+                <h1>Everything we build, <span class="accent">side by side</span></h1>
+                <p>Zinvera for CPA firms, ZinTrading for disciplined traders, Honest Odds for families applying to college, and XSLT Bridge for legacy XML web apps. Where we use AI, it shows its work.</p>
+                <div class="chips">
+                    <a class="chip" href="#zinvera" style="text-decoration:none">Zinvera</a>
+                    <a class="chip" href="#zintrading" style="text-decoration:none">ZinTrading</a>
+                    <a class="chip" href="#honest-odds" style="text-decoration:none">Honest Odds</a>
+                    <a class="chip" href="#xslt-bridge" style="text-decoration:none">XSLT Bridge</a>
+                </div>
+            </div>
+        </section>
 
-    <section class="product-showcase">
-        <div class="container">
+        <section class="section alt">
+            <div class="container">
+                <article class="feature" id="zinvera">
+                    <div class="feature-body">
+                        <div class="feature-head"><h3>Zinvera</h3><span class="pill">Invitation-only pilot</span></div>
+                        <!-- AI-COPY: verify against shipped AI layer -->
+                        <p class="tagline">AI-assisted tax return review for CPA firms</p>
+                        <p>Zinvera is designed to read the draft return beside the K-1s, the broker statements and last year's return, carry each partner's basis forward year to year, follow each finding from one draft to the next, and show the reviewer the line each finding came from and the authority behind it. It sits after the firm's tax software and before sign-off, and it prepares, changes and files nothing.</p>
+                        <ul class="ticks">
+                            <li>Basis continuity ledger for each partnership and S corporation</li>
+                            <li>Cross-document checks against K-1s, broker composites, W-2s and the prior-year return</li>
+                            <li>Draft 1 → Draft 2 tracking: fixed, not fixed, fixed incorrectly, regression, new</li>
+                            <li>Form 8879 currency check against the current draft</li>
+                            <li>Evidence and citations on each finding, plus a planning preview</li>
+                        </ul>
+                        <!-- AI-COPY: verify against shipped AI layer -->
+                        <p class="small">AI-assisted features (document reading, judgment flags, plain-language explanations, and Zinni, an assistant that answers questions about the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</p>
+                        <div class="btn-row">
+                            <a href="zinvera.html" class="btn btn-primary">Explore Zinvera</a>
+                            <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
+                            <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn btn-outline">Request early access</a>
+                        </div>
+                        <p class="note">In pilot on synthetic case files with pre-computed findings; the rule set is not yet signed off by a CPA, and Zinvera is not yet available for client data. Not tax, legal or accounting advice.</p>
+                    </div>
+                    <div class="feature-media">
+                        <div class="shot">
+                            <div class="shot-bar"><i></i><i></i><i></i><span>Zinvera · findings · synthetic case</span></div>
+                            <picture>
+                                <source type="image/webp" srcset="assets/img/zinvera-findings-640.webp 640w, assets/img/zinvera-findings.webp 1120w" sizes="(max-width: 920px) 100vw, 600px">
+                                <img src="assets/img/zinvera-findings.jpg" srcset="assets/img/zinvera-findings-640.jpg 640w, assets/img/zinvera-findings.jpg 1120w" sizes="(max-width: 920px) 100vw, 600px" width="1120" height="752" alt="Zinvera prototype findings list for a synthetic case file: each finding has a plain-English headline, a severity and its effect on taxable income.">
+                            </picture>
+                        </div>
+                        <p class="shot-caption light-caption">Prototype screen. Synthetic case file; fictional names and figures.</p>
+                    </div>
+                </article>
 
-            <div class="product-block">
-                <div class="product-info">
-                    <h2>XSLT Bridge</h2>
-                    <div class="product-subtitle">Chrome and Edge extension for legacy XML / MSXML web apps</div>
-                    <span class="product-status-badge green">Launching November 2026</span>
+                <div class="grid grid-2 mt-2">
+                    <article class="card product-card" id="zintrading">
+                        <div class="product-visual"><svg viewBox="0 0 480 200" role="img" aria-label="Abstract illustration: a price path held above a fixed risk line">
+    <defs><linearGradient id="zt-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ecdc4" stop-opacity=".28"/><stop offset="1" stop-color="#4ecdc4" stop-opacity="0"/></linearGradient></defs>
+    <rect width="480" height="200" fill="#0f1a30"/>
+    <g stroke="rgba(255,255,255,.06)"><path d="M0 50H480M0 100H480M0 150H480"/><path d="M80 0V200M160 0V200M240 0V200M320 0V200M400 0V200"/></g>
+    <path d="M0 140 L40 128 L80 134 L120 110 L160 118 L200 92 L240 100 L280 76 L320 86 L360 62 L400 70 L440 48 L480 56 L480 200 L0 200Z" fill="url(#zt-fill)"/>
+    <path d="M0 140 L40 128 L80 134 L120 110 L160 118 L200 92 L240 100 L280 76 L320 86 L360 62 L400 70 L440 48 L480 56" fill="none" stroke="#4ecdc4" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M0 168H480" stroke="#e5484d" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
+    <g fill="#1e8449"><rect x="114" y="100" width="12" height="22" rx="2"/><rect x="234" y="88" width="12" height="20" rx="2"/><rect x="354" y="52" width="12" height="20" rx="2"/></g>
+</svg></div>
+                        <div class="product-head"><h3>ZinTrading</h3><span class="pill navy">Private development</span></div>
+                        <span class="card-tag">Risk-first trading software</span>
+                        <p>ZinTrading is a set of tools built around one idea: the edge is in the process and the risk control, not in a magic signal. Risk caps, daily stops and protection checks come first. Every alert is graded against random entries, and we will publish the results honestly as tools are released.</p>
+                        <ul class="ticks">
+                            <li>Options Scalp Panel with hard, non-overridable risk caps</li>
+                            <li>Swing Levels Engine covering 230+ stocks nightly</li>
+                            <li>Income Radar for cash-secured put ideas below real support</li>
+                            <li>Momentum Screener with dilution and halt-risk flags (in development)</li>
+                            <li>Grading Lab that tests every signal against random entries</li>
+                        </ul>
+                        <div class="btn-row mt-1">
+                            <a href="stock-trading.html" class="btn btn-primary">Explore ZinTrading</a>
+                            <a href="contact.html?interest=zintrading-notify#contact-form" class="btn btn-outline">Get notified</a>
+                        </div>
+                        <p class="note mt-1">Educational and analytical software, not financial advice. Trading involves substantial risk of loss.</p>
+                    </article>
+
+                    <article class="card product-card" id="honest-odds">
+                        <div class="product-visual"><svg viewBox="0 0 480 200" role="img" aria-label="Abstract illustration: a tall published bar beside a shorter, honest bar">
+    <rect width="480" height="200" fill="#0f1a30"/>
+    <g stroke="rgba(255,255,255,.06)"><path d="M0 50H480M0 100H480M0 150H480"/></g>
+    <g>
+        <rect x="70" y="40" width="70" height="130" rx="6" fill="rgba(255,255,255,.14)"/>
+        <rect x="160" y="105" width="70" height="65" rx="6" fill="#4ecdc4"/>
+        <rect x="270" y="60" width="70" height="110" rx="6" fill="rgba(255,255,255,.14)"/>
+        <rect x="360" y="125" width="70" height="45" rx="6" fill="#4ecdc4"/>
+    </g>
+    <path d="M40 170H450" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+</svg></div>
+                        <div class="product-head"><h3>Honest Odds</h3><span class="pill green">Live</span></div>
+                        <span class="card-tag">AI college-admissions strategy</span>
+                        <p>Published admit rates include recruited athletes, legacies and other hooked applicants, so an unhooked student's real odds are often much lower. Honest Odds gives families those real numbers before they make a binding decision.</p>
+                        <ul class="ticks">
+                            <li>Honest, deflated admit odds for your full school list</li>
+                            <li>Early Decision / Early Action strategy</li>
+                            <li>Essay review with line edits and an AI-authorship check</li>
+                            <li>Free sample review before you pay anything</li>
+                            <li>Full review free for families who qualify for a fee waiver</li>
+                        </ul>
+                        <p class="small muted">Free sample review · $49.99 full review · 7 review passes · about 4 minutes to get your odds.</p>
+                        <div class="btn-row mt-1">
+                            <a href="https://honest-odds.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit Honest Odds</a>
+                        </div>
+                    </article>
+                </div>
+
+                <article class="card mt-2" id="xslt-bridge">
+                    <div class="product-head"><h3>XSLT Bridge</h3><span class="pill green">Launching November 2026</span></div>
+                    <span class="card-tag">Chrome and Edge extension for legacy XML / MSXML web apps</span>
                     <p>Chrome and Edge remove built-in XSLT by default from version 158. XSLT Bridge keeps XML reports, Internet Explorer era MSXML applications and CDISC define.xml files working, inside the browser, on the sites and folders you approve. It sends nothing to us automatically.</p>
-                    <ul class="feature-list">
+                    <ul class="ticks">
                         <li>XSLT restored: XML pages with stylesheets and the XSLTProcessor API</li>
                         <li>MSXML compatibility for insurance, claims and enterprise apps</li>
                         <li>CDISC define.xml from web servers and local submission folders</li>
                         <li>Group Policy and Intune deployment, offline license keys</li>
                         <li>Insurance security pack and GxP validation pack</li>
                     </ul>
-                    <div class="product-actions">
-                        <a href="xslt-bridge/" class="btn-learn">Explore XSLT Bridge</a>
-                        <a href="contact.html?interest=xslt-bridge#contact-form" class="btn-access">Contact Us</a>
+                    <div class="btn-row mt-1">
+                        <a href="xslt-bridge/" class="btn btn-primary">Explore XSLT Bridge</a>
+                        <a href="contact.html?interest=xslt-bridge#contact-form" class="btn btn-outline">Contact us</a>
                     </div>
-                </div>
+                </article>
             </div>
+        </section>
 
-            <div class="product-block">
-                <div class="product-info">
-                    <h2>ZinTrading</h2>
-                    <div class="product-subtitle trade">Risk-First Trading Software</div>
-                    <span class="product-status-badge green">Private Development</span>
-                    <p>ZinTrading is a set of tools built around one idea: the edge is in the process and the risk control, not in a magic signal. Risk caps, daily stops and protection checks come first. Every alert is graded against random entries, and we will publish the results honestly as tools are released.</p>
-                    <ul class="feature-list trade">
-                        <li>Options Scalp Panel with hard, non-overridable risk caps</li>
-                        <li>Swing Levels Engine covering 230+ stocks nightly</li>
-                        <li>Income Radar for cash-secured put ideas below real support</li>
-                        <li>Momentum Screener with dilution and halt-risk flags (in development)</li>
-                        <li>Grading Lab that tests every signal against random entries</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="stock-trading.html" class="btn-learn">Explore ZinTrading</a>
-                        <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-access">Get Notified</a>
-                    </div>
-                    <p class="disclaimer">Educational and analytical software, not financial advice. Trading involves substantial risk of loss.</p>
-                </div>
-                <div class="product-visual">
-                    <span class="product-visual-icon">📈</span>
-                    <h3>Disciplined Trading Tools</h3>
-                    <p style="color:#666; font-size:0.95rem;">Risk built in, not bolted on</p>
-                    <div class="visual-stats">
-                        <div class="visual-stat trade">
-                            <span class="number">5</span>
-                            <span class="label">Tools (1 Still in Development)</span>
-                        </div>
-                        <div class="visual-stat trade">
-                            <span class="number">230+</span>
-                            <span class="label">Stocks Mapped Nightly</span>
-                        </div>
-                        <div class="visual-stat trade">
-                            <span class="number">Every</span>
-                            <span class="label">Alert Logged &amp; Graded</span>
-                        </div>
-                        <div class="visual-stat trade">
-                            <span class="number">0</span>
-                            <span class="label">Overridable Risk Caps</span>
-                        </div>
-                    </div>
-                </div>
+        <section class="section-sm darker">
+            <div class="container">
+                <span class="eyebrow">Across the products</span>
+                <h2>Zinni, one assistant across Zinger products</h2>
+                <!-- AI-COPY: verify against shipped AI layer -->
+                <p class="lede">In development for Zinvera's first pilot release, and planned for ZinTrading and Honest Odds. Not live in any product yet.</p>
+                <div class="btn-row mt-1"><a href="zinni.html" class="btn btn-teal">About Zinni <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </div>
+        </section>
 
-            <div class="product-block">
-                <div class="product-info">
-                    <h2>Zinvera</h2>
-                    <!-- AI-COPY: verify against shipped AI layer -->
-                    <div class="product-subtitle zinvera">Review Tool for CPA Firms</div>
-                    <span class="product-status-badge">Invitation-Only Pilot</span>
-                    <p>Zinvera is designed to read the draft return beside the K-1s, the broker statements and last year's return, carry each partner's basis forward year to year, follow each finding from one draft to the next, and show the reviewer the line each finding came from and the authority behind it. It sits after the firm's tax software and before sign-off, and it prepares, changes and files nothing. In the pilot, reviewers work through pre-computed findings on synthetic case files; the rule set's tax positions are not yet signed off by a CPA.</p>
-                    <ul class="feature-list zinvera">
-                        <li>Basis continuity ledger for each partnership and S corporation</li>
-                        <li>Cross-document checks against K-1s, broker composites, W-2s and the prior-year return</li>
-                        <li>Draft 1 → Draft 2 tracking: fixed, not fixed, fixed incorrectly, regression, new</li>
-                        <li>Form 8879 currency check against the current draft</li>
-                        <li>Evidence and citations on each finding, plus a planning preview</li>
-                        <!-- AI-COPY: verify against shipped AI layer -->
-                        <li>AI-assisted features (document reading, judgment flags, plain-language explanations, and Zinni, an assistant that answers questions about the return) are in development for the first pilot release; the review engine's tax rules run today, and every number stays in code.</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="zinvera.html" class="btn-learn">Explore Zinvera</a>
-                        <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch -->
-                        <a href="contact.html?interest=zinvera-early-access#contact-form" class="btn-access">Request Early Access</a>
-                    </div>
-                    <p class="disclaimer">In pilot on synthetic case files with pre-computed findings; the rule set is not yet signed off by a CPA, and Zinvera is not yet available for client data. Not tax, legal or accounting advice.</p>
-                </div>
-                <div class="product-visual">
-                    <span class="product-visual-icon">🧾</span>
-                    <h3>Review With the Evidence Attached</h3>
-                    <p style="color:#666; font-size:0.95rem;">After the tax software, before sign-off</p>
-                    <div class="visual-stats">
-                        <div class="visual-stat zinvera">
-                            <span class="number">K-1</span>
-                            <span class="label">Basis Carried Year to Year</span>
-                        </div>
-                        <div class="visual-stat zinvera">
-                            <span class="number">D1 → D2</span>
-                            <span class="label">Findings Followed Across Drafts</span>
-                        </div>
-                        <div class="visual-stat zinvera">
-                            <span class="number">Cited</span>
-                            <span class="label">Findings Shown With Their Source</span>
-                        </div>
-                        <div class="visual-stat zinvera">
-                            <span class="number">0</span>
-                            <span class="label">Client Records in the Pilot</span>
-                        </div>
-                    </div>
-                </div>
+        <section class="section-sm">
+            <div class="container">
+                <span class="eyebrow">Services</span>
+                <h2>Our consulting and staffing services</h2>
+                <p class="lede">Need statistical programmers, biostatistics support, technical staffing or a custom solution? That's what we've done since 2013.</p>
+                <div class="btn-row mt-1"><a href="services.html" class="btn btn-outline">Explore our services</a></div>
             </div>
+        </section>
 
-            <div class="product-block reverse">
-                <div class="product-info">
-                    <h2>Honest Odds</h2>
-                    <div class="product-subtitle odds">College Admissions Strategy</div>
-                    <span class="product-status-badge green">Live</span>
-                    <p>Published admit rates include recruited athletes, legacies and other hooked applicants, so an unhooked student's real odds are often much lower. Honest Odds gives families those real numbers before they make a binding decision.</p>
-                    <ul class="feature-list odds">
-                        <li>Honest, deflated admit odds for your full school list</li>
-                        <li>Early Decision / Early Action strategy</li>
-                        <li>Essay review with line edits and an AI-authorship check</li>
-                        <li>Free sample review before you pay anything</li>
-                        <li>Full review free for families who qualify for a fee waiver</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="https://honest-odds.com/" class="btn-learn" target="_blank" rel="noopener">Visit Honest Odds</a>
-                    </div>
-                </div>
-                <div class="product-visual">
-                    <span class="product-visual-icon">🎓</span>
-                    <h3>Real Odds, Not Brochure Numbers</h3>
-                    <p style="color:#666; font-size:0.95rem;">A rigorous, unflinching application review</p>
-                    <div class="visual-stats">
-                        <div class="visual-stat odds">
-                            <span class="number">$0</span>
-                            <span class="label">Free Sample Review</span>
-                        </div>
-                        <div class="visual-stat odds">
-                            <span class="number">$49.99</span>
-                            <span class="label">Full Review</span>
-                        </div>
-                        <div class="visual-stat odds">
-                            <span class="number">7</span>
-                            <span class="label">Review Passes</span>
-                        </div>
-                        <div class="visual-stat odds">
-                            <span class="number">~4 min</span>
-                            <span class="label">To Get Your Odds</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </main>
 
-        </div>
-    </section>
-
-    <section class="services-cta">
+    <footer class="site-footer">
         <div class="container">
-            <h2>Our Core Business Is Clinical Programming</h2>
-            <p>Need statistical programmers, biostatistics support, technical staffing or a custom solution? That's what we've done since 2013.</p>
-            <div class="cta-buttons">
-                <a href="services.html" class="btn-white">Explore Our Services</a>
-                <a href="contact.html?interest=zintrading-notify#contact-form" class="btn-green">Get notified when ZinTrading opens</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
+                <div>
+                    <h4>Products</h4>
+                    <a href="zinvera.html">Zinvera</a>
+                    <a href="stock-trading.html">ZinTrading</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="xslt-bridge/">XSLT Bridge</a>
+                    <a href="products.html">All products</a>
+                </div>
+                <div>
+                    <h4>AI</h4>
+                    <a href="zinni.html">Zinni</a>
+                    <a href="how-we-build.html">How we build AI</a>
+                    <a href="responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
                     <a href="services.html#staffing">Technical Staffing</a>
                     <a href="services.html#programming">Statistical Programming</a>
                     <a href="services.html#consulting">Strategic Consulting</a>
                     <a href="services.html#custom">Custom Solutions</a>
                 </div>
-                <div class="footer-section">
-                    <h3>Products &amp; Community</h3>
-                    <a href="xslt-bridge/">XSLT Bridge</a>
-                    <a href="stock-trading.html">ZinTrading</a>
-                    <a href="zinvera.html">Zinvera</a>
-                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
-                    <a href="index.html#community">Community</a>
-                    <a href="products.html">All Products</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
                     <a href="resources.html">Resources</a>
+                    <a href="index.html#community">Community</a>
+                    <a href="contact.html">Contact</a>
                     <a href="sitemap.html">Sitemap</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
             </div>
         </div>
     </footer>
+    <script src="assets/site.js" defer></script>
 </body>
 </html>

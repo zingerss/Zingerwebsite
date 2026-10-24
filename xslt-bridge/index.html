@@ -5,580 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XSLT Bridge | Keep XSLT and MSXML apps working in Chrome and Edge | Zinger Software Solutions</title>
     <meta name="description" content="XSLT Bridge keeps XSLT and Internet Explorer era MSXML web applications working in Chrome and Edge after the browsers remove XSLT. For insurance, pharma and enterprise IT.">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Dev Banner */
-        .dev-banner {
-            background: #f39c12;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            font-weight: bold;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.4rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #4ecdc4;
-        }
-
-        .cta-button {
-            background: #4ecdc4;
-            color: #1f4788;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #45b5aa;
-            transform: translateY(-2px);
-        }
-
-        /* Page Hero */
-        .page-hero {
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Product Showcase */
-        .product-showcase {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .product-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-            padding-bottom: 5rem;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .product-block:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .product-block.reverse {
-            direction: rtl;
-        }
-
-        .product-block.reverse > * {
-            direction: ltr;
-        }
-
-        .product-info h2 {
-            font-size: 2.5rem;
-            color: #1f4788;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-subtitle {
-            color: #4ecdc4;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .product-subtitle.trade {
-            color: #1e8449;
-        }
-
-        .product-status-badge {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .product-status-badge.green {
-            background: #d1e7dd;
-            color: #0a5a2f;
-        }
-
-        .product-info p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0 0.5rem 2rem;
-            position: relative;
-            color: #444;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4ecdc4;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .feature-list.trade li::before {
-            color: #1e8449;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-learn {
-            background: #1f4788;
-            color: white;
-            padding: 0.9rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-learn:hover {
-            background: #2558a0;
-            transform: translateY(-2px);
-        }
-
-        .btn-access {
-            background: transparent;
-            color: #1f4788;
-            padding: 0.9rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #1f4788;
-            transition: all 0.3s ease;
-        }
-
-        .btn-access:hover {
-            background: #1f4788;
-            color: white;
-        }
-
-        /* Product Visual Card */
-        .product-visual {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-        }
-
-        .product-visual-icon {
-            font-size: 6rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .product-visual h3 {
-            color: #1f4788;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .visual-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .visual-stat {
-            background: white;
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .visual-stat .number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #4ecdc4;
-            display: block;
-        }
-
-        .visual-stat.trade .number {
-            color: #1e8449;
-        }
-
-        .visual-stat .label {
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        /* Services CTA */
-        .services-cta {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1f4788 0%, #2558a0 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .services-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .services-cta p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-white {
-            background: white;
-            color: #1f4788;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .btn-white:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-        }
-
-        .btn-green {
-            background: #1e8449;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .btn-green:hover {
-            background: #196f3d;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #4ecdc4;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #bdc3c7;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover { color: #4ecdc4; }
-
-        .footer-bottom {
-            border-top: 1px solid #34495e;
-            padding-top: 1rem;
-            text-align: center;
-            color: #95a5a6;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .page-hero h1 { font-size: 2.2rem; }
-            .product-block { grid-template-columns: 1fr; direction: ltr; }
-            .product-block.reverse { direction: ltr; }
-        }
-
-        .dev-banner a {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .product-subtitle.odds {
-            color: #8a6416;
-        }
-
-        .feature-list.odds li::before {
-            color: #8a6416;
-        }
-
-        .visual-stat.odds .number {
-            color: #8a6416;
-        }
-
-        .disclaimer {
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 1.5rem;
-        }
-
-        /* Accessibility & polish */
-        a:focus-visible,
-        button:focus-visible,
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible,
-        .form-group input:focus-visible,
-        .form-group select:focus-visible,
-        .form-group textarea:focus-visible {
-            outline: 3px solid #1f4788;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 6px #ffffff;
-        }
-
-        .dev-banner {
-            background: #1f4788 !important;
-            color: white;
-        }
-
-        .dev-banner a {
-            color: #4ecdc4 !important;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            h2 {
-                font-size: 1.75rem !important;
-            }
-
-            header {
-                position: static !important;
-            }
-
-            .nav-links a {
-                display: inline-block;
-                padding: 0.6rem 0.5rem;
-            }
-        }
-
-        /* Mobile nav: wrap the links instead of hiding them */
-        @media (max-width: 768px) {
-            header nav,
-            .header-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.75rem;
-            }
-
-            .nav-links {
-                display: flex !important;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.4rem 1.1rem;
-                padding: 0;
-            }
-
-            .logo {
-                width: 100%;
-                text-align: center;
-                font-size: 1.4rem;
-            }
-
-            .cta-button {
-                display: none;
-            }
-        }
-    
-        .legal { max-width: 820px; margin: 0 auto; padding: 3rem 0; }
-        .legal h2 { color: #1f4788; margin: 2rem 0 0.75rem; font-size: 1.35rem; }
-        .legal p, .legal li { margin-bottom: 0.6rem; }
-        .legal ul { padding-left: 1.4rem; }
-        .legal .meta { color: #666; font-size: 0.95rem; }
-        .xb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
-        .xb-card { background: #fff; border: 1px solid #e3e8f0; border-radius: 10px; padding: 1.25rem; }
-        .xb-card h3 { color: #1f4788; margin-bottom: 0.5rem; font-size: 1.1rem; }
-        .xb-note { background: #f3f8ff; border-left: 4px solid #4ecdc4; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-    </style>
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/xslt-bridge/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="XSLT Bridge | Keep XSLT and MSXML apps working in Chrome and Edge | Zinger Software Solutions">
+    <meta property="og:description" content="XSLT Bridge keeps XSLT and Internet Explorer era MSXML web applications working in Chrome and Edge after the browsers remove XSLT. For insurance, pharma and enterprise IT.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/xslt-bridge/">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/index.html" class="logo">Zinger Software Solutions</a>
-                <nav class="nav-links">
-                    <a href="/index.html">Home</a>
-                    <a href="/services.html">Services</a>
-                    <a href="/xslt-bridge/">XSLT Bridge</a>
-                    <a href="/stock-trading.html">ZinTrading</a>
-                    <a href="/zinvera.html">Zinvera</a>
-                    <a href="/about.html">About</a>
-                    <a href="/resources.html">Resources</a>
-                    <a href="/contact.html">Contact</a>
-                </nav>
-                <a href="/contact.html" class="cta-button">Get Started</a>
-            </div>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera is in pilot for CPA firms — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="../contact.html?interest=zinvera-early-access#contact-form">request early access</a> · ZinTrading is in private development — <a href="../contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="../index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn is-current" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="../zinvera.html">Zinvera<span>AI-assisted tax return review · in pilot</span></a></li><li><a href="../stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="../xslt-bridge/" aria-current="page">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="../products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="../zinni.html">Zinni</a></li><li><a href="../how-we-build.html">How we build</a></li><li><a href="../services.html">Services</a></li><li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="page-hero">
-        <div class="container">
-            <h1>XSLT Bridge</h1>
-            <p>Keep XSLT and Internet Explorer era (MSXML) web applications working in Chrome and Edge after the browsers remove XSLT.</p>
-        </div>
-    </section>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">XSLT Bridge · launching November 2026</span>
+                <h1>XSLT Bridge</h1>
+                <p>Keep XSLT and Internet Explorer era (MSXML) web applications working in Chrome and Edge after the browsers remove XSLT.</p>
+            </div>
+        </section>
 
-    <section>
-        <div class="container legal">
-            <div class="xb-note">Chrome and Edge remove their built-in XSLT support by default starting with version 158 (November 2026). Pages that turn XML into HTML with XSLT, and apps written for Internet Explorer's MSXML, stop working. XSLT Bridge restores them on the sites and folders you approve.</div>
+        <section class="section">
+        <div class="container prose-wide">
+            <div class="callout">Chrome and Edge remove their built-in XSLT support by default starting with version 158 (November 2026). Pages that turn XML into HTML with XSLT, and apps written for Internet Explorer's MSXML, stop working. XSLT Bridge restores them on the sites and folders you approve.</div>
 
-            <div class="xb-grid">
-                <div class="xb-card"><h3>XSLT restored</h3><p>XML pages with a stylesheet render again, and the standard XSLTProcessor API keeps working, using a libxslt engine that runs inside the browser.</p></div>
-                <div class="xb-card"><h3>MSXML compatibility</h3><p>ActiveXObject, DOMDocument, selectNodes, transformNode and XSLTemplate for Internet Explorer era insurance, claims and enterprise apps (paid edition).</p></div>
-                <div class="xb-card"><h3>Pharma: define.xml</h3><p>CDISC define.xml files render from web servers and from approved local submission folders, with their original stylesheets.</p></div>
-                <div class="xb-card"><h3>Enterprise ready</h3><p>Group Policy and Intune deployment, approved-site lists, offline license keys, an insurance security pack and a GxP validation pack.</p></div>
+            <div class="grid grid-2 mt-2">
+                <div class="card"><h3>XSLT restored</h3><p>XML pages with a stylesheet render again, and the standard XSLTProcessor API keeps working, using a libxslt engine that runs inside the browser.</p></div>
+                <div class="card"><h3>MSXML compatibility</h3><p>ActiveXObject, DOMDocument, selectNodes, transformNode and XSLTemplate for Internet Explorer era insurance, claims and enterprise apps (paid edition).</p></div>
+                <div class="card"><h3>Pharma: define.xml</h3><p>CDISC define.xml files render from web servers and from approved local submission folders, with their original stylesheets.</p></div>
+                <div class="card"><h3>Enterprise ready</h3><p>Group Policy and Intune deployment, approved-site lists, offline license keys, an insurance security pack and a GxP validation pack.</p></div>
             </div>
 
-            <h2>Privacy and security</h2>
-            <p>XSLT Bridge sends nothing to us automatically: no telemetry, no analytics and no license server. It runs only on the websites and local folders that you or your administrator approve. See the <a href="/xslt-bridge/privacy/">XSLT Bridge privacy policy</a>.</p>
+            <h2 class="mt-3" style="font-size:1.6rem">Privacy and security</h2>
+            <p>XSLT Bridge sends nothing to us automatically: no telemetry, no analytics and no license server. It runs only on the websites and local folders that you or your administrator approve. See the <a href="../xslt-bridge/privacy/">XSLT Bridge privacy policy</a>.</p>
 
-            <h2>Availability</h2>
+            <h2 class="mt-3" style="font-size:1.6rem">Availability</h2>
             <p>XSLT Bridge will be available from the Chrome Web Store, Microsoft Edge Add-ons and AWS Marketplace. To discuss licensing, a trial or a security review for your organization, contact <a href="mailto:support@zingersoftwaresolutions.com">support@zingersoftwaresolutions.com</a> or call 919-324-4479.</p>
-            <div class="product-actions">
-                <a href="/contact.html?interest=xslt-bridge#contact-form" class="btn-learn">Contact us about XSLT Bridge</a>
+            <div class="btn-row mt-1">
+                <a href="../contact.html?interest=xslt-bridge#contact-form" class="btn btn-primary">Contact us about XSLT Bridge</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Zinger Software Solutions</h3>
-                    <p>Clinical programming, biostatistics and technical staffing since 2013 — plus ZinTrading, our trading software, and Zinvera, our review tool for CPA firms.</p>
-                    <p>admin@zingersoftwaresolutions.com</p>
-                    <p>Apex, NC</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="/services.html#staffing">Technical Staffing</a>
-                    <a href="/services.html#programming">Statistical Programming</a>
-                    <a href="/services.html#consulting">Strategic Consulting</a>
-                    <a href="/services.html#custom">Custom Solutions</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Products &amp; Community</h3>
-                    <a href="/xslt-bridge/">XSLT Bridge</a>
-                    <a href="/stock-trading.html">ZinTrading</a>
-                    <a href="/zinvera.html">Zinvera</a>
+                <div>
+                    <h4>Products</h4>
+                    <a href="../zinvera.html">Zinvera</a>
+                    <a href="../stock-trading.html">ZinTrading</a>
                     <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
-                    <a href="/index.html#community">Community</a>
-                    <a href="/products.html">All Products</a>
+                    <a href="../xslt-bridge/">XSLT Bridge</a>
+                    <a href="../products.html">All products</a>
                 </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <a href="/about.html">About Us</a>
-                    <a href="/contact.html">Contact</a>
-                    <a href="/resources.html">Resources</a>
-                    <a href="/sitemap.html">Sitemap</a>
+                <div>
+                    <h4>AI</h4>
+                    <a href="../zinni.html">Zinni</a>
+                    <a href="../how-we-build.html">How we build AI</a>
+                    <a href="../responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <a href="../services.html#staffing">Technical Staffing</a>
+                    <a href="../services.html#programming">Statistical Programming</a>
+                    <a href="../services.html#consulting">Strategic Consulting</a>
+                    <a href="../services.html#custom">Custom Solutions</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../index.html#community">Community</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../sitemap.html">Sitemap</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="../responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="../xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a></p>
             </div>
         </div>
     </footer>
+    <script src="../assets/site.js" defer></script>
 </body>
 </html>
