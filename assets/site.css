@@ -303,9 +303,9 @@ ul.ticks li::before {
 .mini-product .mini-text p { color: var(--muted); font-size: .95rem; }
 .mini-product .icon { margin: 0; }
 
-/* ---------- Zinni block ---------- */
-.zinni-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
-@media (max-width: 920px) { .zinni-grid { grid-template-columns: 1fr; } }
+/* ---------- Zinn block ---------- */
+.zinn-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
+@media (max-width: 920px) { .zinn-grid { grid-template-columns: 1fr; } }
 .status-list { list-style: none; display: grid; gap: .6rem; margin: 1.25rem 0 1.75rem; }
 .status-list li {
     display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
