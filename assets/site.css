@@ -445,3 +445,18 @@ table.simple tr:last-child td { border-bottom: 0; }
 .prose-wide > p { margin-bottom: 1rem; max-width: 780px; }
 .callout p + p { margin-top: .5rem; }
 .footer-grid a.brand { display: inline-flex; color: #fff; padding: 0; }
+
+/* ---------- Phone screenshots (ZinPulse) ---------- */
+.phones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.phones.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 460px; margin: 0 auto; }
+@media (max-width: 920px) { .phones { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.phones figure { margin: 0; min-width: 0; }
+.phone {
+    border-radius: 26px; padding: 6px; background: #05070c; border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35); overflow: hidden;
+}
+.phone img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.phones figcaption { font-size: .85rem; color: var(--muted-dark); margin-top: .7rem; }
+.pill.lime { background: #eefbd0; color: #3f6212; }
+.dark .pill.lime, .darker .pill.lime { background: rgba(200,255,77,.14); color: #c8ff4d; }
+.card > .pill { align-self: flex-start; }
