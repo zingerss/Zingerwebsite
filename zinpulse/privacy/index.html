@@ -27,7 +27,7 @@
 </ul>
 
 <h2>1. Data stored on your device</h2>
-<p>The app stores the following locally on your phone: your profile (goal, experience, equipment, schedule, and optionally age, sex, height and weight), routines, programs, workout history, body check-ins (weight, estimates you confirm) and check-in photos. We do not have access to it. Uninstalling the app or using <em>Settings → Erase all data</em> deletes it. Exported backups are files you control; they exclude photos.</p>
+<p>The app stores the following locally on your phone: your profile (goal, experience, equipment, schedule, joints that need care, and optionally age, sex, height and weight), routines, programs, workout history, body check-ins (weight, estimates you confirm) and check-in photos. We do not have access to it. Uninstalling the app or using <em>Settings → Erase all data</em> deletes it. Exported backups are files you control; they exclude photos.</p>
 
 <h2>2. AI features (Claude by Anthropic)</h2>
 <p>AI features (program designer, sessions built for today, routine adjustments, coach chat and photo check-in analysis) are powered by Claude, an AI model provided by Anthropic, PBC. Before the first AI request the app asks for your permission. When you use an AI feature, the app sends what that feature needs, which can include your profile, recent workouts and routines, your message, and for photo analysis, the check-in photos you choose to analyse. These requests pass through our server (hosted on Cloudflare) to Anthropic, which processes them to return a result.</p>
@@ -47,7 +47,16 @@
 <p>No advertising. No selling or renting of personal data. No cross-app tracking. No analytics SDKs that profile you.</p>
 
 <h2>6. Health information</h2>
-<p>Workout, body-weight and body-composition information is sensitive. It stays on your device except when you send it to an AI feature as described in section 2. ZinPulse is not a medical service, and its estimates are not medical measurements.</p>
+<p>Workout, body-weight and body-composition information is sensitive, and so are any joints you tell ZinPulse need care. It stays on your device except when you send it to an AI feature as described in section 2. ZinPulse is not a medical service, and its estimates are not medical measurements.</p>
+
+<h2>6a. Google Health Connect and Apple Health</h2>
+<p>If you choose to connect Health Connect (Android) or Apple Health (iOS) in <em>Settings</em>, ZinPulse:</p>
+<ul>
+  <li><strong>Writes</strong> the workouts you finish in ZinPulse (type, start and end time, estimated active calories) and the body weights you log in check-ins.</li>
+  <li><strong>Reads</strong> your step count for today, your most recent sleep duration and your resting heart rate. These are used only on your phone to show today's activity and to adjust your readiness score.</li>
+</ul>
+<p>Health data read from Health Connect or Apple Health stays on your device. It is <strong>not</strong> sent to our server or to the AI, not used for advertising, not sold, and not shared with anyone. You can disconnect at any time in <em>Settings</em>, and manage or revoke permissions in Health Connect or the Health app. Data ZinPulse already wrote there stays there until you delete it.</p>
+<p>ZinPulse's use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements. Data from Apple HealthKit is used only to provide the features above, in line with Apple's HealthKit guidelines.</p>
 
 <h2>7. Children</h2>
 <p>ZinPulse is not intended for children under 13 (or under 16 in the EEA and UK). Photo check-ins are limited to users 18 and over.</p>
