@@ -460,3 +460,14 @@ table.simple tr:last-child td { border-bottom: 0; }
 .pill.lime { background: #eefbd0; color: #3f6212; }
 .dark .pill.lime, .darker .pill.lime { background: rgba(200,255,77,.14); color: #c8ff4d; }
 .card > .pill { align-self: flex-start; }
+
+/* ---------- App store buttons (ZinPulse) ---------- */
+.btn-store { background: #000; color: #fff; border-color: rgba(255,255,255,.28); padding: .55rem 1.25rem .55rem 1rem; gap: .6rem; text-align: left; }
+.btn-store:hover { background: #111; color: #fff; border-color: var(--teal); }
+.btn-store svg { width: 22px; height: 22px; flex: none; }
+.btn-store span { display: flex; flex-direction: column; line-height: 1.15; }
+.btn-store small { font-size: .7rem; font-weight: 500; letter-spacing: .01em; opacity: .85; }
+.btn-store strong { font-size: 1.05rem; font-weight: 600; }
+.store-row { display: flex; flex-wrap: wrap; gap: .75rem; }
+.page-hero p.note { font-size: .9rem; color: var(--muted-dark); }
+.page-hero p.note a { color: #fff; }
