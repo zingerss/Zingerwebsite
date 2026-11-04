@@ -7,7 +7,6 @@
     <meta name="description" content="Download ZinPulse, the AI workout coach, on the App Store or Google Play. 7-day free trial.">
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://zingersoftwaresolutions.com/zinpulse.html">
-    <meta name="apple-itunes-app" content="app-id=6828517395">
     <meta name="theme-color" content="#0a1020">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../assets/site.css">
@@ -21,8 +20,10 @@
         var ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         var appStore = 'https://apps.apple.com/app/id6828517395?ct=' + src;
         var play = 'https://play.google.com/store/apps/details?id=com.zingersoftware.zinpulse&referrer=' + encodeURIComponent('utm_source=' + src + '&utm_medium=smart_link');
-        window.ZP_LINKS = { appStore: appStore, play: play };
-        if (ios) location.replace(appStore);
+        // IOS_LIVE: set to true once ZinPulse is on the App Store (Android-first launch until then).
+        var IOS_LIVE = false;
+        window.ZP_LINKS = { appStore: appStore, play: play, ios: ios, iosLive: IOS_LIVE };
+        if (ios && IOS_LIVE) location.replace(appStore);
         else if (/Android/i.test(ua)) location.replace(play);
     })();
     </script>
@@ -51,8 +52,19 @@
     <script>
     // On a computer the buttons carry the same channel tag as the redirect would have.
     if (window.ZP_LINKS) {
-        document.getElementById('get-ios').href = window.ZP_LINKS.appStore;
+        var iosBtn = document.getElementById('get-ios');
+        iosBtn.href = window.ZP_LINKS.appStore;
         document.getElementById('get-play').href = window.ZP_LINKS.play;
+        if (!window.ZP_LINKS.iosLive) {
+            iosBtn.classList.add('btn-soon');
+            iosBtn.removeAttribute('href');
+            iosBtn.setAttribute('aria-disabled', 'true');
+            iosBtn.querySelector('small').textContent = 'Coming soon on the';
+            if (window.ZP_LINKS.ios) {
+                document.querySelector('.get-card h1').textContent = 'ZinPulse for iPhone is coming soon';
+                document.querySelector('.get-card .lede').textContent = 'It is in Apple’s review right now. ZinPulse is already on Google Play for Android phones.';
+            }
+        }
     }
     </script>
 </body>

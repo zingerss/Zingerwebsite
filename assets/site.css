@@ -471,3 +471,6 @@ table.simple tr:last-child td { border-bottom: 0; }
 .store-row { display: flex; flex-wrap: wrap; gap: .75rem; }
 .page-hero p.note { font-size: .9rem; color: var(--muted-dark); }
 .page-hero p.note a { color: #fff; }
+
+/* App Store button while the iPhone app is in review (Android-first launch). */
+.btn-store.btn-soon { opacity: .5; cursor: default; pointer-events: none; }
