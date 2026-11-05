@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome and Edge 158 remove XSLT: how to check and fix your apps | XSLT Bridge</title>
+    <meta name="description" content="Chrome and Edge 158 remove built-in XSLT by default on November 17, 2026. How to check whether your web apps and XML reports are affected, and your options for fixing them.">
+    <link rel="canonical" href="https://zingersoftwaresolutions.com/xslt-bridge/chrome-158-xslt-fix/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zinger Software Solutions">
+    <meta property="og:title" content="Chrome and Edge 158 remove XSLT: how to check and fix your apps | XSLT Bridge">
+    <meta property="og:description" content="Chrome and Edge 158 remove built-in XSLT by default on November 17, 2026. How to check whether your web apps and XML reports are affected, and your options for fixing them.">
+    <meta property="og:url" content="https://zingersoftwaresolutions.com/xslt-bridge/chrome-158-xslt-fix/">
+    <meta name="theme-color" content="#0a1020">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%230f1a30'/%3E%3Cpath d='M10 10.5h12L10 21.5h12' fill='none' stroke='%234ecdc4' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="status-strip">Zinvera for CPA firms is coming soon — <!-- ZINVERA-APP-LINK: switch to https://zinvera.app/early-access at launch --><a href="../../contact.html?interest=zinvera-early-access#contact-form">get notified</a> · ZinTrading is in private development — <a href="../../contact.html?interest=zintrading-notify#contact-form">get notified when it opens</a></div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="../../index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-h)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-h)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger<small>AI product studio</small></span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><button class="dd-btn is-current" type="button" aria-expanded="false" aria-controls="products-menu">Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <ul class="dropdown" id="products-menu"><li><a href="../../zinvera.html">Zinvera<span>AI-assisted tax return review · coming soon</span></a></li><li><a href="../../stock-trading.html">ZinTrading<span>Risk-first trading tools · private development</span></a></li><li><a href="../../zinpulse.html">ZinPulse<span>AI workout coach · iPhone and Android</span></a></li><li><a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds<span>AI college-admissions strategy · external site</span></a></li><li><a href="../../xslt-bridge/" aria-current="page">XSLT Bridge<span>Keep XSLT web apps working in Chrome and Edge</span></a></li><li class="dd-sep" role="separator"></li><li><a href="../../products.html">All products<span>Everything Zinger builds, side by side</span></a></li></ul></li>
+                <li><a href="../../zinn.html">Zinn</a></li><li><a href="../../how-we-build.html">How we build</a></li><li><a href="../../services.html">Services</a></li><li><a href="../../resources.html">Resources</a></li>
+                <li><a href="../../contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow"><a href="../" style="color:inherit">XSLT Bridge</a> · guide</span>
+                <h1>Chrome and Edge 158 remove XSLT: how to check and fix your apps</h1>
+            </div>
+        </section>
+
+        <section class="section">
+        <div class="container prose-wide">
+            <p>Chrome and Microsoft Edge remove built-in XSLT by default starting with version 158, which ships on November 17, 2026. Web pages and apps that use XSLT to turn XML into HTML can then show raw XML or errors.</p>
+
+            <h2 class="mt-3" style="font-size:1.6rem">What is affected</h2>
+            <ul>
+                <li>XML files and reports that point to a stylesheet, opened in a normal browser tab</li>
+                <li>Web apps that call the browser's XSLTProcessor API</li>
+                <li>CDISC define.xml files (see <a href="../define-xml-chrome-edge/">the define.xml guide</a>)</li>
+            </ul>
+            <p>Apps running in Edge's IE mode use the old Internet Explorer engine, so this change doesn't touch them.</p>
+
+            <h2 class="mt-3" style="font-size:1.6rem">Check in one minute</h2>
+            <p>You can see the effect today, before your browser updates:</p>
+            <ol>
+                <li>Close every Chrome (or Edge) window. If one stays open, the setting is ignored.</li>
+                <li>Press Windows + R and type <code>chrome --disable-blink-features=XSLT</code> (for Edge: <code>msedge --disable-blink-features=XSLT</code>).</li>
+                <li>Open your apps and XML reports. If a page shows raw XML or an error, it will look like that after the update.</li>
+            </ol>
+            <p>To go back, close the browser and open it normally.</p>
+
+            <h2 class="mt-3" style="font-size:1.6rem">Your options</h2>
+            <ul>
+                <li><strong>Rewrite that part of the app.</strong> Do the XSLT step on the server, or move it to a JavaScript library. This is the long-term fix, and it takes development time.</li>
+                <li><strong>Convert files ahead of time.</strong> For static reports, generate an HTML copy and open that instead.</li>
+                <li><strong>Move the app to IE mode.</strong> This works if your organization already manages it, though it keeps the app tied to IE mode.</li>
+                <li><strong>Use a browser extension.</strong> XSLT Bridge restores XSLT only on the sites and folders you or your IT team approve, and it sends nothing to us automatically. The free edition covers XSLT and XML rendering.</li>
+            </ul>
+            <div class="btn-row mt-1">
+                <a href="https://chromewebstore.google.com/detail/xslt-bridge/dccfmjfegmopdcpppnoinhmcdgbblclj" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/xslt-bridge/ghfkmdecgffjdjihdddppianccjppfkd" class="btn btn-outline" target="_blank" rel="noopener">Get it for Edge</a>
+                <a href="../../contact.html?interest=xslt-bridge#contact-form" class="btn btn-outline">Ask a question</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><defs><linearGradient id="zg-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ecdc4"/><stop offset="1" stop-color="#1e8449"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="8" fill="#0f1a30" stroke="url(#zg-f)" stroke-width="2"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="url(#zg-f)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-text">Zinger Software Solutions<small>AI product studio</small></span></a>
+                    <p>We build AI tools that show their work: the numbers come from code, the sources are shown, and people decide.</p>
+                    <p>Our team has also provided clinical programming, biostatistics and technical staffing services since 2013.</p>
+                    <p>admin@zingersoftwaresolutions.com · Apex, NC</p>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <a href="../../zinvera.html">Zinvera</a>
+                    <a href="../../stock-trading.html">ZinTrading</a>
+                    <a href="../../zinpulse.html">ZinPulse</a>
+                    <a href="https://honest-odds.com/" target="_blank" rel="noopener">Honest Odds</a>
+                    <a href="../../xslt-bridge/">XSLT Bridge</a>
+                    <a href="../../products.html">All products</a>
+                </div>
+                <div>
+                    <h4>AI</h4>
+                    <a href="../../zinn.html">Zinn</a>
+                    <a href="../../how-we-build.html">How we build AI</a>
+                    <a href="../../responsible-ai.html">Responsible AI</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <a href="../../services.html#staffing">Technical Staffing</a>
+                    <a href="../../services.html#programming">Statistical Programming</a>
+                    <a href="../../services.html#consulting">Strategic Consulting</a>
+                    <a href="../../services.html#custom">Custom Solutions</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a href="../../about.html">About</a>
+                    <a href="../../resources.html">Resources</a>
+                    <a href="../../index.html#community">Community</a>
+                    <a href="../../contact.html">Contact</a>
+                    <a href="../../sitemap.html">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zinger Software Solutions, Inc. All rights reserved.</p>
+                <p><a href="../../responsible-ai.html" style="color:inherit">Responsible AI</a> · <a href="../../xslt-bridge/privacy/" style="color:inherit">XSLT Bridge privacy</a> · <a href="../../zinpulse/privacy/" style="color:inherit">ZinPulse privacy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../assets/site.js" defer></script>
+</body>
+</html>
