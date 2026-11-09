@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zinvera verify.py fingerprints</title>
+<style>
+  :root { color-scheme: light dark; --bg: #ffffff; --fg: #1d2129; --muted: #5b6270; --box: #f3f4f6; --line: #d9dce1; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #15171b; --fg: #e8eaed; --muted: #a3a9b4; --box: #1f2228; --line: #343841; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+  h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  p, li { color: var(--fg); }
+  .muted { color: var(--muted); }
+  code, pre { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .9rem; }
+  pre { background: var(--box); border: 1px solid var(--line); border-radius: 6px; padding: .75rem; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; border-bottom: 1px solid var(--line); padding: .4rem .5rem .4rem 0; vertical-align: top; }
+  td code { word-break: break-all; }
+</style>
+</head>
+<body>
+<main>
+<h1>Zinvera verify.py fingerprints</h1>
+<p class="muted">The script a firm or its auditor runs to check a Zinvera firm export, on their own machine, with nothing from Zinvera running.</p>
+
+<h2>The current version</h2>
+<table>
+  <tr><th>Version</th><td>verify.py version 2</td></tr>
+  <tr><th>SHA-256</th><td><code>44eef054bc16faec850e9d98371013210902da67fd389f354cad6c04f55e827e</code></td></tr>
+  <tr><th>Needs</th><td>Python 3.8 or newer, nothing else; it uses no network</td></tr>
+</table>
+<p>Each export carries its own copy of verify.py and its method text, and the method text and every approval memo name the version of
+verify.py they came with and its SHA-256. Every version Zinvera has published stays listed under <a href="#all-versions">All versions</a>
+with its hashes, so a memo from an earlier year, which names an earlier version, can still be matched: a memo's hash must be the one listed
+there for the version the memo names.</p>
+
+<h2>How to check it</h2>
+<ol>
+  <li>Take the copy of verify.py from the export and keep it in a folder of your own, outside the export. This page publishes only the fingerprints, so you can confirm that copy is genuine.</li>
+  <li>Check its hash. Either of these prints it:
+<pre>python -I -B verify.py --version
+certutil -hashfile verify.py SHA256      (Windows)
+shasum -a 256 verify.py                  (macOS, Linux)</pre>
+  Find the version it prints under All versions: its SHA-256 must be the one listed for that version, and so must the hash the export's
+  canonical-json-method.txt names. Then, for each memo, find the version the memo names: the memo's hash must be the one listed for that
+  version. A memo naming an older version is expected; a hash that isn't listed for its version means stop and ask. Use the newest version
+  to check an export.</li>
+  <li>Unzip the export and run your copy on it, in Python's isolated mode:
+<pre>python -I -B /your/copy/verify.py &lt;unzipped export&gt; --fingerprint &lt;chain fingerprint from your newest memo&gt; --anchors &lt;your anchors folder&gt;</pre>
+  <code>-I</code> keeps Python from loading anything from the export or the folder you run it in, so a file such as hashlib.py put in the
+  export can't stand in for part of Python. verify.py refuses to run without it, and checks that the modules it uses come from Python's own
+  library.</li>
+  <li>It prints its own version and SHA-256 first, one line for each check, notes to match against your workpapers, and ends with PASS, or
+  FAIL with what failed. The export's canonical-json-method.txt says what each check proves, and what it can't.</li>
+</ol>
+
+<h2 id="all-versions">All versions</h2>
+<table>
+  <tr><th>Version</th><th>verify.py SHA-256</th><th>canonical-json-method.txt SHA-256</th><th>Notes</th></tr>
+  <tr><td>2</td><td><code>44eef054bc16faec850e9d98371013210902da67fd389f354cad6c04f55e827e</code></td><td><code>19b0c9bc265c234654a8114c937df6447bc14f1b68729dd6f0f241a1c84373d5</code></td><td>First published version.</td></tr>
+</table>
+<p class="muted">Version 1 shipped only inside exports made on staging with fictional data, before this page existed.</p>
+</main>
+</body>
+</html>
