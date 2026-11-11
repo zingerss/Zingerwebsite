@@ -27,14 +27,17 @@
 
 <h2>The current version</h2>
 <table>
-  <tr><th>Version</th><td>verify.py version 2</td></tr>
-  <tr><th>SHA-256</th><td><code>44eef054bc16faec850e9d98371013210902da67fd389f354cad6c04f55e827e</code></td></tr>
+  <tr><th>Version</th><td>verify.py version 6</td></tr>
+  <tr><th>SHA-256</th><td><code>fc3f40650e72c5ba9d6515a4e683b185cfa55b436d9031f48423c047c8f8b33e</code></td></tr>
+  <tr><th>Status</th><td>Published</td></tr>
   <tr><th>Needs</th><td>Python 3.8 or newer, nothing else; it uses no network</td></tr>
 </table>
 <p>Each export carries its own copy of verify.py and its method text, and the method text and every approval memo name the version of
-verify.py they came with and its SHA-256. Every version Zinvera has published stays listed under <a href="#all-versions">All versions</a>
-with its hashes, so a memo from an earlier year, which names an earlier version, can still be matched: a memo's hash must be the one listed
-there for the version the memo names.</p>
+verify.py they came with and its SHA-256. Every version stays listed under <a href="#all-versions">All versions</a> with its hashes, so a
+memo from an earlier year, which names an earlier version, can still be matched: a memo's hash must be the one listed there for the version
+the memo names. A version marked "never published" was replaced before any memo named it: a memo naming it means stop and ask. A
+version marked "candidate" is still being checked: its fingerprints may change, no memo should name it, and it is not to be relied on
+until it is marked published.</p>
 
 <h2>How to check it</h2>
 <ol>
@@ -59,7 +62,11 @@ shasum -a 256 verify.py                  (macOS, Linux)</pre>
 <h2 id="all-versions">All versions</h2>
 <table>
   <tr><th>Version</th><th>verify.py SHA-256</th><th>canonical-json-method.txt SHA-256</th><th>Notes</th></tr>
-  <tr><td>2</td><td><code>44eef054bc16faec850e9d98371013210902da67fd389f354cad6c04f55e827e</code></td><td><code>19b0c9bc265c234654a8114c937df6447bc14f1b68729dd6f0f241a1c84373d5</code></td><td>First published version.</td></tr>
+  <tr><td>2</td><td><code>44eef054bc16faec850e9d98371013210902da67fd389f354cad6c04f55e827e</code></td><td><code>19b0c9bc265c234654a8114c937df6447bc14f1b68729dd6f0f241a1c84373d5</code></td><td>Published; superseded by version 6. Isolated mode, dates checked against the signatures and anchors, approval fields by content version, R2 upload times.</td></tr>
+  <tr><td>3</td><td><code>9793c64051e6d805eb9ac9af1995619369ce607d3f14f805d79176a50a662043</code></td><td><code>28e6e8b506864f04782c51341c9fee67286f14eb332f903cd43ae08db78ffb02</code></td><td>Never published: replaced by version 4 before any memo named it. Deleted returns proven both ways: a return listed as deleted needs its deletion event on the chain, at the same time, and nothing but a redaction record may name it after that event.</td></tr>
+  <tr><td>4</td><td><code>297a281631d5690ab07964ec3b1b4831701d8520afcc04a7a2df9011c0b8b537</code></td><td><code>e236df15dd1200ceef8ee20ad994208f3dcc3d6da944a12adb87650c68977ec0</code></td><td>Never published: replaced by version 5 before any memo named it, as it checked who decided and when but not what was decided or on which values. Every decision in an approval traced back to a person's decision event, through the event of each carry to a later run; a return with a signed approval never deleted; a malformed returns row named, not a stop.</td></tr>
+  <tr><td>5</td><td><code>58f4e582d7845292f60607b196173f27490571c40271f7c1e4144a7d04729928</code></td><td><code>30e7d96fccfbda0a528e7e831e4ec1d2e1d3b75bc2b897f31ea3b44e77cab183</code></td><td>Never published: replaced by version 6 before any memo named it, as a carry it accepted could put back a decision the person had since changed. What was decided is on the chain: each run's findings bound to its run event by a digest, each decision event naming the value and the values it was made on. Every carried decision held to the same match key and the same values as the finding it came from, and to the value the person decided; the snapshot's findings held to its run; run numbers checked.</td></tr>
+  <tr><td>6</td><td><code>fc3f40650e72c5ba9d6515a4e683b185cfa55b436d9031f48423c047c8f8b33e</code></td><td><code>d8f3879fb05fb8fffc425b43a5f6c4252224e5a61b86aa7a9aa60fe7b8d35a10</code></td><td>Published; current version. Every carry worked out by replaying the chain: the latest earlier run in the window holding the match key, the key alone in both runs and both findings bound as carrying, the same content hash as each run recorded it (the engine's hash, not recomputed from the values shown), and the decision as it stood when the later run was recorded; each carry event only confirms the replay's carry. Older event forms read only before the first event of the newer form.</td></tr>
 </table>
 <p class="muted">Version 1 shipped only inside exports made on staging with fictional data, before this page existed.</p>
 </main>
